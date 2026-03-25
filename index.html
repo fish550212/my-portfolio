@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>版型索引</title>
+    <link rel="stylesheet" href="css/style.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div class="title">
+          <h1>
+            <i class="fas fa-search"></i>版型索引</h1>
+          <!-- <span class="tag">靜態前台｜無後端</span> -->
+        </div>
+        <div class="toolbar" id="toolbar">
+          <div class="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21l-4.2-4.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6" />
+            </svg>
+            <input id="q" type="search" placeholder="搜尋：案子名稱、版型、關鍵字… (Ctrl+/)" autocomplete="off" />
+          </div>
+          <button class="btn" id="toggle-types">版型篩選</button>
+          <select id="sort">
+            <option value="recent">排序：最近更新</option>
+            <option value="az">排序：名稱 A→Z</option>
+            <option value="type">排序：版型</option>
+          </select>
+          <button class="btn ghost" id="reset">重置</button>
+        </div>
+        <div id="type-chips" class="chips" style="display: none"></div>
+      </header>
+
+      <section class="panel" style="display: none; margin-bottom: 14px">
+        <div class="toolbar" style="gap: 8px; align-items: center; flex-wrap: wrap">
+          <strong style="color: var(--muted)">資料來源：</strong>
+          <select id="data-source">
+            <option value="auto" selected>自動（優先載入 json/projects.json，失敗則用內建資料）</option>
+            <option value="seed">只用內建資料(example-projects.js)</option>
+            <option value="url">指定 JSON URL</option>
+            <option value="file">上傳 JSON 檔</option>
+          </select>
+          <input id="data-url" type="url" placeholder="JSON 位置，例如 ./projects.json" style="display: none" />
+          <input id="data-file" type="file" accept="application/json" style="display: none" />
+          <button class="btn" id="load-data">載入</button>
+          <span style="flex: 1"></span>
+          <button class="btn" id="import-csv">批次匯入（CSV/JSON）</button>
+          <button class="btn" id="export-json">匯出 JSON</button>
+        </div>
+      </section>
+
+      <section class="panel" id="list-view" hidden>
+        <div id="grid" class="grid"></div>
+        <div id="empty" class="empty" style="display: none">沒有找到符合條件的結果。</div>
+        <div class="footer"><div id="count">—</div></div>
+      </section>
+
+      <section class="panel" id="detail-view" hidden>
+        <nav class="crumbs">
+          <a href="#/">首頁</a>
+          /
+          <span id="crumb-name">—</span>
+        </nav>
+        <div class="headline">
+          <div>
+            <h2 id="proj-name">—</h2>
+            <div class="sub" id="proj-sub">—</div>
+          </div>
+          <div style="display: flex; gap: 8px">
+            <a id="proj-url" class="btn" target="_blank" rel="noopener">前往正式站</a>
+            <button class="btn ghost" id="back">返回</button>
+          </div>
+        </div>
+        <div id="layouts-grid" class="grid"></div>
+        <div class="footer">
+          <div id="layout-count">—</div>
+          <!-- <div class="status">
+            <i></i>
+            內頁切版索引
+          </div> -->
+        </div>
+      </section>
+    </div>
+
+    <div id="test-panel" class="test-panel">
+      <span class="close" onclick="this.parentElement.style.display='none'">✕</span>
+      <h4>內建測試結果</h4>
+      <ul id="test-list"></ul>
+    </div>
+
+    <dialog id="dlg-import">
+      <div class="dlg-hd">
+        <strong>批次匯入（CSV 或 JSON）</strong>
+        <button class="btn ghost" onclick="document.getElementById('dlg-import').close()">關閉</button>
+      </div>
+      <div class="dlg-bd">
+        <p style="margin: 0 0 8px 0; color: var(--muted); font-size: 12px">
+          格式 1：JSON 陣列（與
+          <code>projects</code>
+          結構相同）。
+          <br />
+          格式 2：CSV（含表頭）：
+          <code>id,name,type,year,tags,url,thumb,layouts</code>
+          ；
+          <code>tags</code>
+          以
+          <code>|</code>
+          分隔；
+          <code>layouts</code>
+          以分號分隔多筆，單筆格式：
+          <code>key^title^path^kind^thumb</code>
+          。
+        </p>
+        <textarea id="import-text" placeholder="貼上 JSON 或 CSV 內容"></textarea>
+      </div>
+      <div class="dlg-ft">
+        <button class="btn ghost" id="btn-import-sample">貼上 CSV 範例</button>
+        <button class="btn" id="btn-import-apply">套用到目前資料（依 id 覆蓋或新增）</button>
+      </div>
+    </dialog>
+
+    <div id="TOP">
+      <img src="images/gotop.svg" alt="回到上面" />
+    </div>
+   
+    
+
+    <!-- 範例資料 -->
+    <script type="text/javascript" src="js/example-projects.js"></script>
+    <!-- 主要js檔案 -->
+    <script type="text/javascript" src="js/contents.js"></script>
+  </body>
+</html>

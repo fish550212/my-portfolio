@@ -1,0 +1,3 @@
+id,name,type,year,tags,url,thumb,layouts
+1,Project A,web,2024,企業網站|產品介紹,https://example.com/a,/img/thumb-a.jpg,layout1
+2,Project B,app,2023,電商|手機版,https://example.com/b,/img/thumb-b.jpg,"layout2,layout3"

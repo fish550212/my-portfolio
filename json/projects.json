@@ -1,0 +1,250 @@
+[
+  {
+    "id": 1,
+    "name": "采昌多媒體",
+    "type": "企業網站",
+    "year": 2025,
+    "tags": ["多媒體", "淺色", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/CCII/cut/index.html",
+    "thumb": "./file/ccll/ccll.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/ccll/ccll-index.jpg" },
+      { "key": "page-newmovie", "title": "電影", "path": "page-newmovie.html", "kind": "List", "thumb": "./file/ccll/ccll-page-newmovie.jpg" },
+      { "key": "page-tvshow", "title": "頻道", "path": "page-tvshow.html", "kind": "List", "thumb": "./file/ccll/ccll-page-tvshow.jpg" },
+      { "key": "page-shop", "title": "公播", "path": "page-shop.html", "kind": "Form", "thumb": "./file/ccll/ccll-page-shop.jpg" },
+      { "key": "page-about", "title": "關於采昌", "path": "page-about.html", "kind": "Content", "thumb": "./file/ccll/ccll-page-about.jpg" },
+      { "key": "page-sitemap", "title": "網站導覽", "path": "page-sitemap.html", "kind": "Content", "thumb": "./file/ccll/ccll-page-sitemap.jpg" },
+      { "key": "page-contact", "title": "網站導覽", "path": "page-contact.html", "kind": "Form", "thumb": "./file/ccll/ccll-page-contact.jpg" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "2025帆船比賽",
+    "type": "活動網站",
+    "year": 2025,
+    "tags": ["海科", "藍色", "白色", "海洋", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-Contest/boat/cut/index.html",
+    "thumb": "./file/mslc-Contest/mslc-Contest.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-Contest/mslc-Contest.jpg" },
+      { "key": "apply", "title": "立即投稿", "path": "apply.html", "kind": "Form", "thumb": "./file/mslc-Contest/mslc-Contest-apply.jpg" },
+      { "key": "page-gallery", "title": "活動錦集", "path": "page-gallery.html", "kind": "photo", "thumb": "./file/mslc-Contest/mslc-Contest-page-gallery.jpg" },
+      { "key": "page-news-content", "title": "新聞內頁", "path": "page-news-content.html", "kind": "Content", "thumb": "./file/mslc-Contest/mslc-Contest-page-news-content.jpg" },
+      { "key": "sitemap", "title": "網站導覽", "path": "sitemap.html", "kind": "sitemap", "thumb": "./file/mslc-Contest/mslc-Contest-sitemap.jpg" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "海科活動網站",
+    "type": "活動網站",
+    "year": 2025,
+    "tags": ["海科", "藍色", "海洋", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-Contest/activity/cut/index.html",
+    "thumb": "./file/mslc-Contest/mslc-activity.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-Contest/mslc-activity.jpg" },
+      { "key": "apply", "title": "立即投稿", "path": "apply.html", "kind": "Form", "thumb": "./file/mslc-Contest/mslc-activity-apply.jpg" },
+      { "key": "page-gallery", "title": "活動錦集", "path": "page-gallery.html", "kind": "photo", "thumb": "./file/mslc-Contest/mslc-activity-page-gallery.jpg" },
+      { "key": "page-news-content", "title": "新聞內頁", "path": "page-news-content.html", "kind": "Content", "thumb": "./file/mslc-Contest/mslc-activity-page-news-content.jpg" },
+      { "key": "sitemap", "title": "網站導覽", "path": "sitemap.html", "kind": "sitemap", "thumb": "./file/mslc-Contest/mslc-activity-sitemap.jpg" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "ARG實境解謎遊戲平台",
+    "type": "遊戲平台",
+    "year": 2025,
+    "tags": ["海科", "遊戲", "arg", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/arg/2025arg/cut/index.html",
+    "thumb": "./file/arg/2025arg/arg.jpg",
+    "layouts": [
+      { "key": "index", "title": "遊戲列表", "path": "index.html", "kind": "List", "thumb": "./file/arg/2025arg/arg.jpg" },
+      { "key": "page", "title": "遊戲介紹", "path": "page.html", "kind": "Content", "thumb": "./file/arg/2025arg/arg-page.jpg" },
+      { "key": "login", "title": "會員專區", "path": "login.html", "kind": "Form", "thumb": "./file/arg/2025arg/arg-login.jpg" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "學習體驗平台-教師入口",
+    "type": "遊戲平台",
+    "year": 2023,
+    "tags": ["海科", "遊戲", "arg", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/arg/teacher/cut/index.html",
+    "thumb": "./file/arg/teacher/page-livegame.jpg",
+    "layouts": [
+      { "key": "login", "title": "登入", "path": "login.html", "kind": "Login", "thumb": "./file/arg/teacher/login.jpg" },
+      { "key": "page-gamelist", "title": "遊戲列表", "path": "page-gamelist.html", "kind": "List", "thumb": "./file/arg/teacher/page-gamelist.jpg" },
+      { "key": "page-gamerecord", "title": "遊戲紀錄", "path": "page-gamerecord.html", "kind": "table", "thumb": "./file/arg/teacher/page-gamerecord.jpg" },
+      { "key": "page-gameadd", "title": "遊戲編輯", "path": "page-gameadd.html", "kind": "table", "thumb": "./file/arg/teacher/page-gameadd.jpg" },
+      { "key": "page-gamesearch", "title": "紀錄查詢", "path": "page-gamesearch.html", "kind": "table", "thumb": "./file/arg/teacher/page-gamesearch.jpg" },
+      { "key": "page-livegame", "title": "遊戲實況", "path": "page-livegame.html", "kind": "Content", "thumb": "./file/arg/teacher/page-livegame.jpg" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "茶樹育種數位化資訊系統",
+    "type": "管理系統",
+    "year": 2025,
+    "tags": ["綠色", "資訊系統", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/tea/cut/login.html",
+    "thumb": "./file/tea/login.jpg",
+    "layouts": [
+      { "key": "Menu", "title": "登入", "path": "login.html", "kind": "Menu", "thumb": "./file/tea/login.jpg" },
+      { "key": "page-02", "title": "調查記錄", "path": "page-02.html", "kind": "Form", "thumb": "./file/tea/page-02.jpg" },
+      { "key": "page-01", "title": "登入", "path": "page-01.html", "kind": "Menu", "thumb": "./file/tea/page-01.jpg" }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "連江縣政府-網路E櫃台",
+    "type": "政府網站",
+    "year": 2025,
+    "tags": ["白色", "紫色", "連江縣", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/matsu/cut/index.html",
+    "thumb": "./file/matsu/e-serve/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/matsu/e-serve/index.jpg" },
+      { "key": "page-service", "title": "服務分類", "path": "page-service.html#service", "kind": "List", "thumb": "./file/matsu/e-serve/page-service.jpg" },
+      { "key": "page-list", "title": "分類列表", "path": "page-list.html", "kind": "List", "thumb": "./file/matsu/e-serve/page-list.jpg" },
+      { "key": "page-list-content", "title": "線上申辦", "path": "page-list-content.html", "kind": "Form", "thumb": "./file/matsu/e-serve/page-list-content.jpg" },
+      { "key": "page-applyquery", "title": "進度查詢", "path": "page-applyquery.html", "kind": "search", "thumb": "./file/matsu/e-serve/page-applyquery.jpg" },
+      { "key": "page-faq", "title": "常見問答", "path": "page-faq.html", "kind": "QA", "thumb": "./file/matsu/e-serve/page-faq.jpg" },
+      { "key": "page-login", "title": "登入", "path": "page-login.html", "kind": "Login", "thumb": "./file/matsu/e-serve/page-login.jpg" },
+      { "key": "oa-login", "title": "後台登入", "path": "http://matsuedesk.netdoing.com.tw:8888/LOGIN/INDEX1", "kind": "Login", "thumb": "./file/matsu/e-serve/login.jpg" }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "淨灘網站",
+    "type": "活動網站",
+    "year": 2024,
+    "tags": ["海科", "藍色", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-clean/2024clean/cut/index.html",
+    "thumb": "./file/mslc-clean/2024clean/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-clean/2024clean/index.jpg" },
+      { "key": "page", "title": "首頁", "path": "page.html", "kind": "about", "thumb": "./file/mslc-clean/2024clean/page.jpg" }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Kirin行動業務系統",
+    "type": "管理系統",
+    "year": 2024,
+    "tags": ["白色", "RWD", "業務"],
+    "url": "https://fish550212.github.io/my-portfolio/html/kirin/cut-/index.html",
+    "thumb": "./file/kirin/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/kirin/index.jpg" },
+      { "key": "page-01", "title": "業務資訊", "path": "page-01.html", "kind": "List", "thumb": "./file/kirin/page-01.jpg" },
+      { "key": "page-02", "title": "商家列表", "path": "page-02.html", "kind": "List", "thumb": "./file/kirin/page-02.jpg" },
+      { "key": "page-03", "title": "資料填寫", "path": "page-03.html", "kind": "Form", "thumb": "./file/kirin/page-03.jpg" },
+      { "key": "page-list", "title": "資料列表", "path": "page-list.html", "kind": "List", "thumb": "./file/kirin/page-list.jpg" },
+      { "key": "page-list-wrap", "title": "商品列表", "path": "page-list-wrap.html", "kind": "List", "thumb": "./file/kirin/page-list-wrap.jpg" }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "woodpecker啄木鳥科技",
+    "type": "企業網站",
+    "year": 2023,
+    "tags": ["藍色", "RWD", "科技"],
+    "url": "https://fish550212.github.io/my-portfolio/html/woodpecker/cut-ENG/index.html",
+    "thumb": "./file/woodpecker/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/woodpecker/index.jpg" },
+      { "key": "page-Lockstep", "title": "內容", "path": "page-Lockstep.html", "kind": "Content", "thumb": "./file/woodpecker/page-Lockstep.jpg" },
+      { "key": "page-Career", "title": "列表", "path": "page-Career.html", "kind": "List", "thumb": "./file/woodpecker/page-Career.jpg" },
+      { "key": "page-events", "title": "列表-方框", "path": "page-events.html", "kind": "List", "thumb": "./file/woodpecker/page-events.jpg" },
+      { "key": "page-managementteam", "title": "公司介紹", "path": "page-managementteam.html", "kind": "Content", "thumb": "./file/woodpecker/page-managementteam.jpg" },
+      { "key": "page-contactus", "title": "聯絡我們", "path": "page-contactus.html", "kind": "contactus", "thumb": "./file/woodpecker/page-contactus.jpg" }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "EverStyle柏泰食品",
+    "type": "企業網站",
+    "year": 2022,
+    "tags": ["白色", "RWD", "食品"],
+    "url": "https://fish550212.github.io/my-portfolio/html/everStyle/web/cut/index.html",
+    "thumb": "./file/everStyle/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/everStyle/index.jpg" },
+      { "key": "page-company", "title": "公司介紹", "path": "page-company.html", "kind": "Content", "thumb": "./file/everStyle/page-company.jpg" },
+      { "key": "page-companyhistory", "title": "公司沿革", "path": "page-companyhistory.html", "kind": "Content", "thumb": "./file/everStyle/page-companyhistory.jpg" },
+      { "key": "page-quality", "title": "品質管理", "path": "page-quality.html", "kind": "Content", "thumb": "./file/everStyle/page-quality.jpg" },
+      { "key": "page-application", "title": "服務項目", "path": "page-application.html", "kind": "Content", "thumb": "./file/everStyle/page-application.jpg" },
+      { "key": "page-commodity", "title": "香料系列", "path": "page-commodity.html", "kind": "Content", "thumb": "./file/everStyle/page-commodity.jpg" },
+      { "key": "page-color", "title": "著色劑系列", "path": "page-color.html", "kind": "Content", "thumb": "./file/everStyle/page-color.jpg" },
+      { "key": "page-contact", "title": "聯絡我們", "path": "page-contact.html", "kind": "contactus", "thumb": "./file/everStyle/page-contact.jpg" }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "興達發電廠後台",
+    "type": "後台系統",
+    "year": 2022,
+    "tags": ["RWD", "後台"],
+    "url": "https://fish550212.github.io/my-portfolio/html/oa-login/Xingda/cut/login.html",
+    "thumb": "./file/oa-login/Xingda/login.jpg",
+    "layouts": [
+      { "key": "login", "title": "登入", "path": "login.html", "kind": "login", "thumb": "./file/oa-login/Xingda/login.jpg" }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "一坪咖啡",
+    "type": "後台系統",
+    "year": 2022,
+    "tags": ["後台", "白色"],
+    "url": "https://fish550212.github.io/my-portfolio/html/oa-login/cafe/cafe.html",
+    "thumb": "./file/oa-login/cafe/login.jpg",
+    "layouts": [
+      { "key": "login", "title": "登入", "path": "cafe.html", "kind": "login", "thumb": "./file/oa-login/cafe/login.jpg" }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "台電能源再生處",
+    "type": "企業網站",
+    "year": 2023,
+    "tags": ["台電", "RWD", "綠色"],
+    "url": "https://fish550212.github.io/my-portfolio/html/tpcDRE/cut/index.html",
+    "thumb": "./file/tpcDRE/index.jpg",
+    "layouts": [
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/tpcDRE/index.jpg" }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "海科館大搜密",
+    "type": "活動網站",
+    "year": 2019,
+    "tags": ["海科", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-lottery/cut/home.html",
+    "thumb": "./file/mslc-lottery/home.jpg",
+    "layouts": [
+      { "key": "home", "title": "首頁", "path": "home.html", "kind": "home", "thumb": "./file/mslc-lottery/home.jpg" },
+      { "key": "index", "title": "活動辦法", "path": "index.html", "kind": "Content", "thumb": "./file/mslc-lottery/index.jpg" },
+      { "key": "list", "title": "開始活動", "path": "write.html", "kind": "List", "thumb": "./file/mslc-lottery/list.jpg" },
+      { "key": "index-gift", "title": "得獎名單", "path": "index-gift.html", "kind": "List", "thumb": "./file/mslc-lottery/index-gift.jpg" }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "台灣票據交換所-票交財產APP盤點作業",
+    "type": "管理系統",
+    "year": 2025,
+    "tags": ["白色", "RWD"],
+    "url": "https://fish550212.github.io/my-portfolio/html/ticket/cut/index.html",
+    "thumb": "./file/ticket/index.jpg",
+    "layouts": [
+      { "key": "login", "title": "登入", "path": "login.html", "kind": "Login", "thumb": "./file/ticket/login.jpg" },
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "Index", "thumb": "./file/ticket/index.jpg" },
+      { "key": "import-file-link", "title": "轉入檔案", "path": "import-file-link.html", "kind": "List", "thumb": "./file/ticket/import-file-link.jpg" },
+      { "key": "inventory-link", "title": "盤點作業", "path": "inventory-link.html", "kind": "table", "thumb": "./file/ticket/inventory-link.jpg" },
+      { "key": "inventory-link-edit", "title": "盤點作業/明細", "path": "inventory-link-edit.html", "kind": "List", "thumb": "./file/ticket/inventory-link-edit.jpg" },
+      { "key": "inventory-result-link", "title": "盤點結果", "path": "inventory-result-link.html", "kind": "table", "thumb": "./file/ticket/inventory-result-link.jpg" }
+    ]
+  }
+]
