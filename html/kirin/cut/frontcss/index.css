@@ -22,7 +22,8 @@ input{
 .wrapper {
     width: 100%;
     position: relative;
-    height:calc(100vh); /*外層高度100%*/
+    height:100%; 
+    /*外層高度100%*/
     /* margin-bottom: -90px;  */
     /*隨footer高度需做調整*/
   }
@@ -44,20 +45,14 @@ input{
     margin: auto;
     overflow: hidden;
 }
-.headerbox .logobox{
+.indexbox .headerbox{
+    height: 30vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    width: 100%;
-    margin: auto;
-    padding: 90px 0 0 0;
-    font-size: 35px;
-    font-weight: 600;
-    color: #333333;
 }
-.headerbox .logobox img{
-    width:178px;
+.headerbox .logobox{
+    width: 178px;
+    margin: auto;
 }
 .headerbox .topbox{
     background-color: #0071BC;
@@ -78,25 +73,25 @@ input{
 }
 
 .page .topbox .btnbox{
-    width: 18px;
-    height:18px;
+    width: 20px;
+    height:20px;
     display: inline-block;    
     position: absolute;
     left: 15px;
 }
 .page .topbox .btnbox .btn_back{
-    width: 18px;
-    height:18px;
+    width: 20px;
+    height:20px;
     background: url(../frontimages/icon-back.svg)no-repeat;
-    background-size:auto 18px;
+    background-size:auto 20px;
 }
 .page .topbox .title{
     margin: auto;
-    font-weight: bold;
+    font-weight: 500;
 }
 .page .toptitle{
     margin: auto;
-    font-weight: bold;
+    font-weight: 500;
 }
 /*hearder----------------------------*/
 
@@ -105,63 +100,33 @@ input{
 .mainbox {
     width: 100%;
     margin: auto;
-    /* background-color: #fff; */
+}
+.indexbox .mainbox{
+    position: absolute;
+    bottom: 0;
 }
 .mainbox .meunbox{
-    width: 100%;
-    height: 62vh;
+    width: 100%;    
+    height: 56vh;
     margin: auto;
     text-align: center;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed; */
+    /* bottom: 0; */
     background: url(../frontimages/login_box.png) no-repeat;
     background-size:cover;
     border-radius: 30px 30px 0 0;
 }
 .mainbox .meunbox .orderbtn{
-    position: relative;
     display: inline-block;
+    width: 178px;
     margin: -50px auto 0 auto;    
-    border-radius: 25px;
-}
-.mainbox .meunbox .orderbtn a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    position: relative;
-    width: 280px;
-    height: 80px;
-    border-radius: 25px;
-    font-size: 25px;
-    color: #fff;
-    background-color: #EB4040;
-    border: 2px solid #A32A2A;
-    z-index: 999;    
-}
-.mainbox .meunbox .orderbtn::after{
-    display: inline-block;
-    position: absolute;
-    content: "";
-    width: 280px;
-    height: 80px;
-    left: 0;
-    top: 5px;
+    border-radius: 20px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
-    background-color: #B32E2E;     
-    border-radius: 25px;
-    z-index: 1;
-}
-.mainbox .meunbox .orderbtn a:hover{
-    background-color: #B32E2E; 
-    top: 5px;
-}
-.mainbox .meunbox .orderbtn a img{
-    height: 30px;
+    font-size: 0;
 }
 .mainbox .meunbox .iconbox{
     width: 100%;
-    padding: 50px 20px 10px 20px;
+    padding: 10px 0 20px 0;
     text-align: center;
 }
 .mainbox .meunbox .iconbox ul{
@@ -172,32 +137,33 @@ input{
     display: inline-flex;
     gap: 10px;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
 }
 .mainbox .meunbox .iconbox ul li{
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    width: 100%;
-    height: 80px;
+    width: 31%;
+    height: 95px;
+    gap: 5px;
     justify-content: center;
-    border-radius: 20px;    
-    background-color: hsla(211, 44%, 38%, 0.397);
+    border-radius: 10px;    
 }
 .mainbox .meunbox .iconbox ul li:hover{
-    background-color: rgba(42, 75, 110, 0.5);
-    border: 1px #fff solid;
+    background-color: rgba(42, 75, 110, 0.35);
 }
 .mainbox .meunbox .iconbox ul li img{
     width: 33px;
 }
 .mainbox .meunbox .iconbox ul li a{
     color: #fff;
-    font-weight: 500;
+    font-weight: bold;
     display: inline-flex;
     align-items: center;
-    gap: 15px;
-    font-size: 25px;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 18px;
 }
 .page .topbox.circle-style{
     width: 100%;
@@ -237,11 +203,8 @@ input{
 .inputbox .box .input-style{
     width: 100%;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 500;
     
-}
-.inputbox .box input[type="date" i]{
-    display: initial;
 }
 /* --------------------內容 */
 .groupbox{
@@ -255,13 +218,6 @@ input{
 .bottom-hight{
     padding-bottom: 95px;
 }
-.btnbox{
-   margin: auto;
-}
-.btnbox .btn-style{
-    width: 150px;
-    color: #fff;
- }
 /* 內容小標題 */
 .groupbox .titlebox{
     width: 100%;
@@ -293,18 +249,17 @@ input{
 }
 .groupbox .listbox .title{
     color: #333333;
-    font-weight: bold;
+}
+.groupbox .listbox .textbox{
+    color: var(--btn-gray-deep);
 }
 .groupbox .listbox .textbox select{
     font-size: 18px;
     padding:4px 6px;
-    font-weight: bold;
+    font-weight: 500;
     border: 1px solid #D9D9D9;
     border-radius: 8px;
     color: #333333;
-}
-.groupbox .listbox .textbox img{
-    width: 100%;
 }
 /* page下方按鈕列表 */
 .groupbox .list_btnbox{
@@ -318,10 +273,10 @@ input{
 }
 .groupbox .list_btnbox li a{
     width: 100%;
-    height: 50px;
+    height: 55px;
     padding-left: 15px;
     color: #333333;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: #fff;
     display: flex;    
     gap: 10px;
@@ -340,186 +295,6 @@ input{
 .groupbox .list_btnbox li a.btn_edit{
     border: 2px solid #E60020;
 }
-/* 有圖的按鈕 */
-
-.groupbox .btngroup_img li:nth-child(1) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-01.svg)no-repeat;
-    background-size: auto 19px ;
-}
-.groupbox .btngroup_img li:nth-child(2) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-02.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(3) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-03.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(4) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-04.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(5) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-05.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(6) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-06.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(7) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-07.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(8) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-08.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(9) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-09.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(10) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-10.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(11) a::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-11.svg)no-repeat;
-    background-size: auto 19px;
-}
-
-.groupbox .btngroup_img li:nth-child(1) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-01-b.svg)no-repeat;
-    background-size: auto 19px ;
-}
-.groupbox .btngroup_img li:nth-child(2) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-02-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(3) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-03-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(4) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-04-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(5) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-05-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(6) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-06-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(7) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-07-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(8) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-08-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(9) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-09-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(10) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-10-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-.groupbox .btngroup_img li:nth-child(11) a:hover::before{
-    content: "";
-    display: inline-block;
-    width: 22px;
-    height: 19px;
-    background: url(../frontimages/page-icon-11-b.svg)no-repeat;
-    background-size: auto 19px;
-}
-
 .overflowbox-y{
     overflow-y: scroll;
     height: calc(100% - 60px);
@@ -543,12 +318,12 @@ input{
 /*資料填寫*/
 .conterbox .groupbox .inputbox{
     display: flex;
-    gap: 20px;   
+    gap: 10px;   
     flex-direction: column;
 }
 .conterbox .groupbox .inputbox li{
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 .conterbox .groupbox .inputbox .box{
     display: flex;
@@ -556,15 +331,14 @@ input{
     flex-direction: column;
 }
 .conterbox .groupbox .inputbox .box .title{
-    color: var(--btn-black-deep);
-    font-size: 18px;
+
 }
 .btn-archive{
     color: #fff;
-    font-weight: bold;
+    font-weight: 500;
 }
 
-/*資料*/
+/*過去資料*/
 .databox{    
     flex-direction: column;
     gap: 10px;
@@ -580,8 +354,11 @@ input{
     display: flex;
     gap: 10px;
 }
+.databox li .title{
+    color: var(--text-mute);
+}
 .databox li .box .input-style{
-    color: var(--btn-black-deep);
+    color: var(--text-mute);
     font-weight: normal;
     justify-content: flex-start;
 }

@@ -98,6 +98,8 @@ $("#reset").addEventListener("click", () => {
 // ====== 4) 路由：#/  與  #/p/:id ======
 window.addEventListener("hashchange", router);
 function router() {
+  // 每次執行路由切換時，強制將視窗捲動至最上方
+  window.scrollTo(0, 0);
   const hash = location.hash.replace(/^#\/?/, "");
   if (hash.startsWith("p/")) {
     const id = Number(hash.split("/")[1]);

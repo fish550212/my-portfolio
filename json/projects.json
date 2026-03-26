@@ -5,7 +5,7 @@
     "type": "企業網站",
     "year": 2025,
     "tags": ["多媒體", "淺色", "RWD"],
-    "url": "https://fish550212.github.io/my-portfolio/html/CCII/cut/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/ccii/cut/index.html",
     "thumb": "./file/ccll/ccll.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/ccll/ccll-index.jpg" },
@@ -119,7 +119,7 @@
     "type": "活動網站",
     "year": 2024,
     "tags": ["海科", "藍色", "RWD"],
-    "url": "https://fish550212.github.io/my-portfolio/html/mslc-clean/2024clean/cut/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-clean/2024clean/index.html",
     "thumb": "./file/mslc-clean/2024clean/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-clean/2024clean/index.jpg" },
@@ -132,7 +132,7 @@
     "type": "管理系統",
     "year": 2024,
     "tags": ["白色", "RWD", "業務"],
-    "url": "https://fish550212.github.io/my-portfolio/html/kirin/cut-/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/kirin/cut/index.html",
     "thumb": "./file/kirin/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/kirin/index.jpg" },
@@ -149,7 +149,7 @@
     "type": "企業網站",
     "year": 2023,
     "tags": ["藍色", "RWD", "科技"],
-    "url": "https://fish550212.github.io/my-portfolio/html/woodpecker/cut-ENG/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/woodpecker/cutENG/index.html",
     "thumb": "./file/woodpecker/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/woodpecker/index.jpg" },
@@ -162,21 +162,21 @@
   },
   {
     "id": 11,
-    "name": "EverStyle柏泰食品",
+    "name": "everstyle柏泰食品",
     "type": "企業網站",
     "year": 2022,
     "tags": ["白色", "RWD", "食品"],
-    "url": "https://fish550212.github.io/my-portfolio/html/everStyle/web/cut/index.html",
-    "thumb": "./file/everStyle/index.jpg",
+    "url": "https://fish550212.github.io/my-portfolio/html/everstyle/web/cut/index.html",
+    "thumb": "./file/everstyle/index.jpg",
     "layouts": [
-      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/everStyle/index.jpg" },
-      { "key": "page-company", "title": "公司介紹", "path": "page-company.html", "kind": "Content", "thumb": "./file/everStyle/page-company.jpg" },
-      { "key": "page-companyhistory", "title": "公司沿革", "path": "page-companyhistory.html", "kind": "Content", "thumb": "./file/everStyle/page-companyhistory.jpg" },
-      { "key": "page-quality", "title": "品質管理", "path": "page-quality.html", "kind": "Content", "thumb": "./file/everStyle/page-quality.jpg" },
-      { "key": "page-application", "title": "服務項目", "path": "page-application.html", "kind": "Content", "thumb": "./file/everStyle/page-application.jpg" },
-      { "key": "page-commodity", "title": "香料系列", "path": "page-commodity.html", "kind": "Content", "thumb": "./file/everStyle/page-commodity.jpg" },
-      { "key": "page-color", "title": "著色劑系列", "path": "page-color.html", "kind": "Content", "thumb": "./file/everStyle/page-color.jpg" },
-      { "key": "page-contact", "title": "聯絡我們", "path": "page-contact.html", "kind": "contactus", "thumb": "./file/everStyle/page-contact.jpg" }
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/everstyle/index.jpg" },
+      { "key": "page-company", "title": "公司介紹", "path": "page-company.html", "kind": "Content", "thumb": "./file/everstyle/page-company.jpg" },
+      { "key": "page-companyhistory", "title": "公司沿革", "path": "page-companyhistory.html", "kind": "Content", "thumb": "./file/everstyle/page-companyhistory.jpg" },
+      { "key": "page-quality", "title": "品質管理", "path": "page-quality.html", "kind": "Content", "thumb": "./file/everstyle/page-quality.jpg" },
+      { "key": "page-application", "title": "服務項目", "path": "page-application.html", "kind": "Content", "thumb": "./file/everstyle/page-application.jpg" },
+      { "key": "page-commodity", "title": "香料系列", "path": "page-commodity.html", "kind": "Content", "thumb": "./file/everstyle/page-commodity.jpg" },
+      { "key": "page-color", "title": "著色劑系列", "path": "page-color.html", "kind": "Content", "thumb": "./file/everstyle/page-color.jpg" },
+      { "key": "page-contact", "title": "聯絡我們", "path": "page-contact.html", "kind": "contactus", "thumb": "./file/everstyle/page-contact.jpg" }
     ]
   },
   {
