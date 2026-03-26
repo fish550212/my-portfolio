@@ -1,8 +1,0 @@
-/*列印板型*/
-@media print {
-@page{
-size:auto;/*列印紙張大小*/
-margin:0mm;/*列印邊框間距*/
-}
-
-}
