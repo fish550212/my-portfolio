@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+.mubg {
+    /*background-color:#999;*/
+    margin: 10px 10px 10px 10px;
+    color: #000;
+}
+#menu_list>.container {
+    width: 100%;
+    text-align: left;
+    font-size: 130%;
+    color: #000;
+    background: rgba(154, 154, 154, 0.1);
+}
+
+#menu_list>.container .menunoclose,
+#menu_list>.container .menuTitle {
+    position: relative;
+    margin: 0 auto 1px auto;
+    padding: 11px 0 9px 20px;
+    color: #fff;
+    font-size: 110%;
+    /*background-color: #0076a8;*/
+    /*background: linear-gradient(#0076a8 50%, #008fcc 100%);*/
+    cursor: pointer;
+    background-color: #5e5e5e;
+    background-size: 15px auto;
+    background-position: 20px 11px;
+    background-repeat: no-repeat;
+    font-weight: bold;
+}
+
+#menu_list>.container .menuTitle img {
+    width: 18px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#menu_list>.container .menuTitle a {
+    color: #fff;
+    text-decoration: none
+}
+
+
+#menu_list>.container .menuTitle .down {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    width: 10px;
+    height: 6px;
+    background: url(../argterimages/leftmeun_btn.png)no-repeat;
+    background-size: 10px 6px;
+}
+
+
+#menu_list>.container .menunoclose a font {
+    color: #000;
+}
+
+#menu_list>.container .menuContent {
+    font-family: "jf-openhuninn", "·L³n¥¿¶ÂÅé", Arial, Helvetica, sans-serif;
+    /*background-color: #0076a8;*/
+}
+
+#menu_list>.container .menuContent ul {
+    margin-top: 0px;
+    list-style: none;
+    margin-left: 20px;
+    margin-right: 2px;
+    font-size: 105%;
+}
+
+#menu_list>.container .menuContent ul li {
+    width: 90%;
+    height: auto;
+    color: #000;
+
+    padding-left: 20px;
+    margin: 10px 0;
+    background: url(../argterimages/icon.gif) no-repeat left center;
+    list-style-position: outside;
+}
+
+#menu_list>.container .menuContent ul li:hover {
+    width: 90%;
+    height: auto;
+}
+
+#menu_list>.container .menuContent ul li .tfont {
+    background-position: left center;
+    /*padding-left: 15px;*/
+    /*margin-left:-5px;*/
+    /*background-image: url(../images/menu_icon.png);list-style-type: disc;*/
+    background-repeat: no-repeat;
+    color: #000;
+    line-height: 120%;
+}
+
+#menu_list>.container .menuContent ul li .tfont a {
+    color: #000;
+    text-decoration: none;
+}
+
+#menu_list>.container .menuContent ul li .tfont a:hover,
+#menu_list>.container .menuContent ul li .tfont a:active,
+#menu_list>.container .menuContent ul li .tfont a:focus {
+    color: #C00;
+    text-decoration: none;
+}

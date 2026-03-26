@@ -1,0 +1,173 @@
+﻿@charset "utf-8";
+
+/*---共用----------------------------------------------*/
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family:'everstyleFont', Arial, Helvetica, "微軟正黑體", sans-serif;}
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote {margin:0;padding:0;vertical-align:top;text-align:left;font-family:'everstyleFont' ,Arial, Helvetica, "微軟正黑體", sans-serif ;}
+
+h1,h2,h3,h4,h5,h6{margin:3px 0px;padding:3px 0px;font-family:'everstyleFont',Arial, Helvetica, "微軟正黑體", sans-serif;}
+
+body{ 
+    font-family:'everstyleFont', Arial , Helvetica, "微軟正黑體", sans-serif ;
+	-webkit-text-size-adjust:none;
+	width:100%;min-width:320px;
+	height:100%;margin:0 auto;
+	font-size:1.2rem;
+}
+
+@font-face {
+	font-family:everstyleFont;
+	src: url('../enfont/Raleway-VariableFont_wght.ttf') format('woff2'),
+		 url('../enfont/Raleway-VariableFont_wght.ttf') format('woff');
+  } 
+/*-------------------------------------------------------------*/
+a{text-decoration: none;}
+.bottommenu{ display:none;}
+.clear_fix{clear: both;}
+.ulul{list-style-type: disc;list-style-position: outside;margin:15px 0; margin-left:30px;font-size:90%; }
+
+.clear-fix{clear: both;}
+/*-------------------------------------------------------------*/
+/*======輸入框==============*/
+.text_input{ padding:4px 3px; margin:2px; font-size:100%; vertical-align:middle;}
+.select_style{ font-size:100%; padding:0; padding:2px 5px 8px 5px;vertical-align:middle; margin-right:8px;}
+
+/*======btn_input======*/
+.btn_input{color:#FFF; border-style:none; width: auto; text-align:center; vertical-align:middle; cursor:pointer; padding:5px 12px; margin:2px;font-size:100%;border-radius:5px;background:#965A5B;}
+.btn_input:hover{background:#AAAAAA;}
+/*======btn_input=end======*/
+
+select{ padding:2%; font-size:90%;}
+.alignright{ float:right;}
+.alignleft{ float:left;}
+.W100{ width:100%;}.W90{ width:90%;}.W95{ width:95%;}
+.W80{ width:80%;}.W85{ width:85%;}.W79{ width:79%;}.W75{ width:75%;}
+.W70{ width:70%;}.W65{ width:65%;}.W60{ width:60%;}.W55{ width:55%;}
+.W50{ width:50%;}.W45{ width:45%;}.W40{ width:40%;}.W35{ width:35%;}
+.W30{ width:30%;}.W25{ width:25%;}.W20{ width:20%;}.W15{ width:15%;}
+.W10{ width:10%;}.W5{ width:5%;}
+.grayline{ border-top:1px solid #eee; padding-bottom:20px; clear:both;}
+
+/*======buttonbox======*/
+.buttonbox{ width:100%; margin:10px auto; color:#FFF; text-align:center; clear:both;}
+.buttonbox .btnbtn{color:#FFF; border-style:none; min-width:150px; height:36px; text-align:center; cursor:pointer; margin:2px; font-size:100%; border-radius:5px;
+background:#9E5C5D;}
+.buttonbox .btnbtn:hover{background:#7B3A3B;}
+
+.buttonbox .btnbtn_next{color:#FFF; border-style:none; min-width:150px; height:36px; text-align:center; cursor:pointer; margin:2px; font-size:100%; border-radius:5px;
+background:#ED9332;}
+.buttonbox .btnbtn_next:hover{background:#A87226;}
+
+.buttonbox a{ display:inline-block;color:#FFF; border-style:none; min-width:150px; height:36px; text-align:center; vertical-align:middle; cursor:pointer; margin:2px; font-size:100%; border-radius:5px;
+background:#272727;.background:#272727; text-decoration:none; line-height:36px;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;
+background:linear-gradient(#535353 50%, #272727 50%);
+background: -webkit-linear-gradient(#535353 50%, #272727 50%);
+background: -ms-linear-gradient(#535353 50%, #272727 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#272727',GradientType=0);}
+.buttonbox a:hover{background:#000;}
+
+.buttonbox01{ width:100%; margin:-10px auto 10px auto; color:#FFF; text-align:center; clear:both;}
+.buttonbox01 .FB{  display:inline-block;background:#4462a0 url(../frontimages/icon_fb.svg) 16px center no-repeat ; background-size:20px auto;color:#FFF; border-style:none;min-width:150px; height:36px; text-align:center; vertical-align:middle; cursor:pointer; border-radius:5px;text-decoration:none; line-height:36px;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important; margin:2px;}
+.buttonbox01 .FB:hover{ background-color:#2b457b;}
+.buttonbox01 .GG{  display:inline-block;background:#d84938 url(../frontimages/icon_gg.svg) 16px center no-repeat ; background-size:20px auto;color:#FFF; border-style:none; min-width:150px; height:36px; text-align:center; vertical-align:middle; cursor:pointer; border-radius:5px;text-decoration:none; line-height:36px;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important; margin:2px;}
+.buttonbox01 .GG:hover{ background-color:#bc3123;}
+/*======buttonbox=end=====*/
+
+/*0502--topfrom麵包屑--*/
+#topfrom{width:100%;height:auto; overflow:hidden;margin:0px auto;font-size:90%;text-align:left; /*float:left; */margin-top:30px;}
+#topfrom a{ color:#333; text-decoration:none; padding:0px 3px; }
+#topfrom a:hover{ color:#333; text-decoration: underline;}
+/*頁數*/
+.pagenumber{ clear:both; text-align:center; padding:10px 0; font-family: Arial, Helvetica, sans-serif;}
+.pagenumber a{ padding:10px 16px; color:#0099bd; text-decoration:none; font-weight:bold; font-size:120%; background-color: transparent; display:inline-block;}
+.pagenumber a:hover,.pagenumber .on,.pagenumber .btn{/*background-color:#C0B4B0;*/ color:#000; }
+.pagenumber a.aw{ color:#626262; font-weight:bold;font-family: Arial, Helvetica, sans-serif;}
+.pagenumber a.aw:hover{ background-color:#E7E7E7; color:#626262;}
+.pagenumber a.aw img{ vertical-align:middle;}
+.pagenumber .on,.pagenumber .on:hover{/*background-color:#D7D7D7;*/ border-bottom:2px solid #CCC;color:#555555; }
+.pagenumber a.btn{ padding:10px 20px; margin:0 5px;color:#666;text-decoration:none; font-weight:bold;  display:inline-block;}
+.pagenumber a.btn:hover{background-color:#eee;color:#333;}
+/*核選方塊*/
+.checkboxcenter{ width:100%; margin:0px auto 10px auto; padding-top:10px; text-align:center; clear:both; color:rgba(255,255,255,0.6); border-top:1px dashed rgba(255,255,255,0.4);}
+.checkboxcss{ width:20px; height:20px;}
+
+/*點閱數*/
+.count{ text-align:right; color:#757575; margin-top:-10px;line-height:100%; }
+
+/*-----表單樣式--------------------*/
+#css_table { display:table; width:100%; letter-spacing:normal;font-size:120%;}
+#css_table .css_tr { display: table-row;width:100%;.border-bottom:#188fa7 2px solid;.display: inline-block;}
+#css_table .css_td { display: table-cell;padding:10px 10px;min-width: auto;.display:block;border-bottom:#eee 1px solid;text-align: left; font-size:95%; color:#3B3B3B; }
+#css_table .css_tr:nth-child(odd){ background-color:#f5f5f5;.background-color:#EEE;.display: inline-block;}
+
+#css_table .css_tr:first-child {  font-weight:bold; color:#FFFFFF;_display: none;.display: none;}
+#css_table .css_tr:first-child a{ text-decoration:none;color:#666;}
+#css_table .css_tr:first-child a:hover{ text-decoration:none; color:#188fa7;}
+
+#css_table .line{background-color:#000;color:#fff;}
+#css_table .title{.display: block;color:#0277bd;font-size:100%;}
+#css_table .css_td a.link{ color:#ff8a00;}
+
+#css_table .css_td .tabbtn{background-color:#000; text-decoration:none; font-weight:bold;color:#FFF; font-size:100%; padding:5px 5px; border-radius:5px; text-align:center;}
+#css_table .css_td .tabbtn a{ color:#FFFFFF; font-size:14px; }
+#css_table .css_td .tabbtn:hover{text-decoration:none;}
+
+#css_table .css_td a img{ vertical-align:middle; border:0;}
+#css_table .css_tr .css_td.immg { width:110px;}
+#css_table .css_tr .css_td.immg img{ margin:1px;}
+#css_table .css_tr .css_td.none { display:block;}
+#css_table .css_td b{ color:#0277bd;display:none;.display:inline;}
+#css_table .css_td .spanbox{ width: auto; display:inline-block;}
+
+/* == 手機版型區 =============================== */
+
+@media screen and (max-width: 767px) {
+
+/*--topfrom麵包屑--*/
+#topfrom{width:96%;height:auto; overflow:hidden;margin:5px auto;font-size:90%;text-align:left; float: none; margin-top:0px;}
+#topfrom a{  text-decoration:none; padding:0px 3px; }
+#topfrom a:hover{ color:#333; text-decoration: underline;}
+
+/*-----表單樣式--------------------*/
+#css_table { display:table; width:100%; letter-spacing:normal;}
+#css_table .css_tr { display: block;width:100%;.border-bottom:#188fa7 2px solid;.display: inline-block;border:#eee 1px solid;}
+#css_table .css_td { display: block;padding:5px 5px; min-width: auto; height:auto;.display: inline-block;border-bottom:#ccc 0px solid; text-align: left; font-size:95%; overflow:hidden; }
+#css_table .css_tr:nth-child(odd){ background-color:#f6f6f6;.background-color:#f6f6f6;.display: inline-block;}
+
+#css_table .css_tr:first-child {  font-weight:bold; color:#FFFFFF;_display: none;.display: none;display: none;}
+#css_table .css_tr:first-child a{ text-decoration:none;color:#666;}
+#css_table .css_tr:first-child a:hover{ text-decoration:none; color:#188fa7;}
+
+#css_table .line{background-color:#4e4e4e;color:#fff;}
+#css_table .title{.display: block;color:#0277bd;font-size:100%;}
+#css_table .css_td a.link{ color:#ff8a00;}
+
+#css_table .css_td .spanbox .tabbtn{text-decoration:none; font-weight:bold;color:#FFF; font-size:90%; padding:5px 10px; border-radius:5px; text-align:center;
+background:#272727;.background:#272727; text-decoration:none; line-height:100%;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;
+background:linear-gradient(#535353 50%, #272727 50%);
+background: -webkit-linear-gradient(#535353 50%, #272727 50%);
+background: -ms-linear-gradient(#535353 50%, #272727 50%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#535353', endColorstr='#272727',GradientType=0);}
+#css_table .css_td .spanbox .tabbtn a{ color:#FFFFFF; font-size:14px; }
+#css_table .css_td .spanbox .tabbtn:hover{text-decoration:none;background:#000;}
+
+#css_table .css_td a img{ vertical-align:middle; border:0;}
+#css_table .css_td .spanbox .immg { width:110px;}
+#css_table .css_td .spanbox .immg img{ margin:1px;}
+#css_table .css_td .spanbox .none { display:block;}
+#css_table .css_td b{ width:24%;color:#000; vertical-align:top; text-align:right; margin-right:2%;display:inline-block;}
+#css_table .css_td .spanbox{ width:72%; height:auto; display:inline-block; overflow:hidden;}
+
+	}
+	
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+/*--topfrom麵包屑--*/
+#topfrom{width:96%;height:auto; overflow:hidden;margin:0px auto; padding:5px 0px; font-size:90%;}
+#topfrom a{ text-decoration:none; padding:0px 3px; }
+#topfrom a:hover{ color:#333; text-decoration: underline;}
+#topfrom .membericon{width: 50%; float:right;font-size:90%; color: rgba(0,0,0,0.7); font-weight:normal; text-align:right;}
+#topfrom .membericon img{width:5%; vertical-align:middle;}
+#topfrom .membericon a{ color:#000; text-decoration:underline;}
+#topfrom .membericon  strong{font-size:110%;}
+
+}

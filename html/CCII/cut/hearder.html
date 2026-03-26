@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Auto-hide Header + Smart Anchor Offset</title>
+<style>
+  :root { --header-h: 64px; }
+
+  html { scroll-padding: 70px;scroll-behavior: smooth; }
+  body { margin: 0; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto; }
+
+  /* 固定置頂的 header */
+  header.site-header {
+    position: sticky;       /* 支援原生沾黏 */
+    top: 0;                 /* 讓 sticky 生效 */
+    z-index: 9999;
+    height: var(--header-h);
+    background: #0b0b0b;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 16px;
+    transform: translateY(0);               /* 顯示 */
+    transition: transform 200ms ease-out;   /* 平滑隱藏/顯示 */
+    will-change: transform;
+  }
+  /* 隱藏狀態：往上推走 */
+  .site-header.header--hidden {
+    transform: translateY(calc(-1 * var(--header-h)));
+  }
+
+  /* 內容區，避免初載時被蓋到 */
+  main { padding-top: 0; }
+
+  nav a { color: #fff; text-decoration: none; margin-right: 12px; }
+
+  section {
+    min-height: 100vh;
+    padding: 24px;
+    border-top: 1px solid #ddd;
+  }
+
+  /* 尊重使用者降低動效偏好 */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .site-header { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <nav>
+    <a href="#s1">#1</a>
+    <a href="#s2">#2</a>
+    <a href="#s3">#3</a>
+  </nav>
+</header>
+
+<main>
+  <section id="s1"><h2>Section 1</h2><p>內容 1</p></section>
+  <section id="s2"><h2>Section 2</h2><p>內容 2</p></section>
+  <section id="s3"><h2>Section 3</h2><p>內容 3</p></section>
+</main>
+
+<script>
+(() => {
+  const header = document.getElementById('siteHeader');
+  const setVar = () => document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+  setVar();
+  addEventListener('resize', () => { setVar(); });
+
+  // ---- 自動隱藏/顯示 header（下捲隱藏，上捲顯示）----
+  let lastY = window.scrollY;
+  let ticking = false;
+  const THRESHOLD = 8; // 捲動門檻，避免抖動
+  const MIN_HIDE_START = header.offsetHeight; // 過了 header 高度才允許隱藏
+
+  function onScroll() {
+    const y = window.scrollY;
+    const dy = y - lastY;
+
+    // 下捲且超過門檻，並且離開頁面頂端一定距離後才隱藏
+    if (dy > THRESHOLD && y > MIN_HIDE_START) {
+      header.classList.add('header--hidden');
+    }
+    // 上捲且超過門檻 -> 顯示
+    else if (dy < -THRESHOLD) {
+      header.classList.remove('header--hidden');
+    }
+
+    lastY = y;
+    ticking = false;
+  }
+
+  addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(onScroll);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // ---- 錨點定位：僅在 header 可見時扣掉高度 ----
+  function scrollToTarget(el, smooth = true) {
+    const rectTop = el.getBoundingClientRect().top + window.pageYOffset;
+    const headerVisible = !header.classList.contains('header--hidden');
+    const offset = headerVisible ? header.offsetHeight : 0; // 只有可見才扣
+    const top = rectTop - offset;
+    window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
+  }
+
+  // 1) 攔截站內錨點點擊
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = decodeURIComponent(a.getAttribute('href').slice(1));
+    if (!id) return;
+    const target = document.getElementById(id) || document.querySelector(`[name="${CSS.escape(id)}"]`);
+    if (!target) return;
+
+    e.preventDefault();
+    // 保留網址 hash（利於返回/前進）
+    history.pushState(null, '', '#' + id);
+    requestAnimationFrame(() => scrollToTarget(target, true));
+  });
+
+  // 2) 外頁帶 hash 進來／或之後 hash 變更
+  function adjustFromHash() {
+    if (!location.hash) return;
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id) || document.querySelector(`[name="${CSS.escape(id)}"]`);
+    if (!target) return;
+
+    // 等布局穩定後再修正，避免圖片/字型造成位移
+    requestAnimationFrame(() => requestAnimationFrame(() => scrollToTarget(target, false)));
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', adjustFromHash, { once: true });
+  } else {
+    adjustFromHash();
+  }
+  addEventListener('load', adjustFromHash);
+  addEventListener('hashchange', () => { requestAnimationFrame(adjustFromHash); });
+})();
+</script>
+
+</body>
+</html>

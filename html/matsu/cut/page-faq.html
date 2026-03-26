@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>連江縣政府網路E櫃台</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- 電影宣傳輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 電影宣傳輪播 -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+        <div class="logo">
+          <a href="index.html" target="_self" title="回首頁">
+            <img src="frontimages/logo.png" alt="LOGO" />
+          </a>
+          <div class="title">網路E櫃台</div>
+        </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="index.html" title="申辦服務">申辦服務</a>
+            </li>
+            <li>
+              <a href="page-applyquery.html" title="進度查詢">進度查詢</a>
+            </li>
+            <li>
+              <a href="page-faq.html" title="常見問答">常見問答</a>
+            </li>
+            <li>
+              <a href="#" title="使用教學">使用教學</a>
+            </li>
+            <li>
+              <a href="page-login.html" title="登入">登入</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="index.html" title="申辦服務">申辦服務</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-applyquery.html" title="進度查詢">進度查詢</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-faq.html" title="常見問答">常見問答</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="使用教學">使用教學</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-login.html" title="登入">登入</a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!----------------內容-->
+      <div class="articlebox">
+        <div class="page-section list_section">
+          <!--topfrom麵包屑-->
+          <!-- <div class="" id="topfrom">
+            <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+            <a href="index.html" title="首頁">首頁</a>
+            &gt;
+            <a href="page-list.html" title="民政社會處">民政社會處</a>
+            &gt;
+            <a href="page-list-content.html" title="戶籍謄本申辦作業">戶籍謄本申辦作業</a>
+          </div> -->
+          <!--topfrom麵包屑-->
+          <div class="sectionbox listcenter_box faqlist_box">
+            <div class="section-title flex-center">本平台提供哪些服務</div>
+            <ul class="list_group">
+              <li class="formlist">
+                <div class="title">
+                  關於連江縣政府網路E櫃台
+                  <button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button>
+                </div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>本平台目前提供哪些服務?</b>
+                    本平台提供本府所有申辦服務說明，並提供線上、臨櫃、郵寄等申辦方式，還有線上申辦案件進度查詢、線上繳費及表單資料下載功能。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="title">下載 My Data<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>My Data是什麼?</b>
+                    國家發展委員會建置「個人化資料自主運用(My
+                    Data)平臺」，以「民眾自主同意、資料安全取得」為核心理念，提供民眾多元化資料下載、線上服務及臨櫃服務，讓原本就屬於民眾的資料，重新回歸於民，透過本人單次身分驗證及線上同意，便可在本平臺中取得政府機關單位所保存之個人資料，並可單次即時將這些資料提供給政府機關或您信賴的企業使用。
+                  </div>
+                  <div class="text-input-box">
+                    <b>怎麼下載 My Data?</b>
+                    以對應之「適用身分驗證方式」自行於My
+                    Data平臺下載個人資料集，包括個人戶籍、戶政國民身分證影像、地籍及實價、勞保投保、財產、個人所得、車駕籍等資料。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="title">線上申請<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>線上申請有什麼好處?</b>
+                    本平台提供24小時受理線上申請，部份申請文件可透過My Data平臺授權取回，民眾不用再請假往返奔波至臨櫃申請，還可以使用手機上網申請哦！
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="section-title flex-center">如何使用本平台</div>
+            <ul class="list_group">
+              <li class="formlist">
+                <!-- <b>下載 My Data</b> -->
+                <div class="title">申請前準備<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>如何找到想要申請的服務？</b>
+                    可以利用機關分類，也可輸入關鍵字搜尋，並點選分類項目，快速找到想要申請的服務，本平台提供的申辦服務，皆有詳細申辦說明，如服務對象、應備證件、處理期限等內容。
+                  </div>
+                  <div class="text-input-box">
+                    <b>如何下載我要的文件？</b>
+                    點選想要申辦服務，點擊文件即可直接瀏覽文件內容，請勾選要下載的文件後，再點擊檔案下載，系統將自動打包成一壓縮檔供您下載。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="title">怎麼操作<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>如何線上申請?</b>
+                    本平台提供24小時受理線上申請，部份申請文件可透過My Data平臺授權取回，民眾不用再請假往返奔波至臨櫃申請，還可以使用手機上網申請哦！
+                  </div>
+                </div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>進行線上申辦過程中，有疑問時該怎麼辦?</b>
+                    各項申辦服務說明中，皆有提供服務窗口，可於上班時間撥打詢問；如有操作問題，可撥打市府總機：(06)299-1111。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="title">如何補正資料?<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>如何補正資料?</b>
+                    當您申請資料有遺漏或不清楚時，本平台將寄信到您提供郵件信箱通知你，再上本平台點選<進度查詢>，透過會員登入認證成功後，即點選該申請案進行補正。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="title">如何聯繫承辦機關?<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>如何聯繫承辦機關?</b>
+                    本平台提供的線上申請服務，可以點選<進度查詢>並透過會員登入查詢申請進度，此服務僅限於線上申請相關服務。
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="section-title flex-center">Mydata常用驗證方式</div>
+            <ul class="list_group">
+              <li class="formlist">
+                <div class="title">自然人憑證<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box">
+                    <b>什麼是自然人憑證？</b>
+                    由內政部憑證管理中心所簽發。辦理了自然人憑證以後，未來你要申請什麼網路業務都不用再跑政府機關，只要在家上網就可以經由網際網路享受政府E化服務，降低了個人資料外洩的危險。
+                  </div>
+                  <div class="text-input-box">
+                    <b>怎麼申請自然人憑證</b>
+                    申請人攜帶本人身分證（請勿攜帶駕駛執照等證明文件）親赴鄰近家或上班地方的戶所櫃檯申辦，繳驗身分證審驗資料，填寫申請相關資料（如：姓名、身分證字號、電子郵件...等），填妥後即可領取自然人憑證ＩＣ卡，即完成申請。
+                  </div>
+                </div>
+              </li>
+              <li class="formlist">
+                <div class="formlist_in flex_column">
+                  <div class="title">行動自然人憑證(簡稱TW Fido)<button class="advanced-search">
+                    <img src="frontimages/icon-01.svg" alt="" />
+                  </button></div>
+                  <div class="text-input-box">
+                    <b>行動自然人憑證(簡稱TW Fido)</b>
+                    行動自然人憑證(簡稱TW FidO)是一種能提供安全且便利的登入方式，
+                    讓民眾使用自然人憑證註冊並綁定手機，以儲存在您裝置內的生物特徵（指紋或臉部），進行身分驗證，驗證成功後即可登入並使用多項政府提供的服務。
+                  </div>
+
+                  <div class="text-input-box">
+                    <b>哪裡可以下載行動自然人憑證</b>
+                    ios的用戶可以至APP store，Android用戶可以至Google
+                    Play商店搜尋關鍵字：「行動自然人憑證」，即可下載安裝行動自然人憑證的APP進行下載。
+                  </div>
+
+                  <div class="text-input-box">
+                    <b>如何綁定手機？</b>
+                    先以電腦進入「行動自然人憑證」網站→點選「註冊/綁定」，以「自然人憑證」登入→登入成功後，填寫電子信箱、手機號碼→填寫完畢確認後，畫面顯示QR
+                    code→開啟行動自然人憑證後點選「註冊裝置」，掃描畫面產生的QR
+                    code→掃描後，確認您將啟用生物特徵識別，並進行驗證→驗證成功後，完成註冊，即可使用行動身分識別登入功能。
+                  </div>
+
+                  <div class="text-input-box">
+                    <b>使用TW Fido生物辨識、臉部辨識是否存在風險?</b>
+                    TWFido並不會存取您的生物特徵。登入進行生物特徵驗證時，是利用您原本儲存於手機的臉部或指紋，確認為本人後才會啟動後續的驗證機制，加強您個人隱私的安全性。
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <script>
+              $(document).on("ready", function () {
+                $(document).on("click", ".advanced-search", function () {
+                  // e.preventDefault();
+                  $(this).closest(".formlist").toggleClass("active");
+                });
+              });
+            </script>
+          </div>
+        </div>
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <div class="footer-text">
+          <div class="title">連江縣政府網路E櫃台</div>
+          <div class="f-menu">
+            <a href="page-content-information.html">資安及隱私權宣告</a>
+            <a href="page-content-privacy.html">隱私權政策聲明</a>
+          </div>  
+          <!-- <div class="text">
+            <p class="copyright">
+              本網站所有著作權均屬連江縣政府網路E櫃台所有，非經允許，不得任意轉載 Copyright © 2025 CaiChang International, Inc. All Rights Reserved.
+            </p>
+          </div> -->
+        </div>
+        <div class="footer-link">
+          <p>
+            訪客人數
+            <b>19980742</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

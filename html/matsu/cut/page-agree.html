@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>連江縣政府網路E櫃台</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- 電影宣傳輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 電影宣傳輪播 -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+        <div class="logo">
+          <a href="index.html" target="_self" title="回首頁">
+            <img src="frontimages/logo.png" alt="LOGO" />
+          </a>
+          <div class="title">網路E櫃台</div>
+        </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="index.html" title="申辦服務">申辦服務</a>
+            </li>
+            <li>
+              <a href="page-applyquery.html" title="進度查詢">進度查詢</a>
+            </li>
+            <li>
+              <a href="page-faq.html" title="常見問答">常見問答</a>
+            </li>
+            <li>
+              <a href="#" title="使用教學">使用教學</a>
+            </li>
+            <li>
+              <a href="page-login.html" title="登入">登入</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="index.html" title="申辦服務">申辦服務</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-applyquery.html" title="進度查詢">進度查詢</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-faq.html" title="常見問答">常見問答</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="使用教學">使用教學</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-login.html" title="登入">登入</a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!----------------內容-->
+      <div class="articlebox">
+        <div class="page-section list_section">
+          <!--topfrom麵包屑-->
+          <!-- <div class="" id="topfrom">
+            <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+            <a href="index.html" title="首頁">首頁</a>
+            &gt;
+            <a href="page-list.html" title="民政社會處">民政社會處</a>
+            &gt;
+            <a href="page-list-content.html" title="戶籍謄本申辦作業">戶籍謄本申辦作業</a>
+          </div> -->
+          <!--topfrom麵包屑-->
+          <div class="sectionbox listcenter_box faqlist_box">
+            <!-- <div class="section-title flex-center">網路申請同意書</div> -->
+            <ul class="list_group list_group_use">
+              <li class="formlist">
+                <div class="title">連江縣政府網路E櫃台-網路申請同意書</div>
+                <div class="formlist_in flex_column">
+                  <div class="text-input-box overflowbox">
+                    利用「連江縣政府網路E櫃台」網路申請服務，如未依受理機關約定，於一定期間內補足申請案件所需證明文件時，申請人同意受理機關得註銷該申請案。
+                    <br />
+                    <br />
+
+                    申請人於辦理案件申請時同意詳填電子信箱及聯絡電話等資訊，以利資料處理，若因申請人未填寫個人通訊資訊或資訊填寫錯誤致受理機關無法正確完成申請案件處理時，該申請案件延遲處理或無法處理之後果由申請人自行承擔。
+                    <br />
+                    <br />
+
+                    申請人用「連江縣政府網路E櫃台」網路申請內容之傳訊，如經不可抗拒之外力(如斷電、斷線、網路傳輸壅塞等)干擾而導致傳送時間延遲，甚或無法接收、傳送致影響申請人權益時，各受理機關不負任何責任。
+                    <br />
+                    <br />
+
+                    申請人使用本網路申請服務，有下列情形之一者，連江縣政府得終止其使用，並由申請人負相關之法律責任：
+                    <br />
+                    <br />
+
+                    <ol>
+                      <li>有竊取、更改、破壞他人資訊情事者。</li>
+                      <li>有擅自複製他人資訊轉售、轉載情事者。</li>
+                      <li>散播電腦病毒者。</li>
+                      <li>有盜用他人資訊申請案件者。</li>
+                      <li>擷取非經所有者正式開放或授權之資源。</li>
+                      <li>其他有危害通信或違反法令之情事者。</li>
+                    </ol>
+                     <br />
+
+                    申請人因本同意書第6點之規定而終止其「連江縣政府網路E櫃台」辦理申請案件權利時，得提出申訴，如經「連江縣政府申辦入口網」系統管理機關調查認為有理由時，得恢復其權利。
+                    <br />
+                    <br />
+
+                    按下「同意」鍵後，視同申請人已仔細審閱明白上述各條規定，並完全同意遵守各條款之約定。
+                  </div>
+                </div>
+                <div class="btnbox">
+                  <input type="button" value="不同意" class="input-style" />
+                  <input type="button" value="同意" class="input-style" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <div class="footer-text">
+          <div class="title">連江縣政府網路E櫃台</div>
+          <div class="f-menu">
+            <a href="#">資安及隱私權宣告</a>
+            <a href="#">著作權聲明</a>
+          </div>
+          <!-- <div class="text">
+            <p class="copyright">
+              本網站所有著作權均屬連江縣政府網路E櫃台所有，非經允許，不得任意轉載 Copyright © 2025 CaiChang International, Inc. All Rights Reserved.
+            </p>
+          </div> -->
+        </div>
+        <div class="footer-link">
+          <p>
+            訪客人數
+            <b>19980742</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

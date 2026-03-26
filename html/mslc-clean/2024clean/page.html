@@ -1,0 +1,530 @@
+<html class=" jwlxvg idc0_350">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>國立海洋科技博物館-淨灘網站</title>
+    <link href="cleancss/index.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="http://nmmstlearning.netdoing.com.tw:8888/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://nmmstlearning.netdoing.com.tw:8888/dist/aos.css" />
+    <script>
+        function dokSubmit() {
+            if ($("#querykey").val() == "") {
+                alert('請輸入關鍵字!');
+            } else {
+                $("#queryForm").submit();
+            }
+
+        }
+
+        function mobdokSubmit() {
+            if ($("#querykey1").val() == "") {
+                alert('請輸入關鍵字!');
+            } else {
+                $("#querymobForm").submit();
+            }
+
+        }
+
+        $(document).ready(function () {
+            $(document).get(0).oncontextmenu = function () {
+                return false;
+            };
+        });
+    </script>
+
+
+    <script type="text/javascript" src="/js/date/js/jscal2.js"></script>
+    <script type="text/javascript" src="/js/date/js/lang/en.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/date/css/jscal2.css">
+    <link rel="stylesheet" type="text/css" href="/js/date/css/steel/steel.css">
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script>
+
+</head>
+
+<body style="" cz-shortcut-listen="true">
+    <!--header-->
+    <div class="groupbox">
+        <div class="header">
+            <div class="headerbox">
+                
+                <!--logo------------>
+                <p><a href="http://www.nmmst.gov.tw/" title="國立海洋科技博物館LOGO" class="logo">國立海洋科技博物館</a></p>
+                <!--toolbar--------->
+                <form name="queryForm" id="queryForm" method="post"
+                    action="http://nmmstlearning.netdoing.com.tw:8888/clean/searchall">
+                    <div class="toolbar">
+                        <ul class="toolbarmenu_1">
+                            <li class="fbbox">
+                                <a href="https://www.facebook.com/NMMST.TW" class="fb" title="FB(開新視窗)" target="_blank">
+                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/icon-fb.svg"
+                                        alt="fb(開新視窗)">
+                                </a>
+                            </li>
+                            <li class="search">
+                                <input class="search_input" type="text" id="querykey" name="querykey"
+                                    placeholder="全文檢索">
+                                <a href="javascript:void(0)">
+                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_search.svg"
+                                        alt="搜尋" onclick="dokSubmit();">
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="toolbarmenu">
+                            <li>
+                                <a href="http://nmmstlearning.netdoing.com.tw:8888/clean/index" title="回首頁">
+                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun01.svg"
+                                        alt="回首頁">
+                                    回首頁
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://nmmstlearning.netdoing.com.tw:8888/html/index" title="海科官網"><img
+                                        src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun02.svg"
+                                        alt="海科官網">海科官網</a>
+                            </li>
+                            <li>
+                                <a href="https://www.nmmst.gov.tw/chhtml/actionlist/556" title="學習中心行事曆">
+                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun03.svg"
+                                        alt="學習中心行事曆">學習中心行事曆</a>
+                            </li>
+                            <li>
+                                <a href="http://nmmstlearning.netdoing.com.tw:8888/clean/sitemap" title="網站導覽"><img
+                                        src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun04.svg"
+                                        alt="網站導覽">網站導覽</a>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+                <!--MOB-MENU---位置放<div class="headerbox">內--->
+                <!--手機選單-漢堡圖-->
+                <div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div>
+                <!--手機選單-END-->
+                <!-- Nav手機選單 -->
+                <link href="http://nmmstlearning.netdoing.com.tw:8888/mobmu/common_clean.css" rel="stylesheet">
+                <!--[if gte IE 9]><!-->
+                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery-2.1.3.min.js"></script>
+                <!--<![endif]-->
+                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery.mobile-1.4.5.custom.min.js">
+                </script>
+                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery.bxslider-4.1.1.min.js"></script>
+                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/common.js"></script>
+                <script src="http://nmmstlearning.netdoing.com.tw:8888/js/checkdata.js"></script>
+                <div class="nav-panel" id="nav">
+
+                    <h1 class="hidden-element">主選單</h1>
+
+                    <div class="search-panel clearfix">
+                        <form name="querymobForm" id="querymobForm" method="post"
+                            action="http://nmmstlearning.netdoing.com.tw:8888/clean/searchall">
+                            <input class="inText" type="text" id="querykey1" name="querykey1" placeholder="全文檢索"
+                                value="">
+                            <input class="submit gradient-blue" type="button" value="搜尋" onclick="mobdokSubmit();">
+                        </form>
+                    </div>
+                    <ul class="reset">
+                        <li class="nav-first">
+                            <h2><a title="連至淨灘介紹" href="#">淨灘介紹</a></h2>
+                            <div class="nav-second">
+                                <ul class="reset">
+                                    <li>
+                                        <h3><a title="連至淨灘緣由"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/486">淨灘緣由</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至ICC淨灘介紹"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/487">ICC淨灘介紹</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至海科館活動說明"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/488">海科館活動說明</a>
+                                        </h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h2><a title="連至淨灘過程"
+                                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/489">淨灘過程</a></h2>
+                        </li>
+                        <li class="nav-first">
+                            <h2><a title="連至我要淨灘" href="#">我要淨灘</a></h2>
+                            <div class="nav-second">
+                                <ul class="reset">
+                                    <li>
+                                        <h3><a title="連至我要借工具淨灘"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/toolapplynote/492">我要借工具淨灘</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至跟海科館淨灘"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/cleanindex/491">跟海科館淨灘</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至企業淨灘申請"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/bussapplynote/498">企業淨灘申請</a>
+                                        </h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <h2><a title="連至成果記錄"
+                                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/result/494">成果記錄</a></h2>
+                        </li>
+                        <li>
+                            <h2><a title="連至心得分享"
+                                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/sharelist/495">心得分享</a></h2>
+                        </li>
+                        <li>
+                            <h2><a title="連至活動相簿"
+                                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/albumlist/496">活動相簿</a></h2>
+                        </li>
+                        <li>
+                            <h2><a title="連至聯絡我們"
+                                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/contact/497">聯絡我們</a></h2>
+                        </li>
+                        <li class="nav-first">
+                            <h2><a title="連至會員專區" href="#">會員專區</a></h2>
+                            <div class="nav-second">
+                                <ul class="reset">
+                                    <li>
+                                        <h3><a title="連至進度查詢"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/499">進度查詢</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至列印時數"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/500">列印時數</a>
+                                        </h3>
+                                    </li>
+                                    <li>
+                                        <h3><a title="連至心得上傳"
+                                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/501">心得上傳</a>
+                                        </h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--MOB-MENU--END--->
+
+            </div>
+        </div>
+        <!--header-end-->
+        <!--topmenubox-->
+        <div class="topmenubox">
+
+            <!--------topmenu--------->
+            <div class="topmenu">
+                <div class="container">
+
+
+                    <script src="http://nmmstlearning.netdoing.com.tw:8888/js/jquery-latest.min.js"
+                        type="text/javascript"></script>
+                    <script type="text/javascript">
+                        $(function () {
+                            // 幫 #menu li 加上 hover 事件
+                            $('#menu>li').hover(function () {
+                                // 先找到 li 中的子選單
+                                var _this = $(this),
+                                    _subnav = _this.children('ul');
+
+                                // 變更目前母選項的背景顏色
+                                // 同時顯示子選單(如果有的話)
+                                //_this.css('backgroundColor', '#000');
+                                _subnav.css('display', 'block');
+                            }, function () {
+                                // 變更目前母選項的背景顏色
+                                // 同時隱藏子選單(如果有的話)
+                                // 也可以把整句拆成上面的寫法
+                                $(this).css('backgroundColor', '').children('ul').css('display',
+                                    'none');
+                            });
+
+                            // 取消超連結的虛線框
+                            $('a').focus(function () {
+                                this.blur();
+                            });
+                        });
+                    </script>
+                    <ul id="menu">
+                        <li><a title="連至淨灘介紹" href="#">淨灘介紹</a>
+                            <ul>
+                                <li><a title="連至淨灘緣由"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/486">淨灘緣由</a></li>
+                                <li><a title="連至ICC淨灘介紹"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/487">ICC淨灘介紹</a>
+                                </li>
+                                <li><a title="連至海科館活動說明"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/488">海科館活動說明</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a title="連至淨灘過程"
+                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/489">淨灘過程</a></li>
+                        <li><a title="連至我要淨灘" href="#">我要淨灘</a>
+                            <ul>
+                                <li><a title="連至我要借工具淨灘"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/toolapplynote/492">我要借工具淨灘</a>
+                                </li>
+                                <li><a title="連至跟海科館淨灘"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/cleanindex/491">跟海科館淨灘</a>
+                                </li>
+                                <li><a title="連至企業淨灘申請"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/bussapplynote/498">企業淨灘申請</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a title="連至成果記錄" href="http://nmmstlearning.netdoing.com.tw:8888/clean/result/494">成果記錄</a>
+                        </li>
+                        <li><a title="連至心得分享"
+                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/sharelist/495">心得分享</a></li>
+                        <li><a title="連至活動相簿"
+                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/albumlist/496">活動相簿</a></li>
+                        <li><a title="連至聯絡我們"
+                                href="http://nmmstlearning.netdoing.com.tw:8888/clean/contact/497">聯絡我們</a></li>
+                        <li style="display: none;"><a title="連至會員專區" href="#">會員專區</a>
+                            <ul>
+                                <li><a title="連至進度查詢"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/499">進度查詢</a></li>
+                                <li><a title="連至列印時數"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/500">列印時數</a></li>
+                                <li><a title="連至心得上傳"
+                                        href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/501">心得上傳</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--------topmenu-end-------->
+
+        </div>
+    </div>
+    <!--topmenubox-end-->
+    <!--adv-->
+    <div class="adv">
+        <div id="TOP" style="top: -100px;"><img
+            src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/gotop.png" alt="回到上面"></div>
+        <div class="ADVbox">
+            <link href="http://nmmstlearning.netdoing.com.tw:8888/ADVbox/ADV.css" rel="stylesheet">
+            <script src="http://nmmstlearning.netdoing.com.tw:8888/ADVbox/responsiveslides.min.js"></script>
+            <script>
+                $(function () {
+
+                    // Slideshow 1
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        /*false手動 / true自動*/
+                        pager: true,
+                        nav: true,
+                        speed: 763,
+                        maxwidth: 2526,
+                        namespace: "centered-btns"
+                    });
+                });
+            </script>
+            <div class="bannerbox">
+                <div class="wrapper1">
+                    <div class="rslides_container">
+                        <ul class="rslides centered-btns centered-btns1" id="slider4" style="max-width: 2526px;">
+                            <li id="centered-btns1_s0" class="centered-btns1_on"
+                                style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 763ms ease-in-out 0s;">
+                                <div class="mesk"></div><a href="https://mslc.nmmst.gov.tw/clean/index" target="_blank"
+                                    title="開新視窗,網站"><img
+                                        src="http://nmmstlearning.netdoing.com.tw:8888/other/B20240318151310-t.png"
+                                        alt="網站"></a>
+                            </li>
+                            <li id="centered-btns1_s1"
+                                style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 763ms ease-in-out 0s;"
+                                class="">
+                                <div class="mesk"></div><a href="http://nmmstlearning.netdoing.com.tw:8888/clean/index#"
+                                    target="_blank" title="開新視窗,002"><img
+                                        src="http://nmmstlearning.netdoing.com.tw:8888/other/B20240319111449-t.png"
+                                        alt="002"></a>
+                            </li>
+                        </ul><a href="#" class="centered-btns_nav centered-btns1_nav prev">Previous</a><a href="#"
+                            class="centered-btns_nav centered-btns1_nav next">Next</a>
+                        <ul class="centered-btns_tabs centered-btns1_tabs">
+                            <li class="centered-btns1_s1 centered-btns_here"><a href="#" class="centered-btns1_s1">1</a>
+                            </li>
+                            <li class="centered-btns1_s2"><a href="#" class="centered-btns1_s2">2</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+
+    <!--article-->
+    <div class="article">
+        <div class="articlebox">
+
+            <!--topfrom麵包屑-->
+            <div id="topfrom"><a href="http://nmmstlearning.netdoing.com.tw:8888/clean/index" title="首頁">首頁</a> &gt; <a
+                    href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/489" title="淨灘過程">淨灘過程</a></div>
+            <!--topfrom麵包屑-->
+            <h3 class="toptitle title">淨灘大紀元</h3>
+
+
+            <!--content------------------------>
+            <div class="content">
+                <!---↓↓↓↓↓↓↓--------------------------------------->
+                <div class="history_gruop">
+
+                    <div class="history_box">
+                        <p class="circle_box"></p>
+
+                        <div class="history-right aos-item " data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" >
+                            <div class="year">2012</div>
+                            <ul class="aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600" data-aos-once="true" >
+                                <li >
+                                    <span class="month">
+                                        9月
+                                    </span>
+                                    <div class="textbox">
+
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="month">
+                                        10月
+                                    </span>
+                                    <div class="textbox">
+                                        <div class="imgbox">
+                                            <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.jpg"
+                                                alt="">
+                                        </div>
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li><li>
+                                    <span class="month">
+                                        12月
+                                    </span>
+                                    <div class="textbox">
+                                       
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="history_box">
+                        <p class="circle_box"></p>
+                        <div class="history-left aos-item " data-aos="fade-right" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">
+                            <div class="year">2022</div>
+                            <ul class="aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600" data-aos-once="true" >
+                                <li>
+                                    <span class="month">
+                                        9月
+                                    </span>
+                                    <div class="textbox">
+                                        <div class="imgbox">
+                                            <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.jpg"
+                                                alt=""></div>
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="month">
+                                        10月
+                                    </span>
+                                    <div class="textbox">
+                                        <div class="imgbox"><img
+                                                src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.jpg"
+                                                alt=""> </div>
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="history_box">
+                        <p class="circle_box"></p>
+                        <div class="history-right aos-item " data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">
+                            <div class="year">2023</div>
+                            <ul class="aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600" data-aos-once="true" >
+                                <li>
+                                    <span class="month">
+                                        9月
+                                    </span>
+                                    <div class="textbox">
+                                        <div class="imgbox">
+                                            <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.jpg"
+                                                alt=""></div>
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="month">
+                                        10月
+                                    </span>
+                                    <div class="textbox">
+                                        <div class="imgbox"><img
+                                                src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.jpg"
+                                                alt=""> </div>
+                                        <p>白沙灣一日淨灘成功</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-----↑↑↑↑↑↑↑--------------------------------------->
+            </div>
+            <!--content---end----------------->
+            
+        </div>
+    </div>
+    <!--article-end-->
+    <!--indexsitemap------------------------->
+
+    <!--indexsitemap-end------------------------->
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <div class="footer-logo"><img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/footer-logo.png"
+                    alt="國立海洋科技博物館logo"></div>
+            <p>Copyright © National Museum of Marine Science &amp; Technology All rights reserved.</p>
+        </div>
+    </div>
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+    <!--動態語法-->
+    <script src="http://nmmstlearning.netdoing.com.tw:8888/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+</body>
+
+</html>

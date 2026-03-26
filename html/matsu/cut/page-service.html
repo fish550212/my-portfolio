@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>連江縣政府網路E櫃台</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- 電影宣傳輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 電影宣傳輪播 -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+        <div class="logo">
+          <a href="index.html" target="_self" title="回首頁">
+            <img src="frontimages/logo.png" alt="LOGO" />
+          </a>
+          <div class="title">網路E櫃台</div>
+        </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="index.html" title="申辦服務">申辦服務</a>
+            </li>
+            <li>
+              <a href="page-applyquery.html" title="進度查詢">進度查詢</a>
+            </li>
+            <li>
+              <a href="page-faq.html" title="常見問答">常見問答</a>
+            </li>
+            <li>
+              <a href="#" title="使用教學">使用教學</a>
+            </li>
+            <li>
+              <a href="page-login.html" title="登入">登入</a>
+            </li>
+          </ul>
+        </div>
+
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="index.html" title="申辦服務">申辦服務</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="進度查詢">進度查詢</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-faq.html" title="常見問答">常見問答</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="使用教學">使用教學</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-login.html" title="登入">登入</a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!----------------內容-->
+      <div class="articlebox">
+        <div class="page-section index_section">
+          <div class="sectionbox index_box">
+            <div class="search_group">
+              <div class="box">
+                <div class="title">
+                  <img src="frontimages/masu-02.svg" alt="" />
+                  申請項目快速查詢
+                </div>
+                <div class="searchbox">
+                  <input type="search" placeholder="輸入關鍵字查詢" class="text-input" />
+                  <button type="submit" class="searchbtn_style">
+                    <img src="frontimages/search.svg" alt="" />
+                  </button>
+                </div>
+                <ul class="tag_group">
+                  <li><a href="#">孕婦</a></li>
+                  <li><a href="#">老人假牙</a></li>
+                  <li><a href="#">尿布</a></li>
+                  <li><a href="#">身心障礙停車證</a></li>
+                  <li><a href="#">生育補助</a></li>
+                </ul>
+              </div>
+              <div class="box">
+                <div class="title">
+                  <img src="frontimages/masu-02.svg" alt="" />
+                  進階查詢
+                </div>
+                <input type="search" placeholder="申請案件名稱" class="text-input" />
+                <input type="search" placeholder="業務類別" class="text-input" />
+                <input type="button" value="查詢" class="input-style" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page-section swiper_section" id="service">
+          <!--topfrom麵包屑-->
+          <div id="topfrom">
+            <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+            <a href="index.html" title="首頁">首頁</a>
+            &gt;
+            <a href="page-service.html" title="服務分類">服務分類</a>
+          </div>
+          <!--topfrom麵包屑-->
+
+          <div class="sectionbox swiper_box">
+            <div class="section-title flex-center"><span>服務分類</span></div>
+            <!-- 輪播容器 -->
+            <div class="box">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><a href="page-service.html#service">服務分類</a></div>
+                  <div class="swiper-slide"><a href="index.html#business">機關業務</a></div>
+                  <div class="swiper-slide"><a href="page-list.html">熱門業務</a></div>
+                </div>
+              </div>
+              <!-- 箭頭 -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <!-- 箭頭 -->
+              <script>
+                const swiper = new Swiper(".mySwiper", {
+                  slidesPerView: 4,
+                  spaceBetween: 20,
+                  centeredSlides: false,
+                  loop: true,
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                  breakpoints: {
+                    0: {
+                      slidesPerView: 2,
+                    },
+                    768: {
+                      slidesPerView: 3,
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                    },
+                  },
+                });
+              </script>
+            </div>
+
+            <ul class="btnlist_group">
+              <li>
+                <a href="page-list.html">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-01.svg" alt="生育保健" />
+                  </div>
+                  <font>生育保健</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-02.svg" alt="出生及收養" />
+                  </div>
+                  <font>出生及收養</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-03.svg" alt="求學及進修" />
+                  </div>
+                  <font>求學及進修</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-04.svg" alt="服兵役" />
+                  </div>
+                  <font>服兵役</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-05.svg" alt="開創事業" />
+                  </div>
+                  <font>開創事業</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-06.svg" alt="求職及就業" />
+                  </div>
+                  <font>求職及就業</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-07.svg" alt="婚姻" />
+                  </div>
+                  <font>婚姻</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-08.svg" alt="投資理財" />
+                  </div>
+                  <font>投資理財</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-09.svg" alt="休閒旅遊" />
+                  </div>
+                  <font>休閒旅遊</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-10.svg" alt="交通及通訊" />
+                  </div>
+                  <font>交通及通訊</font>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-11.svg" alt="就醫" />
+                  </div>
+                  <font>就醫</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-12.svg" alt="購屋及遷徙" />
+                  </div>
+                  <font>購屋及遷徙</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-13.svg" alt="選舉及投票" />
+                  </div>
+                  <font>選舉及投票</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-14.svg" alt="生活安全及品質" />
+                  </div>
+                  <font>生活安全及品質</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-15.svg" alt="退休" />
+                  </div>
+                  <font>退休</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-16.svg" alt="老年安養" />
+                  </div>
+                  <font>老年安養</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-17.svg" alt="生命禮儀" /> 
+                  </div>
+                  <font>生命禮儀</font>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-18.svg" alt="公共資訊" />
+                  </div>
+                  <font>公共資訊</font>
+                </a>
+              <li>
+                <a href="#">
+                  <div class="imgbox">
+                    <img src="frontimages/service-icon-19.svg" alt="其他" />
+                  </div>
+                  <font>其他</font>
+                </a>
+              </li>
+              </li>
+
+            </ul>
+
+            <!-- 輪播容器 -->
+          </div>
+        </div>
+
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <div class="footer-text">
+          <div class="title">連江縣政府網路E櫃台</div>
+          <div class="f-menu">
+            <a href="#">資安及隱私權宣告</a>
+            <a href="#">著作權聲明</a>
+          </div>
+          <!-- <div class="text">
+            <p class="copyright">
+              本網站所有著作權均屬連江縣政府網路E櫃台所有，非經允許，不得任意轉載 Copyright © 2025 CaiChang International, Inc. All Rights Reserved.
+            </p>
+          </div> -->
+        </div>
+        <div class="footer-link">
+          <p>
+            訪客人數
+            <b>19980742</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

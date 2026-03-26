@@ -1,0 +1,232 @@
+<!Doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    
+        <title>柏泰生產管理系統</title>
+        <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="frontcss/showLayer.css" rel="stylesheet" type="text/css" /> -->
+        <!-- <script type="text/javascript" src="frontjs/showLayer.js"></script> -->
+    
+        
+    </head>
+
+<body class="bg page">
+    <div class="wrapper">
+
+        <div class="headerbox">
+            
+            <div class="topbox">
+                <!-- 返回紐 -->
+                <div class="btnbox">
+                    <input type="button" value="" class="btn_back" onclick="history.go(-1)">
+                </div>
+                <!-- 大標題 -->
+                <span class="title">
+                    工單作業
+                </span>
+            </div>            
+
+        </div>
+
+        <div class="mainbox">
+            <!-- 小標題 -->
+            <!-- <div class="topbox circle-style bg-w">
+                <div class="toptitle inputbox">
+
+                        <div class="box W30">
+                            <div class="title">排面</div>
+                            <select class="input-style" name="" id="">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                                <option value="">4</option>
+                                <option value="">5</option>
+                                <option value="">6</option>
+                                <option value="">7</option>
+                                <option value="">8</option>
+                            </select>                           
+                        </div>
+
+                        <div class="box W70">
+                            <div class="title">日期</div>
+                            <select class="input-style" name="" id="">
+                                <option value="">2023/08</option>
+                                <option value="">2023/09</option>
+                                <option value="">2023/10</option>
+                                <option value="">2023/12</option>
+                            </select>                           
+                        </div>                   
+                </div>
+            </div> -->
+            <!-- 內容 -->
+            <div class="conterbox">
+
+               
+                <div class="groupbox bg-w bg-shadow">
+                       <div class="page-bookmark">
+                        <div class="overflowbox">
+                          <ul class="bookmarkbox">
+                            <li id="mark-active">
+                              <div class="font">
+                                <a href="#" target="_blank">
+                                    工作單位
+                                </a>	           
+                              </div> 
+                            </li> 
+                            <li>
+                              <div class="font">
+                               <a href="#" target="_blank">
+                                工作單位P1
+                               </a>
+                              </div> 
+                            </li>
+                             <li>
+                              <div class="font">
+                               <a href="#" target="_blank"> 工單製造確認項目P2</a>
+                              </div> 
+                            </li>
+                             <li>
+                              <div class="font">
+                               <a href="#" target="_blank">品管確認P3</a>
+                              </div> 
+                            </li>                           
+                            
+                          </ul>
+                        </div>
+                       
+                      </div>
+                </div>
+                <div class="groupbox databox">
+                    
+                 
+
+
+                    <div class="titlebox">                        
+                        <div class="title">
+                            資料新增
+                        </div>
+                    </div>
+                    <ul class="inputbox bg-w bg-shadow">
+                        <li>
+                            <div class="box W50">
+                                <div class="title">工單編號</div>
+                                <input type="text" class="input-style btn-c-gray" readonly value="WO2101-013">
+                            </div>
+                            <div class="box W50">
+                                <div class="title">工單狀態</div>
+                                <input type="text" class="input-style btn-c-gray" readonly value="待確認">
+                            </div> 
+                        </li>  
+                        <li>
+                            <div class="box W50">
+                                <div class="title">生產需求單號</div>
+                                <input type="text" class="input-style " value="240930001">
+                            </div>
+                            <div class="box W50">
+                                <div class="title">需求類型</div>
+                                <select class="input-style" name="" id="">
+                                    <option value="">庫存增補</option>
+                                </select>  
+                            </div> 
+                        </li>  
+                        <li>
+                            <div class="box W50">
+                                <div class="title">產品編號</div>
+                                    <input type="text" class="input-style" value="ccon199">
+                                
+                            </div>
+                            <div class="box W50">
+                                <div class="title">產品名稱</div>
+                                <input type="text" class="input-style btn-c-gray" readonly value="可可醬">
+                            </div> 
+                        </li>  
+                        
+                        <li>
+                            <div class="box W50">
+                                <div class="title">生產批號</div>
+                                <div  class="input-box">
+                                    <input type="text" class="input-style btn-c-gray" readonly value="2024100701">
+                                    <input type="date" class="input-style">
+                                </div>
+                            </div>
+                            <div class="box W50">
+                                <div class="title">生産倉庫</div>
+                                <select class="input-style" name="" id="">
+                                    <option value="">B5-新廠倉</option>
+                                </select>  
+                            </div> 
+                        </li>  
+                        <li>
+                            <div class="box W50">
+                                <div class="title">生產數量</div>
+                                <input type="text" class="input-style" value="1">
+                            </div>
+                            <div class="box W50">
+                                <div class="title">回倉需求日</div>                                
+                                <input type="date" class="input-style" value="1">
+                            </div> 
+                        </li>  
+                        <li>
+                            <div class="box W50">
+                                <div class="title">添加</div>
+                                <input type="button" class="input-style btn-archive btn-c-black-deep" value="添加">
+                            </div>
+                            <div class="box W50">
+                                <div class="title">本次生產總重</div>
+                                <div class="input-box">
+                                    <input type="text" style="text-align: right;" class="input-style" value="1,037">KG
+                                </div>
+                                
+                            </div> 
+                        </li>  
+                        <li>
+                            <div class="box W100">
+                                <div class="title">添加</div>
+                                <textarea class="input-style" style="height: 60px;">陳志明</textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box W100">
+                                <div class="title">生產備註</div>
+                                <textarea class="input-style btn-c-gray" readonly style="height: 60px;">123</textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box W100">
+                                <div class="title">需求備註</div>
+                                <textarea class="input-style btn-c-gray" readonly style="height: 60px;">123</textarea>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="box W100">
+                                <div class="title">工單備註</div>
+                                <textarea class="input-style" style="height: 60px;"></textarea>
+                            </div>
+                        </li>
+
+                        <div class="btnbox">
+                            <input type="button" class=" btn-style btn-c-gray-deep" value="儲存">
+                        </div>
+                    </ul> 
+                    
+                    
+                 
+                </div>
+
+            </div>   
+        <!-- 內容 -->
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

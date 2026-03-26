@@ -1,0 +1,116 @@
+@charset "utf-8";
+@import url("page.css");
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family:Arial, Helvetica, "微軟正黑體", sans-serif; }
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote {margin:0;padding:0;vertical-align:top;text-align:left;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+h1,h2,h3,h4,h5,h6{margin:3px 0px;padding:3px 0px;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+body{ 
+        font-family:Arial, Helvetica, sans-serif;
+	-webkit-text-size-adjust:none;
+        /* 在 iOS 旋轉手機畫面時鎖定文字不縮放 */
+	width:100%;
+	height:100%;
+	background-color:#dcdcdc;
+}
+
+input {
+    -webkit-appearance: none;  /* Safari 和 Chrome，常用於iOS下移除內建樣式 */
+    -moz-appearance: none;     /* FireFox */
+    appearance: none;
+}
+
+.header{width:100%;height:90px; background-color:#5b5b5b; border-bottom:10px solid #484848;}
+.header .logo{width:120px;height:80px; display:inline-block;borde:1px solid #F00; overflow:hidden;}
+.header .logotitle{display:inline-block;width:200px;height:80px; line-height:80px; font-size:120%; color:#dbdbdb; font-weight:bold;}
+.header .topmenu{display:inline-block; width:600px; float:right; margin-right:0.5%;margin-top:25px;}
+
+.topmenu .topmenbox{width: auto;margin:0 auto; position:relative;height: auto; color:#FFF;}
+#menu {	margin: 0;text-decoration:none;
+		padding: 0;
+		list-style: none;
+		position: relative;
+		width: 100%;
+		float: left;
+		background: none;
+		font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+	#menu ul{width: 100%;height: auto;}
+	#menu li {width: 100%;margin: 0;padding: 0;	float: left;text-decoration:none; text-align:center;}
+	#menu>li{width: auto;border-left: 1px solid rgba(255,255,255,0.1); position:relative;}
+	#menu>li:last-child{ border-right: 1px solid rgba(255,255,255,0.1);}
+	#menu li>a {
+		line-height:180%;font-size:115%;
+        padding:0 10px;
+		width: auto;
+		display: block;
+		color: #FFF;
+		text-decoration: none;
+		font-weight:bold;
+	}
+	
+	#menu > li:hover {	text-decoration: none;	background-color: rgba(0,0,0,1);}
+	#menu li>ul {
+		margin: 0;z-index:8000;
+		line-height:150%;
+		list-style: none;
+		position: absolute;
+		top:30px;
+		left: 0;
+		width: 300%;
+		height:auto;
+		color: #fff;
+		background: rgba(0,0,0,0.8);
+		display: none; }
+	#menu li ul li { float:left;display: block; width:100%; padding: 0px;border-bottom: 1px solid rgba(255,255,255,0.5); text-align:left;line-height:150%;}
+	#menu li ul li:nth-child(even) {border-left: 1px solid rgba(255,255,255,0.5); }
+	#menu li ul li a { display: block;color: #fff; width:100%;padding: 10px;line-height:110%; font-size:105%; text-decoration:none;font-weight: normal;}
+	#menu li ul li a:hover { text-decoration:none; color:#b4f9fd; background-color:#000;}	
+
+.container{width:100%;height: auto;}
+
+/*.container .layout-Left{width:13%;height: auto; float:left; background-color:#676767; color:#FFF;}
+
+.container .layout-Right{ width:77%;height: auto; overflow:hidden;}
+.container .layout-Right .Right-main{width:100%;height: auto;color:#525252;padding:20px 65px;font-size:150%;font-weight:bold;background:#EAEAEA url(../frontimages/icon.png) no-repeat 20px center; background-size:35px auto;border-bottom:1px #C9C9C9 solid;}*/
+
+.container .layout-Left{width:250px;height: auto; float:left; background-color:#676767; color:#FFF;}
+
+.container .layout-Right{  margin-left:250px; width:auto;height: auto;}
+.container .layout-Right .Right-main{width:100%;height: auto;color:#525252;padding:20px 65px;font-size:150%;font-weight:bold;background:#EAEAEA url(../frontimages/icon.png) no-repeat 20px center; background-size:35px auto;border-bottom:1px #C9C9C9 solid;}
+
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px) {
+	
+.header{width:100%;height:90px; background-color:#5b5b5b; border-bottom:10px solid #484848;}
+.header .logo{width:120px;height:80px; display:inline-block;borde:1px solid #F00; overflow:hidden;}
+.header .logotitle{display:inline-block;width:200px;height:80px; line-height:80px; font-size:120%; color:#dbdbdb; font-weight:bold;}
+.header .topmenu{display:inline-block; width: auto; float:right; margin-right:2%;}
+.header .topmenu ul{ list-style:none;width:100%;height: auto; overflow:hidden; margin-top:15px;}
+.header .topmenu ul li{ display:inline-block; color:#FFF; padding:10px;}
+.header .topmenu ul li a{ color:#FFF; text-decoration:none;}
+
+.container{width:100%;height: auto;}
+.container .layout-Left{ display:none;width:250px;height: auto; float:left; background-color:#676767; color:#FFF;}
+
+.container .layout-Right{  margin-left:0px; width:100%;height: auto;}
+.container .layout-Right .Right-main{width:100%;height: auto;font-weight:bold; font-size:120%;}	
+
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+.header{width:100%;height:90px; background-color:#5b5b5b; border-bottom:10px solid #484848;}
+.header .logo{width:120px;height:80px; display:inline-block;borde:1px solid #F00; overflow:hidden;}
+.header .logotitle{display:inline-block;width:200px;height:80px; line-height:80px; font-size:120%; color:#dbdbdb; font-weight:bold;}
+.header .topmenu{display:inline-block; width: auto; float:right; margin-right:2%;}
+.header .topmenu ul{ list-style:none;width:100%;height: auto; overflow:hidden; margin-top:15px;}
+.header .topmenu ul li{ display:inline-block; color:#FFF; padding:10px;}
+.header .topmenu ul li a{ color:#FFF; text-decoration:none;}
+
+.container{width:100%;height: auto;}
+
+.container .layout-Left{ display:none;width:250px;height: auto; float:left; background-color:#676767; color:#FFF;}
+
+.container .layout-Right{  margin-left:0px; width:100%;height: auto;}
+.container .layout-Right .Right-main{width:100%;height: auto;font-weight:bold;}	
+	
+}

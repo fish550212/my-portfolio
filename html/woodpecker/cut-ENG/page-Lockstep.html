@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Woodpecker</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script> -->
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+            <!--ul class="iconbox">
+                <li>
+                    <a href="#"><img src="./enfrontimages/icon-linked.png" alt=""></a>
+                </li>
+            </ul-->
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id="menu">
+                    <li><a href="index.html" title="Home">Home</a> </li>
+
+                    <li><a href="page-Product.html" title="Product">Product</a>
+                        <ul>
+                            <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                            <li><a href="page-QED.html" title="QED">QED</a></li>
+                            <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                            <li><a href="page-System.html" title=" System">System</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Technology.html" title="Technology">Technology</a>
+                        <ul>
+                            <li><a href="page-solutions.html" title="Solutions">Solutions</a>
+                            </li>
+                            <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical White
+                                    Paper</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-pressrelease.html" title="News &amp; Events">News</a>
+                        <ul>
+                            <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                            <li><a href="page-events.html" title="Events">Events</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Career.html" title="Career ">Career</a>
+                    </li>
+                    <li><a href="page-managementteam.html" title="About us">About us</a>
+                        <ul style="display: none;">
+                            <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                            <li><a href="page-Partners.html" title="Partners">Partners</a> </li>
+                            <li><a href="page-contacts-locations.html" title="Contacts and Locations">Locations</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-contactus.html" title="Contact us">Contact us</a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <a href="#" title="後台管理" class="oa_btn"><img src="" alt=""></a>
+
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class="reset">
+
+                    <li class="nav-first">
+                        <h2><a href="#" title="Home">Home</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="index.html" title="Home">Home</a> </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Product">Product</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Product.html" title="Product">Product</a></li>
+                                <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                                <li><a href="page-QED.html" title="QED">QED</a></li>
+                                <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                                <li><a href="page-System.html" title="System">System</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Technology">Technology</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Technology.html" title="Technology">Technology</a></li>
+                                <li><a href="page-solutions.html" title="Solutions">Solutions</a></li>
+                                <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical
+                                        White Paper</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="News">News</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                                <li><a href="page-events.html" title="Events">Events</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-Career.html" title="Career">Career</a></h2>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="About us">About us</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                                <li><a href="page-Partners.html" title="Partners">Partners</a></li>
+                                <li><a href="page-contacts-locations.html" title="Locations">
+                                        Locations</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-contactus.html" title="Contact us">Contact us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page_topbg.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Lockstep
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+
+
+    <!--adv-end-->
+
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+
+            <!----Team------------------------------>
+            <div class="Team">
+                <div class="Teambox">
+                    <!----Team---↓↓↓↓↓--------------------------->
+                    <div class="lockgroupbox">
+                        <div class="titlebox">Key Lockstep technology</div>
+                        <ul class="ul_boxgroup bg">
+                            <li>
+                                <div class="title">
+                                    Multiple-instruction
+                                </div>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Detects hard-to-detect sequential <b>control path bugs</b>
+                                    </li>
+                                    <li>
+                                        Self-consistency technology
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    Single-instruction
+                                </div>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Detects <b>datapath</b> bugs
+                                    </li>
+                                    <li>
+                                        Exhaustive set of single-instruction checkers
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <b class="fontbox">
+                            Functional and formal coverage confirmed using 3rd party tool
+                        </b>
+                    </div>
+
+                    <div class="lockgroupbox">
+                        <div class="titlebox">Implementation</div>
+                        <ul class="ul_boxgroup">
+                            <li>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        The Lockstep technology is implemented in an SV module used for verification
+                                        only
+                                        <br>
+                                        <div class="in_box">
+                                            Single- and multiple-instruction checkers
+                                        </div>
+                                    </li>
+                                    <li>
+                                        Used in conjunction with any commercial Formal Bounded Model Checking (BMC) tool
+                                    </li>
+                                    <li>
+                                        Implementation independent, does not require microarchitecture or design
+                                        knowledge
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="imgbox">
+                                    <img src="enfrontimages/lock_img-01.png">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lockgroupbox">
+                        <div class="titlebox">
+                            Multiple-instruction verification
+                        </div>
+                        <b class="icon_tick">
+                            Detects complex, sequential control path bugs
+                        </b>
+                        <ul class="ul_boxgroup box_table">
+                            <li class="box">
+
+                                Multiple transformations ensure automated detection of wide range of control path bugs
+                            </li>
+                            <li>
+                                <table border="0" cellspacing="0" cellpadding="0" class="ul_table">
+                                    <tr>
+                                        <td>
+                                            Error detection using duplicated instructions for validation
+                                        </td>
+                                        <td class="color">Data forwarding error
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Control flow checking using software signatures for validation
+                                        </td>
+                                        <td class="color">Branch error
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Unexpected kill/flush event
+                                        </td>
+                                        <td class="color">Illegal instruction
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Control flow tracking using software signatures for validation
+                                        </td>
+                                        <td class="color">System hang </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Proactive load and check
+                                        </td>
+                                        <td class="color">Load/store error
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                        <ul class="ul_boxgroup bg box_four">
+                            <li>
+                                <div>
+                                    <b>Accurate:</b>Detects actual bugs
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Ready-made constraints:</b>
+                                    Avoids masked bugs</div>
+                            </li>
+
+                            <li>
+                                <div>
+                                    <b>Implementation independent</b></div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Short debug trace</b></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lockgroupbox">
+                        <div class="titlebox">
+                            Multiple-instruction verification using self-consistency
+                        </div>
+                        <div class="imgbox">
+                            <img src="enfrontimages/lock_img-02.png">
+                        </div>
+                        <ul class="ul_boxgroup  box_three">
+                            <li>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Formal tool (BMC) creates exhaustive set of base instructions
+
+
+                                    </li>
+                                    <li>
+                                        Depth of instruction sets customizable by user
+
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Lockstep module duplicates each set of base instructions
+
+                                    </li>
+                                    <li>
+                                        Base instructions use one half of memory/register file
+
+                                    </li>
+                                    <li>
+                                        Duplicate set the other half
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Result pairs compared at short intervals
+                                    </li>
+                                    <li>
+                                        Expect same results → self-consistency
+                                    </li>
+                                    <li>
+                                        Very short error detection latency
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lockgroupbox">
+                        <div class="titlebox">
+                            Single-instruction verification
+                        </div>
+                        <b class="icon_tick">
+                            Detects datapath bugs
+                        </b>
+                        <ul class="ul_boxgroup box_table">
+                            <li class="box">
+                                Exhaustively tests all base instructions and all commonly used extensions
+                                <ul class="ul_discbox">
+                                    <li>
+                                        Individual checker for each instructi
+                                    </li>
+                                    <li>
+                                        Covers all operand values and combinations
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <table border="0" cellspacing="0" cellpadding="0" class="ul_table small_size"
+                                    width="100%">
+                                    <tr>
+                                        <th>
+                                            RISC V extensions
+                                        </th>
+                                        <th>
+                                            Lockstep Support
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            I - Integer
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            M – Multiplication
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            A – Atomics
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            C – Compressed
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            F – Floating Point
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            D – FP Double
+
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            F – Floating Point
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            V – Vector v0.71
+
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            V – Vector v1.0
+
+
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            B - Bitmanip
+                                        </td>
+                                        <td class="color">✔
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            MTX - Matrix
+
+                                        </td>
+                                        <td class="color">Q4 2023
+
+
+                                        </td>
+                                    </tr>
+                                </table>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lockgroupbox Coveragebox">
+                        <div class="titlebox">Coverage analysis</div>
+                        <ul class="ul_boxgroup bg ">
+                            <li>
+                                <div class="title">
+                                    Functional coverage
+
+                                </div>
+                                <ul class="ul_discbox hightbox">
+                                    <li>
+                                        Exhaustive multiple-instruction coverage
+                                        <ul class="ul_discbox">
+                                            <li>
+                                                Across sequence combinations
+                                            </li>
+                                            <li>
+                                                E.g.: 65,536 / 65,536 possible sequential conditions covered by subset
+                                                of 4 instructions and depth of 8
+
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        Exhaustive single-instruction coverage
+                                        <ul class="ul_discbox">
+                                            <li>
+                                                Across instruction types, source operands, destination operands
+
+                                            </li>
+                                            <li>
+                                                E.g.: 4,544/4,544 conditions on MUL instruction
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+                                <div class="imgbox">
+                                    <img src="enfrontimages/lock_img-03.png" alt="">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    Formal coverage
+                                </div>
+                                <ul class="ul_discbox hightbox">
+                                    <li>
+                                        Code overage of single- and multiple- instruction sequences on target RISC-V
+                                        implementation
+                                    </li>
+                                    <li>
+                                        E.g. ZERO-RISCY
+                                        <ul class="ul_discbox">
+                                            <li>
+                                                Stimuli coverage: 90.32%
+                                            </li>
+                                            <li>
+                                                COI coverage: 98.05%
+                                            </li>
+                                            <li>
+                                                Proof core coverage: 96.71%
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+                                <div class="imgbox">
+                                    <img src="enfrontimages/lock_img-04.png" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                        <b class="fontbox">
+                            Analysis using JasperGold – users can target desired covergroups / core implementation
+                        </b>
+                    </div>
+
+                    <div class="lockgroupbox">
+                        <div class="titlebox">Lockstep benefits</div>
+                        <ul class="ul_boxgroup bg ">
+                            <li>
+                                <div class="title">
+                                    Verification quality
+                                </div>
+                                <ul class="ul_discbox hightbox_1">
+                                    <li>
+                                        <b>Exhaustive:</b> Detects bugs missed by traditional simulation-based and other
+                                        formal approaches
+                                    </li>
+                                    <li>
+                                        <b>Accurate:</b> Detects actual bugs
+                                    </li>
+                                    <li>
+                                        <b>Ready-made constraints:</b> Avoids masked bugs
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="title">
+                                    Verification productivity
+                                </div>
+                                <ul class="ul_discbox hightbox_1">
+                                    <li>
+                                        No manually defined setup or test cases
+
+                                    </li>
+                                    <li>
+                                        Does not require additional expertise
+
+                                        <ul class="ul_discbox">
+                                            <li>
+                                                Formal verification
+
+                                            </li>
+                                            <li>
+                                                Architecture, microarchitecture
+
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        Very short traces for debug
+
+                                    </li>
+                                    <li>
+                                        Supports all extensions and custom instructions
+
+                                    </li>
+                                    <li>
+                                        Implementation independent, re-usable
+
+                                    </li>
+                                    <li>
+                                        Formal tool agnostic
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="ul_boxgroup bg box_four box_seven">
+                            <li>
+                                <div>
+                                    Datapath
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Control path</div>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    Lockstep
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Out-of-order execution
+    </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Branch
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    System hang
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Load/store
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!----Team---↑↑↑↑↑--------------------------->
+                </div>
+            </div>
+            <!----Team------------------------------>
+
+
+            <!--indexsitemap------------------下方選單------->
+            <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="centerbox">
+
+                        <ul id='sitemap'>
+                            <li class="title"><a href='index.html' title='Home'>Home</a>
+                                <ul>
+
+                                    <li><a href='page-companymission.html' title='Company Mission'>
+                                            Company Mission</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="title"><a href='page-Lockstep.html' title='Product'>Product</a>
+                                <ul>
+                                    <li><a href='page-Lockstep.html' title='Lockstep'>Lockstep</a></li>
+                                    <li><a href='page-QED.html' title='QED'>QED</a></li>
+                                    <li><a href='page-EQED.html' title='EQED'>EQED</a></li>
+                                    <li><a href='page-Roadmap.html' title='Roadmap'>Roadmap</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-solutions.html' title='Technology'>Technology</a>
+                                <ul>
+                                    <li><a href='page-solutions.html' title='Technical White Paper'>Technical White
+                                            Paper</a>
+                                    </li>
+                                    <li><a href='page-technical-WhitePaper.html'
+                                            title='Certifications'>Certifications</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-pressrelease.html' title='News & Events'>News & Events</a>
+                                <ul>
+                                    <li><a href='page-pressrelease.html' title='Press release'>Press release</a></li>
+                                    <li><a href='page-events.html' title='Events'>Events</a> </li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-career.html' title='About us'>About us</a>
+                                <ul>
+                                    <li><a href='page-managementteam.html' title='Management Team'>Management Team</a>
+                                    </li>
+                                    <li><a href='page-contacts-locations.html' title='Contacts and Locations'>Contacts
+                                            and
+                                            Locations</a> </li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-contactus.html' title='Contact us'>Contact us</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <a href="index.html">
+                                <img src="enfrontimages/footer_logo.png" alt="">
+                            </a>
+                        </div>
+
+                        <ul class="material">
+                            <li>
+                                <a href="#">
+                                    <img src="enfrontimages/icon-work.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="enfrontimages/icon-email.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="enfrontimages/icon-linked.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>Copyright © 2023 Woodpecker Technologies</p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+
+</body>
+
+</html>

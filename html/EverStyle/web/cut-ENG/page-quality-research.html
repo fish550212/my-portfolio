@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ever Style</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+        .flexslider {
+            width: 100%;
+        }
+
+        div.flexslider_6 ol {
+            bottom: 0px;
+            display: none;
+            /*點點*/
+        }
+
+        div.flexslider_6 div.flex-pauseplay {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        function save_currentSlide() {
+            this.currentSlide_1 = null;
+            this.set_1 = function (num) {
+                this.currentSlide_1 = num;
+            }
+            this.get_1 = function () {
+                return this.currentSlide_1;
+            }
+            this.currentSlide_2 = null;
+            this.set_2 = function (num) {
+                this.currentSlide_2 = num;
+            }
+            this.get_2 = function () {
+                return this.currentSlide_2;
+            }
+
+            this.set_paging_OL_Event = function (slider) {
+                const CurrentSlide_X = this;
+                const slides_a_all = slider.slides.children();
+                const paging_OL_a_all = slider.controlNav;
+                const paging_UL_a_all = slider.directionNav;
+
+                $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+                    let slides_a = slides_a_all[index];
+                    if (slides_a.title != "") {
+                        let content = slides_a.title.replace("開新視窗,", "");
+                        $(this).children().attr("title", slides_a.title);
+                        $(this).children().html(content);
+                    }
+                    $(this).keydown(function (event) {
+                        if (event.which == 13) {
+                            slides_a.click();
+                        }
+                    });
+                });
+
+                //離開 1
+                paging_UL_a_all[1].addEventListener("keydown",
+                    function (event) {
+                        if (event.which === 9) {
+                            CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                            slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                            slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                            slider.play();
+                        }
+                    });
+
+                //離開 2
+                $("body").click(function () {
+                    let sliderIsFocus = false;
+                    for (let i = 0; i < slides_a_all.length; i++) {
+                        sliderIsFocus |= slides_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_OL_a_all.length; i++) {
+                        sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_UL_a_all.length; i++) {
+                        sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+                    }
+                    if (!sliderIsFocus && !slider.playing) {
+                        CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                        slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                        slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                        slider.play();
+                    }
+                });
+            }
+        }
+    </script>
+
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script>
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id='menu'>
+                    <li><a href='index.html' title='Home'>Home</a>
+                        <!-- <ul>
+                            <li><a href='index.html' title='Home'>Home</a> </li>
+                            <li><a href='page-news.html' title='News'>News</a></li>
+                        </ul> -->
+                    </li>
+
+                    <li><a href='page-company.html' title='About Us'>About Us</a>
+                        <ul>
+                            <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                            <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                        <ul>
+                            <li><a href='page-quality.html' title='QM'>QM</a></li>
+                            <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                            <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-application.html' title='Products'>Products</a>
+                        <ul>
+                            <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a></li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <!-- <a href='#' title='後台管理' class="oa_btn">後台管理</a> -->
+                <select onchange="gotoUrl(this)">
+                    <option value="../cut/page-quality-certified.html">中文</option>
+                    <option value="../cut-ENG/page-quality-certified.html" selected>ENG</option>
+                </select>
+                <script>
+                    function gotoUrl(selectObject) {
+                      var value = selectObject.value;
+                      if (value) {
+                        window.location.href = value;
+                      }
+                    }
+                    </script>
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class='reset'>
+
+                    <li>
+                        <h2><a href='#' title='Home'>Home</a></h2>
+                        <!-- <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='index.html' title='Home'>Home</a> </li>
+                                <li><a href='page-news.html' title='News'>News</a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='About Us'>About Us</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h2><a href='#' title='QC and R&D'>QC and R&D</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                                <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='Products'>Products</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                             <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='page-contact.html' title='Contact Us'>Contact Us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page-quality-bg.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Research and Developmen
+                    <div class="bottom_line"></div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+
+    <!--article-->
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+
+            <div class="page_research">
+                <div class="page_researchbox">
+
+                    <ul>
+                        <li>                            
+                            <div class="titletext textbox">                                
+                                <p>Our customer base is very diverse, such as baking, beverages, ice products, aesthetic medical, daily supplements, cosmetics, cleaning supplies, fish feed industrial, whichever industry used aromatic flavor.
+                                    The R&D team of EverStyle have many years of research experience, can responding to customers at the fastest speed.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <img src="enfrontimages/research-img-2.png" alt="風味開發">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Flavor Development</div>
+                                <p>Flavor development is the source of fragrance creation. To create a new flavor formula, it is a delicate and complicated process.
+                                    We make full most of the skills and experience of perfumers, analyze the aroma components with instruments and daily research, and continue to develop valuable products. Understand consumers interests,  provide customized products flexibly, to help customers score a success in the ever-changing world.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <img src="enfrontimages/research-img-3.png" alt="應用開發">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Application Development</div>
+                                <p>The flavor created by flavor development can only show its true value when it is added to food, so it must be actually tested in food and subjected to sensory evaluation including taste, properties, and color.
+                                    In application development section, we will test in products such as syrups, beverages, ice products, bakery products, etc., and it is also convenient for customers to check and evaluate the flavor.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!--indexsitemap------------------下方選單------->
+             <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <img src="enfrontimages/footer_logo.png" alt="">
+                            <p>Ever Style Foodstuff Industrial Co., Ltd.</p>
+                        </div>
+                        <ul class="material">
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone.png" alt="">
+                                </span>
+                                <b>(+886 2)2917-9617</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone2.png" alt="">
+                                </span>
+                                <b>(+886 2)2918-5719</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-web.png" alt="">
+                                </span>
+                                <b>http://www.everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-email.png" alt="">
+                                </span>
+                                <b>service@everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-map.png" alt="">
+                                </span>
+                                <b>5F., No.30, Ln.54, Zhongzheng Rd.,<br>
+                                    Xindian Dist., New Taipei City 231, Taiwan.</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="centerbox">
+
+                        <ul id='sitemap'>
+                            <li class="title"><a href='index.html' title='Home'>Home</a>
+                                <!-- <ul>
+                                    <li><a href='index.html' title='Home'>Home</a> </li>
+                                    <li><a href='page-news.html' title='News'>News</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li class="title"><a href='page-company.html' title='About Us'>About Us</a>
+                                <ul>
+                                    <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                    <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                                <ul>
+                                    <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                    <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a>
+                                    </li>
+                                    <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-application.html' title='Products'>Products</a>
+                                <ul>
+                                    <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                        Product Applications</a> </li>
+                                <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                                <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                                <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                                <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                                <li><a href='page-color.html' title='Color'>Color</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-contact.html' title='Contact Us'>Contact Us</a>
+                                <ul>
+                                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a> </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+             
+        </div>
+    </div>
+   
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>
+                Copyright © 2022 Ever Style Foodstuff Industrial Co., Ltd.
+            </p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+    <!--動態語法-->
+    <script src="dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+</body>
+
+</html>

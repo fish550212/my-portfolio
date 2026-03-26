@@ -1,0 +1,830 @@
+﻿@charset "utf-8";
+
+
+/*---共用----------------------------------------------*/
+/**{margin: 0;padding: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote {margin:0;padding:0;vertical-align:top;text-align:left;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+
+h1,h2,h3,h4,h5,h6{margin:3px 0px;padding:3px 0px;font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;}
+
+body{ 
+    font-family:Arial, Helvetica, "微軟正黑體", sans-serif !important;
+	-webkit-text-size-adjust:none;
+	width:100%;min-width:100%;
+	height:100%;margin:0 auto;
+	font-size:87.5%;
+}*/
+
+
+/*網頁大架構Div Layout------------------------*/
+
+/*statistics*/
+.statistics {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.statisticsbox {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.statisticsbox .slides {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.statisticsbox .slides .imgbox {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: auto;
+    float: none;
+    display: block;
+    padding-right: 0%;
+    position: relative;
+    background: #B9B9B9;
+}
+
+.statisticsbox .slides .imgbox h3 {
+    font-size: 120%;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    height: auto;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 280%;
+    height: 45px;
+    z-index: 999;
+}
+
+.statisticsbox .slides .imgboximg {
+    width: 100%;
+    height: 247px;
+    min-height: 247px;
+    overflow: hidden;
+}
+
+.statisticsbox .slides .imgbox img {
+    width: 100%;
+    height: auto;
+}
+
+.statisticsbox .slider .fontbox-mob {
+    width: 100%;
+    height: auto;
+}
+
+.statisticsbox .slider .fontbox-mob a {
+    text-decoration: none;
+    display: inline-block;
+    /* height: 25px; */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0px 10px;
+    color: var(--font-color);
+    background: #EAF0F5;
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+.statisticsbox .slider .fontbox-mob a:hover {
+    background: #cad4dc;
+}
+
+/*花絮*/
+.photo_box .color-1 {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 25px;
+    border: 1px #eee solid;
+    border-radius: 10px;
+}
+
+.photo_box .color-1 .slides {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: o auto;
+}
+
+.photo_box .color-1 .imgbox {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: auto;
+    float: none;
+    display: block;
+    padding-right: 0%;
+    position: relative;
+}
+
+.photo_box .color-1 .imgbox h3 {
+    font-size: 120%;
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    height: auto;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-height: 280%;
+    height: 45px;
+    z-index: 999;
+}
+
+.photo_box .color-1 .imgboximg {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.photo_box .color-1 .imgbox img {
+    width: 100%;
+    max-with: 750px;
+    min-width: auto;
+    height: auto;
+    max-height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+}
+
+
+/*花絮end*/
+
+
+/*.bigtitle{ padding:5px 0px; width:100%; height: auto; margin:10px 0;}
+.bigtitle h2{ color:#07743d; display:inline-block; width:60%; line-height:45px; font-size:160%;}
+.bigtitle h2 img{ margin-right:5px;width:45px;}
+.bigtitle h2 span{ color:#07743d; font-size:80%; font-weight:normal;}
+.bigtitle .mob-more{ display:block; text-align:right; width:65x; height:auto; padding:5px; color:#07743D; margin-top:10px; float:right;}
+.bigtitle .mob-more:before {content: "► ";}
+
+
+.bigtitle .fontsize{height:auto; float:right; margin-top:5px;}
+.bigtitle .fontsize a{display:inline-block; width:40px; height:auto; line-height:225%;text-align:center; color:#fff; font-size:100%; background:#7a7a7a; text-decoration:none;}
+.bigtitle .fontsize a:hover{background:#444444;}
+.bigtitle .fontsize .ON{ display:inline-block; background:#444444;}*/
+
+
+
+/*主題專區 熱門服務 網網相連*/
+
+.iconmu {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.iconmu .iconmubox {
+    display: block;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1% 0px;
+}
+
+.iconmu .iconmubox_mob {
+    display: none;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    padding: 1% 0px;
+}
+
+
+.iconmu .iconmubox .box {
+    clear: both;
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.iconmu .iconmubox .box p {
+    width: 5%;
+    padding: 0% 0px;
+    float: left;
+}
+
+.iconmu .iconmubox .box .bigtitle {
+    padding: 0% 0px;
+}
+
+.iconmu .iconmubox .box .bigtitle i {
+    display: block;
+    text-align: center;
+    width: 58px;
+    font-style: normal;
+    font-size: 120%;
+    font-weight: bold;
+    color: #07743d;
+    letter-spacing: 2px;
+}
+
+.iconmu .iconmubox .box .bigtitle i img {
+    text-align: left;
+}
+
+.iconmu .iconmubox .box .productbox {
+    margin-top: 10px;
+}
+
+/* 熱門服務 網網相連標題-mob*/
+.iconmu .iconmubox_mob h3 {
+    display: block;
+    text-align: left;
+    font-size: 140%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    line-height: 130%;
+    color: #07743d;
+}
+
+.iconmu .iconmubox_mob h3 img {
+    margin-right: 5px;
+    width: 40px;
+    vertical-align: middle;
+    margin-bottom: 5px;
+}
+
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width:767px) {
+
+    .iconmu .iconmubox {
+        display: none;
+        width: 94%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1% 0px;
+    }
+
+    .iconmu .iconmubox_mob {
+        display: block;
+        width: 94%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1% 0px;
+    }
+
+    /*content*/
+    /*.content{ width:94%; height:auto; margin:0 auto;}
+.content .contentbox{ padding:15px 0px;}
+.content .contentbox h2{ margin:10px 0;}
+.content .contentbox P{ line-height:150%; color:#666; letter-spacing:2px; font-size:105%;text-align: justify;text-justify:inter-ideograph;word-break: break-strict;}
+.content .contentbox .BB{ color:#8864be; font-size:110%; line-height:200%;}
+
+
+.bigtitle{ padding:5px 0px; width:100%; height: auto; margin:10px 0;}
+.bigtitle h2{ display:inline-block; width:75%; line-height:40px; font-size:160%; color:#07743d;}
+.bigtitle h2 img{ margin-right:5px;width:40px;}
+.bigtitle h2 span{  font-size:60%; font-weight:normal;}
+.bigtitle .mob-more{ display: inline-block; text-align:right;width:65px; height: auto; padding:5px; color:#07743D; margin-top:10px; float:right;}
+.bigtitle .mob-more:before {content: "► ";}
+
+.bigtitle .fontsize{ display:none;height:auto; float:right; margin-top:0px;}
+.bigtitle .fontsize a{display:inline-block; width:40px; height:auto; line-height:225%;text-align:center; color:#fff; font-size:100%; background:#A7B63B; text-decoration:none;}
+.bigtitle .fontsize a:hover{background:#919F29;}
+.bigtitle .fontsize .ON{ display:inline-block; background:#7b881a;}*/
+    /*hot news*/
+    /*.containerbox .topbg{width:100%; height: auto;border-bottom: rgba(0,0,0,0.5) 2px solid; border-radius:0 0;}
+.containerbox .topbg p{display:block; float:left; width: auto; height: auto; padding:0px 1% ;font-size:100%; line-height:120%; color:#FFFFFF; letter-spacing:2px;}
+.containerbox .topbg a{width: 18.7%;height: auto;line-height:120%;padding:5px 2%; text-align:center;}
+.containerbox .topbg a.on{ background:linear-gradient(to top, #006835 50%,#0a8044 100%); color:#FFF; border:1px solid rgba(5,66,35,0.5);}
+/*.slider{ width: 100%; height: auto; overflow:hidden;padding:0px; margin:0;}*/
+
+
+    /*statistics*/
+    .photo_box .color-1 {
+        width: 95%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .statistics {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .statisticsbox {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /*border-bottom:4px #becd54 solid;*/
+        margin-bottom: 0px;
+        padding: 15px;
+        /* background: #eee; */
+        border-radius: 10px;
+    }
+
+    .statisticsbox .slides {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .statisticsbox .slides .imgbox {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: auto;
+        float: none;
+        display: block;
+        padding-right: 0%;
+        position: relative;
+        background: #B9B9B9;
+    }
+
+    .statisticsbox .slides .imgbox h3 {
+        font-size: 120%;
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        height: auto;
+        background: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-height: 280%;
+        height: 45px;
+        z-index: 999;
+    }
+
+    .statisticsbox .slides .imgboximg {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        overflow: hidden;
+    }
+
+    .statisticsbox .slides .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .statisticsbox .slider .fontbox-mob {
+        width: 100%;
+        height: auto;
+    }
+
+    .statisticsbox .slider .fontbox-mob a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 130%;
+        font-weight: bold;
+        overflow: hidden;
+        float: right;
+    }
+
+    .statisticsbox .slider .fontbox-mob a:hover {
+        color: #DC810E;
+        text-decoration: underline;
+    }
+
+    /*花絮*/
+    .color-1 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /*border-bottom:4px #becd54 solid;*/
+        margin-bottom: 0px;
+        padding: 15px;
+        border: 1px #eee solid;
+        border-radius: 10px;
+    }
+
+    .color-1.slides {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .color-1 .slides .imgbox {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: auto;
+        float: none;
+        display: block;
+        padding-right: 0%;
+        position: relative;
+        background: #B9B9B9;
+    }
+
+    .color-1 .slides .imgbox h3 {
+        font-size: 120%;
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        height: auto;
+        background: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-height: 280%;
+        height: 45px;
+        z-index: 999;
+    }
+
+    .color-1 .slides .imgboximg {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        overflow: hidden;
+    }
+
+    .color-1 .slides .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .color-1 .slider .fontbox-mob {
+        width: 100%;
+        height: auto;
+    }
+
+    .color-1 .slider .fontbox-mob a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 130%;
+        font-weight: bold;
+        overflow: hidden;
+        color: #007D97;
+        float: right;
+    }
+
+    .color-1 .slider .fontbox-mob a:hover {
+        color: #DC810E;
+        text-decoration: underline;
+    }
+
+
+    /*主題專區 熱門服務 網網相連*/
+    .iconmu .iconmubox .box {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .iconmu .iconmubox .box p {
+        width: 5%;
+        padding: 0% 0px;
+        float: left;
+    }
+
+    .iconmu .iconmubox .box .bigtitle {
+        padding: 0% 0px;
+        margin-top: 10px;
+    }
+
+    .iconmu .iconmubox .box .bigtitle i {
+        display: block;
+        text-align: center;
+        width: 58px;
+        font-style: normal;
+        font-size: 100%;
+        font-weight: bold;
+        color: #4e4e4e;
+        letter-spacing: 2px;
+    }
+
+    .iconmu .iconmubox .box .bigtitle i img {
+        text-align: center;
+        width: 40px;
+        padding-top: 2px;
+    }
+
+    .iconmu .iconmubox .box .productbox {
+        margin-top: 10px;
+    }
+
+
+    /* 熱門服務 網網相連標題-mob*/
+    .iconmu .iconmubox_mob h3 {
+        text-align: left;
+        font-size: 140%;
+        padding: 1% auto;
+        margin: 1% auto;
+        color: #07743d;
+    }
+
+    .iconmu .iconmubox_mob h3 img {
+        margin-right: 5px;
+        width: 40px;
+    }
+
+    .iconmu .iconmubox_mob {
+        width: 94%;
+        border-bottom: 0px solid #666;
+    }
+
+    .iconmu:nth-child(2).iconmubox_mob {
+        border-bottom: 0px solid #666;
+    }
+
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .container .containerbox {
+        width: 94%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .iconmu .iconmubox {
+        display: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1% 0px;
+    }
+
+    .iconmu .iconmubox_mob {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 1% 0px;
+    }
+
+    /*.bigtitle{ padding:5px 0px; width:100%; height: auto; margin:10px 0;}
+.bigtitle h2{  display:inline-block; width:60%; line-height:40px; font-size:160%; color:#07743d;}
+.bigtitle h2 img{ margin-right:5px;width:40px;}
+.bigtitle h2 span{ font-size:60%; font-weight:normal;}
+.bigtitle .fontsize{height:auto; float:right; margin-top:0px;}
+.bigtitle .fontsize a{display:inline-block; width:40px; height:auto; line-height:225%;text-align:center; color:#fff; font-size:100%; background:#A7B63B; text-decoration:none;}
+.bigtitle .fontsize a:hover{background:#919F29;}
+.bigtitle .fontsize .ON{ display:inline-block; background:#7b881a;}
+
+.containerbox .bigtitle{margin-right:2%; }
+.containerbox .bigtitle .mob-more{ display:block;width:65px; height: auto; padding:5px; color:#07743D; margin-top:10px; float:right;}
+.containerbox .bigtitle .mob-more:before {content: "► ";}*/
+
+    /*statistics*/
+    .statistics {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .statisticsbox {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /*border-bottom:4px #becd54 solid;*/
+        margin-bottom: 0px;
+        padding: 25px;
+        /* background: #eee; */
+        min-height: 300px;
+        max-height: 320px;
+        border-radius: 10px;
+    }
+
+    .statisticsbox .slides {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .statisticsbox .slides .imgbox {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: auto;
+        float: none;
+        display: block;
+        padding-right: 0%;
+        position: relative;
+        background: #B9B9B9;
+    }
+
+    .statisticsbox .slides .imgbox h3 {
+        font-size: 120%;
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        height: auto;
+        background: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-height: 280%;
+        height: 45px;
+        z-index: 999;
+    }
+
+    .statisticsbox .slides .imgboximg {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        max-height: 250px;
+        overflow: hidden;
+    }
+
+    .statisticsbox .slides .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .statisticsbox .slider .fontbox-mob {
+        width: 100%;
+        height: auto;
+    }
+
+    .statisticsbox .slider .fontbox-mob a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 130%;
+        font-weight: bold;
+        overflow: hidden;
+        float: right;
+    }
+
+    .statisticsbox .slider .fontbox-mob a:hover {
+        color: #DC810E;
+        text-decoration: underline;
+    }
+
+    /*花絮*/
+
+    .color-1 {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /*border-bottom:4px #becd54 solid;*/
+        margin-bottom: 0px;
+        padding: 25px;
+        border: 1px #eee solid;
+        min-height: 300px;
+        max-height: 320px;
+        border-radius: 10px;
+    }
+
+    .color-1 .slides {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .color-1 .slides .imgbox {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: auto;
+        float: none;
+        display: block;
+        padding-right: 0%;
+        position: relative;
+        background: #B9B9B9;
+    }
+
+    .color-1 .slides .imgbox h3 {
+        font-size: 120%;
+        display: inline-block;
+        width: 100%;
+        color: #fff;
+        height: auto;
+        background: rgba(0, 0, 0, 0.65);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        line-height: 280%;
+        height: 45px;
+        z-index: 999;
+    }
+
+    .color-1 .slides .imgboximg {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        max-height: 250px;
+        overflow: hidden;
+    }
+
+    .color-1 .slides .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .color-1 .slider .fontbox-mob {
+        width: 100%;
+        height: auto;
+    }
+
+    .color-1 .slider .fontbox-mob a {
+        text-decoration: none;
+        display: inline-block;
+        font-size: 130%;
+        font-weight: bold;
+        overflow: hidden;
+        color: #007D97;
+        float: right;
+    }
+
+    .color-1 .slider .fontbox-mob a:hover {
+        color: #DC810E;
+        text-decoration: underline;
+    }
+
+    /*主題專區 熱門服務 網網相連*/
+    .iconmu .iconmubox .box {
+        clear: both;
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .iconmu .iconmubox .box p {
+        width: 5%;
+        padding: 0% 0px;
+        float: left;
+    }
+
+    .iconmu .iconmubox .box .bigtitle {
+        padding: 0% 0px;
+        margin-top: 10px;
+    }
+
+    .iconmu .iconmubox .box .bigtitle i {
+        display: block;
+        width: 58px;
+        font-style: normal;
+        font-size: 100%;
+        font-weight: bold;
+        color: #4e4e4e;
+        letter-spacing: 2px;
+    }
+
+    .iconmu .iconmubox .box .bigtitle i img {
+        width: 40px;
+        padding-top: 20px;
+    }
+
+    .iconmu .iconmubox .box .productbox {
+        margin-top: 10px;
+    }
+
+    /*content*/
+    /*.content{ width:94%; height:auto; margin:0 auto;}
+.content .contentbox{ padding:15px 0px;}
+.content .contentbox h2{ margin:10px 0;}
+.content .contentbox P{ line-height:150%; color:#666; letter-spacing:2px; font-size:105%;text-align: justify;text-justify:inter-ideograph;word-break: break-strict;}
+.content .contentbox .BB{ color:#8864be; font-size:110%; line-height:200%;}*/
+
+
+}

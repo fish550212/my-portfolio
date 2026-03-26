@@ -1,0 +1,37 @@
+﻿/* 上排選單 */
+/*
+				作者：Yuxin
+				教學文：http://fundesigner.net/only-css-menu
+				授權：MIT License
+			*/
+/*****************************/
+.keep
+{
+    color: #FFFFFF;
+    background-color:rgba(0,0,0,0.9);
+    }
+    
+    .keep2
+    {
+       color: #FFFFFF;
+       background-color:#FFFFFF;
+	   transition: background 0.2s ease-out;
+	   /*transition-delay: 0.2s;*/
+        }
+        
+        @media only screen and (min-width:1250px) and (max-width:1514px) {
+    
+}
+
+
+@media only screen and (min-width:1001px) and (max-width:1249px) {
+    #t_menu li a
+        {
+            padding: 20px 13px;
+            }
+}
+        
+        
+        
+        
+    

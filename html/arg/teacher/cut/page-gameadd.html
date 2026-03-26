@@ -1,0 +1,241 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>學習體驗平台-教師入口</title>
+
+  <link rel="stylesheet" type="text/css" href="argtercss/erpcss.css" />
+  <link rel="stylesheet" type="text/css" href="argtercss/leftmenu.css" />
+
+
+</head>
+
+<body>
+
+ 
+  <!----header-------------------------------->
+  <div class="header">
+    <div class="headerbox">
+
+
+      <!--logo------------>
+      <H1>
+        <P><a href="#" class="logo"><img src="argterimages/login-logo.png" title="後台標題名稱" />
+            <span>學習體驗平台<b>教師入口</b>
+            </span></a>
+
+          <a href="#" class="logo-mob">
+            <img src="./argterimages/login-mob.png" title="後台標題名稱" />
+            <span>學習體驗平台<b>教師入口</b> </span>
+          </a>
+        </P>
+      </H1>
+
+      <!-- <div id="TOP"><img class="TOP" src="./argterimages/gotop.png" title="回到上面" /></div> -->
+      <!--toolbar--------->
+
+      <div class="toolbar">
+
+        <div class="toolbarbox">
+          <span><img src="./argterimages/user.png">管理者 (mark)</span>
+          <span class="outbox"><a href="#" class="out"><img src="./argterimages/out.png">登出</a></span>
+
+
+          <ul class="navbox">
+            <li><a href="#">遊戲建置</a></li>
+            <li><a href="#">ARG參考模板</a></li>
+            <li><a href="page-gamelist.html">遊戲實況</a></li>
+            <li><a href="#">紀錄查詢</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <!--toolbar-end-------->
+
+      <!--MOB-MENU---位置放<div class="headerbox">內----------------->
+      <!--手機選單-漢堡圖-->
+      <div class="mu2 nav-button"><A title="Menu" class="animate" href="#">MENU</A></div>
+      <!--手機選單-END-->
+      <!-- Nav手機選單 -->
+      <LINK href="mobmu/common.css" rel="stylesheet">
+      <!--[if gte IE 9]><!-->
+      <SCRIPT src="mobmu/jquery-2.1.3.min.js"></SCRIPT>
+      <!--<![endif]-->
+      <SCRIPT src="mobmu/jquery.mobile-1.4.5.custom.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/jquery.bxslider-4.1.1.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/common.js"></SCRIPT>
+
+      <div class="nav-panel" id="nav">
+
+        <H1 class="hidden-element">主選單</H1>
+
+        <!-- <div class="othermu">
+          <a href="#2"><img src="argterimages/icon_01.png">回首頁</a>
+          <a href="#1"><img src="argterimages/icon_01.png">登出</a>
+        </div> -->
+
+        <!--DIV class="search-panel clearfix">
+        <FORM action="search.php"><INPUT class="inText" type="text" placeholder="請輸入關鍵字" value="請輸入關鍵字">
+        <INPUT class="submit" type="submit" value="搜尋"></FORM>
+        </DIV-->
+
+        <ul class="reset">
+
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-01.png">遊戲建置</a></h2>
+          </li>
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-02.png">ARG參考模板</a></h2>
+          </li>
+          <li>
+            <h2><a href="page-gamelist.html"><img src="argterimages/menu-03.png">遊戲實況</a></h2>
+          </li>
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-04.png">紀錄查詢</a></h2>
+          </li>
+          <li>
+            <h2><a href="#1"><img src="argterimages/menu-out.png">登出</a></h2>
+          </li>
+        </ul>
+
+      </div>
+      <!--MOB-MENU--END-------------------------------->
+
+
+    </div>
+  </div>
+  <!----header--end------------------------------>
+
+
+
+  <!----container-------------------------------->
+  <div class="container">
+    <div class="containerbox">
+      <!-- rightbox -->
+      <div class="rightbox">
+        <div class="minabg">
+
+          <!---------------標題--------------------->
+          <div class="title-tlink">
+            <h2 class="tlink">
+              <img src="./argterimages/nav-04.png" alt="遊戲紀錄">
+              <span>遊戲紀錄</span>
+            </h2>
+          </div>
+          <!---------------標題-end-------------------->
+          <div class="contentbox">
+            <!-----------內容替換------------------------->
+            <div class="gamesearchbox">
+              <div class="oderlist">
+                <div class="table_box1 table_overflowx">
+                  <div id="business_table">
+                    <table id="myTable" class="tablesorter table_w_medium" border="1">
+                      <tbody>
+                        <tr>
+                          <th colspan="2">遊戲編輯</th>
+                        </tr>
+                        <tr>
+                          <td align="right" width="20%">
+                            <img src="./argterimages/art.gif" border="0">
+                            尋寶活動編號
+                          </td>
+                          <td width="80%">
+                            <label>
+                            <input type="radio" name="tshownext" value="y">是</label>
+                            <label>
+                            <input type="radio" name="tshownext" value="n" checked="">否</label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right" width="20%">
+                            <img src="./argterimages/art.gif" border="0">
+                            尋寶活動編號
+                          </td>
+                          <td width="80%">
+                            <input type="text" class="c12border" id="tgno" name="tgno" size="20" maxlength="20"
+                              value="">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            登入背景圖
+                          </td>
+                          <td align="left">
+                            <input type="file" id="file_1" name="file_1" size="50">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">
+                            <img src="./argterimages/art.gif" border="0">
+                            活動日期起迄
+                          </td>
+                          <td align="left">
+                            <input type="text" name="tgsdate" id="tgsdate" size="12" class="c12border" maxlength="10"
+                              value="">&nbsp;
+                            <img src="./argterimages/show-calendar.gif" border="0" id="f_btn" style="cursor: pointer">
+
+                            <input type="text" name="tgedate" id="tgedate" size="12" class="c12border" maxlength="10"
+                              value="">&nbsp;
+                            <img src="./argterimages/show-calendar.gif" border="0" id="f_btn1" style="cursor: pointer">
+
+                            <script type="text/javascript">
+                              cal.manageFields("f_btn", "tgsdate", "%Y/%m/%d");
+                              cal.manageFields("f_btn1", "tgedate", "%Y/%m/%d");
+                            </script>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td align="right">簡介</td>
+                          <td align="left">
+                            <textarea id="tgnote" name="tgnote" rows="5"></textarea>
+                          </td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttonbox">
+              <input type="button" value="確認" class="abutton" onclick="goBack()">
+              <input type="button" value="清除" class="abutton" onclick="goBack()">
+            </div>
+            <!---------------內容替換end--------------------->
+          </div>
+          <!------------------------------------>
+
+        </div>
+      </div>
+      <!-- rightbox end-->
+
+    </div>
+  </div>
+  <!----container--end------------------------------>
+  <!----footer-------------------------------->
+  <div class="footer">
+    <div class="footerbox">
+      <div class="copyright">
+        Copyright © 2023 All Rights Reserved.本網站所有著作權均屬本站所有，非經允許，不得任意轉載
+      </div>
+
+    </div>
+  </div>
+  <!----footer--end------------------------------>
+
+
+  <script type="text/javascript" src="argterjs/gotop.js"></script>
+</body>
+<script>
+  function goBack() {
+    history.go(-1);
+  }
+</script>
+
+</html>

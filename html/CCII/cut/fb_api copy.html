@@ -1,0 +1,37 @@
+
+
+<!doctype html>
+<meta charset="utf-8">
+<h1>粉專最新貼文</h1>
+<div id="posts"></div>
+<script>
+const PAGE_ID = "178390788844401";          // 粉專 ID
+const TOKEN   = "EAA7IZBAiB3j4BPcIn0S4ZAg1oDue4IGBmhtJar9fDwqE6YRPirhXflpwUHv3YD3mR3TvZCGWulUvmy94bY0RKfclgRJrk918EhNTXSAZCrMwi8QLx5qGLQxSgXobKw589rSVMcpZBox3G5oN3IKisxtYvhlBzogu2bWZC6uSqnBo1qRSHDtji1D02BoRRq93oEnVcNmv0ZD";                  // 剛驗證過的 System User Token
+
+const FIELDS =
+  "id,message,created_time,permalink_url,full_picture," +
+  "reactions.type(LIKE).summary(true).limit(0)," +
+  "comments.summary(true).limit(0),shares";
+
+fetch(`https://graph.facebook.com/v23.0/${PAGE_ID}/posts?fields=${encodeURIComponent(FIELDS)}&limit=5`, {
+  headers: { Authorization: `Bearer ${TOKEN}` }
+})
+.then(r => r.json())
+.then(j => {
+  if (j.error) { document.body.innerText = JSON.stringify(j.error, null, 2); return; }
+  const box = document.getElementById("posts");
+  (j.data || []).forEach(p => {
+    const like = p.reactions?.summary?.total_count ?? 0;
+    const cmt  = p.comments?.summary?.total_count ?? 0;
+    const sh   = p.shares?.count ?? 0;
+    box.insertAdjacentHTML("beforeend", `
+      <article style="border:1px solid #ddd;padding:12px;margin:12px 0">
+        <p>${p.message ?? "(無文字)"}</p>
+        ${p.full_picture ? `<img src="${p.full_picture}" width="320">` : ""}
+        <p>👍 ${like}　💬 ${cmt}　↗ ${sh}</p>
+        <a href="${p.permalink_url}" target="_blank">查看原文</a>
+      </article>
+    `);
+  });
+});
+</script>

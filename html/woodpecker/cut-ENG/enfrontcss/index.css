@@ -1,0 +1,1544 @@
+﻿@charset "utf-8";
+@import url("all_shared.css");
+@import url("page.css");
+@import url("page-other.css");
+
+/*TOP回到最上面*/
+#TOP {
+    position: absolute;
+    top: -80px;
+    padding-top: 0px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 999;
+    opacity: .8;
+    border-radius: 50px;
+    /* box-shadow: 0px 0px 3px 1px #45454585; */
+}
+
+#TOP:hover {
+    opacity: 1;
+}
+
+#TOP img {
+    width: 100%;
+    height: auto;
+}
+
+/*-----------header*/
+.header {
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease-in-out;
+    position: inherit;
+    background-color: #002957;
+}
+
+.header.page {
+    width: 100%;
+    height: 90px;
+    z-index: 9999;
+    position: absolute;
+    top: 0px;
+    transition: top 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.header .headerbox {
+    width: 96%;
+    height: 90px;
+    margin: 0 auto;
+    vertical-align: middle;
+    position: relative;
+}
+
+/* .header:hover {
+    background-color: #002957;
+    box-shadow: 0 3px 5px 0px rgba(108, 108, 108, 0.5);
+} */
+
+.header .headerbox .logo {
+    width: 180px;
+    height: auto;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.header .headerbox .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.header .headerbox .topmenu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    display: inline-block;
+}
+
+.topbox a,
+.topbox select {
+    line-height: 200%;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header .headerbox .topbox {
+    float: right;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.headerbox .topbox .oa_btn {
+    display: inline-block;
+}
+
+.headerbox .topbox .oa_btn:hover {
+    color: #9D0000;
+}
+
+.headerbox .topbox select {
+    display: inline-block;
+    background: none;
+    border: none;
+}
+
+.headerbox .iconbox {
+    list-style: none;
+    float: right;
+    margin-top: 15px;
+    padding-right: 10px;
+}
+
+.headerbox .iconbox img {
+    width: 25px;
+    font-size: 0;
+}
+
+#menu {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    float: left;
+    background: none;
+}
+
+#menu ul {
+    width: 100%;
+    height: auto;
+
+}
+
+#menu li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+}
+
+#menu>li {
+    width: auto;
+    position: relative;
+}
+
+#menu li>a {
+    font-size: 20px;
+    padding: 0px 20px 20px 20px;
+    width: auto;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .4s;
+}
+
+
+#menu>li>a:hover {
+    display: inline-block;
+    color: transparent;
+    color: #6acbff;
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90deg, #FFC730, #8FFFD7, #82E0FF);
+    will-change: transform; */
+    overflow: hidden;
+}
+
+#menu li>ul {
+    display: none;
+    margin: 0;
+    z-index: 8000;
+    line-height: 150%;
+    list-style: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 220px;
+    height: auto;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    scroll-behavior: smooth;
+}
+
+#menu li ul li {
+    float: left;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+    line-height: 150%;
+}
+
+#menu li ul li:first-child {
+    border-top: 0;
+}
+
+#menu li ul li a {
+    display: block;
+    color: #fff;
+    width: auto;
+    padding: 15px 10px;
+    line-height: 110%;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#menu li ul li a:hover {
+    text-decoration: none;
+    color: #FFC730;
+    transition: all .5s ease-out;
+    font-weight: normal;
+}
+
+#menu li .icon {
+    background: url(../enfrontimages/buy-icon-05.png) no-repeat left center;
+    background-size: 19px 17px;
+    padding-left: 25px;
+    margin: 2px 2px 2px 10px;
+}
+
+#menu .iconbox:hover {
+    border: 1px #BFBFBF solid;
+}
+
+/*header-----------end*/
+
+/*adv*/
+.adv {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background-color: #00264F;
+}
+
+.adv .ADVbox {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    margin: auto;
+    font-size: 0;
+}
+
+.adv .ADVbox img {
+    width: 100%;
+    height: auto;
+}
+
+.indexadv .ADVbox {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    font-size: 0;
+}
+.indexadv .ADVbox img{
+    width: 100% !important;
+    height: auto !important;
+}
+.pagecontent .ADVbox {
+    height: auto !important;
+}
+
+/*footer*/
+.footer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    clear: both;
+    z-index: 99999;
+    background: #002957;
+}
+
+.footer .footerbox {
+    width: 100%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.footerbox p {
+    text-align: center;
+    height: auto;
+    margin: 5px auto;
+    color: rgba(255, 255, 255, 0.689);
+    font-size: 1rem;
+}
+
+/*article*/
+.article {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.article .articlebox {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    background: #062544;
+    overflow: hidden;
+}
+
+.titlebox {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.titlebox .title {
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    padding-right: 10px;
+    font-family: 'everstyleFont', sans-serif;
+}
+
+.titlebox .title .title_red {
+    font-size: 40%;
+    color: #e00b0b;
+    font-weight: normal;
+    text-align: left;
+}
+
+.titlebox .title_line {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #D3D3D3;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.btnbox {
+    width: 100%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.btnbox .btn {
+    display: inline-block;
+    padding: 15px 60px;
+    margin: auto;
+    background-color: #225589;
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: .5s;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 0px #3e3e3e62;
+}
+
+.btnbox .btn:hover {
+    background-color: rgb(58, 111, 163);
+
+}
+
+.btnbox .w_btn {
+    background-color: #fff;
+    color: #545454;
+}
+
+.btnbox .w_btn:hover {
+    background-color: #AA0000;
+    color: #fff;
+}
+
+.btnbox .red_btn {
+    background-color: #AA0000;
+    border: 1px solid #AA0000;
+    color: #fff;
+}
+
+.btnbox .red_btn:hover {
+    background-color: #aa000000;
+    color: #303030;
+}
+
+/* 關於柏泰 */
+.about {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    background: linear-gradient(to bottom, #00264F 0%, #00264F 100%);
+}
+
+.about .aboutbox {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    z-index: 1;
+}
+
+.about::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    background: url(../enfrontimages/text_bg_01.png)no-repeat left top;
+    background-size: 12% auto;
+}
+
+/*圖片*/
+.about .aboutbox .abutbox_bgimages {
+    position: absolute;
+}
+
+.about .aboutbox .bgimages_01 {
+    top: 30px;
+    left: -80px;
+}
+
+.about .aboutbox .bgimages_02 {
+    bottom: -30px;
+    right: -80px;
+}
+
+.about .aboutbox .abutbox_bgimages img {
+    width: 90%;
+}
+
+/*圖片*/
+.about_content {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 150px 0 120px 0;
+    overflow: hidden;
+}
+
+.about_img {
+    float: left;
+    width: 45%;
+    border-radius: 10px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.about_img img {
+    width: 100%;
+}
+
+.about_content .content_text {
+    float: left;
+    width: 100%;
+    font-size: 25px;
+    line-height: 35px;
+    color: #fff;
+    text-justify: inter-word;
+
+}
+
+.about_content .content_text b {
+    color: #fff;
+    display: inline-block;
+    font-size: 35px;
+    /* padding-left: 2%;
+    border-left: 1px solid transparent;
+    border-width: 0 0 0px 4px;
+    border-image: linear-gradient(to top, #F4AD46 0%, #8FFFD7 50%, #2FA2F5 100%);
+    border-image-slice: 1; */
+}
+
+.about_content .content_text p {
+    display: block;
+    padding-left: 3%;
+}
+
+.about_content .btnbox {
+    float: left;
+}
+
+/*產品應用*/
+.research {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    background-size: 100%;
+
+}
+
+.research::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #042345 url(../enfrontimages/text_bg.png)no-repeat top right;
+    background-size: auto 100%;
+    ;
+}
+
+.contentbox {
+    width: 100%;
+    max-width: 1200px;
+    padding: 120px 0;
+    margin: auto;
+}
+
+.research .titlebox {
+    text-align: center;
+}
+
+.research .title {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    background-color: #ececec00;
+}
+
+
+.research .commodity {
+    width: 100%;
+    height: auto;
+    padding: 60px 0 0 0;
+    margin: 0 auto;
+}
+
+.research .commodity .commoditybox {
+    float: left;
+    width: 23.5%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 0 0 2%;
+    padding: 0 0 10px 0;
+    background: #063667;
+    transform: scale(1, 1);
+    transition: all .5s ease-out;
+    overflow: hidden;
+}
+
+.research .commodity .commoditybox:first-child {
+    margin: 0;
+}
+
+.research .commodity .commoditybox:hover {
+    position: relative;
+    z-index: 2;
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.research .commodity .imgbox {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    font-size: 0;
+}
+
+.research .commodity .imgbox img {
+    width: 100%;
+    height: auto;
+    transform: scale(1, 1);
+    transition: all .5s ease-out;
+    font-size: 0;
+}
+
+.research .commoditybox:hover .imgbox img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1, 1.1);
+}
+
+.research .commodity .fontbox {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.research .commodity .fontbox div {
+    display: inline-block;
+    height: auto;
+    text-align: center;
+    color: #8A8A8A;
+    padding-top: 50px;
+    border-bottom: 1px solid #AA0000;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.research .contentbox .btnbox {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/*首頁下方文字*/
+.about.text .aboutbox {
+    background: url(../enfrontimages/text_bg.png)no-repeat top right;
+    background-size: auto 100%;
+    padding-bottom: 15%;
+}
+
+.about.text .about_content .content_text {
+    float: left;
+    width: 70%;
+    font-size: 1.6rem;
+    padding: 0;
+    line-height: 30px;
+    color: #3B3B3B;
+    text-justify: inter-word;
+
+}
+
+.imagebox {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    font-size: 0;
+    margin: -235px auto;
+}
+
+.imagebox img {
+    width: 100%;
+}
+
+/*bottom------------------------------------------*/
+.bottombox {
+    background: #020A1F url(../enfrontimages/bottom_bg.png)no-repeat center 30%;
+    background-size: 100% auto;
+}
+
+.bottombox .contentbox {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10% 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+
+.indexsitemap {
+    width: auto;
+    height: auto;
+    padding: 60px 0;
+    text-align: center;
+    background: #002957;
+    overflow: hidden;
+}
+
+.indexsitemapbox {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.indexsitemapbox .centerbox {
+    display: none;
+}
+
+.indexsitemap .title_logo {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+
+.indexsitemap .title_logo a {
+    display: inline-block;
+}
+
+.indexsitemap .detailbox {
+    width: 100%;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+
+.indexsitemap .material {
+    display: inline-block;
+    list-style: none;
+    color: #b8b8b8;
+    overflow: hidden;
+}
+
+.indexsitemap .material li {
+    float: left;
+    padding: 10px;
+}
+
+.indexsitemap .material a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    opacity: .7;
+    transition: .5s;
+}
+
+.indexsitemap .material a:hover {
+    opacity: 1;
+}
+
+.indexsitemap .centerbox {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    text-align: right;
+    overflow: hidden;
+}
+
+#sitemap {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+}
+
+#sitemap .title {
+    width: 16.6%;
+    float: left;
+    text-align: left;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-right: 1%;
+    padding-bottom: 8px;
+}
+
+#sitemap .title a {
+    color: #fff;
+    transition: .3s;
+}
+
+#sitemap .title a:hover {
+    text-decoration: none;
+    color: #53E2F5;
+}
+
+#sitemap .title ul {
+    margin-top: 20px;
+    display: none;
+}
+
+#sitemap .title ul li {
+
+    list-style-type: none;
+    text-align: left;
+    font-weight: normal;
+}
+
+#sitemap .title ul li a {
+    color: #b8b8b8;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    line-height: 160%;
+}
+
+#sitemap .title ul li a:hover {
+    color: #53E2F5;
+    border: 0;
+}
+
+.Teamindex {
+    padding: 0;
+}
+
+.Teamindex .Teambox {
+    padding: 80px 0;
+}
+
+.Teamindex .groupbox li {
+    float: none;
+    display: inline-block;
+    width: 33%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px 0px;
+}
+
+.Teamindex .Teambox .titlebox {
+    text-align: center;
+}
+
+.Teamindex .groupbox {
+    list-style: none;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.Teamindex .groupbox li {
+    margin: 0;
+}
+
+.Teamindex .Teambox p {
+    text-align: center;
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1920px) {}
+
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px) {
+
+    /*adv*/
+    .adv {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0px auto;
+    }
+
+    .adv .ADVbox {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 0px auto;
+        font-size: 0;
+        height: 100px;
+    }
+    .indexadv .ADVbox{
+        width: 100%;
+        height: auto;
+    }
+    .pagecontent .ADVbox img{
+        width: 100% !important;
+        height: auto !important;
+    }
+    .adv .ADVbox img {
+        width: 100%;
+        height:100%;
+    }
+
+
+    .header {
+        width: 100%;
+        height: auto;
+        background-color: #002957;
+        position: relative;
+    }
+
+    .header.page {
+        width: 100%;
+        height: auto;
+        z-index: 9999;
+        position: relative;
+        background-color: #002957;
+    }
+
+    .header .headerbox .topmenu,
+    .header .headerbox .topbox .oa_btn {
+        display: none;
+    }
+
+    .headerbox .topbox {
+        right: 65px;
+    }
+
+    .header .headerbox {
+        width: 100%;
+        height: 65px;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .headerbox .iconbox {
+        display: none;
+    }
+
+    .footerbox p {
+
+        font-size: 1.1rem;
+    }
+
+    /*-------------------------------------------*/
+    .btnbox {
+        width: 100%;
+        margin: auto;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    .btnbox .btn {
+        display: inline-block;
+        margin: auto;
+        color: #fff;
+        text-align: center;
+        font-size: 1.1rem;
+        transition: .5s;
+        padding: 10px 30px;
+    }
+
+    .btnbox .w_btn {
+        background-color: #fff;
+        color: #545454;
+    }
+
+    .btnbox .w_btn:hover {
+        background-color: #AA0000;
+        color: #fff;
+    }
+
+    .btnbox .red_btn {
+        background-color: #AA0000;
+        border: 1px solid #AA0000;
+        color: #fff;
+    }
+
+    .btnbox .red_btn:hover {
+        background-color: #aa000000;
+        color: #303030;
+    }
+
+    /*header---------------------*/
+    .article .articlebox {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        overflow: hidden;
+    }
+
+    /*標題*/
+    .titlebox .title {
+        font-size: 1.5rem;
+        text-align: center;
+        display: inline-block;
+        background-color: #fff;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    .titlebox .title .title_red {
+        font-size: 40%;
+        color: #e00b0b;
+        font-weight: normal;
+    }
+
+    .topbox a,
+    .topbox select {
+
+        font-size: 1.1rem;
+    }
+
+    /* 關於柏泰 */
+    .about {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+
+    }
+
+    .about .aboutbox {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        /* background-color: #ffffff;
+        background: linear-gradient(to bottom, #ffffff 70%, #ffffff00 100%); */
+        overflow: hidden;
+    }
+
+    .about_content {
+        float: none;
+        width: 90%;
+        padding: 60px 0;
+        margin: auto;
+        min-height: auto;
+    }
+    .about_content .content_text b {
+        color: #fff;
+        display: inline-block;
+        font-size: 30px;
+    }
+    .about_content .content_text {
+        width: 100%;
+        margin: auto;
+        padding: 0 0 0 0;
+        font-size: 1.1rem;
+        line-height: 25px;
+        /* color: #525252; */
+    }
+
+    .about_img {
+        float: none;
+        width: 100%;
+        height: 250px;
+        border-radius: 10px;
+        font-size: 0;
+        padding-bottom: 0%;
+        margin-bottom: 5%;
+        overflow: hidden;
+    }
+
+    .about_img img {
+        width: 100%;
+    }
+
+    .about_content .titlebox {
+        text-align: center;
+    }
+
+    .about_content .titlebox .title {
+        position: relative;
+        z-index: 2;
+        padding: 0 10px;
+    }
+
+    .about_content .title_line {
+        width: 100%;
+        position: relative;
+        top: -20px;
+        z-index: 0;
+    }
+
+    .about::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        background: url(../enfrontimages/text_bg_01.png)no-repeat -17px -45px;
+        background-size: auto 90%;
+    }
+
+    /*產品應用*/
+    .research {
+        width: 100%;
+        margin: auto;
+    }
+    .research::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #042345 url(../enfrontimages/text_bg.png)repeat-y top right;
+        background-size: 100% auto;
+    }
+    .contentbox {
+        width: 90%;
+        max-width: none;
+        margin: auto;
+        padding: 50px 0;
+    }
+
+    .research .title {
+        position: relative;
+        z-index: 2;
+        padding: 0;
+        background-color: #ececec00;
+    }
+
+    .research .titlebox {
+        width: 100%;
+        margin: auto;
+    }
+
+    .research .commodity {
+        width: 100%;
+        min-width: 300px;
+        height: auto;
+        padding: 40px 0 0 0;
+        margin: 0 auto;
+    }
+
+    .research .commodity .commoditybox {
+        float: left;
+        width: 44%;
+        height: auto;
+        margin: 3%;
+        text-align: center;
+        padding: 0 0 10px 0;
+        /* background: #fff; */
+        transform: scale(1, 1);
+        transition: all .5s ease-out;
+        overflow: hidden;
+    }
+
+    .research .commodity .fontbox {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+        /* color: #3E3E3E; */
+        font-weight: bold;
+        /* font-size: 1.2rem; */
+    }
+
+    .research .commodity .commoditybox:first-child {
+        margin: 3%;
+    }
+
+    .research .commodity .commoditybox:hover {
+        position: relative;
+        z-index: 2;
+        transform: scale(1.05, 1.05);
+        box-shadow: 0px 2px 10px 3px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .research .commodity .fontbox div {
+
+        font-size: 1.1rem;
+    }
+
+    .indexsitemap {
+        width: auto;
+        height: auto;
+        padding: 40px 0;
+        text-align: center;
+        background: #002957;
+        overflow: hidden;
+    }
+
+    .indexsitemap .indexsitemapbox {
+        width: 90%;
+        margin: auto;
+    }
+
+    .indexsitemap .detailbox {
+        float: none;
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+
+    .indexsitemap .centerbox {
+        float: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        text-align: right;
+        overflow: hidden;
+    }
+
+    #sitemap .title {
+        width: 33%;
+        float: left;
+        text-align: left;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-right: 0%;
+        padding-bottom: 20px;
+    }
+
+    /*首頁下方文字*/
+    .about.text .aboutbox {
+        background: none;
+        background-size: auto 94%;
+        padding-bottom: 15%;
+    }
+
+    .about.text .about_content .content_text {
+        float: left;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 0;
+        line-height: 25px;
+        color: #3B3B3B;
+        text-justify: inter-word;
+
+    }
+
+    .imagebox {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 90%;
+        max-width: none;
+        font-size: 0;
+        margin: -18% auto;
+    }
+
+    .imagebox img {
+        width: 100%;
+    }
+
+    /*bottom------------------------------------------*/
+    .bottombox {
+        position: relative;
+        z-index: 1;
+        background: #020A1F url(../enfrontimages/bottom_bg.png)no-repeat center 20%;
+        background-size: 100% auto;
+    }
+
+    .bottombox .contentbox {
+        width: 90%;
+        max-width: none;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .research .commodity {
+        width: 90%;
+        min-width: 280px;
+        height: auto;
+        padding: 40px 0 0 0;
+        margin: 0 auto;
+    }
+
+    .research .commodity .commoditybox {
+        float: left;
+        width: 100%;
+        height: auto;
+        margin: 3% auto;
+        text-align: center;
+        padding: 0 0 10px 0;
+        /* background: #fff; */
+        transform: scale(1, 1);
+        transition: all .5s ease-out;
+        overflow: hidden;
+    }
+
+    .research .commodity .commoditybox:first-child {
+        margin: 3% auto;
+    }
+
+    #sitemap .title {
+        width: 50%;
+        float: left;
+        text-align: left;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding-right: 0%;
+        padding-bottom: 20px;
+    }
+
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    /*adv*/
+    .adv {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0px auto;
+    }
+
+    .adv .ADVbox {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        margin: 0px auto;
+        font-size: 0;
+    }
+
+    .adv .ADVbox img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /*-----------header*/
+    .header {
+        width: 100%;
+        height: auto;
+    }
+
+    .header .headerbox {
+        width: 100%;
+        height: 65px;
+        margin: 0 auto;
+        padding-left: 10px;
+    }
+
+    .header .headerbox .topmenu,
+    .header .headerbox .topbox .oa_btn {
+        display: none;
+    }
+
+    .headerbox .topbox {
+        right: 65px;
+    }
+
+    .headerbox .iconbox {
+        display: none;
+    }
+
+    /*header---------------------*/
+
+    /*footer*/
+    .footer {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    /*標題*/
+    .titlebox .title {
+        font-size: 2rem;
+        text-align: center;
+        display: inline-block;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    .titlebox .title .title_red {
+        font-size: 40%;
+        color: #e00b0b;
+        font-weight: normal;
+    }
+
+    /* 關於柏泰 */
+    .about {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .about .aboutbox {
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .about_content {
+        float: none;
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        padding: 80px 4% 80px 4%;
+    }
+
+    .about_content .content_text {
+        width: 100%;
+        padding: 0;
+        font-size: 19.5px;
+        line-height: 25px;
+    }
+
+    .about_img {
+
+        width: 47%;
+    }
+
+    .about_img img {
+        width: 100%;
+    }
+
+    .about::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        background: url(../enfrontimages/text_bg_01.png)no-repeat -17px -26px;
+        background-size: 10% auto;
+    }
+
+    /*首頁下方文字*/
+    .about.text .aboutbox {
+        background: url(../enfrontimages/text_bg.png)no-repeat top right;
+        background-size: auto 94%;
+        padding-bottom: 15%;
+    }
+
+    .about.text .about_content .content_text {
+        float: left;
+        width: 70%;
+        font-size: 1.2rem;
+        padding: 0;
+        line-height: 25px;
+        color: #3B3B3B;
+        text-justify: inter-word;
+
+    }
+
+    .imagebox {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 90%;
+        max-width: none;
+        font-size: 0;
+        margin: -18% auto;
+    }
+
+    .imagebox img {
+        width: 100%;
+    }
+
+    /*bottom------------------------------------------*/
+    .bottombox {
+        position: relative;
+        z-index: 1;
+        background: #020A1F url(../enfrontimages/bottom_bg.png)no-repeat center 20%;
+        background-size: 100% auto;
+    }
+
+    .bottombox .contentbox {
+        width: 100%;
+        max-width: none;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+
+    /*產品應用*/
+    .research {
+        width: 100%;
+        margin: auto;
+    }
+
+    .contentbox {
+        width: 90%;
+        padding: 80px 0;
+        max-width: none;
+        margin: auto;
+    }
+
+    .research .title {
+        position: relative;
+        z-index: 2;
+        padding: 0;
+        background-color: #ececec00;
+    }
+
+
+    .research .commodity .commoditybox {
+        float: left;
+        width: 23.5%;
+        height: auto;
+        margin: 0 0 0 2%;
+        padding: 0 0 10px 0;
+        transform: scale(1, 1);
+        transition: all .5s ease-out;
+    }
+
+    .research .commodity .fontbox {
+        max-height: 157px;
+    }
+
+    .indexsitemap {
+        width: auto;
+        height: auto;
+        padding: 50px 0;
+        text-align: center;
+        background: #002957;
+        overflow: hidden;
+    }
+
+    .indexsitemap .centerbox {
+        width: 90%;
+        max-width: none;
+        height: auto;
+        margin: 0 auto;
+        text-align: right;
+        overflow: hidden;
+    }
+
+    .indexsitemapbox {
+        max-width: 100%;
+        width: 100%;
+        margin: auto;
+    }
+
+    #sitemap .title {
+        float: left;
+        text-align: center;
+        color: #fff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        padding-right: 0%;
+        padding-bottom: 8px;
+    }
+
+    .indexsitemap .detailbox {
+        width: 100%;
+        padding: 20px 0 0 0;
+    }
+
+    .indexsitemap .material li {
+        padding: 10px;
+    }
+
+    .indexsitemap .material span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0;
+    }
+
+    .indexsitemap .material b {
+        font-weight: normal;
+        padding-left: 15px;
+    }
+
+}

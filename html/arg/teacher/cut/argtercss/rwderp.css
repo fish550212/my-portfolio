@@ -1,0 +1,1351 @@
+@charset "utf-8";
+
+.header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(51, 51, 51, 0.21);
+    position: relative;
+    z-index: 1;
+}
+
+.header .headerbox {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+
+}
+
+.footer {
+    width: 100%;
+    background: #695958;
+    background-size: 100% cover;
+    z-index: 8000;
+    position: relative;
+    overflow: hidden;
+}
+
+.copyright {
+    width: 100%;
+    height: auto;
+    font-size: 100%;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container .containerbox {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #E5F2E3;
+}
+
+.footer .footerbox {
+    width: 100%;
+    height: auto;
+    padding: 21px;
+    margin: 0px auto;
+    background: rgba(179, 179, 179, 0.3);
+}
+
+.service_chatbox {
+    position: fixed;
+    bottom: 9%;
+    right: 1%;
+
+    z-index: 999999;
+}
+
+.service_chatbox .teacher_service {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 0 10px #7777777a;
+}
+
+.service_chatbox .teacher_service:hover {
+    border-radius: 5px;
+}
+
+.service_chatbox .teacher_service img {
+    width: 100%;
+}
+
+.service_chatbox .chat-box {
+    display: none;
+    position: absolute;
+    bottom: 110%;
+    right: 1%;
+    width: 350px;
+    background-color: #fff;
+    z-index: 9999;
+    box-shadow: 0 0 10px #4545457a;
+}
+
+.chat-box.show {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.chat-box .title {
+    padding: 10px;
+    background-color: #704F4C;
+    color: #fff;
+}
+
+.chat-box .title b {
+    display: inline-block;
+    background: url(../argterimages/service-logo.png)no-repeat left center;
+    padding-left: 23px;
+    background-size: auto 16px;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: normal;
+    vertical-align: middle;
+    font-family: "jf-openhuninn" !important;
+}
+
+.chat-box .title .close-btn {
+    font-size: 1.5rem;
+    float: right;
+    cursor: pointer;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+
+.chat-box .contentbox {
+    overflow: scroll;
+    padding-bottom: 300px;
+    height: 0;
+    margin: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.chat-box .contentin {
+    width: auto;
+    height: 0;
+}
+
+.chat-box .content {
+    padding: 10px;
+}
+
+.chat-box .dialogbox {
+    background: #F7E8B7;
+    padding: 8px;
+}
+
+.chat-box .dialogbox input {
+    height: 35px;
+    padding: 8px;
+    background-color: #fff;
+    font-size: 120%;
+    border-radius: 3px;
+    border: 0;
+    outline: none;
+}
+
+.chat-box .dialogbox .question {
+    width: calc(100% - 65px);
+    margin: 0;
+}
+
+.chat-box .dialogbox .send {
+    width: 60px;
+    background: #704F4C;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.chat-box .dialogbox .send:hover {
+    background: #634644;
+}
+
+.chat-box .gm_message {
+    width: 100%;
+    background: url(../argterimages/service-stu.png) no-repeat top left;
+    background-size: 35px auto;
+    padding: 0 0 5px 40px;
+}
+
+.chat-box .gm_message .stu_name {
+    color: #5E5E5E;
+    font-size: .9rem;
+    padding: 3px 0;
+}
+
+.chat-box .gm_message .innerText {
+    display: inline-block;
+    max-width: 90%;
+    font-size: 1rem;
+    border: 1px #AABBBD solid;
+    background: #fff;
+    border-radius: 5px;
+    padding: 7px 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.chat-box .message_time {
+    padding: 5px 0;
+    color: #909599;
+    font-size: 90%;
+}
+
+.chat-box .chat_message {
+    text-align: right;
+    padding: 0 0 5px 0;
+}
+
+.chat_message .innerText {
+    display: inline-block;
+    max-width: 85%;
+    font-size: 1rem;
+    background: #F7E8B7;
+    border-radius: 5px;
+    padding: 7px 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/*TOP回到最上面*/
+.headerbox #TOP {
+    position: absolute;
+    top: -122px;
+    right: 0px;
+    width: 60px;
+    height: 120px;
+    cursor: pointer;
+    z-index: 999999;
+}
+
+.headerbox #TOP .TOP1 {
+    width: 100%;
+    height: auto;
+}
+
+/*logo*/
+
+.logo-mob {
+    display: none;
+}
+
+.headerbox .logo {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 32px;
+    text-decoration: none;
+}
+
+.headerbox .logo span {
+    display: inline-block;
+    padding-left: 5px;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    color: #341E1C;
+    line-height: 120%;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+
+.headerbox .logo span b {
+    display: inline-block;
+    padding: 3px 12px;
+    margin-left: 5px;
+    font-size: 1.3rem;
+    font-weight: normal;
+    color: #4A3836;
+    font-family: "jf-openhuninn" !important;
+    background-color: #FFDB8C;
+    border-radius: 30px;
+}
+
+.headerbox .logo img {
+    width: auto;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/*toolbar*/
+.headerbox .toolbar {
+    float: right;
+    width: auto;
+    height: auto;
+    padding-top: 19px;
+}
+
+.headerbox .toolbar .toolbarbox {
+    clear: both;
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #696969;
+}
+
+.headerbox .toolbar .outbox {
+    border-left: 1px solid #CFCFCF;
+    padding-left: 10px;
+}
+
+.headerbox .toolbar img {
+    display: inline-block;
+    height: 20px;
+    padding-right: 5px;
+    margin-top: -2px;
+}
+
+.headerbox .toolbar .toolbarbox span {
+    display: inline-block;
+    font-family: "jf-openhuninn" !important;
+}
+
+.headerbox .toolbar .toolbarbox span a {
+    display: inline-block;
+    font-size: 100%;
+    color: #696969;
+    text-decoration: none;
+    font-family: "jf-openhuninn" !important;
+}
+
+.headerbox .toolbar .toolbarbox span a:hover {
+    text-decoration: underline;
+}
+
+/*選單*/
+.navbox {
+    width: auto;
+    text-align: right;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.navbox li {
+    float: left;
+    margin: 0 0 0 3px;
+}
+
+.navbox li a {
+    float: left;
+    padding: 9px 7px 9px 34px;
+    border: 1px solid #C7C6C3;
+    background-color: #fff;
+    color: #704F4C;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    font-family: "jf-openhuninn" !important;
+    background: url(../argterimages/nav-01.png)no-repeat 9px center;
+    background-size: auto 17px;
+    transition: .3s;
+}
+
+.navbox li a:hover {
+    background-color: #E8E6E3;
+    border: 1px solid #DEDCD9;
+}
+
+.navbox li:nth-child(2) a {
+    border: 1px solid #C7C6C3;
+    background-color: #fff;
+    color: #704F4C;
+    border-radius: 5px;
+    font-family: "jf-openhuninn" !important;
+    background: url(../argterimages/nav-02.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+.navbox li:nth-child(2) a:hover {
+    border: 1px solid #DEDCD9;
+    color: #704F4C;
+    background: #E8E6E3 url(../argterimages/nav-02.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+.navbox li:nth-child(3) a {
+    border: 1px solid #C7C6C3;
+    background-color: #fff;
+    color: #704F4C;
+    border-radius: 5px;
+    font-family: "jf-openhuninn" !important;
+    background: url(../argterimages/nav-03.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+.navbox li:nth-child(3) a:hover {
+    border: 1px solid #DEDCD9;
+    color: #704F4C;
+    background: #E8E6E3 url(../argterimages/nav-03.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+.navbox li:nth-child(4) a {
+    border: 1px solid #C7C6C3;
+    background-color: #fff;
+    color: #704F4C;
+    border-radius: 5px;
+    font-family: "jf-openhuninn" !important;
+    background: url(../argterimages/nav-04.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+.navbox li:nth-child(4) a:hover {
+    border: 1px solid #DEDCD9;
+    color: #704F4C;
+    background: #E8E6E3 url(../argterimages/nav-04.png)no-repeat 9px center;
+    background-size: auto 17px;
+}
+
+/*左邊選單*/
+.leftbox {
+    display: none;
+}
+
+.livegamebox .leftbox {
+    display: inline-block;
+    width: 250px;
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px 1px rgb(51 51 51 / 20%);
+}
+
+.livegamebox .leftbox .leftbox_gamebox .leftbox_gametitle {
+    padding: 15px;
+}
+
+.livegamebox .leftbox_gametitle .imgbox {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 100px;
+}
+
+.livegamebox .leftbox_gametitle .imgbox img {
+    width: 100%;
+}
+
+.livegamebox .leftbox_gametitle .title {
+    padding: 10px 0;
+    font-size: 1.4rem;
+    color: #474747;
+    font-family: "jf-openhuninn" !important;
+}
+
+.livegamebox .leftbox_gameuser {
+    padding: 15px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.livegamebox .leftbox_gameuser .title {
+    color: #86959E;
+    font-size: 1rem;
+    padding: 5px 0;
+    font-family: "jf-openhuninn" !important;
+}
+
+.livegamebox .leftbox_gameuser ul li a {
+    display: inline-block;
+    width: 100%;
+    color: #4D3539;
+    border: 2px solid #F5F5F5;
+    background: #F5F5F5 url(../argterimages/game-user01.png)no-repeat 12px center;
+    background-size: auto 16px;
+    padding: 7px 8px 7px 35px;
+    margin: 2px 0;
+    border-radius: 5px;
+    font-family: "jf-openhuninn" !important;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.livegamebox .leftbox_gameuser ul li a:hover,
+.leftbox_gameuser ul li a:active {
+    border: 2px solid #B57C34;
+    background: #FFEEA3 url(../argterimages/game-user02.png)no-repeat 12px center;
+    background-size: auto 16px;
+}
+
+/*右邊選單rightbox*/
+.rightbox {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    min-height: calc(100vh - 133px);
+    margin: auto;
+}
+
+.rightbox .contentbox {
+    margin: auto;
+}
+
+/*遊戲列表*/
+.rightbox .gamelistbox {
+    position: relative;
+    margin: auto;
+}
+
+.rightbox .gamelistbox li {
+    width: 32.3%;
+    margin: 0 .5% 1% .5%;
+    float: left;
+    padding: 10px 0;
+    background-color: #fff;
+    box-shadow: 0px 2px 6px 1px rgb(51 51 51 / 20%);
+    border-radius: 7px;
+}
+
+.gamelistbox .gametitle {
+    padding: 0 20px;
+    margin: 10px 0 0 0;
+    font-size: 1.4rem;
+    font-family: "jf-openhuninn" !important;
+    line-height: 120%;
+    height: 50px;
+    color: #575757;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.gamelistbox .gameimgbox {
+    display: inline-block;
+    border-radius: 5px;
+    height: 100px;
+    margin: 10px 20px 20px 20px;
+    overflow: hidden;
+}
+
+.gamelistbox .gameimgbox img {
+    width: 100%;
+}
+
+.gamelistbox .userbox {
+    overflow: scroll;
+    padding-bottom: 140px;
+    height: 0;
+    margin: 20px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.gamelistbox .userboxin {
+    width: 100%;
+    height: 0;
+}
+
+.gamelistbox .gamelist_userbox {
+    display: inline-block;
+}
+
+.gamelistbox .gamelist_userbox li {
+    float: left;
+    width: 48%;
+    color: #575757;
+    background: url(../argterimages/game-user01.png) no-repeat left center;
+    background-size: auto 15px;
+    padding: 6px 0px 6px 18px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 6px 1px rgb(51 51 51 / 0%);
+    font-size: 1.3rem;
+    font-family: "jf-openhuninn" !important;
+}
+
+.gamelistbox .gamelist_btn {
+    padding: 0px 20px 10px 20px;
+}
+
+.gamelistbox .gamelist_btn .abutton {
+    display: block;
+    width: 100%;
+    padding: 13px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+    background-color: #F5F5F5;
+    border: #C7C6C3 2px solid;
+    transition: .3s;
+}
+
+.gamelistbox .gamelist_btn .abutton:hover {
+    background-color: #704F4C;
+    border: #704F4C 2px solid;
+    color: #fff;
+}
+
+/*rightbox-遊戲實況畫面*/
+.livegamebox .rightbox {
+    display: inline-block;
+    width: calc(100% - 255px);
+    height: auto;
+    padding: 1%;
+    min-height: calc(100vh - 133px);
+}
+
+.livegamebox .rightbox .gamemapbox {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.livegamebox .rightbox .gamemapbox .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.livegamebox .rightbox .gamemapbox .user b {
+    font-size: 1.2rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 6px 8px;
+    line-height: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.livegamebox .rightbox .gamemapbox .user::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: auto;
+    opacity: .8;
+}
+
+.livegamebox .rightbox .gamemapbox .game_map_img {
+    width: 100%;
+    margin: auto;
+}
+
+.livegamebox .rightbox .gamemapbox .game_map_img img {
+    width: 100%;
+}
+
+
+/*搜尋頁面*/
+.gamesearchbox {
+    width: 100%;
+    background-color: #fff;
+}
+
+.gamesearchbox .search {
+    padding: 20px;
+    background: #fff url(../argterimages/record-img.png)no-repeat top center;
+    background-size: 100% 100%;
+}
+
+.gamesearchbox ul {
+    overflow: hidden;
+}
+
+.gamesearchbox .search li {
+    float: left;
+    margin: 5px 15px 5px 0;
+    font-size: 1.2rem;
+    color: #575757;
+}
+.gamesearchbox li b {
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+.gamesearchbox li img{    
+    height: 23px;
+    vertical-align: middle;
+}
+.gamesearchbox li b::before {
+    content: "";
+    width: 5px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 4px;
+    margin-bottom: -2px;
+    background: rgb(222, 111, 0);
+}
+
+.gamesearchbox li .searchdate{
+    display: inline-block;
+}
+.gamesearchbox li input {
+    padding: 3px 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+
+.gamesearchbox li input::placeholder {
+    color: #9C9C9C;
+}
+
+.gamesearchbox .search .buttonbox {
+    margin: 10px auto 0px auto;
+}
+
+.gamesearchbox .search .buttonbox input {
+    background-color: #EDEDED;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+
+.gamesearchbox .search .buttonbox input:nth-child(1) {
+    background-color: #D88001;
+    color: #fff;
+    border-color: #c77501;
+}
+
+.gamesearchbox .search .buttonbox input:hover {
+    background-color: #704F4C;
+    border-color: #5d413e;
+    color: #fff;
+}
+
+.gamesearchbox .tablebox {
+    padding: 40PX;
+}
+
+
+/*遊戲紀錄*/
+.gamerecordbox {
+    padding: 40PX;
+    background: #fff url(../argterimages/record-img.png)no-repeat top center;
+    background-size: 100% 130px;
+    box-shadow: 0px 0px 6px rgb(51 51 51 / 30%);
+}
+
+.gamerecordbox .user_column {
+    display: inline-block;
+    width: 100%;
+    font-size: 1.2rem;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+.gamerecordbox .user_column b {
+    display: inline-block;
+    background-color: #D88001;
+    border-radius: 30px;
+    padding: 8px 13px;
+    margin-right: 10px;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+    color: #fff;
+}
+
+.gamerecordbox .user_column span {
+    color: #291B10;
+    font-size: 1.8rem;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+    vertical-align: middle;
+}
+
+.gamerecordbox .user_column .username {
+    float: left;
+}
+
+.gamerecordbox .user_column .userscore {
+    float: right;
+}
+
+.gamerecordbox .user_column .userscore span {
+    font-size: 2.3rem;
+}
+
+.gamerecord_table {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    font-size: 1.2rem;
+    line-height: 120%;
+}
+
+.gamerecord_table td,
+.gamerecord_table th {
+    padding: 7px;
+    border: 1px solid #B5C7C9;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+    color: #3D3D3D;
+}
+
+.gamerecord_table th {
+    background-color: #EAEEF0;
+    color: #778182;
+}
+
+.gamerecord_table tr:nth-child(odd) td {
+    background-color: #eaeef033;
+}
+
+.gamerecord_table img {
+    width: 100%;
+    max-width: 400px;
+}
+.oderlist textarea{
+    width: 100%;
+    resize: auto;
+    padding: 4px;
+    font-size: 1.1rem;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+/*table*/
+
+.tablesorter {
+    width: 100%;
+}
+
+/*拉霸*/
+.table_w_large {
+    min-width: auto;
+}
+
+.table_w_medium {
+    min-width: auto;
+}
+
+.table_w_small {
+    min-width: auto;
+}
+
+.table_overflowx {
+    width: 100%;
+    overflow: auto;
+    padding: 0 1px;
+}
+
+.table_overflowx::-webkit-scrollbar {
+    height: 8px;
+}
+
+.table_overflowx::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid slategrey;
+}
+
+.oderlist {
+    list-style: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 20px;
+}
+
+.oderlist .table_box1 {
+    width: 100%;
+    background-color: #fff;
+    font-size: 1.1rem;
+    line-height: 120%;
+}
+
+#business_table {
+    display: table;
+    width: 100%;
+    letter-spacing: normal;
+}
+
+#business_table tr {
+    display: table-row;
+    width: 100%;
+    line-height: 100%;
+}
+
+#business_table td,
+#business_table th {
+    display: table-cell;
+    min-width: auto;
+    height: auto;
+    padding: 7px;
+    border: 1px solid #B5C7C9;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+    color: #3D3D3D;
+    overflow: hidden;
+    vertical-align: middle;
+}
+#business_table td input{    
+    padding: 4px;
+    font-size: 1rem;
+    vertical-align: middle;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+#business_table td input[type="radio"] {
+    vertical-align: middle;
+    margin: 0 5px;
+}
+#business_table td img{
+    vertical-align: middle;
+}
+#business_table th {
+    background-color: #EAEEF0;
+    color: #778182;
+}
+
+#business_table tr:nth-child(odd) td {
+    background-color: #eaeef033;
+}
+
+#business_table .css_td a {
+    color: #0086cc;
+}
+
+#business_table .line {
+    background-color: #e9d7d5;
+    color: #783633;
+}
+
+#business_table .title {
+
+    color: #0277bd;
+    font-size: 100%;
+}
+
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 320px) {
+    /*業務日誌*/
+
+    .headerbox .toolbar {
+        display: none;
+    }
+
+    .oderlist .table_box1 #business_table .box02 {
+        display: none;
+        width: auto;
+    }
+
+    .oderlist .table_box1 #business_table .box07 {
+        display: none;
+        width: auto;
+    }
+
+    .tdnone320 {
+        display: none;
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .rightbox {
+        display: inline-block;
+        width: 85%;
+        height: auto;
+        padding: 2%;
+    }
+
+    .footer {
+        width: 100%;
+        clear: both;
+        z-index: 8000;
+        position: relative;
+    }
+
+    .header .headerbox {
+        width: auto;
+        margin: 0 auto;
+        height: 50px;
+        position: relative;
+        margin-bottom: 0px;
+        padding: 0;
+    }
+
+    /*logo*/
+    .headerbox h1 {
+        display: inline-block;
+    }
+
+    .headerbox .logo-mob {
+        display: inline-block;
+        text-indent: inherit;
+        width: auto;
+        height: 50px;
+        float: none;
+        margin-top: 0;
+        font-size: 80%;
+        line-height: 45px;
+        color: #333;
+        padding-left: 50px;
+    }
+
+    .headerbox .logo-mob img {
+        width: auto;
+        height: 16px;
+        vertical-align: middle;
+    }
+
+    .headerbox .logo-mob span {
+        display: inline-block;
+        border: 0;
+        vertical-align: middle;
+        font-weight: normal;
+        font-size: 1.1rem;
+        line-height: 120%;
+        font-family: "jf-openhuninn" !important;
+    }
+
+    .headerbox .logo-mob span b {
+        display: inline-block;
+        padding: 6px 12px 4px 12px;
+        margin-left: 5px;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #4A3836;
+        font-family: "jf-openhuninn" !important;
+        background-color: #FFDB8C;
+        border-radius: 30px;
+    }
+
+    .headerbox .logo img {
+        display: none;
+    }
+
+    .headerbox .logo {
+        display: none;
+        text-indent: inherit;
+        width: auto;
+        height: 70px;
+        float: none;
+        margin-top: 0;
+        font-size: 100%;
+        line-height: 80px;
+        padding: 18px 0;
+        color: #333;
+    }
+
+    .headerbox .logo span {
+        display: block;
+        border: 0;
+    }
+
+    #menu>li img {
+        display: block;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /*toolbar*/
+    .headerbox .toolbar {
+        display: none;
+    }
+
+
+    .timebox {
+        display: none;
+    }
+
+    .skip-page {
+        display: block;
+        padding: 10px 0 0 0;
+        line-height: 150%;
+    }
+
+    .skip-page span {
+        display: block;
+    }
+
+    .topmenu {
+        display: none;
+    }
+
+    .livegamebox .leftbox {
+        width: 200px;
+    }
+
+    .livegamebox .rightbox {
+        display: inline-block;
+        width: calc(100% - 205px);
+        height: auto;
+        padding: 1%;
+        min-height: calc(100vh - 133px);
+    }
+
+    .rightbox {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding: 3%;
+        min-height: calc(100vh - 133px);
+    }
+
+    /*遊戲列表*/
+    .rightbox .gamelistbox {
+        position: relative;
+        margin: auto;
+    }
+
+    .rightbox .gamelistbox li {
+        width: 100%;
+        max-width: 420px;
+        margin: 0% auto 2% auto;
+        float: none;
+        padding: 10px 0;
+        background-color: #fff;
+        box-shadow: 0px 2px 6px 1px rgb(51 51 51 / 20%);
+        border-radius: 7px;
+    }
+
+    .gamelistbox .gamelist_userbox li {
+        float: left;
+        width: 48%;
+        color: #575757;
+        background: url(../argterimages/game-user01.png) no-repeat left center;
+        background-size: auto 15px;
+        padding: 6px 0px 6px 18px;
+        margin: 0 auto;
+        box-shadow: 0px 2px 6px 1px rgb(51 51 51 / 0%);
+        font-size: 1.3rem;
+        font-family: "jf-openhuninn" !important;
+    }
+/*搜尋*/
+.gamesearchbox .search li {
+    float: none;
+    margin: 5px 15px 5px 0;
+    font-size: 1.2rem;
+    color: #575757;
+}
+.gamesearchbox li input {
+    padding: 3px 5px;
+    margin: 3px 0;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+.gamesearchbox li b {
+    display: block;
+    font-weight: normal;
+    font-family: "jf-openhuninn" !important;
+}
+.gamesearchbox li img{    
+    height: 23px;
+    vertical-align: middle;
+}
+    /*遊戲紀錄*/
+    .gamerecordbox {
+        padding: 30px 20PX;
+        background: #fff url(../argterimages/record-img.png)no-repeat top center;
+        background-size: 100% 100px;
+        box-shadow: 0px 3px 4px 1px rgb(51 51 51 / 30%);
+    }
+
+    .gamerecordbox .user_column {
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        overflow: hidden;
+        padding-bottom: 20px;
+    }
+
+    .gamerecordbox .user_column b {
+        display: inline-block;
+        background-color: #D88001;
+        border-radius: 30px;
+        padding: 6px 8px;
+        margin-right: 5px;
+        font-weight: normal;
+        font-family: "jf-openhuninn" !important;
+        color: #fff;
+    }
+
+    .gamerecordbox .user_column span {
+        color: #291B10;
+        font-size: 1.4rem;
+        font-weight: normal;
+        font-family: "jf-openhuninn" !important;
+        vertical-align: middle;
+    }
+
+    .gamerecordbox .user_column .username {
+        float: left;
+    }
+
+    .gamerecordbox .user_column .userscore {
+        float: right;
+    }
+
+    .gamerecordbox .user_column .userscore span {
+        font-size: 1.8rem;
+    }
+
+    .gamerecord_table {
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        font-size: 1rem;
+        line-height: 120%;
+    }
+
+    .gamerecord_table td,
+    .gamerecord_table th {
+        padding: 5px;
+        border: 1px solid #B5C7C9;
+        font-weight: normal;
+        font-family: "jf-openhuninn" !important;
+        color: #3D3D3D;
+    }
+
+    .gamerecord_table th {
+        background-color: #EAEEF0;
+        color: #778182;
+    }
+
+    /*手機版拉霸*/
+    .table_w_large {
+        min-width: 1100px;
+        margin-bottom: 3px;
+    }
+
+    /*table無摺疊，電腦版table寬度*/
+    .table_w_medium {
+        min-width: 767px;
+        margin-bottom: 3px;
+    }
+
+    /*table有摺疊，手機版table寬度*/
+    .table_w_small {
+        min-width: auto;
+        margin-bottom: 0px;
+    }
+
+    /*table寬度偏小*/
+
+    .oderlist {
+        margin: auto;
+    }
+
+    .oderlist .table_box1 {
+        margin: auto;
+    }
+
+    .tdnone767 {
+        display: none;
+        width: auto;
+    }
+
+}
+
+/* == 平板版型區 =============================== */
+
+@media screen and (min-width: 768px) and (max-width: 1136px) {
+    .header .headerbox {
+        width: 100%;
+        max-width: 1440px;
+        /*電腦版寬度*/
+        height: 70px;
+        margin: 0 auto;
+        padding: 0 5px;
+        position: relative;
+    }
+
+    .footer {
+        width: 100%;
+        clear: both;
+        z-index: 8000;
+        position: relative;
+    }
+
+    .livegamebox .leftbox {
+        width: 200px;
+    }
+
+    .livegamebox .rightbox {
+        display: inline-block;
+        width: calc(100% - 205px);
+        height: auto;
+        padding: 2%;
+        min-height: calc(100vh - 133px);
+    }
+
+    .rightbox {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        padding: 1%;
+        min-height: calc(100vh - 133px);
+    }
+
+    .headerbox .logo {
+        padding-left: 70px;
+        margin-top: 17px;
+    }
+
+    /*遊戲紀錄*/
+    .gamerecordbox {
+        width: 95%;
+        margin: auto;
+        padding: 30px 20PX;
+        background: #fff url(../argterimages/record-img.png)no-repeat top center;
+        background-size: 100% 100px;
+        box-shadow: 0px 3px 4px 1px rgb(51 51 51 / 30%);
+    }
+
+    .oderlist {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .oderlist .table_box1 {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        /*overflow:scroll;overflow-y:hidden;*/
+    }
+    /*手機版拉霸*/
+    .table_w_large {
+        min-width: 1100px;
+        margin-bottom: 3px;
+    }
+
+    /*table無摺疊，電腦版table寬度*/
+    .table_w_medium {
+        min-width: 767px;
+        margin-bottom: 3px;
+    }
+
+    /*table有摺疊，手機版table寬度*/
+    .table_w_small {
+        min-width: auto;
+        margin-bottom: 0px;
+    }
+    .toolbar {
+        display: none;
+    }
+
+
+}

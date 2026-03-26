@@ -1,0 +1,489 @@
+.opaqueLayer {
+    display: inherit;
+    position: fixed;
+    z-index: 1;
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(170, 170, 170, 0.75);
+}
+
+.questionLayer {
+    display: inherit;
+    position: absolute;
+    bottom: 5%;
+    right: 8%;
+    margin: auto;
+    z-index: 999;
+    vertical-align: middle;
+}
+
+.shadowbox {
+    width: 100%;
+    margin: auto;
+}
+
+.shadowbox .titlebox {
+    text-align: right;
+    height: auto;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 30px;
+}
+.shadowbox .titlebox p{
+    padding: 15px 0;
+}
+.shadowbox .titlebox img{
+    width: 70%;
+}
+
+/*--input設定--*/
+.shadowbox ul {
+    width: 100%;
+    padding: 15px 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.shadowbox ul li {
+    float: left;
+    width: 50%;
+    padding: 10px 1.5%;
+}
+
+.loginbox li b {
+    font-weight: normal;
+}
+
+.loginbox li p {
+    padding: 5px 0;
+    font-size: 19px;
+    color: #636363;
+}
+
+.shadowbox .loginbox .w100 {
+    width: 100%;
+}
+
+.shadowbox .loginbox input {
+    width: 100%;
+    padding: 8px;
+    color: #636363;
+    font-size: 19px;
+    background: #F7FCFF;
+    border: #BED7E8 1px solid;
+    border-radius: 5px;
+}
+
+.shadowbox .btnbox .btn {
+    margin: 0 24px;
+}
+
+.shadowbox .btn {
+    padding: 6px 15px;
+    text-align: center;
+}
+
+.shadowbox .labelbox {
+    width: 100%;
+    min-height: 62px;
+    padding: 10px 0;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.shadowbox .labelbox label {
+    display: inline-block;
+    width: 32.3%;
+    padding-left: 3%;
+}
+
+.shadowbox .labelbox input {
+    width: auto;
+    margin-right: 3%;
+    vertical-align: middle;
+}
+
+/*寬100%的ul*/
+.shadowbox .w100_ul li {
+    width: 100%;
+    text-align: center;
+
+}
+
+.shadowbox .w100_ul li .btn {
+    min-width: 200px;
+}
+
+/*螢幕錄影彈跳視窗*/
+.shadowbox .video_ul {
+    width: 180px;
+    text-align: center;
+    margin: auto;
+}
+
+.shadowbox .video_ul li {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.shadowbox .video_ul .title {
+    text-align: left;
+}
+
+.video_ul li p {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 19px;
+    color: #636363;
+}
+
+.video_ul li input {
+    width: 10%;
+    vertical-align: middle;
+}
+
+.video_ul li .btn {
+    width: 100%;
+}
+
+.video_ul li .video_rideo {
+    width: 87%;
+    vertical-align: middle;
+    padding: 8px;
+    color: #636363;
+    font-size: 19px;
+    background: #F7FCFF;
+    border: #BED7E8 1px solid;
+    border-radius: 5px;
+}
+
+/*網頁截圖*/
+.webcutbox li .video_rideo {
+    width: 100%;
+    height: 40px;
+    vertical-align: middle;
+    padding: 8px;
+    color: #636363;
+    font-size: 19px;
+    background: #F7FCFF;
+    border: #BED7E8 1px solid;
+    border-radius: 5px;
+}
+
+/*應用程式截圖*/
+.appcutbox {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.appcutbox table {
+    width: 100%;
+    border: 1px #B0C7D9 solid;
+    background: #FAFAFA;
+}
+
+.appcutbox thead {
+    padding: 8px 2%;
+    background: #EBEBEB;
+    color: #636363;
+}
+
+.appcutbox tbody {
+    display: block;
+    overflow-y: auto;
+    height: 150px;
+    /*下拉高度設定*/
+}
+
+.appcutbox table tbody tr,
+.appcutbox table thead tr {
+    display: inline-table;
+    /*設定下拉後要加回去*/
+    width: 100%;
+}
+
+.appcutbox table th,
+.appcutbox table td {
+    width: 50%;
+    padding: 8px 2%;
+    text-align: left;
+}
+
+.appcutbox table td {
+    background: #fff;
+    border-bottom: 1px #EBEBEB solid;
+}
+
+.appcutbox input {
+    vertical-align: middle;
+    font-size: 18px;
+    padding: 5px;
+    color: #636363;
+    border: #C2C2C2 1px solid;
+    border-radius: 5px;
+}
+
+.appcutbox .input_text {
+    width: 90%;
+}
+
+.appcutbox td span {
+    vertical-align: middle;
+    padding-left: 5px;
+    color: #636363;
+}
+
+/*篩選條件*/
+.filecutbox {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.box {
+    width: 100%;
+    height: 0;
+    margin: 0 auto 15px auto;
+    padding-bottom: 100px;
+    background: #F5F5F5;
+    border-radius: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.box .boxin {
+    width: 100%;
+    height: 0;
+}
+
+.box .boxin .filter {
+    padding: 10px;
+}
+
+.box .boxin .filter p {
+    display: inline-block;
+    padding: 5px;
+    background: #718D9E;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.box .boxin .filter button {
+    display: inline-block;
+    font-size: 18px;
+    background: #718D9E;
+    color: #fff;
+    margin: 0 3px;
+    border: 0;
+    cursor: pointer;
+}
+
+.optionsbox {
+    width: 100%;
+    border: 1px #636363 solid;
+    border-radius: 5px;
+}
+
+.optionsbox .loginbox {
+    padding: 15px 3%;
+}
+
+.optionsbox .loginbox li {
+    width: 100%;
+    padding: 5px 0;
+}
+
+.shadowbox .optionsbox .file_btn {
+    width: 36px;
+    padding: 6px;
+    background: #E8E8E8;
+}
+
+.shadowbox .optionsbox .file_input {
+    width: 70%;
+}
+
+.shadowbox .optionsbox .setup_btn {
+    display: inline-block;
+    width: 20px;
+    padding: 0;
+    vertical-align: text-top;
+    background: none;
+    border: 0;
+}
+
+.optionsbox .loginbox input,
+.optionsbox .loginbox select {
+    width: 32%;
+    border: 1px #C2C2C2 solid;
+    border-radius: 0;
+    background: #fff;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.optionsbox .loginbox label {
+    width: 32.5%;
+    padding: 5px;
+}
+
+.optionsbox .loginbox .labelbox span,
+.optionsbox .loginbox .date_checkbox span {
+    vertical-align: middle;
+    font-size: 16px;
+}
+
+.optionsbox .loginbox .datebox input {
+    width: 47%;
+    vertical-align: middle;
+}
+
+.optionsbox .loginbox .date_checkbox {
+    padding: 5px 0;
+}
+
+.optionsbox .loginbox .labelbox input,
+.optionsbox .loginbox .date_checkbox input {
+    width: 20px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/**/
+.shadowbox .remarks {
+    width: 100%;
+    margin: auto;
+}
+
+.shadowbox .remarks li {
+    width: 100%;
+    margin: auto;
+}
+
+.shadowbox .remarks textarea {
+    width: 100%;
+    margin: auto;
+    font-size: 19px;
+    padding: 2%;
+}
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width:767px) {
+    .bgstyle {
+        width: 95%;
+        height: 600px;
+        min-width: auto;
+        background: #fff;
+        margin: auto auto;
+        border-radius: 10px;
+        border: 1px #13314F solid;
+        padding: 0 5%;
+        overflow: hidden;
+    }
+
+    .bgsetup {
+        width: 95%;
+        height: 650px;
+    }
+
+    .bgstepsearch {
+        min-width: auto;
+        width: 95%;
+        height: 300px;
+    }
+
+    .bgvideo {
+        min-width: auto;
+        width: 95%;
+        height: 430px;
+    }
+
+    .bgwebcut {
+        min-width: auto;
+        width: 95%;
+        height: 400px;
+    }
+
+    .bgfilecut {
+        min-width: auto;
+        width: 95%;
+        height: 720px;
+    }
+
+    .shadowbox .labelbox label {
+        display: inline-block;
+        width: 100%;
+        padding-left: 3%;
+        padding-bottom: 5px;
+    }
+
+    .optionsbox .loginbox label {
+        width: 32.5%;
+        padding: 5px;
+    }
+
+
+
+
+}
+
+/* == 平板版型區 =============================== */
+
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+
+    .bgstyle {
+        width: 90%;
+        height: 600px;
+        min-width: 600px;
+        background: #fff;
+        margin: auto auto;
+        border-radius: 10px;
+        border: 1px #13314F solid;
+        padding: 0 35px;
+        overflow: hidden;
+    }
+
+    .bgsetup {
+        min-width: 750px;
+        width: 60%;
+        height: 600px;
+    }
+
+    .bgstepsearch {
+        min-width: 500px;
+        width: 30%;
+        height: 300px;
+    }
+
+    .bgvideo {
+        min-width: 500px;
+        width: 30%;
+        height: 430px;
+    }
+
+    .bgwebcut {
+        min-width: 600px;
+        width: 30%;
+        height: 400px;
+    }
+
+    .bgfilecut {
+        min-width: 600px;
+        width: 30%;
+        height: 720px;
+    }
+
+
+
+
+
+
+}

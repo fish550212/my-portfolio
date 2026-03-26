@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "jf-openhuninn", Arial, Helvetica, "微軟正黑體", sans-serif !important;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+input,
+textarea,
+blockquote {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    text-align: left;
+    font-family: "jf-openhuninn", Arial, Helvetica, sans-serif !important;
+}
+
+body {
+    margin: 0;
+    font-family: "jf-openhuninn", Arial, Helvetica, "微軟正黑體", sans-serif;
+    -webkit-text-size-adjust: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #F5F9FA;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*background: linear-gradient(110deg, rgba(255, 255, 255, 1)15%, rgba(0, 0, 0, 0.5)85%);*/
+}
+
+@font-face {
+    font-family: 'jf-openhuninn';
+    src: url('../argterimages/fonts/jf-openhuninn-1.1.woff') format("woff"),
+        url('../argterimages/fonts/jf-openhuninn-1.1.ttf') format("truetype"),
+        url('../argterimages/fonts/jf-openhuninn-1.1.eot') format("embedded-opentype");
+}
+
+.main {
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 150px;
+}
+
+.mainbox {
+    width: 850px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid #CCC;
+    background: #fff url(../argterimages/login-bg.png);
+    background-size: 168px 170px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.3);
+}
+
+.mainboxin {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    background: url(../argterimages/loginbox-bg.png)no-repeat right top;
+    background-size: auto 100%;
+    position: relative;
+}
+
+
+.login {
+    width: 300px;
+    height: auto;
+    margin-left: 80px;
+    padding: 80px 30px;
+}
+
+.login img {
+    width: 100%;
+    height: auto;
+}
+
+.login div {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    font-size: 130%;
+    color: #423636;
+    line-height: 130%;
+}
+
+.login .logintitle {
+    font-size: 1.9rem;
+    text-align: center;
+}
+
+.logintitle .logintitle02 {
+    width: 75%;
+    background-color: #FFDB8C;
+    padding: 5px;
+    font-size: 1.7rem;
+    border-radius: 80px;
+    text-align: center;
+    margin: auto;
+}
+
+.inputbox {
+    padding: 10px 10px 10px 48px;
+    width: 100%;
+    border: 1px solid #BFBFBF;
+    border-radius: 3px;
+}
+
+.form_text {
+    width: 180px;
+    border: 0;
+    font-size: 100%;
+    color: #000;
+    outline: none;
+}
+
+.form_text::placeholder {
+    color: #9C9C9C;
+}
+
+.icon01 {
+    background: #fff url(../argterimages/icon_loginaccount.png) 15px center no-repeat;
+    background-size: 20px auto;
+}
+
+.icon02 {
+    background: #fff url(../argterimages/icon_loginpassword.png) 15px center no-repeat;
+    background-size: 20px auto;
+}
+
+.button,
+a .button {
+    text-align: center;
+    font-size: 20px;
+    border-radius: 3px;
+    color: #643726;
+    padding: 10px 30px;
+    min-width: 48%;
+    margin: 5px 0px 5px 4%;
+    text-decoration: none;
+    border: 1px solid #BFBFBF;
+    background-color: #EDEDED;
+    cursor: pointer;
+    font-family: "微軟正黑體", "新細明體", "細明體", Arial, Helvetica, sans-serif;
+}
+
+.button:first-child {
+    margin-left: 0;
+    color: #fff;
+    background-color: #704F4C;
+    border: 1px solid #704F4C;
+}
+
+.button:hover,
+.button:first-child:hover {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #575757;
+    background-color: #4f4f4f;
+}
+
+/* == 手機版型區 =============================== */
+
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        font-family: "微軟正黑體", "新細明體", "細明體", Arial, Helvetica, sans-serif;
+    }
+
+ 
+.main {
+    margin: 0px auto;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 150px;
+}
+
+.mainbox {
+    width: 85%;
+    max-width: 550px;
+    height: auto;
+    overflow: hidden;
+    margin: auto;
+    border: 1px solid #CCC;
+    background: #fff url(../argterimages/login-bg.png);
+    background-size: 168px 170px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.3);
+}
+
+.mainboxin {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    border-radius: 8px;
+    background: url(../argterimages/loginbox-bg-1.png)no-repeat top center;
+    background-size: auto 100%;
+    position: relative;
+}
+
+    .mainboxin .corner01 {
+        width: 11px;
+        width: 11px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background: url(../argterimages/icon_point.png) top center no-repeat;
+    }
+
+    .mainboxin .corner02 {
+        width: 11px;
+        width: 11px;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        background: url(../argterimages/icon_point.png) top center no-repeat;
+    }
+
+    .mainboxin .corner03 {
+        width: 11px;
+        width: 11px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: url(../argterimages/icon_point.png) top center no-repeat;
+    }
+
+    .mainboxin .corner04 {
+        width: 11px;
+        width: 11px;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        background: url(../argterimages/icon_point.png) top center no-repeat;
+    }
+
+
+    .login {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        margin: auto;
+        padding: 60px 30px 40px 30px;
+    }
+
+    .login img {
+        width: 100%;
+        height: auto;
+    }
+
+    .login div {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        font-size: 130%;
+        color: #423636;
+        line-height: 130%;
+    }
+
+    .login .logintitle {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .logintitle .logintitle02 {
+        width:180px;
+        background-color: #FFDB8C;
+        padding: 5px;
+        font-size: 1.7rem;
+        border-radius: 80px;
+        text-align: center;
+        margin: auto;
+    }
+
+    .form_text {
+        width:calc(100% - 5px);
+        border: 0;
+        font-size: 100%;
+        color: #000;
+        outline: none;
+    }
+    
+    .form_text::placeholder {
+        color: #9C9C9C;
+    }
+    
+    .icon01 {
+        background: #fff url(../argterimages/icon_loginaccount.png) 15px center no-repeat;
+        background-size: 20px auto;
+    }
+    
+    .icon02 {
+        background: #fff url(../argterimages/icon_loginpassword.png) 15px center no-repeat;
+        background-size: 20px auto;
+    }
+    
+    .button,
+    a .button {
+        font-size: 20px;
+        border-radius: 3px;
+        color: #643726;
+        padding: 10px 0px;
+        min-width: 48%;
+        margin: 5px 0px 5px 4%;
+        text-decoration: none;
+        border: 1px solid #BFBFBF;
+        background-color: #EDEDED;
+        cursor: pointer;
+        font-family: "微軟正黑體", "新細明體", "細明體", Arial, Helvetica, sans-serif;
+    }
+    
+    .button:first-child {
+        margin-left: 0;
+        color: #fff;
+        background-color: #704F4C;
+        border: 1px solid #704F4C;
+    }
+    
+    .button:hover,
+    .button:first-child:hover {
+        color: #fff;
+        text-decoration: none;
+        border: 1px solid #575757;
+        background-color: #4f4f4f;
+    }
+    
+
+}
+
+/* == 平板版型區 =============================== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1025px) and (max-width: 1119px) {}

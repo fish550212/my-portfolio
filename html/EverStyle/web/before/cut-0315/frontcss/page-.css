@@ -1,0 +1,2580 @@
+/*adv標題*/
+.adv .ADVbox .page_title {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.adv .ADVbox .page_title .title{
+    display: inline-block;
+}
+.adv .ADVbox .page_title .bottom_line {
+    border-bottom: 5px #D1000F solid;
+}
+
+/*page內容*/
+.pagecontent {
+    width: 100%;
+}
+
+.pagecontent .pagecontentbox {
+    width: 100%;
+}
+
+
+/*公司logo介紹*/
+.companycontent {
+    position: relative;
+}
+
+/*---背景圖*/
+.companycontent .img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 490px;
+}
+
+.companycontent .wap {
+    width: 1200px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*---圖片*/
+.companycontent .everstyle_logo {
+    float: left;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.everstyle_logo img {
+    width: 246px;
+}
+
+/*---文字*/
+.everstyle_text {
+    float: right;
+    width: 50%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.everstyle_text .title {
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.everstyle_text .line {
+    width: 100px;
+    border-bottom: #B90000 2px solid;
+    margin: 25px 0;
+}
+
+/*公司-香味創造美味*/
+.companytext {
+    padding-top: 80px;
+    background: #fff;
+}
+
+.companytext .companytextbox {
+    background-color: #EBEBEB;
+    margin-top: 30px;
+}
+
+/*---文字*/
+.companytextbox .everstyle_text {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding: 40px;
+    background: none;
+}
+
+.companytextbox .everstyle_text .inbox {
+    position: absolute;
+    max-width: 600px;
+    top: -35px;
+    right: 0;
+}
+
+.companytextbox .everstyle_text .line {
+    margin: 45px 0;
+}
+
+.companytextbox .everstyle_text .title {
+    font-size: 50px;
+}
+
+.companytextbox .everstyle_text .title span {
+    color: #333;
+}
+.everstyle_text .inbox p{
+    display: inline-block;
+    width: 98%;
+}
+/*---圖片*/
+.companytextbox .companytext_img {
+    float: right;
+    width: 50%;
+    height: 490px;
+    overflow: hidden;
+}
+
+.companytextbox .companytext_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 490px;
+}
+
+/*公司-四格理念*/
+.companyidea{
+    width: 100%;
+    background-color: #fff;
+}
+.companyidea .companyideabox {
+    max-width: 1200px;
+    margin: auto;
+    background: url(../frontimages/page-company-idea.png)no-repeat center;
+    background-size: 20% auto;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.companyidea ul {
+    list-style: none;
+}
+
+.companyidea ul li {
+    float: left;
+    width: 48%;
+    min-height: 240px;
+    padding: 3% 2%;
+    margin: 1%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+
+.companyidea ul li .title {
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #612E2C;
+    line-height: 28px;
+    margin-bottom: 10px;
+    border-left: 5px #B90000 solid;
+}
+
+/*公司-圖片文字*/
+.company_imagesbox {
+    padding: 100px 0;
+    margin: auto;
+    text-align: center;
+    background: url(../frontimages/page-company-images.png)no-repeat center;
+    background-size: cover;
+}
+
+.company_imagesbox p {
+    text-align: center;
+    max-width: 800px;
+    display: inline-block;
+    color: #fff;
+}
+
+/*----page-commodity-------------------商品頁面*/
+
+/*----------風味香精*/
+.imagesgroup{
+    background: #fff url(../frontimages/page-05.png)no-repeat -50px 20px ;
+}
+.imagesgroup .imagesgroupbox{
+    max-width: 1200px;
+    padding: 30px 0;
+    margin: auto;
+}
+/*---文字*/
+.imagesgroupbox .textbox{
+    float: left;
+    width: 50%;
+    padding: 80px 0 0 0;
+}
+.imagesgroupbox .textbox .title{
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*---圖片*/
+.imagesgroupbox .imgbox{  
+    float: right;  
+    width: 50%;
+    text-align: center;
+}
+.imagesgroupbox .imgbox img {
+    height: 250px;
+}
+
+/*水果系列*/
+.fruitgroup{
+    position: relative;
+    overflow: hidden;
+}
+.fruitgroup .fruitgroupbox{
+    position: relative;
+    max-width: 1200px;
+    padding: 80px 0;
+    margin: auto;    
+    z-index: 3;
+}
+.fruitgroupbox .fruitbox {
+    list-style: none;
+    height: 302px;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+    border-radius: 35px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox .imgbox{  
+    position: relative;  
+    float: left;
+    width: 430px;
+    height: 302px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox:nth-child(even) .imgbox{
+    float: right;
+}
+.fruitgroupbox .fruitbox .imgbox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 303px;
+    transition: .8s ease-out;
+}
+.fruitgroupbox .fruitbox:hover .imgbox img{
+    width: 110%;
+}
+.fruitgroupbox .fruitbox .textbox{  
+    position: relative;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    padding-right: 3%;
+}
+.fruitgroupbox .fruitbox .title{    
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.fruitgroupbox .fruitbox p{
+    color: #616161;
+}
+.fruitgroup .img-bg-1{
+    position: absolute;
+    top: 80px;
+    right:-50px;
+}
+.fruitgroup .img-bg-2{
+    position: absolute;
+    top: 800px;
+    left: -50px;
+}
+.fruitgroup .img-bg-3{
+    position: absolute;
+    top: 1400px;
+    right: -50px;
+}
+.fruitgroup .img-bg-4{
+    position: absolute;
+    bottom:-20px;
+    left: -50px;
+}
+
+/*------------聯絡我們*/
+.contactlist{
+    padding: 80px 0;
+    background-color: #fff;
+}
+.contactlistbox{
+    max-width: 1200px;
+    margin: auto;
+}
+.contactlistbox .titlebox{
+    text-align: center;
+    margin:0 0 60px 0;
+}
+.contactlistbox .titlebox .title{
+    display: inline-block;
+    font-size: 35px;
+    color: #333;
+}
+.contactlistbox .titlebox .bottom_line {  
+    width: 50px;
+    border-bottom: 2px #D1000F solid;
+    margin: auto;
+} 
+.contactlistbox .imgbox{
+    float: left;
+    width: 50%;
+    font-size: 0;
+}
+.contactlistbox .imgbox img{
+    width: 100%;
+}
+.contactlistbox .textbox{
+    float: right;
+    width: 50%;
+    padding: 0 0 0 5%;
+}
+.contactlistbox .textbox ul{
+    list-style: none;
+}
+.contactlistbox .textbox ul li{
+    margin:15px 0 0 0;
+    font-size: 20px;
+    background: #fff;
+    border: 1px #B0B0B0 solid;
+    padding: 10px;
+}
+.contactlistbox .textbox ul li:first-child{
+    margin: 0;
+}
+.contactlistbox .textbox ul li b{
+    color: #616161;
+    vertical-align:middle;
+    padding-right: 5px;
+}
+.contactlistbox .textbox ul li span{
+    color: #B81A1A;
+}
+.contactlistbox .textbox  input,.contactlistbox .textbox textarea{
+    width: calc(100% - 59px);
+    border: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    border: transparent 0px solid;    
+    outline: none;
+}
+.contactlistbox .textbox textarea{
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+/*加入我們*/
+.joinin{
+    background-color: #F5F5F5;
+}
+.joininbox .textbox{
+    float: left;
+    padding-right:3% ;
+}
+.joininbox .imgbox{
+    float: right;
+}
+.joininbox .textbox .title{
+    color: #B10000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.joininbox .textbox p{
+    color: #404040;
+}
+
+/*公司沿革*/
+.companyhistorybox .everstyle_text{
+  float: none;
+}
+.companyhistory {
+    background-color: #fff;
+    padding: 80px 0;
+}
+/*歷史沿革*/
+.companyhistory .companyhistorybox{
+    max-width: 1200px;  
+    margin: auto;
+}
+.companyhistorybox ul{
+    list-style: none;
+}
+.companyhistorybox ul li{
+    width: 100%;
+    overflow: hidden;
+}
+.companyhistorybox .historybox{
+    width:calc(49.5% - 45px);
+    min-height: 50px;
+    display: inline-block;
+    background: #EDEDED;
+    border-right: 1px solid #B4B4B4;
+}
+.companyhistorybox li .historybox:last-child{
+    border-left: 1px solid #B4B4B4;    
+    border-right: 0;
+}
+.companyhistorybox li .boxnone{
+    background: transparent;
+    border: 0 !important;
+}
+.companyhistorybox .history_line{
+    width: 100px;
+    display: inline-block;
+    margin: 0 -5px;
+}
+.companyhistorybox .history_line .date{
+    color: #B30000;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.companyhistorybox .history_line .line{
+    height: 150px;
+    border-left: 4px solid #FF0000;
+    margin-left: 50%;
+}
+
+.companyhistorybox li .historybox .imgbox{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 240px;
+    font-size: 0;
+}
+.companyhistorybox li .historybox .textbox{
+    display: inline-block;
+    width: 295px;
+    vertical-align: middle;
+    padding-left: 1%;
+    word-wrap:break-word;
+}
+
+/*品質管理*/
+.qualitycontent{
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+}
+.qualitycontent .imgbox{
+    
+    width: 60%;
+}
+.qualitycontent .imgbox img{
+    width: 100%;
+}
+.qualitycontent .wap{
+    width: 1200px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.qualitycontent .wap .textbox{
+    float: right; 
+    margin: auto;
+    width:600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+.qualitycontent .wap .textbox .title {
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.qualitycontent .wap .textbox .line {
+    width: 100px;
+    border-bottom: #B90000 2px solid;
+    margin: 25px 0;
+}
+/*品管兩格*/
+.qualityidea {
+    background:#EBEBEB url(../frontimages/images-qualityidea-bg.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+.qualityideabox {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+.qualityideabox .testbox{
+    width: 800px;
+    margin: auto;
+}
+.qualityideabox .testbox .title{
+    color: #205975;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.qualityideabox .testbox p{
+    text-align: center;
+    padding: 30px 0;
+}
+.qualityideabox ul {
+    list-style: none;
+    padding-top: 30px;
+}
+.qualityideabox ul li {
+    float: left;
+    width: 46%;
+    padding:50px;
+    margin: 1% 2%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+.qualityideabox ul li .title {
+    float: right;
+    width: calc(100% - 100px );
+    font-size: 30px;
+    font-weight: bold;
+    color: #612E2C;
+    padding-left: 20px;
+}
+.qualityideabox ul li .title p{
+    font-size: 20px;
+    font-weight: normal;
+    color: #474747;
+    padding: 4% 0;
+}
+.qualityideabox ul li .imagesbox{
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+.qualityideabox ul li .imagesbox img{
+    width: 100%;
+}
+
+/*專業認證*/
+.certified .everstyle_text {
+    float: right;
+    width: 50%;
+    padding: 40px;
+    background:transparent ;
+}
+.certified .everstyle_text .title {
+    color: #FFF38D;
+    font-size: 30px;
+    font-weight: bold;
+}
+.certified .everstyle_text p {
+    color: #fff;
+    padding: 20px 0 0 0;
+}
+/*專業認證四格*/
+.certifiedidea{
+    background:#F5F5F5 url(../frontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+.certifiedidea .pagecontentbox{
+    overflow: initial;
+}
+.certifiedidea .testbox {
+    width: 600px;
+    margin: 0;
+}
+.certifiedidea .testbox .title,.certifiedidea .testbox p{
+    text-align: left;
+}
+.certifiedidea ul li {
+    float: left;
+    width: 46%;
+    padding: 25px;
+    margin: 2% 2%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+    border-bottom:2px solid #B30000;
+    transition: .5s;
+}
+.certifiedidea ul li:hover{
+    transform: scale(1.05, 1.05);
+}
+.certifiedidea ul li .imgbox{
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 370px;
+    font-size: 0;
+}
+.certifiedidea ul li .imgbox img{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+.certifiedidea ul li:hover img:last-child{
+    opacity: 0;
+}
+.certifiedidea ul li .title{
+    float: right;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #990000;
+    padding-left: 20px;
+}
+/*研究開發*/
+.page_research{
+    background-color: #fff;
+    padding: 80px 0;
+}
+.page_researchbox{
+    width: 1200px;
+    margin: auto;
+}
+.page_researchbox ul{
+    list-style: none;
+}
+.page_researchbox ul li{
+    list-style: none;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px dashed #CCCCCC;
+}
+.page_researchbox ul li:last-child{
+    border: 0;
+}
+.page_researchbox ul li .imgbox{
+    float: left;
+    width: 400px;
+    font-size: 0;
+}
+.page_researchbox ul li .imgbox img{
+    width: 100%;
+}
+.page_researchbox ul li .textbox{
+    float: right;
+    width: calc(100% - 400px);
+    padding-left: 20px;
+}
+.page_researchbox ul li .textbox .title{
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 3px solid #B30000;
+    padding-left: 5px;
+    line-height: 31px;
+}
+.page_researchbox ul li .textbox p{
+    color: #4A4A4A;
+    padding: 20px 0;    
+    line-height: 35px;
+}
+/*------------服務項目與產品應用*/
+.application{
+    width: 100%;
+    background: url(../frontimages/application-bg.png)no-repeat center 180px;
+    background-size: 100% auto;
+    padding: 80px 0;
+    background-color: #fff;
+}
+.application .applicationbox{
+    width: 1200px;
+    margin: auto;
+}
+.application .applicationbox .titlebox {
+    font-size: 35px;
+    color: #3B3B3B;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+.application .applicationbox .titlebox .line{
+    margin:5px auto;
+    width: 65px;
+    border-bottom: 2px solid #DB0000;
+}
+.applicationbox .groupbox{
+    list-style: none;
+    padding: 40px 0;
+}
+.applicationbox .groupbox .title{    
+    font-weight: bold;
+    font-size: 25px;
+}
+.applicationbox .groupbox li{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.applicationbox .groupbox li .imgbox{
+    text-align: center;
+}
+.applicationbox .groupbox li .title{
+    text-align: center;
+    color: #3B3B3B;
+}
+.applicationbox .groupbox li p{    
+    color: #3B3B3B;
+    padding: 20px 0;
+}
+/*產品應用*/
+.product{
+    width: 100%;
+    background: url(../frontimages/application-product-bg.png)no-repeat fixed top center;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 80px 0;
+}
+.product .productbox{
+    width: 1200px;
+    margin: auto;
+}
+/*產品分類*/
+.productbox .tabs {
+    list-style: none;
+    width: 1000px;
+    height: 77px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+.productbox .tabs li {
+    display: inline-block;
+    position: relative;
+    margin-right: -6px;
+    width: 25%;
+    padding:0 2%;    
+    vertical-align: middle;
+  }
+  .productbox .tabs li::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 30px;
+    background-color: #A1A1A1;
+  }
+.productbox .tabs li:last-child::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0px;
+    height: 15px;
+    background-color: #A1A1A1;
+}
+.productbox .tabs li a {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #303030;
+    text-align: center;
+    padding: 20px 0;    
+    border-radius: 8px;
+    transition: .5s;
+  }
+  .productbox .tabs li a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-1-1.png)no-repeat left center;
+    background-size: 38px auto;
+    vertical-align: bottom;
+    transition: .5s;
+  }
+  .productbox .tabs li.active a::before,.productbox .tabs li:hover a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-1-2.png)no-repeat left center;
+    background-size: 38px auto;    
+    transition: .5s;
+  }
+  .productbox .tabs li:nth-child(2) a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-2-1.png)no-repeat left center;
+    background-size: 38px auto;
+    vertical-align: bottom;
+    transition: .5s;
+  }
+  .productbox .tabs li:nth-child(2).active a::before,.tabs li:nth-child(2):hover a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-2-2.png)no-repeat left center;
+    background-size: 38px auto;
+  }
+  .productbox .tabs li:nth-child(3) a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-3-1.png)no-repeat left center;
+    background-size: 38px auto;
+    vertical-align: bottom;
+    transition: .5s;
+  }
+  .productbox .tabs li:nth-child(3).active a::before,.tabs li:nth-child(3):hover a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-3-2.png)no-repeat left center;
+    background-size: 38px auto;
+  }
+  .productbox .tabs li:nth-child(4) a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-4-1.png)no-repeat left center;
+    background-size: 38px auto;
+    vertical-align: bottom;
+    transition: .5s;
+  }
+  .productbox .tabs li:nth-child(4).active a::before,.tabs li:nth-child(4):hover a::before{
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 10px;
+    background: url(../frontimages/application-icon-4-2.png)no-repeat left center;
+    background-size: 38px auto;
+  }
+.productbox .tabs li.active a,.productbox .tabs li:hover a{
+    color: #fff;
+    background:#205975;
+    border-radius: 8px;
+    padding: 20px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05, 1.05);
+  }  
+.productbox .tab-content {
+    display: none;
+    margin: 35px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+/**/
+.css-table{
+	display: table;
+}
+.css-table .thead{
+	display:table-header-group;
+}
+.css-table .tbody{
+	display:table-row-group;
+}
+.css-table .tr{
+	display:table-row;
+}
+.css-table .th,
+.css-table .td{
+	display:table-cell;
+}
+.only-one-td{
+    display:inline-block !important;
+    width: 50%;
+}
+/**/
+.tab-content .typebox{
+    display: inline-block;
+    margin:20px auto;
+    background-color:#F7F7F7 ;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.tab-content .css-table{
+	width:100%;
+    margin:0 auto 20px auto;
+	background-color: #ffffff;
+	border-collapse: collapse;
+    text-align: center;
+}
+.tab-content .tbody{    
+	border-top: #D10000 1px dashed;
+	border-bottom: #D10000 1px dashed;
+}
+.css-table .td{
+    width: 25%;
+	color: #545454;	
+	padding: 1%;
+    vertical-align: middle;
+}
+.css-table .tr{
+    border-bottom: #D1D1D1 1px solid;
+}
+.css-table .tr:last-child{
+    border-bottom: 0;
+}
+.css-table .title{
+    background-color: #F7F7F7;
+    color: #363636;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+
+/* == 手機版型區 ========================================================================================= */
+@media screen and (max-width: 767px) {
+
+    /*adv標題*/
+    .adv .ADVbox .page_title {
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+    /*公司介紹-----------------*/
+    /*---背景圖*/
+    .companycontent .wap {
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    /*---背景圖*/
+    .companycontent .img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 580px;
+    }
+
+    /*---圖片*/
+    .companycontent .everstyle_logo {
+        float: none;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .everstyle_logo img {
+        width: 160px;
+    }
+
+    /*---文字*/
+    .everstyle_text {
+        float: none;
+        width: 95%;
+        padding: 4%;
+        background: rgba(255, 255, 255, 0.9);
+        margin: 9% auto;
+    }
+
+    .everstyle_text .title {
+        color: #B90000;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .everstyle_text .line {
+        text-align: center;
+        width: 100px;
+        border-bottom: #B90000 2px solid;
+        margin: 25px auto;
+    }
+
+    /*公司-香味創造美味*/
+    .companytext {
+        padding-top: 80px;
+        background: #fff;
+
+    }
+
+    .companytext .companytextbox {
+        background-color: #EBEBEB;
+        margin-top: 30px;
+    }
+
+    /*---文字*/
+    .companytextbox .everstyle_text {
+        position: relative;
+        float: none;
+        width: 95%;
+        padding: 0;
+        background: none;
+        margin: auto;
+    }
+
+    .companytextbox .everstyle_text .inbox {
+        position: relative;
+        max-width: none;
+        top: -30px;
+        left: 0;
+    }
+
+    .companytextbox .everstyle_text .line {
+        margin: 45px auto;
+        text-align: center;
+    }
+
+    .companytextbox .everstyle_text .title {
+        font-size: 40px;
+    }
+
+    .companytextbox .everstyle_text .title span {
+        color: #333;
+    }
+    .everstyle_text .inbox p{
+        display: inline-block;
+        width: 100%;
+    }
+    /*---圖片*/
+    .companytextbox .companytext_img {
+        float: none;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+    }
+
+    .companytextbox .companytext_img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 430px;
+    }
+
+    /*公司-四格理念*/
+    .companyidea .companyideabox {
+        max-width: none;
+        width: 100%;
+        margin: auto;
+        background: url(../frontimages/page-company-idea.png)no-repeat center;
+        background-size: 250px auto;
+        padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .companyidea ul {
+        list-style: none;
+    }
+
+    .companyidea ul li {
+        float: none;
+        width: 90%;
+        min-height:auto;
+        padding:30px 20px;
+        margin: 20px auto;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .companyidea ul li .title {
+        padding-left: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #612E2C;
+        line-height: 28px;
+        margin-bottom: 10px;
+        border-left: 5px #B90000 solid;
+    }
+
+/*公司-圖片文字*/
+.company_imagesbox {
+    padding: 60px 0;
+    margin: auto;
+    text-align: center;
+    background: url(../frontimages/page-company-images.png)no-repeat center;
+    background-size: cover;
+}
+
+.company_imagesbox p {
+    text-align: center;
+    max-width: none;
+    width: 80%;
+    display: inline-block;
+    color: #fff;
+}
+
+/*----page-commodity-------------------商品頁面*/
+/*----------風味香精*/
+.imagesgroup{
+    background: #fff url(../frontimages/page-05.png)no-repeat -80px -15px ;
+    background-size: 250px;
+}
+.imagesgroup .imagesgroupbox{
+    max-width: auto;
+    width: 90%;
+    padding: 30px 0;
+    margin: auto;
+}
+/*---文字*/
+.imagesgroupbox .textbox{ 
+    float: left;
+    width: 100%;
+    padding: 60px 0 0 0;
+}
+.imagesgroupbox .textbox .title{
+    color: #B90000;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*---圖片*/
+.imagesgroupbox .imgbox{  
+    float: right;  
+    width: 100%;
+    text-align: center;
+}
+.imagesgroupbox .imgbox img {
+    width: 100%;
+    height: auto; 
+}
+/*---------水果系列*/
+.fruitgroup{
+    position: relative;
+    overflow: hidden;
+}
+.fruitgroup .fruitgroupbox{
+    position: relative;
+    max-width: auto;
+    width: 90%;
+    padding: 60px 0;
+    margin: auto;    
+    z-index: 3;
+}
+.fruitgroup .img-bg{
+    width: 70%;
+}
+.fruitgroup .img-bg img{
+    width: 100%;
+}
+.fruitgroupbox .fruitbox {
+    height: auto;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+    border-radius: 25px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox .imgbox{  
+    position: relative;  
+    float: none;
+    width: 100%;
+    height: 302px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox:nth-child(even) .imgbox{
+    float: none;
+}
+.fruitgroupbox .fruitbox .imgbox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 302px;
+    transition: .8s ease-out;
+}
+.fruitgroupbox .fruitbox:hover .imgbox img{
+    width: 110%;
+    height: 110%;
+}
+.fruitgroupbox .fruitbox .textbox{  
+    position: inherit;
+    transform: translateY(0);
+    padding: 30px 30px 50px 30px;
+
+}
+.fruitgroupbox .fruitbox .title{    
+    padding-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+}
+.fruitgroupbox .fruitbox p{
+    color: #616161;
+}
+/*聯絡我們*/
+.contactlist{
+    padding: 60px 0;
+}
+.contactlistbox{
+    max-width: auto;
+    width: 90%;
+    margin: auto;
+}
+.contactlistbox .titlebox{
+    text-align: center;
+    margin:0 0 4 0px 0;
+}
+.contactlistbox .titlebox .title{
+    display: inline-block;
+    font-size: 30px;
+    color: #333;
+    background-color: transparent;
+}
+.contactlistbox .titlebox .bottom_line {  
+    width: 50px;
+    border-bottom: 2px #D1000F solid;
+    margin: auto;
+} 
+.contactlistbox .imgbox{
+    float: none;
+    width: 100%;
+    font-size: 0;
+}
+.contactlistbox .imgbox img{
+    width: 100%;
+}
+.contactlistbox .textbox{
+    float: none;
+    width: 100%;
+    padding: 5% 0 5% 0;
+}
+.contactlistbox .textbox ul{
+    list-style: none;
+}
+.contactlistbox .textbox ul li{
+    margin:15px 0 0 0;
+    font-size: 20px;
+    background: #fff;
+    border: 1px #B0B0B0 solid;
+    padding: 10px;
+}
+.contactlistbox .textbox ul li:first-child{
+    margin: 0;
+}
+.contactlistbox .textbox ul li b{
+    color: #616161;
+    vertical-align:middle;
+    padding-right: 5px;
+}
+.contactlistbox .textbox ul li span{
+    color: #B81A1A;
+}
+.contactlistbox .textbox  input,.contactlistbox .textbox textarea{
+    width: calc(100% - 59px);
+    border: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    border: transparent 0px solid;    
+    outline: none;
+}
+.contactlistbox .textbox textarea{
+    padding-top: 3px;
+    vertical-align: top;
+}
+/*加入我們*/
+.joinin{
+    background-color: #F5F5F5;
+}
+.joininbox .textbox{
+    float: left;
+    padding-right:0 ;
+}
+.joininbox .imgbox{
+    float: right;
+}
+.joininbox .textbox .title{
+    color: #B10000;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*公司沿革*/
+.companyhistorybox .everstyle_text{
+    float: none;
+    margin: 8% auto;
+}
+.companyhistorybox .img img {
+ min-height: 450px;
+}
+/*歷史沿革*/
+.companyhistory .companyhistorybox{
+    max-width: auto;
+    width: 90%;  
+    margin: auto;
+}
+.companyhistorybox .historybox{
+    width:calc(50% - 40px);
+    min-height: 50px;
+    display: inline-block;
+    background: #EDEDED;
+    border-right: 1px solid #B4B4B4;
+}
+.companyhistorybox li .historybox:last-child{
+    border-left: 1px solid #B4B4B4;    
+    border-right: 0;
+}
+.companyhistorybox li .boxnone{
+    background: transparent;
+    border: 0 !important;
+}
+.companyhistorybox .history_line{
+    width: 80px;
+    max-width: none;
+    display: inline-block;
+    margin: 0 -6px;
+}
+.companyhistorybox .history_line .date{
+    color: #B30000;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+.companyhistorybox .history_line .line{
+    width: 1px;
+    height: 300px;
+    border-left: 4px solid #FF0000;
+}
+
+.companyhistorybox li .historybox .imgbox{
+    display: inline-block;
+    vertical-align: middle;
+    max-width: none;
+    width: 100%;
+    font-size: 0;
+}
+.companyhistorybox li .historybox .imgbox img{
+    width: 100%;
+}
+.companyhistorybox li .historybox .textbox{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    padding:10px 2%;
+    word-wrap:break-word;
+}
+/*品質管理*/
+.qualitycontent{
+    padding:0;
+    background-color: #fff;
+    position: relative;
+}
+.qualitycontent .imgbox{
+    width: 100%;
+    font-size: 0;
+}
+.qualitycontent .imgbox img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 450px;
+}
+.qualitycontent .wap{
+    width: 95%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.qualitycontent .wap .textbox{
+    float: none; 
+    margin:8% auto;
+    width:95%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+.qualitycontent .wap .textbox .title {
+    color: #B90000;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.qualitycontent .wap .textbox .line {
+    width: 100px;
+    border-bottom: #B90000 2px solid;
+    margin: 25px auto;
+}
+/*品管兩格*/
+.qualityidea {
+    background:#EBEBEB url(../frontimages/images-qualityidea-bg.png)no-repeat top center;
+    background-size: 100%;
+    padding: 60px 0;
+}
+.qualityideabox {
+    max-width: none;
+    width: 90%;
+    margin: auto;
+    overflow: inherit;
+}
+.qualityideabox .testbox{
+    width: 80%;
+    margin: auto;
+    max-width: 440px;
+}
+.qualityideabox .testbox .title{
+    color: #205975;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.qualityideabox .testbox p{
+    text-align: center;
+    padding: 20px 0;
+}
+.qualityideabox ul {
+    list-style: none;
+    padding-top: 30px;
+}
+.qualityideabox ul li {
+    float: none;
+    width: 90%;
+    padding:30px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    overflow: hidden;
+}
+.qualityideabox ul li .title {
+    float: right;
+    width: calc(100% - 80px );
+    font-size: 25px;
+    font-weight: bold;
+    color: #612E2C;
+    padding-left: 20px;
+}
+.qualityideabox ul li .title p{
+    font-size: 20px;
+    font-weight: normal;
+    color: #474747;
+    padding: 4% 0;
+}
+.qualityideabox ul li .imagesbox{
+    float: left;
+    width: 80px;
+    height: auto;
+}
+.qualityideabox ul li .imagesbox img{
+    width: 100%;
+}
+/*專業認證*/
+.certified {
+background-color: #1B2E36;
+}
+.certified .everstyle_text {
+    float: none;
+    width: 90%;
+    padding: 60px 0;
+    margin: auto;
+    background:transparent ;    
+}
+.certified .everstyle_text .title {
+    color: #FFF38D;
+    font-size: 30px;
+    font-weight: bold;
+}
+.certified .everstyle_text p {
+    color: #fff;
+    padding: 20px 0 0 0;
+}
+.certified .img {
+    width: 100%;
+    overflow: hidden;
+    min-height: auto;
+}
+.certified .img img {
+    display: block;
+    width: 200%;
+    height: auto;
+    margin-top: -30px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 300px;
+}
+.certified .wap {    
+    width: 100%;
+    margin: auto;
+    position:initial;
+    top: 50%;
+    left: 50%;
+    transform: translatex(0);
+    background:url(../frontimages/page-certified-bg-3.png)no-repeat top center;
+    background-size: cover;
+}
+
+/*專業認證四格*/
+.certifiedidea{
+    background:#F5F5F5 url(../frontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+.certifiedidea .testbox {
+    width: 600px;
+    margin: 0;
+}
+.certifiedidea .testbox .title,.certifiedidea .testbox p{
+    text-align: left;
+}
+/*專業認證四格*/
+.certifiedidea{
+    background:#F5F5F5 url(../frontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 60px 0;
+}
+.certifiedidea .pagecontentbox{
+    overflow: initial;
+    width: 90%;
+}
+.certifiedidea .testbox {
+    width: 60%;
+    margin: 0;
+}
+.certifiedidea .testbox .title,.certifiedidea .testbox p{
+    text-align: left;
+}
+.certifiedidea ul li {
+    float: none;
+    width: 98%;
+    padding: 4% 2%;
+    margin: 4% auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+    border-bottom:2px solid #B30000;
+    transition: .5s;
+}
+.certifiedidea ul li .imgbox{
+    position: relative;
+    float: left;
+    width: 50%;
+    font-size: 0;
+    overflow: hidden;
+}
+.certifiedidea ul li .imgbox img{
+    position: absolute;
+    max-width: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+.certifiedidea ul li img:first-child{
+    width: 100% ;
+    height:auto;
+    opacity: 0;
+}
+.certifiedidea ul li:hover img:last-child{
+    opacity: 0;
+}
+.certifiedidea ul li:hover img:first-child{
+    opacity: 100;
+}
+.certifiedidea ul li .title{
+    float: right;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #990000;
+    padding-left: 20px;
+}
+/*研究開發*/
+.page_research{
+    background-color: #fff;
+    padding: 40px 0;
+}
+.page_researchbox{
+    width: 90%;
+    margin: auto;
+}
+.page_researchbox ul{
+    list-style: none;
+}
+.page_researchbox ul li{
+    list-style: none;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px dashed #CCCCCC;
+}
+.page_researchbox ul li:last-child{
+    border: 0;
+}
+.page_researchbox ul li .imgbox{
+    float: none;
+    width: 100%;
+    font-size: 0;
+    padding-bottom: 20px;
+}
+.page_researchbox ul li .imgbox img{
+    width: 100%;
+}
+.page_researchbox ul li .textbox{
+    float: none;
+    width:100%;
+    padding-left: 0px;
+}
+.page_researchbox ul li .textbox .title{
+    font-size: 25px;
+    font-weight: bold;
+    border-left: 3px solid #B30000;
+    padding-left: 5px;
+    line-height: 25px;
+}
+.page_researchbox ul li .textbox p{
+    color: #4A4A4A;
+    padding: 15px 0;    
+    line-height: 35px;
+}
+/*------------服務項目與產品應用*/
+.application{
+    width: 100%;
+    background: url(../frontimages/application-bg.png)no-repeat center center;
+    background-size: 100% auto;
+    padding: 40px 0;
+    background-color: #fff;
+}
+.application .applicationbox{
+    width:95%;
+    margin: auto;
+}
+.application .applicationbox .titlebox {
+    font-size: 30px;
+    color: #3B3B3B;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+.application .applicationbox .titlebox .line{
+    margin:5px auto;
+    width: 65px;
+    border-bottom: 2px solid #DB0000;
+}
+.applicationbox .groupbox{
+    list-style: none;
+    padding: 40px 0;
+}
+.applicationbox .groupbox .title{    
+    font-weight: bold;
+    font-size: 25px;
+}
+.applicationbox .groupbox li{
+    float: none;
+    width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+.applicationbox .groupbox li .imgbox{
+    text-align: center;
+}
+.applicationbox .groupbox li .imgbox img{
+    width: 100%;
+    max-width: 180px;
+}
+.applicationbox .groupbox li .title{
+    text-align: center;
+    color: #3B3B3B;
+}
+.applicationbox .groupbox li p{    
+    color: #3B3B3B;
+    padding: 20px 0;
+}
+/*產品應用*/
+.product{
+    width: 100%;
+    background: url(../frontimages/application-product-bg.png)no-repeat fixed top center;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 40px 0;
+}
+.product .productbox{
+    width: 95%;
+    margin: auto;
+}
+/*產品分類*/
+.productbox .tabs {
+    list-style: none;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+.productbox .tabs li {
+    display: inline-block;
+    position: relative;
+    margin-right: -6px;
+    width: 25%;
+    padding:0 2%;    
+    vertical-align: middle;
+  }
+.productbox .tabs li.active a,.productbox .tabs li:hover a{
+    color: #fff;
+    background:#205975;
+    border-radius: 8px;
+    padding: 15px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05, 1.05);
+  }  
+  .productbox .tabs li a::before {
+    content: '';
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    padding-right: 0px !important;
+    background: url(../frontimages/application-icon-1-1.png)no-repeat left center;
+    background-size: 38px auto;
+    vertical-align: bottom;
+    transition: .5s;
+}
+.productbox .tabs b{
+    display: none;
+}
+.productbox .tab-content {
+    display: none;
+    margin: 35px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+.tab-content .typebox{
+    display: inline-block;
+    margin:20px auto;
+    background-color:#F7F7F7 ;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.tab-content .css-table{
+	width:100%;
+    margin:0 auto 20px auto;
+	background-color: #ffffff;
+	border-collapse: collapse;
+    text-align: center;
+}
+.tab-content .tbody{    
+	border-top: #D10000 1px dashed;
+	border-bottom: #D10000 1px dashed;
+}
+.css-table .td{
+    width: 55%;
+    min-height: 66px;
+    margin-right: -6px;
+    border-bottom: #D1D1D1 1px solid;
+	color: #545454;	
+	padding: 1% 2%;
+    vertical-align: middle;    
+    font-size: 20px;
+}
+.css-table .tr{
+    border-bottom:0;
+}
+.css-table .tr:last-child{
+    border-bottom: 0;
+}
+.css-table .title{
+    width: 45%;
+    background-color: #F7F7F7;
+    color: #363636;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+/**/
+.css-table{
+	display: table;
+}
+.css-table .thead{
+	display:table-header-group;
+}
+.css-table .tbody{
+	display:table-row-group;
+}
+.css-table .tr{
+	display:block;
+    overflow: auto;
+}
+.css-table .th,
+.css-table .td{
+	display:inline-block;    
+}
+/**/
+}
+@media screen and (max-width: 550px) {
+    .css-table .td{
+        width: 100%;
+        min-height:0;
+        margin-right: -6px;
+        border-bottom: #D1D1D1 1px solid;
+        color: #545454;	
+        padding:2% 3%;
+        vertical-align: middle;    
+        font-size:20px;
+    }
+    .css-table .td::before{
+        content: '原料:';
+        display: block;
+    }
+    .css-table .title::before{
+        content: '品項:';
+        display: block;
+    }
+
+}
+/* == 平板版型區 ====================================================================================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    /*adv標題*/
+    .adv .ADVbox .page_title {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: rgb(255, 255, 255);
+    }
+
+    /*公司介紹-----------------*/
+    /*---背景圖*/
+    .companycontent .wap {
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*---圖片*/
+    .companycontent .everstyle_logo {
+        float: left;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .everstyle_logo img {
+        width: 246px;
+    }
+
+    /*---文字*/
+    .everstyle_text {
+        float: right;
+        width: 48%;
+        padding: 3%;
+        background: rgba(255, 255, 255, 0.9);
+        margin-right: 2%;
+    }
+
+    /*公司-香味創造美味*/
+    .companytext {
+        padding-top: 80px;
+        background: #fff;
+
+    }
+
+    .companytext .companytextbox {
+        background-color: #EBEBEB;
+        margin-top: 30px;
+    }
+
+    /*---文字*/
+    .companytextbox .everstyle_text {
+        position: relative;
+        float: left;
+        width: 50%;
+        padding: 40px;
+        background: none;
+        margin: auto;
+    }
+
+    .companytextbox .everstyle_text .inbox {
+        position: absolute;
+        max-width: none;
+        top: -35px;
+        left: 5%;
+    }
+
+    .companytextbox .everstyle_text .line {
+        margin: 45px 0;
+    }
+
+    .companytextbox .everstyle_text .title {
+        font-size: 50px;
+    }
+
+    .companytextbox .everstyle_text .title span {
+        color: #333;
+    }
+    .everstyle_text .inbox p{
+        display: inline-block;
+        width: 94%;
+    }
+    /*---圖片*/
+    .companytextbox .companytext_img {
+        float: right;
+        width: 50%;
+        height: 490px;
+        overflow: hidden;
+    }
+
+    .companytextbox .companytext_img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 490px;
+    }
+
+    /*公司-四格理念*/
+    .companyidea{
+        width: 100%;
+    }
+    .companyidea .companyideabox {
+        max-width: none;
+        width: 95%;
+        margin: auto;
+        background: url(../frontimages/page-company-idea.png)no-repeat center;
+        background-size: 250px auto;
+        padding: 80px 0;
+        overflow: hidden;
+    }
+
+    .companyidea ul {
+        list-style: none;
+    }
+
+    .companyidea ul li {
+        float: left;
+        width: 48%;
+        min-height: 240px;
+        padding: 3% 2%;
+        margin: 1%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .companyidea ul li .title {
+        padding-left: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #612E2C;
+        line-height: 28px;
+        margin-bottom: 10px;
+        border-left: 5px #B90000 solid;
+    }
+
+
+/*公司-圖片文字*/
+.company_imagesbox {
+    padding: 100px 0;
+    margin: auto;
+    text-align: center;
+    background: url(../frontimages/page-company-images.png)no-repeat center;
+    background-size: cover;
+}
+
+.company_imagesbox p {
+    text-align: center;
+    max-width: 700px;
+    width: 80%;
+    display: inline-block;
+    color: #fff;
+}
+
+/*----page-commodity-------------------商品頁面*/
+/*----------風味香精*/
+.imagesgroup{
+    background: #fff url(../frontimages/page-05.png)no-repeat -50px 20px ;
+}
+.imagesgroup .imagesgroupbox{
+    max-width: auto;
+    width: 90%;
+    padding: 30px 0;
+    margin: auto;
+}
+/*---文字*/
+.imagesgroupbox .textbox{
+    float: left;
+    width: 50%;
+    padding: 80px 0 0 0;
+}
+.imagesgroupbox .textbox .title{
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/*---圖片*/
+.imagesgroupbox .imgbox{  
+    float: right;  
+    width: 50%;
+    text-align: center;
+}
+.imagesgroupbox .imgbox img {
+    height: 250px;
+}
+/*---------水果系列*/
+.fruitgroup{
+    position: relative;
+    overflow: hidden;
+}
+.fruitgroup .fruitgroupbox{
+    position: relative;
+    max-width: auto;
+    width: 90%;
+    padding: 0px 0;
+    margin: auto;    
+    z-index: 3;
+}
+.fruitgroupbox .fruitbox {
+    height: 302px;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+    border-radius: 35px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox .imgbox{  
+    position: relative;  
+    float: left;
+    width: 330px;
+    height: 302px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+}
+.fruitgroupbox .fruitbox:nth-child(even) .imgbox{
+    float: right;
+}
+.fruitgroupbox .fruitbox .imgbox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 302px;
+    transition: .8s ease-out;
+}
+.fruitgroupbox .fruitbox:hover .imgbox img{
+    width: 110%;    
+    height: 110%;
+}
+.fruitgroupbox .fruitbox .textbox{  
+    position: relative;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+}
+.fruitgroupbox .fruitbox .title{    
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.fruitgroupbox .fruitbox p{
+    color: #616161;
+}
+
+/*聯絡我們*/
+
+.contactlistbox{
+    max-width: auto;
+    width: 90%;
+    margin: auto;
+}
+/*公司沿革*/
+.companyhistorybox .everstyle_text{
+    float: none;
+    margin-left: 2%;
+  }
+/*歷史沿革*/
+.companyhistory .companyhistorybox{
+    max-width: auto;
+    width: 90%;  
+    margin: auto;
+}
+.companyhistorybox .historybox{
+    width:calc(49.5% - 46px);
+    min-height: 50px;
+    display: inline-block;
+    background: #EDEDED;
+    border-right: 1px solid #B4B4B4;
+}
+.companyhistorybox .history_line {
+    width: 100px;
+    display: inline-block;
+    margin: 0px -6px;
+}
+.companyhistorybox li .historybox .imgbox {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: auto;
+    width: 49%;
+    font-size: 0;
+    margin-right: -6px;
+}
+.companyhistorybox li .historybox .imgbox img{
+    width: 100%;
+}
+.companyhistorybox li .historybox .textbox {
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    word-wrap: break-word;
+    padding: 1%;
+}
+/*品質管理*/
+.qualitycontent{
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+}
+.qualitycontent .imgbox{
+    width: 70%;
+}
+.qualitycontent .imgbox img{
+    width: 100%;
+}
+.qualitycontent .wap{
+    width: 95%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.qualitycontent .wap .textbox{
+    float: right; 
+    margin: auto;
+    width:50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+.qualitycontent .wap .textbox .title {
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.qualitycontent .wap .textbox .line {
+    width: 100px;
+    border-bottom: #B90000 2px solid;
+    margin: 25px 0;
+}
+/*品管兩格*/
+.qualityidea {
+    background:#EBEBEB url(../frontimages/images-qualityidea-bg.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 80px 0;
+}
+.qualityideabox {
+    max-width: none;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+.qualityideabox .testbox{
+    width: 550px;
+    margin: auto;
+}
+.qualityideabox .testbox .title{
+    color: #205975;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.qualityideabox .testbox p{
+    text-align: center;
+    padding: 20px 0;
+}
+.qualityideabox ul {
+    list-style: none;
+    padding-top: 30px;
+}
+.qualityideabox ul li {
+    float: left;
+    width: 46%;
+    padding:4%;
+    margin: 1% 2%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+.qualityideabox ul li .title {
+    float: right;
+    width: calc(100% - 100px );
+    font-size: 30px;
+    font-weight: bold;
+    color: #612E2C;
+    padding-left: 10px;
+}
+.qualityideabox ul li .title p{
+    font-size: 20px;
+    font-weight: normal;
+    color: #474747;
+    padding: 4% 0;
+}
+.qualityideabox ul li .imagesbox{
+    float: left;
+    width: 80px;
+    height: 106px;
+}
+.qualityideabox ul li .imagesbox img{
+    width: 100%;
+}
+/*專業認證*/
+.certified .everstyle_text {
+    float: right;
+    width: 50%;
+    padding: 40px;
+    background:transparent ;
+}
+.certified .everstyle_text .title {
+    color: #FFF38D;
+    font-size: 30px;
+    font-weight: bold;
+}
+.certified .everstyle_text p {
+    color: #fff;
+    padding: 20px 0 0 0;
+}
+.certified .img img {
+    display: block;
+    width: 102%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+/*專業認證四格*/
+.certifiedidea{
+    background:#F5F5F5 url(../frontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+.certifiedidea .testbox {
+    width: 600px;
+    margin: 0;
+}
+.certifiedidea .testbox .title,.certifiedidea .testbox p{
+    text-align: left;
+}
+/*專業認證四格*/
+.certifiedidea{
+    background:#F5F5F5 url(../frontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+.certifiedidea .pagecontentbox{
+    overflow: initial;
+    width: 95%;
+}
+.certifiedidea .testbox {
+    width: 600px;
+    margin: 0;
+}
+.certifiedidea .testbox .title,.certifiedidea .testbox p{
+    text-align: left;
+}
+.certifiedidea ul li {
+    float: left;
+    width: 48%;
+    padding: 2%;
+    margin: 1%;
+    min-height: 410px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+    border-bottom:2px solid #B30000;
+    transition: .5s;
+}
+.certifiedidea ul li:hover{
+    transform: scale(1.05, 1.05);
+}
+.certifiedidea ul li .imgbox{
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 370px;
+    font-size: 0;
+}
+.certifiedidea ul li .imgbox img{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+.certifiedidea ul li:hover img:last-child{
+    opacity: 0;
+}
+.certifiedidea ul li .title{
+    float: right;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #990000;
+    padding-left: 20px;
+}
+/*研究開發*/
+.page_research{
+    background-color: #fff;
+    padding: 80px 0;
+}
+.page_researchbox{
+    width: 90%;
+    margin: auto;
+}
+.page_researchbox ul{
+    list-style: none;
+}
+.page_researchbox ul li{
+    list-style: none;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px dashed #CCCCCC;
+}
+.page_researchbox ul li:last-child{
+    border: 0;
+}
+.page_researchbox ul li .imgbox{
+    float: left;
+    width: 400px;
+    font-size: 0;
+}
+.page_researchbox ul li .imgbox img{
+    width: 100%;
+}
+.page_researchbox ul li .textbox{
+    float: right;
+    width: calc(100% - 400px);
+    padding-left: 20px;
+}
+.page_researchbox ul li .textbox .title{
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 3px solid #B30000;
+    padding-left: 5px;
+    line-height: 31px;
+}
+.page_researchbox ul li .textbox p{
+    color: #4A4A4A;
+    padding: 20px 0;    
+    line-height: 35px;
+}
+
+/*------------服務項目與產品應用*/
+.application{
+    width: 100%;
+    background: url(../frontimages/application-bg.png)no-repeat center 180px;
+    background-size: 100% auto;
+    padding: 80px 0;
+    background-color: #fff;
+}
+.application .applicationbox{
+    width:95%;
+    margin: auto;
+}
+.application .applicationbox .titlebox {
+    font-size: 35px;
+    color: #3B3B3B;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+.application .applicationbox .titlebox .line{
+    margin:5px auto;
+    width: 65px;
+    border-bottom: 2px solid #DB0000;
+}
+.applicationbox .groupbox{
+    list-style: none;
+    padding: 40px 0;
+}
+.applicationbox .groupbox .title{    
+    font-weight: bold;
+    font-size: 25px;
+}
+.applicationbox .groupbox li{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.applicationbox .groupbox li .imgbox{
+    text-align: center;
+}
+.applicationbox .groupbox li .imgbox img{
+    width: 100%;
+    max-width: 180px;
+}
+.applicationbox .groupbox li .title{
+    text-align: center;
+    color: #3B3B3B;
+}
+.applicationbox .groupbox li p{    
+    color: #3B3B3B;
+    padding: 20px 0;
+}
+/*產品應用*/
+.product{
+    width: 100%;
+    background: url(../frontimages/application-product-bg.png)no-repeat fixed top center;
+    -moz-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 80px 0;
+}
+.product .productbox{
+    width: 95%;
+    margin: auto;
+}
+/*產品分類*/
+.productbox .tabs {
+    list-style: none;
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+.productbox .tabs li {
+    display: inline-block;
+    position: relative;
+    margin-right: -6px;
+    width: 25%;
+    padding:0 2%;    
+    vertical-align: middle;
+  }
+.productbox .tabs li.active a,.productbox .tabs li:hover a{
+    color: #fff;
+    background:#205975;
+    border-radius: 8px;
+    padding: 15px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05, 1.05);
+  }  
+.productbox .tab-content {
+    display: none;
+    margin: 35px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  }
+
+.tab-content .typebox{
+    display: inline-block;
+    margin:20px auto;
+    background-color:#F7F7F7 ;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 25px;
+    font-weight: bold;
+}
+.tab-content .css-table{
+	width:100%;
+    margin:0 auto 20px auto;
+	background-color: #ffffff;
+	border-collapse: collapse;
+    text-align: center;
+}
+.tab-content .tbody{    
+	border-top: #D10000 1px dashed;
+	border-bottom: #D10000 1px dashed;
+}
+.css-table .td{
+    width: 25%;
+	color: #545454;	
+	padding: 1%;
+    vertical-align: middle;
+}
+.css-table .tr{
+    border-bottom: #D1D1D1 1px solid;
+}
+.css-table .tr:last-child{
+    border-bottom: 0;
+}
+.css-table .title{
+    background-color: #F7F7F7;
+    color: #363636;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+}

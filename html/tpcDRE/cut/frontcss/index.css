@@ -1,0 +1,899 @@
+﻿@charset "utf-8";
+@import url("all_shared.css");
+
+/*網頁大架構Div Layout------------------------*/
+.header {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    z-index: 8000;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    clear: both;
+    background: url(../frontimages/bg.jpg)no-repeat center center fixed;
+    background-size: cover;
+}
+
+.iconmu {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.footerline {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #D9D9D9;
+}
+
+
+.header .headerbox {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.topmenu {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translatex(-50%);
+    height: auto;
+    margin: 0 auto;
+    z-index: 8000;
+}
+
+.topmenu .topmenubox {
+    height: auto;
+    margin: 0 auto;
+}
+
+.container .containerbox {
+	width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 3% 0;
+}
+
+.iconmu .iconmubox {
+	width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: 0 auto;
+	padding: 60px 0;
+    overflow: hidden;
+}
+
+.footerline .footerlinebox {
+    width: 1000px;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+    padding: 15px 0;
+    color: #616161;
+    font-size: 100%;
+    letter-spacing: 2px;
+}
+
+/*----------------------------------------------------------------*/
+
+/*header--------------------------------------------------*/
+/*logo*/
+.headerbox .logo {
+    display: block;
+    text-indent: -999999px;
+    width: 170px;
+    height: 80px;
+    float: left;
+    background: #13A754 url(../frontimages/logo-w.png) center no-repeat;
+    background-size: 140px auto;
+}
+
+/*TOP回到最上面*/
+.headerbox #TOP {
+    position: absolute;
+    top: -100px;
+    padding-top: 25px;
+    right: 0px;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.headerbox #TOP img {
+    width: 100%;
+    height: auto;
+}
+
+/*toolbar*/
+/* .headerbox .toolbar {
+    float: right;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.headerbox .toolbar .toolbarsearch a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 0 0 2px;
+    font-size: 110%;
+    color: #545454;
+    background-color: #E3E3E3;
+    text-decoration: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.headerbox .toolbar .toolbarsearch a:hover {
+    color: #333;
+    background-color: #d7d7d7;
+} */
+
+/*選單*/
+.topmenu .topmenubox {
+    width: 613px;
+    margin: auto;
+    position: relative;
+}
+
+#menu {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+    background: none;
+    font-family: "微軟正黑體", "新細明體", "細明體", Arial, Helvetica, sans-serif;
+}
+
+#menu ul {
+    width: 100%;
+    height: 55px;
+}
+
+#menu li {
+    width: 78px;
+    margin: 1% .5%;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+#menu>li img {
+    display: block;
+    height: 25px;
+    margin: 2px auto;
+}
+
+#menu>li:last-child {
+    border-right: 0px solid rgba(255, 255, 255, 0.1);
+}
+
+#menu>li>a {
+    font-size: 120%;
+    padding: 5px;
+    width: auto;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    /*text-indent:-999999px;	*/
+}
+
+#menu>li:hover {
+    background: #EDEDED;
+    text-decoration: none;
+}
+
+#menu li>ul {
+    margin: 0;
+    z-index: 8000;
+    line-height: 150%;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    color: #6a5951;
+    background: #ffe6a6;
+    border-top: 2px solid #fcad17;
+    display: none;
+}
+
+#menu li ul li {
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 0px;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.5);
+    text-align: left;
+    line-height: 150%;
+}
+
+#menu li ul li a {
+    display: block;
+    color: #6a5951;
+    width: 100%;
+    padding: 10px;
+    line-height: 110%;
+    font-size: 105%;
+    text-decoration: none;
+    background: url(../frontimages/icon_arrow.png) 10px center no-repeat;
+    background-size: 10px auto;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+#menu li ul li a:hover {
+    text-decoration: none;
+    color: #FFF;
+    background: #396b97 url(../frontimages/icon_arrow_h.png) 10px center no-repeat;
+    background-size: 10px auto;
+}
+
+
+
+/*-----------------------container-----------------------------------------*/
+.container .containerbox .advbox {
+    width: 50%;
+	max-width: 500px;
+	margin: 0 1%;
+    float: right;
+	list-style: none;
+    overflow: hidden;
+}
+
+.container .containerbox .advbox li {
+    width: 49%;
+    float: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333333;
+    margin: .5%;
+	padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container .containerbox .advbox .titlebox {
+    width: 99%;
+    float: none;
+	padding: 0;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container .containerbox .advbox .titlebox .title {
+    text-align: center;
+    background-color: rgb(37 125 72 / 80%);
+    color: #fff;
+	font-weight: bold;
+    padding: 8px 0;
+}
+
+.container .containerbox .advbox .titlebox b {
+    display: inline-block;
+	font-weight: normal;
+    padding: 8px 0;
+}
+
+.container .containerbox .advbox .titlebox b span {
+    color: #D40000;
+	padding: 0 5px;
+	font-weight: bold;
+}
+
+.container .containerbox .advbox .titlebox .title img {
+    width: 22px;
+	margin-bottom: 5px;
+    vertical-align: middle;
+}
+
+.container .containerbox .advbox li .imgbox{
+	text-align: center;
+	margin:10px auto;
+}
+.container .containerbox .advbox li .imgbox img{
+	width: auto;
+	height: 55px;
+}
+.container .containerbox .advbox li .title{
+	color: #257D48;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.container .containerbox .advbox li .value{
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 5px 0;
+}
+/*好食焦點*/
+.iconmu .iconmubox .powerbox{
+	width: 99%;
+	margin: auto;
+	border: 3px solid #D6DBE3;
+	border-radius: 50px;
+}
+.iconmu .iconmubox .powerbox .title{
+	display:inline-block;
+	position: relative;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0 10px;
+	font-size: 1.6rem;
+	color: #2E996E;
+	font-weight: bold;
+	text-align: center;
+	background-color: #fff;
+}
+.iconmu .iconmubox .powerbox .title img{
+	height: 22px;
+	vertical-align: middle;
+	margin-bottom: 5px;
+}
+.iconmu .iconmubox .powerbox ul{
+	list-style: none;
+	padding: 30px 0 50px 0;
+	overflow: hidden;
+}
+.iconmu .iconmubox .powerbox .power{
+	width: 33.3%;
+	float: left;
+	text-align: center;
+}
+.iconmu .iconmubox .powerbox .power img{
+	width: 80%;
+}
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px) {
+    body {
+        width: 100%;
+        min-width: 320px;
+        height: auto;
+        -webkit-text-size-adjust: none;
+        font-family: Arial, Helvetica, "微軟正黑體", sans-serif !important;
+    }
+
+    /*-------------------------------------------*/
+    .header {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        z-index: 8000;
+    }
+
+    .topmenu {
+        display: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        z-index: 8000;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        clear: both;
+    }
+
+    .iconmu {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .footerline {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .header .headerbox {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .topmenu .topmenubox {
+        width: 94%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .container .containerbox {
+        width: 94%;
+        height: auto;
+        margin: 0 auto;
+		padding: 5% 0;
+        overflow: hidden;
+    }
+
+    .iconmu .iconmubox {
+        width: 94%;
+        height: auto;
+        margin: 0 auto;    
+		padding: 40px 0;
+        overflow: hidden;
+    }
+
+    .footerline .footerlinebox {
+        width: 94%;
+        height: auto;
+        margin: 0px auto;
+        text-align: center;
+        padding: 10px;
+        font-size: 100%;
+        letter-spacing: 1px;
+    }
+
+    /*-------------------------------------------*/
+
+    /*logo*/
+    .headerbox .logo {
+        display: block;
+        text-indent: -999999px;
+        width: 134px;
+        height: 70px;
+        float: left;
+        background: #13A754 url(../frontimages/logo-w.png) center no-repeat;
+        background-size: 108px auto;
+    }
+
+    /*toolbar*/
+    .headerbox .toolbar {
+        display: none;
+        float: right;
+        width: 100%;
+        height: auto;
+    }
+
+    .topmenu {
+        display: none;
+    }
+
+    /*-----------------------container-----------------------------------------*/
+	.container .containerbox .advbox {
+		width: 80%;
+		max-width: 500px;
+		margin: 0 auto;
+		float: none;
+		list-style: none;
+		overflow: hidden;
+	}
+	
+	.container .containerbox .advbox li {
+		width: 100%;
+		float: left;
+		background-color: #fff;
+		color: #333333;
+		margin:1% 0;
+		padding:2%;
+		border-radius: 5px;
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	.container .containerbox .advbox .titlebox {
+		width: 99%;
+		float: none;
+		padding: 0;
+		text-align: center;
+		font-size: 1.1rem;
+	}
+	
+	.container .containerbox .advbox .titlebox .title {
+		text-align: center;
+		background-color: #257D48;
+		color: #fff;
+		font-weight: bold;
+		padding: 8px 0;
+	}
+	
+	.container .containerbox .advbox .titlebox b {
+		display: inline-block;
+		font-weight: normal;
+		padding: 8px 0;
+	}
+	
+	.container .containerbox .advbox .titlebox b span {
+		color: #D40000;
+		padding: 0 5px;
+		font-weight: bold;
+	}
+	
+	.container .containerbox .advbox .titlebox .title img {
+		width: 22px;
+		vertical-align: middle;
+	}
+	
+	.container .containerbox .advbox li .imgbox{
+		text-align: center;
+		margin:10px auto;
+	}
+	.container .containerbox .advbox li .imgbox img{
+		width: auto;
+		height: 50px;
+	}
+	.container .containerbox .advbox li .title{
+		color: #257D48;
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+	.container .containerbox .advbox li .value{
+		font-size: 1.3rem;
+		font-weight: bold;
+		padding: 5px 0;
+	}
+	/*好食焦點*/
+	.iconmu .iconmubox .powerbox{
+		width: 100%;
+		margin: auto;
+		border: 3px solid #D6DBE3;
+		border-radius: 50px;
+	}
+	.iconmu .iconmubox .powerbox .title{
+		display:inline-block;
+		position: relative;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0 10px;
+		font-size: 1.5rem;
+		color: #2E996E;
+		font-weight: bold;
+		text-align: center;
+		background-color: #fff;
+	}
+	.iconmu .iconmubox .powerbox .title img{
+		height: 20px;
+		vertical-align: middle;
+		margin-bottom: 5px;
+	}
+	.iconmu .iconmubox .powerbox ul{
+		list-style: none;
+		padding:0;
+		overflow: hidden;
+	}
+	.iconmu .iconmubox .powerbox .power{
+		width:100%;
+		float: none;
+		padding:0 0 20px 0;
+		text-align: center;
+	}
+	.iconmu .iconmubox .powerbox .power img{
+		width: 80%;
+		max-width: 300px;
+	}
+
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        z-index: 8000;
+    }
+
+    .container {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        clear: both;
+    }
+    .topmenu {
+        position: absolute;
+        bottom: 3px;
+        left: 50%;
+        transform: translatex(-50%);
+        height: auto;
+        margin: 0 auto;
+        z-index: 8000;}
+    .iconmu {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .header .headerbox {
+        width: 100%;
+        height: 70px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .container .containerbox {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 1.5% 0;
+    }
+
+    .iconmu .iconmubox {
+        width: 98%;
+        height: auto;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .footerline .footerlinebox {
+        width: 100%;
+        height: auto;
+        margin: 0px auto;
+        text-align: center;
+        padding: 10px 0;
+        color: #433130;
+        font-size: 100%;
+        letter-spacing: 2px;
+    }
+
+    /*----------------------------------------------------------------*/
+    .headerbox .toolbar {
+        float: right;
+        height: auto;
+        margin-top: 8px;
+        margin-right: 10px;
+    }
+
+    /*header--------------------------------------------------*/
+    /*logo*/
+    .headerbox .logo {
+        display: block;
+        text-indent: -999999px;
+        width: 130px;
+        height: 70px;
+        float: left;
+        background: #13A754 url(../frontimages/logo-w.png) center no-repeat;
+        background-size: 115px auto;
+    }
+
+    /*TOP回到最上面*/
+    .headerbox #TOP {
+        position: absolute;
+        top: -100px;
+        padding-top: 25px;
+        right: 0px;
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .headerbox #TOP img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /*選單*/
+    .topmenu .topmenubox {
+        position: relative;
+        width: 514px;
+    }
+
+    #menu {
+        margin: 0;
+        text-decoration: none;
+        padding: 0;
+        list-style: none;
+        position: relative;
+        width: 100%;
+        float: left;
+        background: none;
+        font-family: "微軟正黑體", "新細明體", "細明體", Arial, Helvetica, sans-serif;
+    }
+
+    #menu ul {
+        width: 100%;
+    }
+
+    #menu li {
+        width: 70px;
+        margin: auto;
+        margin: 1% 0;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    #menu>li img {
+        display: block;
+        height: 20px;
+        margin: 2px auto;
+    }
+
+    #menu>li>a {
+        font-size: 105%;
+        /* padding:10px;*/
+        width: auto;
+        display: block;
+        color: #000;
+        text-decoration: none;
+        /*text-indent:-999999px;	*/
+    }
+
+    #menu>li:hover {
+        background: #EDEDED;
+        text-decoration: none;
+    }
+
+    #menu li>ul {
+        margin: 0;
+        z-index: 8000;
+        line-height: 150%;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: auto;
+        color: #6a5951;
+        background: #ffe6a6;
+        border-top: 2px solid #fcad17;
+        display: none;
+    }
+
+    #menu li ul li {
+        float: left;
+        display: block;
+        width: 100%;
+        padding: 0px;
+        border-bottom: 0px solid rgba(255, 255, 255, 0.5);
+        text-align: left;
+        line-height: 150%;
+    }
+
+    #menu li ul li a {
+        display: block;
+        color: #6a5951;
+        width: 100%;
+        padding: 10px;
+        line-height: 110%;
+        font-size: 105%;
+        text-decoration: none;
+        background: url(../frontimages/icon_arrow.png) 10px center no-repeat;
+        background-size: 10px auto;
+        padding-left: 25px;
+        font-weight: bold;
+    }
+
+    #menu li ul li a:hover {
+        text-decoration: none;
+        color: #FFF;
+        background: #396b97 url(../frontimages/icon_arrow_h.png) 10px center no-repeat;
+        background-size: 10px auto;
+    }
+
+    /*-----------------------container-----------------------------------------*/
+	.container .containerbox .advbox {
+		width: 60%;
+		max-width: 600px;
+		margin: 0 1%;
+		float: right;
+		list-style: none;
+		overflow: hidden;
+	}
+	
+	.container .containerbox .advbox li {
+		width: 49%;
+		float: left;
+		background-color: #fff;
+		color: #333333;
+		margin: .5%;
+		padding:2%;
+		border-radius: 5px;
+		text-align: center;
+		overflow: hidden;
+	}
+	
+	.container .containerbox .advbox .titlebox {
+		width: 99%;
+		float: none;
+		padding: 0;
+		text-align: center;
+		font-size: 1.2rem;
+	}
+	
+	.container .containerbox .advbox .titlebox .title {
+		text-align: center;
+		background-color: #257D48;
+		color: #fff;
+		font-weight: bold;
+		padding: 8px 0;
+	}
+	
+	.container .containerbox .advbox .titlebox b {
+		display: inline-block;
+		font-weight: normal;
+		padding: 8px 0;
+	}
+	
+	.container .containerbox .advbox .titlebox b span {
+		color: #D40000;
+		padding: 0 5px;
+		font-weight: bold;
+	}
+	
+	.container .containerbox .advbox .titlebox .title img {
+		width: 22px;
+		vertical-align: middle;
+	}
+	
+	.container .containerbox .advbox li .imgbox{
+		text-align: center;
+		margin:10px auto;
+	}
+	.container .containerbox .advbox li .imgbox img{
+		width: auto;
+		height: 55px;
+	}
+	.container .containerbox .advbox li .title{
+		color: #257D48;
+		font-size: 1.2rem;
+		font-weight: bold;
+	}
+	.container .containerbox .advbox li .value{
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding: 5px 0;
+	}
+	/*好食焦點*/
+	.iconmu .iconmubox .powerbox{
+		width: 99%;
+		margin: auto;
+		border: 3px solid #D6DBE3;
+		border-radius: 50px;
+	}
+	.iconmu .iconmubox .powerbox .title{
+		display:inline-block;
+		position: relative;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0 10px;
+		font-size: 1.6rem;
+		color: #2E996E;
+		font-weight: bold;
+		text-align: center;
+		background-color: #fff;
+	}
+	.iconmu .iconmubox .powerbox .title img{
+		height: 22px;
+		vertical-align: middle;
+		margin-bottom: 5px;
+	}
+	.iconmu .iconmubox .powerbox ul{
+		list-style: none;
+		padding: 30px 0 50px 0;
+		overflow: hidden;
+	}
+	.iconmu .iconmubox .powerbox .power{
+		width: 33.3%;
+		float: left;
+		text-align: center;
+	}
+	.iconmu .iconmubox .powerbox .power img{
+		width: 80%;
+	}
+}

@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>柏泰金牌業務</title>
+
+  <link rel="stylesheet" type="text/css" href="frontcss/erpcss.css" />
+  <link rel="stylesheet" type="text/css" href="frontcss/leftmenu.css" />
+  <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  <script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+      var i, x, a = document.MM_sr;
+      for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_preloadImages() { //v3.0
+      var d = document;
+      if (d.images) {
+        if (!d.MM_p) d.MM_p = new Array();
+        var i, j = d.MM_p.length,
+          a = MM_preloadImages.arguments;
+        for (i = 0; i < a.length; i++)
+          if (a[i].indexOf("#") != 0) {
+            d.MM_p[j] = new Image;
+            d.MM_p[j++].src = a[i];
+          }
+      }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+      var p, i, x;
+      if (!d) d = document;
+      if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document;
+        n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n];
+      for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+      if (!x && d.getElementById) x = d.getElementById(n);
+      return x;
+    }
+
+    function MM_swapImage() { //v3.0
+      var i, j = 0,
+        x, a = MM_swapImage.arguments;
+      document.MM_sr = new Array;
+      for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) {
+          document.MM_sr[j++] = x;
+          if (!x.oSrc) x.oSrc = x.src;
+          x.src = a[i + 2];
+        }
+    }
+  </script>
+</head>
+
+<body onLoad="MM_preloadImages('Images/btn_02_O.png','Images/btn_04_O.png')">
+
+  <!----header-------------------------------->
+  <div class="header">
+    <div class="headerbox">
+
+
+      <!--logo------------>
+      <H1>
+        <P><a href="#" class="logo"><img src="Images/logo.jpg" title="後台標題名稱" />
+            <span>柏泰金牌業務<br>銷售顧問服務管理系統
+            </span></a>
+
+            <a href="#" class="logo-mob">
+              <img src="Images/logo-mob.png" title="後台標題名稱" />
+              <span>柏泰金牌業務</span>
+            </a>
+          </P>
+      </H1>
+
+<div id="TOP"><img class="TOP" src="Images/gotop.png" title="回到上面" /></div>
+      <!--toolbar--------->
+
+      <div class="toolbar">
+
+        <div class="toolbarsearch">
+          <p class="user_info_name">
+            <img src="./Images/user.png">管理者 (mark)
+          </p>
+          <p class="timebox">
+            <span class="time">
+              <font id='gotime' name='gotime'>星期一 上午&nbsp;11:22:47</font>
+              <script>
+                var TimeClock = new set_time_Clock('gotime');
+                TimeClock.startClock();
+              </script>
+            </span>
+            <a href="#" class="out"><img src="./Images/out.png">登出</a>
+          </p>
+        </div>
+
+      </div>
+      <!--toolbar-end-------->
+
+      <!--MOB-MENU---位置放<div class="headerbox">內----------------->
+      <!--手機選單-漢堡圖-->
+      <div class="mu2 nav-button"><A title="Menu" class="animate" href="#">MENU</A></div>
+      <!--手機選單-END-->
+      <!-- Nav手機選單 -->
+      <LINK href="mobmu/common.css" rel="stylesheet">
+      <!--[if gte IE 9]><!-->
+      <SCRIPT src="mobmu/jquery-2.1.3.min.js"></SCRIPT>
+      <!--<![endif]-->
+      <SCRIPT src="mobmu/jquery.mobile-1.4.5.custom.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/jquery.bxslider-4.1.1.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/common.js"></SCRIPT>
+
+      <div class="nav-panel" id="nav">
+
+        <H1 class="hidden-element">主選單</H1>
+
+        <div class="othermu">
+<a href="#2"><img src="Images/icon_01.png">首頁</a><a href="#1"><img src="Images/icon_01.png">登出</a>
+</div>
+
+        <!--DIV class="search-panel clearfix">
+<FORM action="search.php"><INPUT class="inText" type="text" placeholder="請輸入關鍵字" value="請輸入關鍵字">
+<INPUT class="submit" type="submit" value="搜尋"></FORM>
+</DIV-->
+
+        <UL class="reset">
+            <LI>
+            <H2><A href="#"><img src="Images/icon_02.png">業務日誌</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">行事曆</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+          <LI>
+            <H2><A href="#"><img src="Images/icon_03.png">資料查詢</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">客戶資料</a></LI>
+                <LI><a href="#">產品資料</a></LI>
+                <LI><a href="#">銷(退)貨單</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_04.png">報表</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">分區月報表</a></LI>
+                <LI><a href="#">大區報表</a></LI>
+                <LI><a href="#">業績目標</a></LI>
+                <LI><a href="#">客戶業績</a></LI>
+                <LI><a href="#">產品銷售</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_05.png">業務通告</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">業務通告列表</a></LI>
+              </UL>
+            </DIV>
+            
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_06.png">送樣記錄</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">送樣記錄列表</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+          
+          <LI>
+            <H2><A href="#"><img src="Images/icon_07.png">系統管理</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">客戶警示設定</a></LI>
+                <LI><a href="#">共用資料編輯</a></LI>
+                <LI><a href="#">帳號資料列表</a></LI>
+                <LI><a href="#">資料匯出</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+        </UL>
+
+      </div>
+      <!--MOB-MENU--END-------------------------------->
+
+
+    </div>
+  </div>
+  <!----header--end------------------------------>
+
+
+
+  <!----container-------------------------------->
+  <div class="container">
+    <div class="containerbox">
+
+    <!-- leftbox -->
+      <div class="leftbox">
+        <div id='leftDivId' class='leftDiv'>
+          <div id='menu_list'>
+            <div class="container">
+              <div class="menuTitle"><a href='#' title='首頁'><img src="Images/icon_01.png">首頁</a></div>
+              <div class="menuContent" style=''><ul style='list-style:none;'>
+                 
+                </ul></div>
+                
+              <div class="menuTitle"><img src="Images/icon_02.png">業務日誌<i class="down"></i></div>
+              <div class="menuContent" style=''>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='行事曆'>行事曆</a></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menuTitle"><img src="Images/icon_03.png">資料查詢<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶資料'>客戶資料</a></span>
+                  </li>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='產品資料'>產品資料</a></span>
+                  </li>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='銷(退)貨單'>銷(退)貨單</a></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menuTitle"><img src="Images/icon_04.png">報表<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='分區月報表'>分區月報表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='大區報表'>大區報表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='業績目標'>業績目標</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶業績'>客戶業績</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='產品銷售'>產品銷售</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_05.png">業務通告<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'>
+                      <a href='contact.php?sid=581&realsid=646' title='業務通告列表'>業務通告列表
+                      </a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_06.png">送樣記錄<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='送樣記錄列表'>送樣記錄列表</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_07.png">系統管理<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶警示設定'>客戶警示設定</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='共用資料編輯'>共用資料編輯</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='帳號資料列表'>帳號資料列表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='資料匯出'>資料匯出</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+    $(document).ready(function () {
+        //Examples of how to assign the Colorbox event to elements
+        //$(".iframe").colorbox({ iframe: true, width: "50%", height: "60%" });
+        //$(".kabutton").colorbox({ iframe: true, width: "85%", height: "80%" });
+        $(".menuTitle").click(function () {
+            $(this).next("div").slideToggle("slow")
+            .siblings(".menuContent:visible").slideUp("slow");
+            $(this).toggleClass("activeTitle");
+            $(this).siblings(".activeTitle").removeClass("activeTitle");
+        });
+        /*$(".date_picker").datepicker({
+            showOn: 'button',
+            changeMonth: true,
+            changeYear: true,
+            buttonImage: "/Images/show-calendar.gif",
+            buttonImageOnly: true,
+            dateFormat: 'yy/mm/dd',
+            yearRange: "2000:2020"
+        });*/
+
+        //$("#selpage").change(function () {
+        //    var Tmppage = $("#selpage").val();
+        //    $("#page").val(Tmppage);
+        //    $("form:first").submit();
+        //});     
+
+
+     });
+</script>
+      <!-- leftbox end-->
+
+      <!-- rightbox -->
+      <div class="rightbox">
+
+        <div class="minabg">
+
+          <div class="title-tlink">
+            <h2 class="tlink">業務日誌列表</h2>
+          </div>
+          <div class="qfont">
+            <!-- <span class="page_btn">
+              <input type="button" class="abutton arrow_l">
+              <span>08/12</span>
+              <input type="button" class="abutton arrow_r">
+            </span> -->
+            <span><select id="qcfunctype" name="qcfunctype">
+                <option value=''>業務區域</option>
+                <option value='0'>選擇</option>
+                <option value='1'>選擇</option>
+                <option value='2'>選擇</option>
+                <option value='3'>選擇</option>
+              </select> </span>
+            <span>
+              <div class="searchbox">
+                <input type="text" name="qctitle" id="qctitle" value="" placeholder="搜尋">
+                <input class="search_btn" type="submit" value="" />
+              </div>
+
+              <!-- <input class="abutton" id="Submit1" type="submit" value="進階查詢" /> -->
+            </span>
+          </div>
+
+          <div class="buttontd">
+            <input id="abut" type="button" value="行事曆" class="abutton" onclick="return submitform('A',1,'cpid=0')" />
+            <input id="dbut" type="button" value="+新增" class="abutton" onclick="javascript:if(confirm('確定刪除勾選資料??')==1) {return submitform('D',1, 'cpid=0');}" />
+            <span class="skip-page">
+              『 共有 <b>8</b> 筆 / <b>1</b> 頁』  <font color="red">上一頁</font> | <font color="red">下一頁</font> |
+              &nbsp;
+              <span>目前在<select name=pagenum
+                onchange=javascript:$('#pageno').val(this.value);this.form.submit();>
+                <option value=1 selected>1</option>
+              </select>頁<font color="red" style="font-size:12pt"></font>
+            </span>
+            </span>
+          </div>
+
+
+
+          <!------------------------------------>
+          <div class="oderlist">
+
+            <!-------css_table-------->
+            <div class="table_box1">
+              <div id="business_table">                
+                <table id="myTable" class="tablesorter">
+                  <thead>
+                  <tr class="css_tr title">
+                  <th class="css_td line">日期<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line W10 tdnone320">業務名稱<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line W10">客戶名稱<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line W5">次數<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line">預計拜訪<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line tdnone320 tdnone767">拜訪內容<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  <th class="css_td line tdnone320 tdnone767">更新時間<span><img src="Images/arrowdown.png" alt="遞增" title="遞增"></span></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr class="css_tr">
+                    <td class="css_td"><a href="#">2022/09/12</a></td>
+                    <td class="css_td tdnone320">613-C-王大名</td>
+                    <td class="css_td"><a href="#">固的C2</a></td>
+                    <td class="css_td"><a href="#">17</a></td>
+                    <td class="css_td">客訂協助送貨</td>
+                    <td class="css_td tdnone320 tdnone767">貨品改寄货運,瞭解使用泡打粉的廠牌有哪幾家-除了我們會叫的香精料有哪家</td>
+                    <td class="css_td tdnone320 tdnone767">2022/09/14<span class="mobbr">下午02:40:33</span></td>
+                  </tr>
+                  <tr class="css_tr">
+                    <td class="css_td"><a href="#">2021/11/14</a></td>
+                    <td class="css_td tdnone320">633-M-王大名</td>
+                    <td class="css_td"><a href="#">愛烘焙</a></td>
+                    <td class="css_td"><a href="#">1</a></td>
+                    <td class="css_td">陳大哥-業務拜訪</td>
+                    <td class="css_td tdnone320 tdnone767">陳大哥,近況關心年的中秋生意沒有很好可是我看外面非常多人院大家都只是出去走走逛赶呀!買月餅的人不多訂單還好</td>
+                    <td class="css_td tdnone320 tdnone767">2022/09/14<span class="mobbr">下午02:40:33</span></td>
+                  </tr>
+                  <tr class="css_tr">
+                    <td class="css_td"><a href="#">2021/11/14</a></td>
+                    <td class="css_td tdnone320">613-C-王大名</td>
+                    <td class="css_td"><a href="#">家鄉包子</a></td>
+                    <td class="css_td "><a href="#">6</a></td>
+                    <td class="css_td">電訪老聞羅先生</td>
+                    <td class="css_td tdnone320 tdnone767">追蹤進況,談軟寶.在整理需求之後下單,在安排出货</td>
+                    <td class="css_td tdnone320 tdnone767">2022/09/14<span class="mobbr">下午02:40:33</span></td>
+                  </tr>
+                  </tbody></table> 
+               
+                
+              </div>
+            </div>
+            <!-------css_table-end------->
+
+            
+          </div>
+          
+          
+        </div>
+
+      </div>
+      <!-- rightbox end-->
+
+    </div>
+  </div>
+  <!----container--end------------------------------>
+  <!----footer-------------------------------->
+  <div class="footer"><div class="footerbox">
+      <div class="copyright">
+        Copyright © 2022 All Rights Reserved.本網站所有著作權均屬本站所有，非經允許，不得任意轉載
+      </div>
+
+  </div></div>
+
+
+
+
+
+
+  <!----footer--end------------------------------>
+
+
+<script type="text/javascript" src="frontjs/gotop.js"></script>
+</body>
+
+
+</html>

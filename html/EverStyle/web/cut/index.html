@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ever Style柏泰</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+        .flexslider {
+            width: 100%;
+        }
+
+        div.flexslider_6 ol {
+            bottom: 0px;
+            display: none;
+            /*點點*/
+        }
+
+        div.flexslider_6 div.flex-pauseplay {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        function save_currentSlide() {
+            this.currentSlide_1 = null;
+            this.set_1 = function (num) {
+                this.currentSlide_1 = num;
+            }
+            this.get_1 = function () {
+                return this.currentSlide_1;
+            }
+            this.currentSlide_2 = null;
+            this.set_2 = function (num) {
+                this.currentSlide_2 = num;
+            }
+            this.get_2 = function () {
+                return this.currentSlide_2;
+            }
+
+            this.set_paging_OL_Event = function (slider) {
+                const CurrentSlide_X = this;
+                const slides_a_all = slider.slides.children();
+                const paging_OL_a_all = slider.controlNav;
+                const paging_UL_a_all = slider.directionNav;
+
+                $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+                    let slides_a = slides_a_all[index];
+                    if (slides_a.title != "") {
+                        let content = slides_a.title.replace("開新視窗,", "");
+                        $(this).children().attr("title", slides_a.title);
+                        $(this).children().html(content);
+                    }
+                    $(this).keydown(function (event) {
+                        if (event.which == 13) {
+                            slides_a.click();
+                        }
+                    });
+                });
+
+                //離開 1
+                paging_UL_a_all[1].addEventListener("keydown",
+                    function (event) {
+                        if (event.which === 9) {
+                            CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                            slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                            slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                            slider.play();
+                        }
+                    });
+
+                //離開 2
+                $("body").click(function () {
+                    let sliderIsFocus = false;
+                    for (let i = 0; i < slides_a_all.length; i++) {
+                        sliderIsFocus |= slides_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_OL_a_all.length; i++) {
+                        sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_UL_a_all.length; i++) {
+                        sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+                    }
+                    if (!sliderIsFocus && !slider.playing) {
+                        CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                        slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                        slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                        slider.play();
+                    }
+                });
+            }
+        }
+    </script>
+
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script>
+</head>
+
+
+<body>
+    <div id="TOP"><img src="frontimages/gotop.png" alt="回到上面" /></div>
+
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="frontimages/logo.png"></div>
+
+
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id='menu'>
+                    <li><a href='index.html' title='首頁'>首頁</a>
+                        <!-- <ul>
+                            <li><a href='index.html' title='首頁'>首頁</a> </li>
+                            <li><a href='page-news.html' title='最新消息'>最新消息</a></li>
+                        </ul> -->
+                    </li>
+
+                    <li><a href='page-company.html' title='關於柏泰'>關於柏泰</a>
+                        <ul>
+                            <li><a href='page-company.html' title='公司介紹'>公司介紹</a></li>
+                            <li><a href='page-companyhistory.html' title='公司沿革'>公司沿革</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-quality.html' title='品保與研發'>品保與研發</a>
+                        <ul>
+                            <li><a href='page-quality.html' title='品質管理'>品質管理</a></li>
+                            <li><a href='page-quality-certified.html' title='專業認證'>專業認證</a></li>
+                            <li><a href='page-quality-research.html' title='研究開發'>研究開發</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-application.html' title='產品與服務'>產品與服務</a>
+                        <ul>
+                            <li><a href='page-application.html' title='服務項目與產品應用'>服務項目與產品應用</a> </li>
+                            <li><a href='page-commodity.html' title='香精香料系列'>香精香料系列</a> </li>
+                            <li><a href='page-bakery.html' title='烘焙系列'>烘焙系列</a></li>
+                            <li><a href='page-powderflavor.html' title='粉末香料'>粉末香料</a></li>
+                            <li><a href='page-syrup.html' title='糖漿系列'>糖漿系列</a></li>
+                            <li><a href='page-color.html' title='著色劑'>著色劑</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-contact.html' title='聯絡我們'>聯絡我們</a></li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <!-- <a href='#' title='後台管理' class="oa_btn">後台管理</a> -->
+                <select onchange="gotoUrl(this)">
+                    <option value="../cut/index.html" selected>中文</option>
+                    <option value="../cut-ENG/index.html" >ENG</option>
+                </select>
+                <script>
+                    function gotoUrl(selectObject) {
+                      var value = selectObject.value;
+                      if (value) {
+                        window.location.href = value;
+                      }
+                    }
+                    </script>
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="mobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="mobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="mobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class='reset'>
+
+                    <li>
+                        <h2><a href='#' title='首頁'>首頁</a></h2>
+                         <!-- <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='index.html' title='首頁'>首頁</a> </li>
+                                <li><a href='page-news.html' title='最新消息'>最新消息</a></li>
+                            </ul> 
+                        </div> -->
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='關於柏泰'>關於柏泰</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-company.html' title='公司介紹'>公司介紹</a></li>
+                                <li><a href='page-companyhistory.html' title='公司沿革'>公司沿革</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h2><a href='#' title='品保與研發'>品保與研發</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-quality.html' title='品質管理'>品質管理</a></li>
+                                <li><a href='page-quality-certified.html' title='專業認證'>專業認證</a></li>
+                                <li><a href='page-quality-research.html' title='研究開發'>研究開發</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='產品與服務'>產品與服務</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-application.html' title='服務項目與產品應用'>服務項目與產品應用</a> </li>
+                            <li><a href='page-commodity.html' title='香精香料系列'>香精香料系列</a> </li>
+                            <li><a href='page-bakery.html' title='烘焙系列'>烘焙系列</a></li>
+                            <li><a href='page-powderflavor.html' title='粉末香料'>粉末香料</a></li>
+                            <li><a href='page-syrup.html' title='糖漿系列'>糖漿系列</a></li>
+                            <li><a href='page-color.html' title='著色劑'>著色劑</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='page-contact.html' title='聯絡我們'>聯絡我們</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <link href="ADVbox/ADV.css" rel="stylesheet">
+            <script src="ADVbox/responsiveslides.min.js"></script>
+            <script>
+                $(function () {
+
+                    // Slideshow 1
+                    $("#slider4").responsiveSlides({
+                        auto: true,
+                        /*false手動 / true自動*/
+                        pager: true,
+                        nav: true,
+                        speed: 650,
+                        namespace: "centered-btns"
+                    });
+                });
+            </script>
+            <div class="bannerbox">
+                <div class="wrapper1">
+                    <!-- Slideshow 1 -->
+                    <div class="rslides_container">
+                        <ul class="rslides" id="slider4">
+                            <li>
+                                <div class="mesk">
+                                    <div class="box"></div>
+                                </div>
+                                <img src="frontimages/banner-01.png" />
+                            </li>
+                            <li>
+                                <div class="mesk">
+                                    <div class="box"></div>
+                                </div>
+                                <img src="frontimages/banner-02.png" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+
+    <!--article-->
+    <div class="article">
+        <div class="articlebox">
+            <!----------------關於柏泰---------------------------->
+            <div class="about">
+                <div class="aboutbox">
+
+                    <div class="abutbox_bgimages bgimages_01">
+                        <img src="frontimages/page-05.png" alt="">
+                    </div>
+                    <div class="abutbox_bgimages bgimages_02">
+                        <img src="frontimages/bg-05.png" alt="">
+                    </div>
+
+                    <div class="about_content">
+                        <div class="titlebox aos-item" data-aos="fade-up" data-aos-once="true" data-aos-duration="500" >
+                            <div class="title">
+                                關於柏泰
+                                <p class="title_red">ABOUT EVERSTYLE</p>
+                            </div>
+                            <div class="title_line"></div>
+                        </div>
+
+                        <div class="content_text aos-item" data-aos="fade-right" data-aos-duration="600"
+                            data-aos-delay="500" data-aos-once="true">
+                            香味 促使飲食文化，具豐富性與多變性，發展創新與多元化產品，是我們的競爭力，提供安心品質的產品，是我們的責任。
+                            柏泰食品創立於1985年，30年來投入了人力、技術與研發，致力於食品原料安全把關，幫助客戶提升產品的品質與競爭力。
+                            顧客遍及台灣、中國、東南亞、澳洲、韓國、香港、新加坡等地，同時還在英國、日本、德國等地擁有策略夥伴，以及上百位協力廠商開發人員。<br><br>
+
+                            展望未來，柏泰食品將繼續提昇本身競爭力，以支援客戶獲得持續發展及成功。我們依然致力於協助客戶將目前最先進的烘焙技術與生產行銷進行整合。透過這種方法，我們可以使客戶夢想成真，並可以使他們在商業競爭中取勝。
+
+                            <div class="btnbox">
+                                <a href="page-company.html" class="btn">ABOUT US</a>
+                            </div>
+                        </div>
+                        <div class="about_img aos-item" data-aos="fade-left" data-aos-duration="600"
+                            data-aos-delay="600" data-aos-once="true">
+                            <img src="./frontimages/about-img.png" alt="關於柏泰">
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="about_link">
+                <div class="link">
+                    <div class="linkbox aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" data-aos-once="true">
+                        <div class="title">
+                            <img src="./frontimages/link_title_1.png" alt="">
+                            <p>主要產品</p>
+                        </div>
+                        <p class="text ">
+                            ‧各式風味香精、香料系列<br>
+                            ‧各類食品添加物<br>
+                            ‧食品級色素、烘焙預拌粉系列
+                        </p>
+                        <div class="btnbox">
+                            <a href="page-commodity.html" class="btn">了解產品</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="link link_r">
+
+                    <div class="linkbox aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400" data-aos-once="true">
+                        <div class="title">
+                            <img src="./frontimages/link_title_2.png" alt="">
+                            <p>服務項目</p>
+                        </div>
+                        <p class="text">
+                            客制研發：特殊風味調配與研發<br>
+                            產品應用：產品實作、配方應用與調整<br>
+                            實體銷售：各式風味香料、食品添加物
+                        </p>
+                        <div class="btnbox">
+                            <a href="page-quality.html" class="btn">了解服務</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------------產品應用---------------------------->
+            <div class="research">
+                <div class="contentbox">
+                    <div class="titlebox aos-item" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                        <div class="title_line"></div>
+                        <div class="title">
+                            產品應用
+                            <p class="title_red">RESEARCH</p>
+                        </div>
+                        <div class="title_line line_r"></div>
+                    </div>
+
+                    <div class="commodity aos-item" data-aos="fade-down" data-aos-duration="600" data-aos-delay="500" data-aos-once="true">
+                        <a class="commoditybox" href="page-application.html#tab1">
+                            <div class="imgbox"><img src="frontimages/img_1.png"></div>
+                            <div class="fontbox">
+                                <p>飲品應用</p>
+                                <div>詳細內容</div>
+                            </div>
+                        </a>
+                        <a class="commoditybox" href="page-application.html#tab2">
+                            <div class="imgbox"><img src="frontimages/img_2.png"></div>
+                            <div class="fontbox">
+                                <p>糖果應用</p>
+                                <div>詳細內容</div>
+                            </div>
+                        </a>
+                        <a class="commoditybox" href="page-application.html#tab3">
+                            <div class="imgbox"><img src="frontimages/img_3.png"></div>
+                            <div class="fontbox">
+                                <p>烘培應用</p>
+                                <div>詳細內容</div>
+                            </div>
+                        </a>
+                        <a class="commoditybox" href="page-application.html#tab4">
+                            <div class="imgbox"><img src="frontimages/img_4.png"></div>
+                            <div class="fontbox">
+                                <p>冰品應用</p>
+                                <div>詳細內容</div>
+                            </div>
+                        </a>
+                        <div class="clear_fix"></div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!--聯絡------------------------->
+            <div class="connect">
+                <div class="contentbox">
+                    <div class="connectbox aos-item" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
+                        <div class="imgbox">
+                            <img src="./frontimages/img_connect.png" alt="">
+                        </div>
+                        <div class="textbox">
+                            <div class="title">
+                                聯絡我們
+                            </div>
+                            <p>您可以就我們的產品與服務，與我們聯繫</p>
+                            <div class="btnbox">
+                                <a href="page-contact.html" class="btn">聯繫資訊</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="connectbox aos-item" data-aos="fade-left" data-aos-duration="600" data-aos-once="true">
+                        <div class="imgbox">
+                            <img src="./frontimages/img_togeter.png" alt="">
+                        </div>
+                        <div class="textbox">
+                            <div class="title">
+                                人才招募
+                            </div>
+                            <p>
+                                人力資源管理是企業永續經營和價值鏈整合的管理活動，亦與企業經營和管理成效息息相關，因此，如何管理人力、運用人力、整合人力就成為企業提高生產力與競爭力的關鍵因素。
+                                <br>
+                                我們對於人才培育與員工福利有完善的制度，歡迎加入我們！
+                            </p>
+                            <div class="btnbox">
+                                <a href="page-contact.html" class="btn">招募資訊</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--最新消息------------------------->
+            <!-- <div class="newsbox">
+                <div class="centerbox">
+                    <div class="titlebox aos-item" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">
+                        <div class="title">
+                            最新消息
+                            <p class="title_red">NEWS</p>
+                        </div>
+                    </div>
+                    <div class="content_text aos-item" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500" data-aos-once="true">
+                        <ul>
+                            <li>
+                                <div class="date">2023/01/05</div>
+                                <a href="#" class="news_text">
+                                    人力資源管理是企業永續經營和價值鏈整合的管理活動，亦與企業經營和管理成效息息相關，
+                                    因此，如何管理人力、運用人力、整合人力就成為企業提高生產力與競爭
+                                </a>
+                            </li>
+                            <li>
+                                <div class="date">2023/01/05</div>
+                                <a href="#" class="news_text">
+                                    人力資源管理是企業永續經營和價值鏈整合的管理活動，亦與企業經營和管理成效息息相關，
+                                    因此，如何管理人力、運用人力、整合人力就成為企業提高生產力與競爭
+                                </a>
+                            </li>
+                            <li>
+                                <div class="date">2023/01/05</div>
+                                <a href="#" class="news_text">
+                                    人力資源管理是企業永續經營和價值鏈整合的管理活動，亦與企業經營和管理成效息息相關，
+                                    因此，如何管理人力、運用人力、整合人力就成為企業提高生產力與競爭人力資源管理是企業永續經營和價值鏈整合的管理活動，亦與企業經營和管理成效息息相關，
+                                    因此，如何管理人力、運用人力、整合人力就成為企業提高生產力與競爭
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="btnbox">
+                            <a href="#" class="btn">消息一覽</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div> -->
+
+
+            <!--indexsitemap------------------下方選單------->
+            <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <img src="frontimages/footer_logo.png" alt="">
+                            <p>柏泰食品興業股份有限公司</p>
+                        </div>
+                        <ul class="material">
+                            <li>
+                                <span>
+                                    <img src="frontimages/icon-phone.png" alt="">
+                                </span>
+                                <b>(+886 2)2917-9617</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="frontimages/icon-phone2.png" alt="">
+                                </span>
+                                <b>(+886 2)2918-5719</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="frontimages/icon-web.png" alt="">
+                                </span>
+                                <b>http://www.everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="frontimages/icon-email.png" alt="">
+                                </span>
+                                <b>service@everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="frontimages/icon-map.png" alt="">
+                                </span>
+                                <b>231新北市新店區中正路54巷30號5樓</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="centerbox">
+
+                        <ul id='sitemap'>
+                            <li class="title"><a href='index.html' title='首頁'>首頁</a>
+                                <!-- <ul>
+                                    <li><a href='index.html' title='首頁'>首頁</a> </li>
+                                    <li><a href='page-news.html' title='最新消息'>最新消息</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li class="title"><a href='page-company.html' title='關於柏泰'>關於柏泰</a>
+                                <ul>
+                                    <li><a href='page-company.html' title='公司介紹'>公司介紹</a></li>
+                                    <li><a href='page-companyhistory.html' title='公司沿革'>公司沿革</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-quality.html' title='品保與研發'>品保與研發</a>
+                                <ul>
+                                    <li><a href='page-quality.html' title='品質管理'>品質管理</a></li>
+                                    <li><a href='page-quality-certified.html' title='專業認證'>專業認證</a></li>
+                                    <li><a href='page-quality-research.html' title='研究開發'>研究開發</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-application.html' title='產品與服務'>產品與服務</a>
+                                <ul>
+                                    <li><a href='page-commodity.html' title='香精香料系列'>香精香料系列</a> </li>
+                            <li><a href='page-bakery.html' title='烘焙系列'>烘焙系列</a></li>
+                            <li><a href='page-powderflavor.html' title='粉末香料'>粉末香料</a></li>
+                            <li><a href='page-syrup.html' title='糖漿系列'>糖漿系列</a></li>
+                            <li><a href='page-color.html' title='著色劑'>著色劑</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-contact.html' title='聯絡我們'>聯絡我們</a>
+                                <ul>
+                                    <li><a href='page-contact.html' title='聯絡我們'>聯絡我們</a> </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>Copyright © 2022 柏泰食品</p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+    <!--動態語法-->
+    <script src="dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+</body>
+
+</html>

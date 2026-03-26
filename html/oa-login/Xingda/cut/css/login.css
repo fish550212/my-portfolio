@@ -1,0 +1,294 @@
+﻿@charset "utf-8";
+body {    
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;    
+
+}
+.loginimg{
+    width: 100%;
+    height:auto;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background:#96dafa url(../Images/login-images-bgcloud.png) no-repeat bottom center;
+	background-size: 100% auto;
+}
+.bgbox{
+	width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+
+	background: #96dafa;
+	background: -moz-linear-gradient(top,  #96dafa 0%, #96dafa 45%, #257fbd 78%, #005272 99%);
+	background: -webkit-linear-gradient(top,  #96dafa 0%,#96dafa 45%,#257fbd 78%,#005272 99%);
+	background: linear-gradient(to bottom,  #96dafa 0%,#96dafa 45%,#257fbd 78%,#005272 99%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96dafa', endColorstr='#005272',GradientType=0 ); 
+	-moz-background-size: cover;
+    background-size: cover;
+}
+
+.loginbox {
+    width:350px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.loginbox .title{
+	width:99%;
+	margin: auto;
+    padding: 15px 0;
+	font-size: 0;
+}
+.loginbox .title img{
+	width: 100%;
+}
+.inputbox{
+    width: 75%;
+	margin: auto;
+    vertical-align: middle;
+}
+.btnbox{
+    width: 75%;
+	margin: auto;
+}
+.bottomimg img{
+	width: 100%;
+}
+.bottombox{
+	width: 100%;
+	height: 20px;
+	margin-top: -5px;
+	background: url(../Images/login-images-line.png) repeat-x;
+	background-size: 100% 21px;
+}
+.footerbox{
+	height: 50px; /*設定footer本身高度*/
+    background: #257fbd;
+	background: -moz-linear-gradient(top,  #257fbd 0%, #005272 100%);
+	background: -webkit-linear-gradient(top,  #257fbd 0%,#005272 100%);
+	background: linear-gradient(to bottom,  #257fbd 0%,#005272 100%);    
+}
+.title_font {
+    font-size: 120%;
+    color: #fff;
+    line-height: 35px;
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+    font-weight: normal;
+}
+
+.button, a .button {
+    width: 48%;
+    padding: 10px 0;
+    min-width: 100px;
+    margin: 10px 0px;
+    font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+    font-size: 130%;
+    border-radius: 2px; /*圓角左上 右上 右下 左下 順時針*/
+    color: #fff;            
+    text-decoration: none;
+    border: 0px;
+    /*background: linear-gradient(-15deg, #1da9b6 50%, #00a0ae 50%);*/
+    cursor: pointer;
+    font-weight: bold;
+}
+.btnbox #Login{
+background: #099ae6;
+}
+.btnbox #clean{
+background: #c72222;
+}
+.btnbox #Login:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #286099;
+}
+.btnbox #clean:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #a80909;
+}
+.form_text {
+    border: 1px solid #6a7a91;
+    border-radius: 3px;
+    padding: 13px 10px;
+    width: 90%;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 20px;
+    background-color:#fff  !important;
+    color: rgb(42, 42, 42);
+}
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width:767px) {  
+	.loginbox {
+		width:80%;
+		max-width:400px;
+		margin: auto;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.loginbox .title{
+		width:97%;
+		margin: auto;
+		padding: 15px 0;
+		font-size: 0;
+	}
+	.loginbox .title img{
+		width: 100%;
+	}
+	.inputbox{
+		width: 90%;
+		margin: auto;
+		vertical-align: middle;
+	}
+	.btnbox{
+		width: 87%;
+		margin:15px auto 0 auto;
+	}
+	.bottomimg img{
+		width: 100%;
+	}
+	.bottombox{
+		width: 100%;
+		height: 20px;
+		margin-top: -5px;
+		background: url(../Images/login-images-line.png) repeat-x;
+		background-size: 100% 21px;
+	}
+	.footerbox{
+		height: 50px; /*設定footer本身高度*/
+		background: #257fbd;
+		background: -moz-linear-gradient(top,  #257fbd 0%, #005272 100%);
+		background: -webkit-linear-gradient(top,  #257fbd 0%,#005272 100%);
+		background: linear-gradient(to bottom,  #257fbd 0%,#005272 100%);    
+	}
+	.title_font {
+		font-size: 120%;
+		color: #fff;
+		line-height: 35px;
+		text-decoration: none;
+		border: 0;
+		border-radius: 10px;
+		font-weight: normal;
+	}
+	
+	.button, a .button {
+		width: 99%;
+		padding: 10px 0;
+		min-width: 100px;
+		margin: 5px 0px;
+		font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+		font-size: 130%;
+		border-radius: 2px; /*圓角左上 右上 右下 左下 順時針*/
+		color: #fff;            
+		text-decoration: none;
+		border: 0px;
+		/*background: linear-gradient(-15deg, #1da9b6 50%, #00a0ae 50%);*/
+		cursor: pointer;
+		font-weight: bold;
+	}
+	
+	.form_text {
+		border: 1px solid #6a7a91;
+		border-radius: 3px;
+		padding: 13px 10px;
+		width: 90%;
+		margin: 5px 0;
+		font-weight: bold;
+		font-size: 20px;
+		background-color:#fff  !important;
+		color: rgb(42, 42, 42);
+	}
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.loginbox {
+		width:350px;
+		margin: auto;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.loginbox .title{
+		width:99%;
+		margin: auto;
+		padding: 15px 0;
+		font-size: 0;
+	}
+	.loginbox .title img{
+		width: 100%;
+	}
+	.inputbox{
+		width: 75%;
+		margin: auto;
+		vertical-align: middle;
+	}
+	.btnbox{
+		width: 75%;
+		margin: auto;
+	}
+	.bottomimg img{
+		width: 100%;
+	}
+	.bottombox{
+		width: 100%;
+		height: 20px;
+		margin-top: -5px;
+		background: url(../Images/login-images-line.png) repeat-x;
+		background-size: 100% 21px;
+	}
+	.footerbox{
+		height: 50px; /*設定footer本身高度*/
+		background: #257fbd;
+		background: -moz-linear-gradient(top,  #257fbd 0%, #005272 100%);
+		background: -webkit-linear-gradient(top,  #257fbd 0%,#005272 100%);
+		background: linear-gradient(to bottom,  #257fbd 0%,#005272 100%);    
+	}
+	.title_font {
+		font-size: 120%;
+		color: #fff;
+		line-height: 35px;
+		text-decoration: none;
+		border: 0;
+		border-radius: 10px;
+		font-weight: normal;
+	}
+	
+	.button, a .button {
+		width: 48%;
+		padding: 10px 0;
+		min-width: 100px;
+		margin: 10px 0px;
+		font-family: "微軟正黑體",Arial, Helvetica, sans-serif;
+		font-size: 130%;
+		border-radius: 2px; /*圓角左上 右上 右下 左下 順時針*/
+		color: #fff;            
+		text-decoration: none;
+		border: 0px;
+		/*background: linear-gradient(-15deg, #1da9b6 50%, #00a0ae 50%);*/
+		cursor: pointer;
+		font-weight: bold;
+	}
+	
+	.form_text {
+		border: 1px solid #6a7a91;
+		border-radius: 3px;
+		padding: 13px 10px;
+		width: 90%;
+		margin: 5px 0;
+		font-weight: bold;
+		font-size: 20px;
+		background-color:#fff  !important;
+		color: rgb(42, 42, 42);
+	}
+}

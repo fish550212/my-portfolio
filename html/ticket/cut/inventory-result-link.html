@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>票交財產APP</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body class="bg page">
+    <div class="wrapper">
+      <div class="headerbox">
+        <div class="Rtop">
+          <div class="logo">
+            <img src="frontimages/logo.jpg" />
+            <font>
+              票交財產APP
+              <span>盤點作業</span>
+            </font>
+          </div>
+
+          <div class="rtop_menugroup">
+            <div class="tola">
+              <input type="button" value="回首頁" class="input-style" onclick="location.href='index.html'" />
+              <input type="button" value="登出" class="input-style" onclick="location.href='login.html'" />
+            </div>
+          </div>
+
+          <!--MOB-MENU---位置放class="header"內--->
+          <!--手機選單-漢堡圖-->
+          <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+          <!--手機選單-END-->
+          <!-- Nav手機選單 -->
+          <link href="mobmu/common.css" rel="stylesheet" />
+          <!--[if gte IE 9]><!-->
+          <script src="mobmu/jquery-2.1.3.min.js"></script>
+          <!--<![endif]-->
+          <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+          <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+          <script src="mobmu/common.js"></script>
+
+          <div class="nav-panel" id="nav">
+            <ul class="reset">
+              <li>
+                <h2>
+                  <a href="import-file-link.html" title="轉入檔案">轉入檔案</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="inventory-link.html" title="盤點作業">盤點作業</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="inventory-result-link.html" title="盤點結果">盤點結果</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="index.html" title="首頁">首頁</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="login.html" title="登出">登出</a>
+                </h2>
+              </li>
+            </ul>
+          </div>
+          <!--MOB-MENU--END------------->
+        </div>
+
+        <ul class="toptitle">
+          <li>
+            <a href="import-file-link.html" title="轉入檔案">
+              <img src="frontimages/icon-qr.svg" alt="" />
+              轉入檔案
+            </a>
+          </li>
+          <li>
+            <a href="inventory-link.html" title="盤點作業">
+              <img src="frontimages/icon-check.svg" alt="" />
+              盤點作業
+            </a>
+          </li>
+          <li class="active">
+            <a href="inventory-result-link.html" title="盤點結果">
+              <img src="frontimages/icon-weather.svg" alt="" />
+              盤點結果
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mainbox">
+        <!-- 內容 -->
+        <div class="conterbox">
+          <div class="groupbox bg-w bg-shadow">
+            <div class="titlebox">
+              <div class="title">盤點結果</div>
+            </div>
+
+            <div class="tablebox">
+              <div class="tablebox-title">已盤點</div>
+
+              <div class="inbox">
+                <table class="table-inbox table-w-m">
+                  <tr class="table-title">
+                    <th style="width: 50px">明細</th>
+                    <th>財產編號</th>
+                    <th>財產名稱</th>
+                    <th>數量</th>
+                    <th>單位</th>
+                    <th>部門</th>
+                    <th>位置</th>
+                    <th>保管人</th>
+                    <th>盤點人</th>
+                    <th style="width: 165px">時間</th>
+                    <th>備註</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="input-style-s btn-c-blue" value="明細" onclick="location.href='inventory-link-edit.html'" />
+                    </td>
+                    <td>123456</td>
+                    <td>筆記型電腦</td>
+                    <td align="right">1</td>
+                    <td>行政單位</td>
+                    <td>管理部</td>
+                    <td>抽屜</td>
+                    <td>Amy</td>
+                    <td>Max</td>
+                    <td>2024-06-01 09:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="input-style-s btn-c-blue" value="明細" onclick="location.href='inventory-link-edit.html'" />
+                    </td>
+                    <td>123456</td>
+                    <td>筆記型電腦</td>
+                    <td align="right">1</td>
+                    <td>行政單位</td>
+                    <td>管理部</td>
+                    <td>抽屜</td>
+                    <td>Amy</td>
+                    <td>Max</td>
+                    <td>2024-06-01 09:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="input-style-s btn-c-blue" value="明細" onclick="location.href='inventory-link-edit.html'" />
+                    </td>
+                    <td>123456</td>
+                    <td>筆記型電腦</td>
+                    <td align="right">1</td>
+                    <td>行政單位</td>
+                    <td>管理部</td>
+                    <td>抽屜</td>
+                    <td>Amy</td>
+                    <td>Max</td>
+                    <td>2024-06-01 09:00</td>
+                    <td>-</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <div class="inventory-summary-group">
+              <div class="inventory-summary">
+                本次盤點，共有
+                <span class="total-count">500</span>
+                筆，已盤點
+                <span class="checked-count">498</span>
+                筆，未盤點
+                <span class="unchecked-count">2</span>
+                筆
+              </div>
+              <div class="btnbox">
+                <input type="button" class="btn-style btn-archive btn-c-orange W100" value="匯出" />
+              </div>
+            </div>
+            <div class="tablebox">
+              <div class="tablebox-title">未盤點</div>
+              <div class="inbox">
+                <table class="table-inbox table-w-m">
+                  <tr class="table-title">
+                    <th style="width: 50px">明細</th>
+                    <th>財產編號</th>
+                    <th>財產名稱</th>
+                    <th>數量</th>
+                    <th>單位</th>
+                    <th>部門</th>
+                    <th>位置</th>
+                    <th>保管人</th>
+                    <th>盤點人</th>
+                    <th style="width: 165px">時間</th>
+                    <th>備註</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="input-style-s btn-c-blue" value="明細" onclick="location.href='inventory-link-edit.html'" />
+                    </td>
+                    <td>123456</td>
+                    <td>筆記型電腦</td>
+                    <td align="right">1</td>
+                    <td>行政單位</td>
+                    <td>管理部</td>
+                    <td>抽屜</td>
+                    <td>Amy</td>
+                    <td>Max</td>
+                    <td>2024-06-01 09:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="input-style-s btn-c-blue" value="明細" onclick="location.href='inventory-link-edit.html'" />
+                    </td>
+                    <td>123456</td>
+                    <td>筆記型電腦</td>
+                    <td align="right">1</td>
+                    <td>行政單位</td>
+                    <td>管理部</td>
+                    <td>抽屜</td>
+                    <td>Amy</td>
+                    <td>Max</td>
+                    <td>2024-06-01 09:00</td>
+                    <td>-</td>
+                  </tr>
+                  <tr></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 內容 -->
+      </div>
+    </div>
+  </body>
+</html>

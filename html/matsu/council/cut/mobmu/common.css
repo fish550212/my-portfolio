@@ -1,0 +1,199 @@
+/*手機選單*/
+#nav li { display: block; list-style:none;}
+body{overflow-x: hidden;}
+
+/*Phone選單---*menu.css----------------*/
+.headerbox .mu2{display: none;}
+.headerbox .nav-panel{display: block;}
+
+/*手機選單-end*/
+/* == 手機版型區 =============================== */
+
+
+body { -webkit-text-size-adjust: none;font-family: "Noto Sans TC", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4 ,form,input,textarea,select,button,label {
+margin: 0px; padding: 0px; font-family: "Noto Sans TC", Arial, "Noto Sans T Chinese", "LiGothicMed"; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+img {border: 0px currentColor; border-image: none; text-decoration: none; vertical-align: top; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+a {	text-decoration: none;}
+textarea {	resize: none;}
+input,label {vertical-align: middle;}
+textarea.safariOff,input.safariOff {border-radius: 0px; -webkit-appearance: none;}
+.clearfix::before {	display: table; content: "";}
+.clearfix::after {	display: table; content: "";}
+.clearfix::after {	clear: both;}
+.clearfix {	-ms-zoom: 1;}
+.reset { clear:both;list-style: none; margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; border-collapse: collapse; border-spacing: 0;}
+.reset input {	vertical-align: middle;}
+.reset label {	vertical-align: middle;}
+.reset select {	vertical-align: middle;}
+:-ms-input-placeholder {color: rgb(153, 153, 153);}
+.animate {	transition:0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out;}
+.hidden-element {position: absolute; clip: rect(1px, 1px, 1px, 1px);}
+
+.main-panel::before {	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: absolute; z-index: 99999999; content: ""; pointer-events: none; background-color: rgba(0, 0, 0, 0.7);}
+.toggle.main-panel::before {display: block;}
+.content-wrap {	padding: 10px; background-color: rgb(255, 255, 255);}
+.top-subject {	padding: 10px; color: rgb(32, 181, 232); font-size: 1.14em; border-bottom: rgba(255, 255, 255, 0.3) 1px solid;}
+.top-desc {	padding: 10px;}
+
+.gradient-orange {	background-image: linear-gradient(to top, rgb(255, 138, 0) 1%, rgb(255, 162, 52));}
+.gradient-blue {	background-image: linear-gradient(to top, rgb(0, 64,119), rgb(1, 75, 139)); background-color: rgb(0, 64,119);}
+.gradient-gray {	background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(221, 221, 221)); background-color: rgb(255, 255, 255);}
+.gradient-green {	background-color: #7b881a;}
+
+
+.button-box {	margin: 5px 0px 0px; width: 28px; height: 38px; text-align: center; float: right; position: relative;	background-image: url(icon-menu.svg);	background-repeat: no-repeat;	background-position: center center;	background-size:100% auto;}
+.button-box a {	height: 100%; color: rgb(255, 255, 255); line-height: 1.52em; font-size: 1.85em; display: block; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+.button-box {	margin-right: 5px;}
+
+.nav-panel {/*選單底色*/ background-color:#333;transition:0.2s ease-in-out; top: 0px; width: 100%; left: -200%;/*選單收在左邊隱藏*/ padding-top: 0px;/*搜尋列的高度48PX*/ position: absolute; z-index: 99; box-shadow: 0px 0px 10px rgba(0,0,0,0.15);  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .15); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .15); -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out;}
+.toggle.nav-panel {	left: 0px;/*選單從左邊出現*/ }
+
+
+#nav{ /* 選單上方高度*/ margin-top:70px;display:block; z-index:999999999;}
+#nav li { display:block;font-family: "Noto Sans TC", "新細明體", "細明體",Arial, Helvetica, sans-serif;	border-bottom: rgba(255, 255, 255, 0.3) 1px solid; position: relative;}
+
+/*第二層選單-nav-first箭頭樣式*/
+#nav li.open .nav-first {}
+#nav li::before {border-width: 6px 6px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; top: 20px; width: 0px; height: 0px; right: 10px; margin-top: -3px; display: none; position: absolute; content: ""; pointer-events: none;}
+#nav li.open::before {border-width: 6px 6px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; top: 20px; width: 0px; height: 0px; right: 10px; margin-top: -3px; display: none; position: absolute; content: ""; pointer-events: none;}
+#nav li.open::before {border-width: 0px 6px 6px; border-color: transparent transparent rgb(255, 255, 255);}
+#nav li.nav-first::before {	display: block;}
+/*---------------------------*/
+/*第三層選單-nav-first箭頭樣式*/
+#nav li.open .nav-first {/*background-color:#2d8b40;選單底色*/}
+
+#nav li ul li::before {border-width: 6px 6px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; top: 14px; width: 0px; height: 0px; right: 10px; margin-top: -3px; display: none; position: absolute; content: ""; pointer-events: none;}
+#nav li ul li.open::before {border-width: 6px 6px 0px; border-style: solid; border-color: rgb(255, 255, 255) transparent transparent; top: 14px; width: 0px; height: 0px; right: 10px; margin-top: -3px; display: none; position: absolute; content: ""; pointer-events: none;}
+#nav li ul li.open::before {border-width: 0px 6px 6px; border-color: transparent transparent rgb(255, 255, 255);}
+#nav li ul li.nav-first::before {	display: block;}
+
+#nav h2 {font-size: 1em; font-weight: normal;font-family: "Noto Sans TC", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+#nav h3 {font-size: 1em; font-weight: normal;font-family: "Noto Sans TC", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+#nav a {padding: 7px 20px 7px 10px; color: rgb(255, 255, 255); font-size: 1.08em; display: block; position: relative;font-family: "Noto Sans TC", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+
+/*第二層選單*/
+#nav .nav-second {width:100%; 	padding: 0px 0px; display: none; background-color:#eee; font-size:90%; margin:0;}
+#nav .nav-second li { width:100%; background-color: rgba(0%,0%,0%,0.7);line-height:120%;}
+#nav .nav-second li:hover{ text-decoration: none;background-color:#000;}
+#nav .nav-second a {padding: 7px 20px 7px 20px; color:#FFF;}
+#nav .nav-second a:hover{ text-decoration:none;}
+#nav .nav-second a::before {display: none;}
+#nav .nav-second a::after {	display: none;}
+/*第三層選單*/
+#nav .nav-3 {	padding: 0px 0px; display: none; font-size:100%; margin:0; overflow:hidden;}
+#nav .nav-3 li {width:100%;line-height:120%; text-decoration:none;}
+#nav .nav-3 li:hover{ text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.5);}
+#nav .nav-3 li a {padding: 7px 20px 7px 40px; color:#FFF;background-color: #222222;}
+#nav .nav-3 li a:hover{ text-decoration:none;}
+#nav .nav-3 li a::before {display: none;}
+#nav .nav-3 li a::after {	display: none;}
+
+.othermu{ background:#246EAE; width:100%; height:auto; overflow:hidden;border-bottom:1px solid rgba(255,255,255,0.5); }
+.othermu a{ display:inline-block;width: 33.3%; float:left; line-height:30px; text-align:center;}
+.othermu a:hover{
+	 background:#185c97;
+}
+
+.mobiconmu{ background:#333; width:100%; height:auto; overflow:hidden; padding:10px 0;}
+.mobiconmu ul{width: 90%;border:none;margin:0 auto; }
+.mobiconmu ul li{width: 50%; height: auto;  float:left;border-bottom:0px solid #333;}
+.mobiconmu ul li p{ text-align:center; line-height:110%;display:block;width: 100px; height:100px; margin:0 auto; padding:10px; border:2px solid #77a44e; border-radius:50%;}
+.mobiconmu ul li p:hover{ background:rgba(0,0,0,0.5);}
+.mobiconmu .mobicon{display:block; text-align:center; margin:0 auto;}
+
+
+.search-panel {	background-color: rgb(255, 255, 255); margin-top:0px; padding:5px }/*搜尋框*/
+.search-panel .inText {	padding: 5px 10px;border: currentColor; border-image: none; width: calc(100% - 120px); font-size: 1.02em; vertical-align: middle; float: left; box-sizing: border-box; background-color: rgb(255, 255, 255); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; border-style:none;}
+/*搜尋鈕底色submit*/
+.search-panel .submit {background-color: #7b881a;	margin:0 auto; text-align:center; border: currentColor; border-image: none; width: 120px; height: 32px; color: rgb(255, 255, 255); text-transform: uppercase; font-size: 1.01em; vertical-align: middle; float: right; display: block; cursor: pointer; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+
+.bx-wrapper {	margin: 0px;}
+.bx-wrapper .bx-viewport {	border: currentColor; border-image: none; left: 0px; z-index: 0; box-shadow: none; background-color: transparent; -moz-box-shadow: none; -webkit-box-shadow: none;}
+.bx-wrapper .bx-loading {	background-image: url("../images/ajax-loader.gif");}
+.bx-wrapper li img {	width: 100%;}
+
+.button-style {	padding: 5px 0px; border-radius: 5px; width: 80px; text-align: center; color: rgb(255, 255, 255); margin-left: 10px; float: right; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
+.button-style {	margin: 20px; padding: 10px 20px; width: auto; float: none; display: block;}
+
+#nav .topsearchbar{
+	width: calc(100% - 20px);
+	border-radius: 5px;
+	display: flex;
+	margin: 10px auto;
+    padding: 8px;
+    background-color: #fff;
+}
+#nav .topsearchbar input.data_field {
+	width: 100%;
+    vertical-align: middle;
+    appearance: none;
+    border-style: none;
+    font-size: 16px;
+    background-color: transparent;
+}
+#nav .topsearchbar input.searchbtn {
+    width: 23px;
+    height: 23px;    margin-left: auto;
+    cursor: pointer;
+    border: 0;
+    background: url(../frontimages/toolimg_search.png) no-repeat left center;
+}
+@media screen and (max-width: 767px) {
+/*Phone選單---*menu.css*/
+.headerbox .mu2{
+	display:block;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	right: 0px;
+	top: 2%;/*1060202*/
+	border-radius:0px;-webkit-border-radius:0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background-image: url(icon-menu.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:60% auto;
+	}
+.headerbox .mu2:hover{
+	text-align:center;
+	background:url(icon-menu02.svg) no-repeat center center;
+	background-size:60% auto;
+	/*background-color:#65b76e;*/
+	border-radius:0px;-webkit-border-radius:0px;
+	}
+.headerbox .nav-panel{display: block; margin-top:60px; height:auto;}
+/*手機選單-end*/
+
+	}
+
+/* == 平板版型區 =============================== */
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.headerbox .mu2{
+	display:block;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	right: 0px;
+	top: 2%;/*1060202*/
+	border-radius:0px;-webkit-border-radius:0px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background-image: url(icon-menu02.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size:60% auto;
+	}
+.headerbox .mu2:hover{
+	text-align:center;
+	background:url(icon-menu.svg) no-repeat center center;
+	background-size:60% auto;
+	/*background-color:#65b76e;*/
+	border-radius:0px;-webkit-border-radius:0px;
+	}
+.headerbox .nav-panel{display: block; margin-top:60px; height:auto;}
+/*手機選單-end*/
+
+	}

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>采昌國際多媒體</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- 電影宣傳輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 電影宣傳輪播 -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+        <div class="logo">
+          <a href="index.html" target="_self" title="回首頁">
+            <img src="frontimages/logo.svg" alt="LOGO" />
+          </a>
+        </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="page-newmovie.html" title="電影">電影</a>
+            </li>
+            <li>
+              <a href="page-tvshow.html" title="頻道">頻道</a>
+            </li>
+            <li><a href="page-shop.html" title="公播">公播</a></li>
+            <li><a href="page-about.html" title="采昌">采昌</a></li>
+          </ul>
+          <ul class="linkgroup">
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img" target="_blank" href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+          </ul>
+          <div class="searchbox">
+            <input type="search" class="input-search" placeholder="搜尋" />
+            <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+          </div>
+        </div>
+
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="linkgroup">
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09-1.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11-1.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30-1.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img" target="_blank" href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29-1.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+
+            <li class="searchbox">
+              <input type="search" class="input-search" placeholder="搜尋" />
+              <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+            </li>
+          </ul>
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="page-newmovie.html" title="電影">電影</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-tvshow.html" title="頻道">頻道</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-shop.html" title="公播">公播</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-about.html" title="采昌">采昌</a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <div class="adv">
+      <div class="advbox">
+        <link href="ADVbox/ADV.css" rel="stylesheet" />
+        <script src="ADVbox/responsiveslides.min.js"></script>
+        <script>
+          $(function () {
+            // Slideshow 1
+            $("#slider4").responsiveSlides({
+              auto: true,
+              /*false手動 / true自動*/
+              pager: true,
+              nav: true,
+              speed: 650,
+              namespace: "centered-btns",
+            });
+          });
+        </script>
+        <div class="bannerbox">
+          <div class="wrapper1">
+            <!-- Slideshow 1 -->
+            <div class="rslides_container">
+              <ul class="rslides" id="slider4">
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字</div>
+                  </div>
+                  <img src="frontimages/images-23.png" />
+                </li>
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字2</div>
+                  </div>
+                  <img src="frontimages/bg-2.png" />
+                </li>
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字2</div>
+                  </div>
+                  <img src="frontimages/images-24.png" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!----------------內容-->
+      <div class="articlebox">
+        <div class="page-section company-section" id="company-section">
+          <div class="sectionbox">
+            <div class="company-logo">
+              <img src="frontimages/logo.svg" alt="" />
+            </div>
+            <div class="company-text">
+              采昌成立於1995年,其營業内容整合了娛樂、多媒體及Home Video
+              的市場,在整體經營績效上也具有非常卓越的表現,發行量亦優於其他同業發行商,位居業界之冠。
+              <br />
+              <br />
+
+              在內容經營方面,上游的電影發行,為采昌主要經營項目,掌握娛樂內容的龍頭產業,積極代理發行世界各國精采電影。在電視內容經營上,同時與八大、三立、緯來等知名频道業者合作,發行各電視台所播出的強檔戲劇,共同攻估國內
+              Home Video市場。
+              <br />
+              <br />
+
+              而在通路設置部分,采昌也居於市場領導地位,通路據點遍布全國各縣市,完全展現采昌整合影音市場上下游之決心與能力。本公司透過與資深經銷商合作,直接銷售
+              DVD 店家市場,更與百視達、亞藝二大影音連鎖體系有密切的合作関係與聯緊,使二大直營通路銷售與活動都能更加順暢,也更能精確掌握市場趨勢。
+              <br />
+              <br />
+
+              展望未來,采昌在事業版圖朝向多角化經營,故在 2004年創立雜誌出版的事業,並發行【DVDInfo】,同時在
+              2006下半年,出版發行二本新型態雜誌搶攻市場,分別為針對運動市場的【運動人】與針對熟男生活型態及品味經營的【M社會】。並且又與 Discovery
+              頻道合作,於台灣地區獨家發行 Discovery系列頻道之 Home Video 商品,充份展現采昌在未來的企圖與成長潛力。
+            </div>
+          </div>
+        </div>
+        <div class="page-section company-section bg-gray">
+          <div class="sectionbox">
+            <div class="companytitle-list">
+              <a href="#" class="active" data-tab="tab1">優勢</a>
+              <a href="#" data-tab="tab2">多元化產品</a>
+              <a href="#" data-tab="tab3">成功與榮耀</a>
+              <a href="#" data-tab="tab4">經營團隊</a>
+              <a href="#" data-tab="tab5">部門組織</a>
+              <a href="#" data-tab="tab6">遠景展望</a>
+            </div>
+            <div class="company-texts">
+              <div class="company-text tab-content active" id="tab1">
+                （一）取得全方位之授權許可—本公司品牌形象之發展是透過與跨國際性品牌的 Home Video
+                發行之營業諮許可，曾經代理或目前代理中的知名廠牌包含Buena
+                Vista、Warner、Universal、Paramount、Dreamworks、Discovery、MBC、Fox、SBS、KBS 等電影院、電視公司。
+                <br />
+                <br />
+                （二）強勢與緊密的媒體關係—平日與媒體間的關係是密切合作且熱絡的，其中廣佈全大平面雜誌媒體、電子媒體、網路媒體、廣播節目，如大無線電視台：台視、中視、華視；四大有線電視台：八大東森、緯來、超視、Discovery頻道；與五大報紙：中國時報、自由時報、蘋果日報、聯合報系與壹周刊等。
+                <br />
+                <br />
+                （三）充滿無限熱情與創意—我們對事業有無限的創意與熱忱，且對未來具有深遠規劃之經營理念。
+                <br />
+                <br />
+                （四）行銷通路完善—具有專業的銷售人員與市場行銷企劃團隊，拓展內文之各大通路有百貨專櫃、量販賣場、網路商城、連鎖書局、便利商店與影音地點，全國超過
+                5,000 個據點。
+                <br />
+                <br />
+                （五）多角化拓展其專業版圖—旗下專屬影音雜誌【DVD Info】，詳紧美容保養、娛樂新聞等資訊，其銷量目前每月發行量超過
+                30,000本；同時經營美容網站【美容線上個人】以及對美容具影響力之專業廣告整體規劃【M
+                社會】，為公司經營開拓更多的可能性、拓展更多的經營觸角。
+              </div>
+              <div class="company-text tab-content" id="tab2">
+                采昌提供多元豐富的影音光碟產品，絕對能夠滿足一般消費者、個人、家庭甚至工商企業的娛樂需求，總共分為下列六個主系列：
+                <br />
+                <br />
+                <b>（一）韓／日劇</b>
+                <br />
+                《大長今》《戀戀書中人》《皇太子的初戀》《加油金順》《溫柔人生》《天國的階梯》《豪傑春香》《真實遊戲》《藍色生死戀》《我的女孩》《情定大飯店》《宮
+                野蠻王妃》《冬季戀歌》《薰衣草》《惡魔在身邊》《東京愛情故事》《螢之光》《帥哥青蛙大變身》《不良家族》《戀人們》《流星花園》《情牽百子》《貧窮貴公子》《戀愛世代》《古墓奇兵》《宮S
+                續集》《伊甸園之東》……等。
+                <br />
+                <br />
+
+                <b>（二）好萊塢強檔片／獨立製片</b>
+                <br />
+                《阿凡達》《全面啟動》《駭客任務》《玩命關頭系列》《不可能的任務》《蜘蛛人系列》《暮光之城》《星際大戰》《神鬼傳奇》《海角七號》《休假綜合症》《超人再起》……等。
+                <br />
+                <br />
+
+                <b>（三）兒／日片</b>
+                <br />
+                《大象總動員》《幼幼台藝教》《我的野蠻女友2：蠻風再現》《來不及對你說》《我的老師是大野狼》《馬達加斯加系列》《隱藏中的神秘故事》……等。
+                <br />
+                <br />
+
+                <b>（四）台灣偶像劇／大陸劇／港劇</b>
+                <br />
+                《惡作劇之吻》《鬥牛要不要》《下一站幸福》《痞子英雄》《戀香》《命中註定我愛你》《轉角遇到愛》《惡靈05》《愛情魔髮師》《鬥魚》《郵差Postia》《回家的路》《藍色馬賽克》《流星雨》《京華煙雲》《天涯女人心》《金枝欲孽》《少年天子－順治王朝》《功夫足球》《金枝欲孽》……等。
+
+                <b>（五）國片</b>
+                <br />
+                《不能說的祕密》《海角七號》《七年很癢》《冏男孩》《見鬼》《飛龍再生》《人妖打排球》……等。
+                <br />
+                <br />
+                <b>（六）紀錄片</b>
+                <br />
+                《台灣人物誌系列》《假如國寶會說話系列》《浩大工程全系列》《建築奇蹟全系列》
+              </div>
+              <div class="company-text tab-content" id="tab3">
+                <b>1995年：</b>
+                <br />
+                台日共同合作──采昌（原名華亞）在台灣經銷發行日本卡通，如《黃金少年》（The Golden Boy）。
+                <br />
+                <br />
+
+                <b>1996年：</b>
+                <br />
+                開創中國卡通在台灣市場的先聲──與大陸上海美術電影合作經銷發行卡通影片，「小和尚」（The Little Monk）。
+                <br />
+                <br />
+
+                <b>1997年：</b>
+                <br />
+                台灣中華傳統戲劇──與世傑國際股份有限公司（大宇祥讚公司）作成長期配合關係，並與藝人林重謨長期合作，負責中國戲劇主串性曲藝作品。
+                <br />
+                <br />
+
+                <b>1998年：</b>
+                <br />
+                開始共同攜手合作銷售美影片源目錄一片及2進，與美國世界電影公司、美亞電影公司等跨國影業合作，獲致行銷商機；並代理發行美商數支影片之著作。
+                <br />
+                <br />
+
+                <b>1999年：</b>
+                <br />
+                正式全面啟動國內第一大視頻產品─以經營產品與經銷全台的行銷管路，建立全國最完整的通路行銷網，並代理中國電影公司製作戲劇片，並開發動畫卡通等。
+                <br />
+                <br />
+
+                <b>2000年：</b>
+                <br />
+                進一步整合台灣與國際華人市場資源，並與霹靂國際多媒體股份有限公司合作，正式經銷發行霹靂系列布袋戲影片（Pili Puppet Drama Series
+                系列）260 餘片 VHS、VCD、DVD 行銷全台，奠定布袋戲產品的影片市場領導地位。
+                <br />
+                <br />
+
+                <b>2001年：</b>
+                <br />
+                銷售一名的片源──為一名的製作與代理發行商，進口大量美國影片及代理美商八大娛樂、派拉蒙等 VCD、DVD
+                發行之獨家影片，如綠色怪物《Shrek》、侏羅紀公園3（Jurassic Park III）、神鬼傳奇（The Mummy Returns）、古墓奇兵（Lara Croft Tomb
+                Raider）、不可能的任務（Mission Impossible）、愛國者遊戲（Patriot Games）、剛果（Congo）、拯救雷恩大兵（Saving Private Ryan）。
+                <br />
+                <br />
+
+                <b>2002年：</b>
+                <br />
+                銷售同時以高畫質 DVD 電影產品市場為重點──采昌作為 DVD 發行的業界領先者，將旗下所有發行內容均改以 DVD
+                形式發行。涵蓋消費市場高畫質視覺需求之最新發燒產品如：
+                <br />
+                魔戒首部曲─魔戒現身（The Lord The Ring - Fellowship Of The Ring）、蜘蛛人（SpiderMan）、星際大戰二部曲（Star War
+                II）、紅龍（reddragon）、霹靂嬌娃Ⅱ（Charlie's Angels: Full Throttle）、搞怪理髮師（The Wesley’s Mysterious File）、神隱少女（Spirited
+                Away）、怪獸電力公司（Monsters, Inc.）、星際寶貝（Lilo & Stitch）、哈拉教父令（Wasabi）、TAXI II 醉後大丈夫系列（Taxi
+                3）、二十四小時（反恐任務 24、Twenty Four）、蕭十一郎（Xiao Shi Yi Lang）、《天下第一丑》(The Most Ugly Man)、《七品芝麻綠柳綠》（LIU
+                LUO GUO）、《玻璃美人》（Glass Shoes）…等。
+                <br />
+                <br />
+
+                <b>2003年：</b>
+                <br />
+                擁有全台第一名──采昌（原名華亞）秉持為國人帶來最新最好內容的理念，將一貫的強片經銷作風更進一步延伸至更多未曾見於台灣市面的影片如：
+                <br />
+                愛的祕密（Secret Things）、性本愛（Compassionate Sex）、飛龍再生（TheMedallion）、回家愛妻（Dogville）、神鬼傳奇之獵金傳奇（Hunter The
+                Crown Affair）、神鬼海盜（Pirates of the Caribbean: The Curse of the Black Pearl）、王者再現（Bruce Almighty）、海底總動員（Finding
+                Nemo）、雙龍會（Twin Effect）、雙龍會Ⅱ（Shuang Long Hui）、雍正王朝（Yong Zheng Dynasty）、少年天子（The Young Prince Of
+                Han）、大唐情史（High Flying Songs of the Tang Dynasty）、似水年華（The Years）、定情啟事（The
+                Engagement）、大陸劇片如：天龍八部、倚天屠龍記、尋秦記、還珠格格、情深深雨濛濛、少年包青天、風雲、情定愛琴海、鳳
+              </div>
+              <div class="company-text tab-content" id="tab4">
+                <h3>經營者理念</h3>
+
+                ● 優秀人才與設備相輔相成
+                <br />
+                為追求卓越，采昌積極儲備業界最佳人才，運用公司優秀之人力資源及完善的軟、硬體設備，以兼具之行銷策略，整合銷售網路及專業資訊的創業理念，使公司成長幅度快速，成就業界之巔峰。
+                <br />
+                <br />
+
+                ● 建制健全、專業分工的組織編制
+                <br />
+                目的乃是使員工組織更井利，充分發揮專業精神，使公司蓬勃發展，生氣無限。
+                <br />
+                <br />
+
+                ● 積極實責、團隊合作
+                <br />
+                本公司講求積極拓展業務空間之經營方針，從代理國外知名電影公司影片產品，到尋求長期配合發行業務之策略聯盟關係，秉持著先進的行銷信念以及專業分工的合作態度，持續穩健地開拓與掌握世界娛樂市場的企圖。
+                <br />
+                <br />
+
+                <h3>領導幹部</h3>
+
+                <b>董事總經理：陳亮旭 先生</b>
+                <br />
+                主導公司整體經營方向，領引經營團隊，拓展全球華語片市場，做到讓台灣看世界，提升打造建立以台灣為立基點，制台台灣第一的 CaiChang
+                企業標竿系統文化傳播機構，邁向多元化的影業世界。
+                <br />
+                <br />
+
+                <b>常務董事：吳力 先生</b>
+                <br />
+                專注於戲劇與影視版權之執行製作，在電影界已有 30 年以上之資歷，於國內發行過無數藝人知名影片，如植芝麗斯片 月光少年…等。
+                <br />
+                <br />
+
+                <b>總經理室副理：王啟志 先生</b>
+                <br />
+                負責組織規劃與策略行銷發展及人才訓練，自 1983 年進入影視產業，至今已有 23
+                年資歷，始終盡職盡責協助公司決策與推展，協助公司經營管理工作，以達到企業永續經營之理念。
+                <br />
+              </div>
+              <div class="company-text tab-content" id="tab5">
+                采昌的內部組織劃分共分為七個事業處，分別如下：
+                <br />
+                <br />
+
+                ● 總經理室　● 行銷企劃處　● 業務處　● 視覺創意處　● 出版事業處　● 資材處　● 財務處
+                <br />
+              </div>
+              <div class="company-text tab-content" id="tab6">
+                <b>● 秉著「消費者第一」之理念</b>
+                <br />
+                本公司本著回饋消費者之理念，致力於拓展教育和知識性節目之影音產品，以及將影音產品導引多元化的多媒體事業體延，延伸影音相關產品，服務大眾求新求變之娛樂需求。
+                <br />
+                <br />
+
+                <b>● 不斷尋求策略聯盟，帶領產業共同成長</b>
+                <br />
+                因應劇組經濟市場快速變遷，公司將致力於數位內容的研究與推動，期望與高科技產業結合，跨產業策略聯盟，共創影音娛樂利潤豐富。
+                <br />
+                <br />
+
+                <b>● 成為台灣影音市場的第一品牌</b>
+                <br />
+                展望全球大市場，放眼台灣之地平線，建立采昌成為台灣的第一影音品牌，邁向未來市場娛樂產業無限寬廣的視野。
+                <br />
+              </div>
+            </div>
+          </div>
+          <script>
+            const tabs = document.querySelectorAll(".companytitle-list a");
+            const contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach((tab) => {
+              tab.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                // 移除所有 active
+                tabs.forEach((t) => t.classList.remove("active"));
+                contents.forEach((c) => c.classList.remove("active"));
+
+                // 加上目前這個 active
+                this.classList.add("active");
+                const tabId = this.getAttribute("data-tab");
+                document.getElementById(tabId).classList.add("active");
+              });
+            });
+          </script>
+        </div>
+        <div class="page-section company-section"  id="history-section">
+          <div class="sectionbox">
+            <div class="section-title blackfont flex-center">采昌紀事</div>
+            <div class="history-group">
+              <div class="year-group">
+                <div class="year">2025</div>
+                <div class="month-gruop">
+                  <div class="monthbox">
+                    <div class="monthline"></div>
+                    <div class="box">
+                      <font>5月</font>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-23.png" alt="" />
+                        </div>
+                        <div class="img-text">ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN CINEMAS</div>
+                      </a>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-24.png" alt="" />
+                        </div>
+                        <div class="img-text">少年與狗The Boy and the Dog</div>
+                      </a>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/bg-2.png" alt="" />
+                        </div>
+                        <div class="img-text">GIVEN被贈與的未來劇場版：去海邊</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="monthbox">
+                    <div class="monthline"></div>
+                    <div class="box">
+                      <font>4月</font>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-28.png" alt="" />
+                        </div>
+                        <div class="img-text">夏日的檸檬草 DVD</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="year-group">
+                <div class="year">2024</div>
+                <div class="month-gruop">
+                  <div class="monthbox">
+                    <div class="monthline"></div>
+                    <div class="box">
+                      <font>5月</font>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-23.png" alt="" />
+                        </div>
+                        <div class="img-text">ATEEZ WORLD TOUR [TOWARDS THE LIGHT : WILL TO POWER] IN CINEMAS</div>
+                      </a>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-24.png" alt="" />
+                        </div>
+                        <div class="img-text">少年與狗The Boy and the Dog</div>
+                      </a>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/bg-2.png" alt="" />
+                        </div>
+                        <div class="img-text">GIVEN被贈與的未來劇場版：去海邊</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="monthbox">
+                    <div class="monthline"></div>
+                    <div class="box">
+                      <font>4月</font>
+                      <a href="#" class="imggroup">
+                        <div class="imgbox">
+                          <img src="frontimages/images-28.png" alt="" />
+                        </div>
+                        <div class="img-text">夏日的檸檬草 DVD</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <a href="index.html" class="footer-logo">
+          <img src="frontimages/footer-logo.svg" alt="采昌國際多媒體" />
+        </a>
+        <div class="footer-text">
+          <div class="title">采昌國際多媒體股份有限公司</div>
+          <div class="f-menu">
+            <a href="page-sitemap.html">網站導覽</a>
+            <a href="page-privacy.html">隱私權政策</a>
+            <a href="page-faq.html">常見問題</a>
+            <a href="https://www.ccii.com.tw/chhtml/product_menu.asp?pbid=D04">采昌商城</a>
+            <a href="page-contact.html">聯絡我們</a>
+          </div>
+          <div class="text">
+            <span>地址：台北市11491內湖區瑞光路258巷56號6樓之3</span>
+            <span>客服專線：0800-308-868</span>
+            <p class="copyright">
+              本網站所有著作權均屬采昌國際多媒體所有，非經允許，不得任意轉載 Copyright © 2025 CaiChang International, Inc. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/"target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img"target="_blank"  href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+          </ul>
+          <p>
+            訪客人數
+            <b>19980742</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

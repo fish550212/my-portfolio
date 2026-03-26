@@ -1,0 +1,3917 @@
+
+/*adv標題*/
+.page .adv .ADVbox {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    margin: 0px auto;
+    font-size: 0;
+}
+.adv .ADVbox .page_title {
+    display: inline-block;
+    width: 100%;
+    max-width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+
+.adv .ADVbox .page_title .title {
+    display: inline-block;
+}
+
+
+/*page內容*/
+.pagecontent {
+    width: 100%;
+    margin: auto;
+}
+
+.pagecontent .pagecontentbox {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.pagecontent .pagecontentbox .titlebox {
+    font-size: 25px;
+    color: #ffc528;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.line_bg_blue {
+    background: linear-gradient(to right, #002957 0%, #002957 33%, #F4F7FF 37%, #F4F7FF 100%);
+}
+
+.line_bg_blue .pagecontentbox {
+    height: 40px;
+    background: url(../enfrontimages/blue-line-bg.png)no-repeat center center;
+    background-size: auto 45px;
+}
+
+.line_bg_blue.w_col {
+    background: linear-gradient(to right, #002957 0%, #002957 33%, #fff 37%, #fff 100%);
+}
+
+.line_bg_white {
+    background: linear-gradient(to left, #002957 0%, #002957 33%, #fff 37%, #FFF 100%);
+}
+
+.line_bg_white .pagecontentbox {
+    height: 40px;
+    background: url(../enfrontimages/white-line-bg.png)no-repeat center center;
+    background-size: auto 45px;
+}
+
+/*ul列表*/
+.ullist {
+    padding: 60px 0;
+}
+
+.ullist li {
+    border-top: 1px #dadada70 dashed;
+    padding: 25px 0 40px 0;
+
+}
+
+.ullist li:first-child {
+    border-top: 0;
+}
+
+.ullist li .titlebox {
+    font-size: 30px;
+    color: #ffc528;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+/*公司logo介紹*/
+.companycontent {
+    position: relative;
+    padding: 80px 0;
+}
+
+.companycontentbox {
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 430px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 20%);
+}
+
+/*---圖片*/
+.companycontent .woodpecker_logo {
+    float: left;
+    width: 50%;
+    margin: auto;
+    height: 430px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.woodpecker_logo img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 108%;
+    height: auto;
+}
+
+/*---文字*/
+.woodpecker_text {
+    float: right;
+    width: 50%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.woodpecker_text .title {
+    color: #213066;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.woodpecker_text .line {
+    width: 100px;
+    border-bottom: 1px solid transparent;
+    border-width: 0 0 4px 0;
+    border-image: linear-gradient(to right, #F4AD46 0%, #8FFFD7 50%, #2FA2F5 100%);
+    border-image-slice: 1;
+    margin: 25px 0;
+}
+
+.woodpecker_text p {
+    line-height: 25px;
+    0
+}
+
+/*公司*/
+.companytext {
+    padding: 80px 0;
+    background-color: #002957;
+}
+
+/*---文字*/
+.companytextbox .text_box {
+    width: 100%;
+    background: none;
+    text-align: center;
+}
+
+.companytextbox .text_box .title {
+    color: #FFB742;
+    font-size: 35px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_box p {
+    width: 80%;
+    margin: auto;
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+     
+}
+
+/*---圖片*/
+.companytextbox .companytext_img {
+    width: 70%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.companytextbox .companytext_img img {
+    width: 100%;
+}
+
+/*白皮書*/
+.whitePaper {
+    padding: 80px 0;
+    text-align: left;
+}
+
+.whitePaper .text_box {
+    border-top: 1px #dadada70 dashed;
+    padding: 25px 0;
+    text-align: left;
+}
+.whitePaper .text_box:first-child{
+    border: 0;
+}
+.whitePaper .text_box .group{
+    overflow: hidden;
+    padding: 10px 0;
+}
+.whitePaper .text_box .title {
+    font-size: 25px;
+    padding: 10px 0;
+    float: left;
+    text-align: left;
+    color: #ffc528;
+}
+
+.whitePaper .text_box .btnbox{
+    width: auto;
+    float: right;
+    padding: 0;
+}
+.whitePaper p {
+    width: 100%;
+    display: inline-block;
+    color: #4d4d4d;
+    text-align: left;
+}
+
+.whitePaper .text_box ul {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+.whitePaper .text_box li {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.whitePaper .text_box li .title {
+    color: #0a6aae;
+    font-size: 20px;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.blue_bg {
+    background: #002957;
+}
+
+.blue_bg .text_box .title {
+    text-align: left;
+    color: #fff;
+}
+
+.blue_bg .text_box li .title {
+    color: #eaa503;
+    font-size: 25px;
+}
+
+.blue_bg p {
+    color: #ffffff;
+    text-align: left;
+}
+.downloadbox .contactlistbox .textbox {
+    float: none;
+    width: 50%;
+    margin: auto;
+}
+.downloadbox .contactlistbox .textbox .btnbox{
+    margin: auto;
+    text-align: center;
+}
+.downloadbox .contactlistbox .textbox input{
+    width: calc(100% - 71px);
+    border: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    border: transparent 0px solid;
+    outline: none;
+}
+/*公司-技術*/
+.technology_content {
+    background-color: #fff;
+}
+
+.technology_content .text_box {
+    border: 2px solid #a3c9de;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.technology_content .text_box .title {
+    color: #002957;
+    margin-top: -23px;
+    background: #062544;
+    display: inline-block;
+    padding: 0 15px 35px 15px;
+}
+
+.technology_content .text_box p {
+    width: 80%;
+    text-align: left;
+    line-height: 25px;
+    color: #4A4A4A;
+}
+
+/*support*/
+.support-conter .companycontentbox {
+    overflow: hidden;
+    max-height: 350px;
+}
+
+.support-conter .woodpecker_logo {
+    float: right;
+    width: 50%;
+    margin: auto;
+    height: 350px;
+    padding: 0 2%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.support-conter .woodpecker_text {
+    float: left;
+    width: 50%;
+    padding: 40px 0px 40px 40px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.support-conter .woodpecker_logo img {
+    width: 100%;
+    font-size: 0;
+    height: auto;
+}
+
+/*公司-四格理念*/
+.companyidea {
+    width: 100%;
+    background:#00264F url(../enfrontimages/bg.png)no-repeat fixed top center;
+    background-size:cover ;
+}
+
+.companyidea .companyideabox {
+    max-width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.companyidea .companyideabox .testbox .title {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.companyidea ul {
+    list-style: none;
+    padding-top: 30px;
+}
+
+.companyidea ul li {
+    float: left;
+    width: 48%;
+    min-height: 190px;
+    padding: 3% 2%;
+    margin: 1%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+	border-radius:10px;
+}
+
+.companyidea ul li .title {
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    line-height: 28px;
+    margin-bottom: 10px;
+    border-left: 5px #007cb5 solid;
+}
+
+.companyidea ul li p {
+    line-height: 25px;
+}
+
+/*公司-圖片文字*/
+.company_imagesbox {
+    padding: 100px 0;
+    margin: auto;
+    text-align: center;
+    background: url(../enfrontimages/page-company-images.png)no-repeat center;
+    background-size: cover;
+}
+
+.company_imagesbox p {
+    text-align: center;
+    max-width: 800px;
+    display: inline-block;
+    color: #fff;
+}
+
+/*----page-commodity-------------------商品頁面*/
+
+/*----------風味香精*/
+.imagesgroup {
+    background: #fff url(../enfrontimages/page-05.png)no-repeat -50px 20px;
+}
+
+.imagesgroup .imagesgroupbox {
+    max-width: 1200px;
+    padding: 30px 0;
+    margin: auto;
+}
+
+/*---文字*/
+.imagesgroupbox .textbox {
+    float: left;
+    width: 50%;
+    padding: 80px 0 0 0;
+}
+
+.imagesgroupbox .textbox .title {
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.imagesgroupbox .textbox p {}
+
+/*---圖片*/
+.imagesgroupbox .imgbox {
+    float: right;
+    width: 50%;
+    text-align: center;
+}
+
+.imagesgroupbox .imgbox img {
+    height: 250px;
+}
+
+/*水果系列*/
+.fruitgroup {
+    position: relative;
+    overflow: hidden;
+}
+
+.fruitgroup .fruitgroupbox {
+    position: relative;
+    max-width: 1200px;
+    padding: 80px 0;
+    margin: auto;
+    z-index: 3;
+}
+
+.fruitgroupbox .fruitbox {
+    list-style: none;
+    height: 302px;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+    border-radius: 35px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.fruitgroupbox .fruitbox .imgbox {
+    position: relative;
+    float: left;
+    width: 430px;
+    height: 302px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.fruitgroupbox .fruitbox:nth-child(even) .imgbox {
+    float: right;
+}
+
+.fruitgroupbox .fruitbox .imgbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 303px;
+    transition: .8s ease-out;
+}
+
+.fruitgroupbox .fruitbox:hover .imgbox img {
+    width: 110%;
+}
+
+.fruitgroupbox .fruitbox .textbox {
+    position: relative;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    padding-right: 3%;
+}
+
+.fruitgroupbox .fruitbox .title {
+    padding-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.fruitgroupbox .fruitbox p {
+    color: #616161;
+}
+
+.fruitgroup .img-bg-1 {
+    position: absolute;
+    top: 80px;
+    right: -50px;
+}
+
+.fruitgroup .img-bg-2 {
+    position: absolute;
+    top: 800px;
+    left: -50px;
+}
+
+.fruitgroup .img-bg-3 {
+    position: absolute;
+    top: 1400px;
+    right: -50px;
+}
+
+.fruitgroup .img-bg-4 {
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+}
+
+/*------------聯絡我們*/
+.contactlist {
+    padding: 80px 0;
+}
+
+.contactlistbox {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contactlistbox .titlebox {
+    margin: 0 0 60px 0;
+}
+
+.contactlistbox .titlebox .title {
+    display: inline-block;
+    font-size: 35px;
+    text-align: left;
+    color: #ffc528;
+}
+
+.contactlistbox .titlebox .bottom_line {
+    width: 50px;
+    border-bottom: 2px #D1000F solid;
+    margin: auto;
+}
+
+.contactlistbox .imgbox {
+    float: left;
+    width: 50%;
+    font-size: 0;
+}
+
+.contactlistbox .imgbox img {
+    width: 100%;
+}
+
+.contactlistbox .textbox {
+    float: right;
+    width: 50%;
+    padding: 0 0 0 5%;
+}
+
+.contactlistbox .textbox ul {
+    list-style: none;
+}
+
+.contactlistbox .textbox ul li {
+    margin: 15px 0 0 0;
+    font-size: 20px;
+    background: #fff;
+    border: 1px #B0B0B0 solid;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contactlistbox .textbox ul li:first-child {
+    margin: 0;
+}
+
+.contactlistbox .textbox ul li b {
+    color: #616161;
+    vertical-align: middle;
+    padding-right: 5px;
+}
+
+.contactlistbox .textbox ul li span {
+    color: #B81A1A;
+}
+
+.contactlistbox .textbox input,
+.contactlistbox .textbox textarea {
+    width: calc(100% - 59px);
+    border: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    border: transparent 0px solid;
+    outline: none;
+}
+
+.contactlistbox .textbox textarea {
+    padding-top: 3px;
+    vertical-align: top;
+}
+
+/*加入我們*/
+.joinin {
+    background-color: #F5F5F5;
+}
+
+.joininbox .textbox {
+    float: left;
+    padding-right: 3%;
+}
+
+.joininbox .imgbox {
+    float: right;
+}
+
+.joininbox .textbox .title {
+    color: #B10000;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.joininbox .textbox p {
+    color: #404040;
+    line-height: 25px;
+}
+
+/*公司沿革*/
+.companyhistorybox .everstyle_text {
+    float: none;
+}
+
+.companyhistory {
+    background-color: #fff;
+    padding: 80px 0;
+}
+
+/*歷史沿革*/
+.companyhistory .companyhistorybox {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.companyhistorybox ul {
+    list-style: none;
+}
+
+.companyhistorybox ul li {
+    width: 100%;
+    overflow: hidden;
+}
+
+.companyhistorybox .historybox {
+    width: calc(49.5% - 45px);
+    min-height: 50px;
+    display: inline-block;
+    background: #EDEDED;
+    border-right: 1px solid #B4B4B4;
+}
+
+.companyhistorybox li .historybox:last-child {
+    border-left: 1px solid #B4B4B4;
+    border-right: 0;
+}
+
+.companyhistorybox li .boxnone {
+    background: transparent;
+    border: 0 !important;
+}
+
+.companyhistorybox .history_line {
+    width: 100px;
+    display: inline-block;
+    margin: 0 -5px;
+}
+
+.companyhistorybox .history_line .date {
+    color: #B30000;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.companyhistorybox .history_line .line {
+    height: 150px;
+    border-left: 4px solid #FF0000;
+    margin-left: 50%;
+}
+
+.companyhistorybox li .historybox .imgbox {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 240px;
+    font-size: 0;
+}
+
+.companyhistorybox li .historybox .textbox {
+    display: inline-block;
+    width: 295px;
+    vertical-align: middle;
+    padding-left: 1%;
+    word-wrap: break-word;
+}
+
+/*品質管理*/
+.qualitycontent {
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.qualitycontent .imgbox {
+
+    width: 60%;
+}
+
+.qualitycontent .imgbox img {
+    width: 100%;
+}
+
+.qualitycontent .wap {
+    width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.qualitycontent .wap .textbox {
+    float: right;
+    margin: auto;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+
+.qualitycontent .wap .textbox .title {
+    color: #B90000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.qualitycontent .wap .textbox .line {
+    width: 100px;
+    border-bottom: #B90000 2px solid;
+    margin: 25px 0;
+}
+
+/*品管兩格*/
+.qualityidea {
+    padding: 100px 0;
+    /* background: #536183; */
+    background: #020A1F url(../enfrontimages/bottom_bg.png)no-repeat center 30%;
+    background-size: 100% auto;
+}
+
+.qualityideabox {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;    
+}
+
+.qualityideabox .testbox {
+    width: 800px;
+    margin: auto;
+}
+
+.qualityideabox .testbox .title {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.qualityideabox .testbox p {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.qualityideabox ul {
+    list-style: none;
+    padding-top: 30px;
+}
+
+.qualityideabox ul li {
+    float: left;
+    width: 46%;
+    min-height: 230px;
+    padding: 35px;
+    margin: 1% 2%;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+
+.qualityideabox ul li .title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.qualityideabox ul li p {
+    display: block;
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+    padding: 4% 0;
+}
+
+.qualityideabox ul li .imagesbox {
+    float: left;
+    width: 90px;
+    height: 90px;
+}
+
+.qualityideabox ul li .imagesbox img {
+    width: 100%;
+}
+
+/*專業認證*/
+.certified .everstyle_text {
+    float: right;
+    width: 50%;
+    padding: 40px;
+    background: transparent;
+}
+
+.certified .everstyle_text .title {
+    color: #FFF38D;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.certified .everstyle_text p {
+    color: #fff;
+    padding: 20px 0 0 0;
+}
+
+/*專業認證四格*/
+.certifiedidea {
+    background: #F5F5F5 url(../enfrontimages/page-certified-bg-2.png)no-repeat top center;
+    background-size: 100% auto;
+    padding: 100px 0;
+}
+
+.certifiedidea .pagecontentbox {
+    overflow: initial;
+}
+
+.certifiedidea .testbox {
+    width: 600px;
+    margin: 0;
+}
+
+.certifiedidea .testbox .title,
+.certifiedidea .testbox p {
+    text-align: left;
+}
+
+.certifiedidea ul li {
+    float: left;
+    width: 46%;
+    min-height: 510px;
+    padding: 25px;
+    margin: 2% 2%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+    border-bottom: 2px solid #B30000;
+    transition: .5s;
+}
+
+.certifiedidea ul li:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.certifiedidea ul li .imgbox {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 370px;
+    font-size: 0;
+}
+
+.certifiedidea ul li .imgbox img {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    transition: opacity .5s ease-in-out;
+}
+
+.certifiedidea ul li:hover img:last-child {
+    opacity: 0;
+}
+
+.certifiedidea ul li .title {
+    float: right;
+    width: 50%;
+    font-size: 25px;
+    font-weight: bold;
+    color: #990000;
+    padding-left: 20px;
+}
+
+/*研究開發*/
+.page_research {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.page_researchbox {
+    width: 1200px;
+    margin: auto;
+}
+
+.page_researchbox ul {
+    list-style: none;
+}
+
+.page_researchbox ul li {
+    list-style: none;
+    overflow: hidden;
+    padding: 30px 0;
+    border-bottom: 1px dashed #CCCCCC;
+}
+
+.page_researchbox ul li:last-child {
+    border: 0;
+}
+
+.page_researchbox ul li .imgbox {
+    float: left;
+    width: 400px;
+    font-size: 0;
+}
+
+.page_researchbox ul li .imgbox img {
+    width: 100%;
+}
+
+.page_researchbox ul li .textbox {
+    float: right;
+    width: calc(100% - 400px);
+    padding-left: 20px;
+}
+
+.page_researchbox ul li:nth-child(3) .imgbox {
+    float: right;
+}
+
+.page_researchbox ul li:nth-child(3) .textbox {
+    padding: 0 20px 0 0;
+}
+
+.page_researchbox ul li .titletext {
+    float: none;
+    width: 100%;
+    padding: 0;
+}
+
+.page_researchbox ul li .textbox .title {
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 3px solid #B30000;
+    padding-left: 5px;
+    line-height: 31px;
+}
+
+.page_researchbox ul li .textbox p {
+    color: #4A4A4A;
+    padding: 20px 0;
+    line-height: 25px;
+}
+
+/*------------人力資源聲明*/
+.application {
+    width: 100%;
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.application .applicationbox {
+    width: 1200px;
+    margin: auto;
+}
+
+.application .applicationbox .titlebox {
+    font-size: 35px;
+    color: #3B3B3B;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.application .applicationbox .titlebox .line {
+    margin: 5px auto;
+    width: 65px;
+    border-bottom: 2px solid #DB0000;
+}
+
+.applicationbox .groupbox {
+    list-style: none;
+    padding: 40px 0;
+}
+
+.applicationbox .groupbox .title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.applicationbox .groupbox li {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+
+.applicationbox .groupbox li .imgbox {
+    text-align: center;
+}
+
+.applicationbox .groupbox li .title {
+    text-align: center;
+    color: #3B3B3B;
+}
+
+.applicationbox .groupbox li p {
+    color: #3B3B3B;
+    padding: 20px 0;
+}
+
+/*產品應用*/
+.product {
+    width: 100%;
+    background: linear-gradient(to bottom, #F4F7FF 0%, #D8DFF5 50%, #F0F4FF 100%);
+    -moz-background-size: 100% auto;
+    background-size: 100% auto;
+    margin: 0;
+    padding: 80px 0;
+}
+
+.product .productbox {
+    width: 1200px;
+    margin: auto;
+}
+
+/*頁簽分類*/
+.productbox .tabs {
+    list-style: none;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.productbox .tabs li {
+    display: inline-block;
+    position: relative;
+    margin-right: -6px;
+    margin-top: 5px;
+    width: 25%;
+    padding: 0 1.1%;
+    vertical-align: middle;
+}
+
+.productbox .tabs li::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 1px;
+    height: 30px;
+    background-color: #a1a1a163;
+}
+
+.productbox .tabs li:last-child::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0px;
+    height: 15px;
+    background-color: #A1A1A1;
+}
+
+.productbox .tabs li:nth-child(4)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 0px;
+    height: 15px;
+    background-color: #A1A1A1;
+}
+
+.productbox .tabs li a {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #303030;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 8px;
+    transition: .5s;
+}
+
+.productbox .tabs li a b {
+    line-height: 25px;
+}
+
+.productbox .tabs li.active a,
+.productbox .tabs li:hover a {
+    color: #fff;
+    background: #1c2c68;
+    border-radius: 5px;
+    padding: 20px 0;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05, 1.05);
+}
+
+.productbox .tab-content {
+    display: none;
+    margin: 35px auto;
+    text-align: left;
+    padding: 40px 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+/*頁簽內*/
+.tab-content .font_text {
+    font-size: 25px;
+    color: #1c518d;
+    font-weight: bold;
+     
+    line-height: 25px;
+}
+.tab-content .font_text .btn{ float:right; display:inline-block; width:120px; height:auto; padding:5px; margin:2px; background-color:#1c518d; color:#FFF; font-size:16px; text-align:center; border-radius:6px;}
+.tab-content .typebox {
+    border-top: 1px dashed #ddd;
+    display: block;
+    margin: 20px auto 10px auto;
+    padding: 20px 0 0 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #4d4d4d;
+}
+
+.tab-content .typebox:first-child {
+    border: 0;
+    margin: 0px auto 20px auto;
+}
+
+/**/
+.tab-content .flex {
+    width: 100%;
+    margin: 0 auto 0px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 5px;
+    line-height: 25px;
+    color: #7d7d7d;
+     
+}
+
+.tab-content .flex p {
+
+     
+}
+
+.tab-content .flex ul {
+    padding-left: 25px;
+}
+
+.tab-content .flex ul li {
+    list-style: disc;
+     
+}
+
+/*最新消息---------------*/
+
+.listgroup{
+    
+}
+.listgroup .newsgroupbox {
+    width: 100%;
+    padding: 20px 0;
+    list-style: none;    
+    border: 0;
+    border-top: 1px rgba(221, 221, 221, 0.315) dashed;
+    margin: auto;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: none;
+    border-radius:0;
+    /* transform: scale(1, 1); */
+}
+.listgroup .newsgroupbox:hover{
+    cursor: pointer;
+}
+.listgroup .newsgroupbox:first-child{
+    border: 0;
+}
+.listgroup .newsgroupbox .textbox {
+    float: right;
+    width:calc(100% - 300px);
+    padding:0px 0px 0 20px;
+}
+.listgroup .newsgroupbox .textbox .title {
+    display:block;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: normal;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:initial;
+    height:auto;
+}
+.listgroup .newsgroupbox .textbox .date {
+    display: inline-block;
+    color: #ffbc22;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.listgroup .newsgroupbox .imgbox {
+    float: left;
+    position: relative;
+    width:300px;
+    height: 200px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+    filter: contrast(0.7);
+    transition: .5s;
+}
+
+.listgroup .newsgroupbox:hover .imgbox {
+    filter: inherit;
+}
+
+.listgroup .newsgroupbox .imgbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 303px;
+}
+
+.listgroup .btnbox{
+    text-align: center;
+    margin: auto;
+}
+/*頁碼*/
+.pagecode{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.pagecode li{    
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 22px;
+     
+    float: left;
+}
+.pagecode li a{
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    line-height: 30px;
+}
+.pagecode li:hover a{
+    color: rgb(150, 150, 150);
+}
+
+/*活動*/
+.newsgroup ul {
+    overflow: hidden;
+}
+
+.newsgroupbox {
+    width: 48%;
+    float: left;
+    list-style: none;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 21%);
+    border-radius: 10px;
+    border: 1px #ffffff85 solid;
+    margin: 10px 1%;
+    overflow: hidden;
+    transition: .5s;
+    /* transform: scale(1, 1); */
+}
+
+.newsgroupbox .imgbox {
+    position: relative;
+    width: 100%;
+    height: 302px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+    filter: contrast(0.7);
+    transition: .5s;
+}
+
+.newsgroupbox:hover .imgbox {
+    filter: inherit;
+}
+
+.newsgroupbox .imgbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 303px;
+}
+
+.newsgroupbox .textbox {
+    width: 100%;
+    padding: 20px;    
+}
+
+.newsgroupbox .textbox .date {
+    color: #ffbc22;
+    font-weight: bold;
+     
+}
+
+.newsgroupbox .textbox .title {
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: bold;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 60px;
+}
+
+.newsgroupbox .textbox .title:hover {
+    color: #a3c3e2;
+    text-decoration: underline;
+}
+
+.newsgroupbox .textbox p {
+    color: rgb(238, 238, 238);
+    overflow: hidden;
+    display: -webkit-box;
+     
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 25px;
+    height: 48px;
+}
+
+/*最新消息內文*/
+.newslistgroup {
+    /* background-color: #fff; */
+}
+
+.newslistgroup .newslistbox {
+    margin: auto;
+}
+
+.newslistgroup .newslistbox .date {
+    color: #FFB742;
+     
+}
+
+.newslistgroup .newslistbox .title {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px #dadada70 dashed;
+}
+
+.newslistgroup .newslistbox .textbox {
+    padding-top: 10px;
+}
+
+.newslistgroup .newslistbox .textbox p {
+    color: #fff;
+     
+}
+
+.newslistgroup .newslistbox .imgbox {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.newslistgroup .newslistbox .imgbox img {
+    width: 100%;
+}
+
+.newslistgroup .newslistbox .btnbox {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+/* == 手機版型區 ========================================================================================= */
+@media screen and (max-width: 767px) {
+/*頁碼*/
+.pagecode{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.pagecode li{    
+    padding: 0px 5px 5px 5px;
+    margin: 0 0px;
+    font-size: 20px;
+     
+    float: left;
+}
+.pagecode li a{
+    color: rgb(85, 85, 85);
+    vertical-align: middle;
+    line-height: 25px;
+}
+.pagecode li:hover a{
+    color: rgb(150, 150, 150);
+}
+    /*adv標題*/
+    .adv .ADVbox .page_title {
+        display: inline-block;
+        width: 90%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .adv .ADVbox .page_title .title {
+        text-align: center;
+    }
+
+
+
+    /*page內容*/
+    .pagecontent {
+        width: 100%;
+        margin: auto;
+    }
+
+    .pagecontent .pagecontentbox {
+        width: 100%;
+        max-width: none;
+        margin: auto;
+    }
+
+    .pagecontent .pagecontentbox .titlebox {
+        font-size: 25px;
+        color: #ffc528;
+        font-weight: bold;
+        padding: 10px 0;
+    }
+
+    /*ul列表*/
+    .ullist {
+        /* background: #fff; */
+        padding: 20px 0;
+    }
+
+    .ullist ul {
+        width: 90%;
+        margin: auto;
+    }
+
+    .ullist li {
+        border-top: 1px #dadada70 dashed;
+        padding: 25px 0;
+    }
+
+    .ullist li:first-child {
+        border-top: 0;
+    }
+
+    .ullist li .titlebox {
+        font-size: 30px;
+        color: #213066;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+
+
+ /*公司logo介紹*/
+ .pagecontent .companycontent {
+    width: 95%;
+    position: relative;
+    padding: 40px 0;
+}
+
+.companycontentbox {
+    background-color: #fff;
+    overflow: hidden;
+    max-height: none;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 20%);
+}
+
+/*---圖片*/
+.companycontent .woodpecker_logo {
+    float: none;
+    width: 100%;
+    margin: auto;
+    height: 230px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.woodpecker_logo img {
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height:auto;
+}
+
+/*---文字*/
+.woodpecker_text {
+    float: none;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.woodpecker_text .title {
+    color: #213066;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+.woodpecker_text .line {
+    width: 100px;
+    border-bottom: 1px solid transparent;
+    border-width: 0 0 4px 0;
+    border-image: linear-gradient(to right, #F4AD46 0%, #8FFFD7 50%, #2FA2F5 100%);
+    border-image-slice: 1;
+    margin: 15px 0;
+}
+
+.woodpecker_text p {
+    line-height: 22px;
+     
+}
+/*公司*/
+.companytext {
+    padding: 40px 0;
+    background-color: #002957;
+}
+
+/*---文字*/
+.companytextbox .text_box {
+    width: 100%;
+    background: none;
+    text-align: center;
+}
+
+.companytextbox .text_box .title {
+    color: #FFB742;
+    font-size: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_box p {
+    width: 80%;
+    margin: auto;
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+     
+}
+
+/*---圖片*/
+.companytextbox .companytext_img {
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.companytextbox .companytext_img img {
+    width: 100%;
+}
+/*白皮書*/
+.whitePaper {
+    padding: 40px 0;
+    text-align: left;
+}
+.whitePaper .companytextbox{
+    width: 90%;
+}
+.whitePaper .text_box {
+    text-align: left;
+}
+
+.whitePaper .text_box .title {
+    text-align: left;    
+    color: #ffc528;
+}
+
+.whitePaper p {
+    width: 100%;
+    color: #4d4d4d;
+    text-align: left;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.whitePaper .text_box ul {
+    width: 100%;
+    margin: auto;
+}
+
+.whitePaper .text_box li {
+    padding: 10px;
+}
+
+.whitePaper .text_box li .title {
+    color: #0a6aae;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.blue_bg {
+    background: #002957;
+}
+
+.blue_bg .text_box .title {
+    text-align: left;
+    color: #fff;
+}
+
+.blue_bg .text_box li .title {
+    color: #eaa503;
+    font-size: 20px;
+}
+
+.blue_bg p {
+    color: #ffffff;
+    text-align: left;
+}
+.downloadbox{
+    padding: 40px 0 !important;
+}
+.downloadbox .contactlistbox .textbox {
+    float: none;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+}
+.downloadbox .contactlistbox .textbox .btnbox{
+    margin: auto;
+    text-align: center;
+}
+.downloadbox .contactlistbox .textbox input{
+    width: calc(100% - 71px);
+    border: 0;
+    font-size: 18px;
+    vertical-align: middle;
+    border: transparent 0px solid;
+    outline: none;
+}
+.downloadbox .contactlistbox .titlebox {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+.downloadbox .contactlistbox .titlebox .title{
+    padding-right: 0px;
+    font-size: 25px;
+}
+/*公司-技術*/
+.technology_content {
+    background-color: #fff;
+}
+.technology_content .companytextbox{
+    width: 95%;
+}
+.technology_content .text_box {
+    border: 2px solid #a3c9de;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.technology_content .text_box .title {
+    color: #002957;
+    margin-top: -15px;
+    background: #fff;
+    display: inline-block;
+    padding: 0 15px 25px 15px;
+}
+
+.technology_content .text_box p {
+    width: 90%;
+    text-align: left;
+    line-height: 25px;
+    color: #4A4A4A;
+}
+
+/*support*/
+.support-conter .companycontentbox {
+    overflow: hidden;
+    max-height: none;
+}
+
+.support-conter .woodpecker_logo {
+    float: none;
+    width: 90%;
+    margin: auto;
+    height: auto;
+    padding: 20px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.support-conter .woodpecker_text {
+    float: none;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.support-conter .woodpecker_logo img {
+    position: initial;
+    transform: initial;
+    width: 100%;
+    font-size: 0;
+    height: auto;
+}
+    /*公司-四格理念*/
+    .companyidea {
+        width: 100%;
+    }
+
+    .companyidea .companyideabox {
+        max-width: none;
+        width: 95%;
+        margin: auto;
+        padding: 40px 0;
+        overflow: hidden;
+    }
+    .companyidea .companyideabox .testbox .title {
+        /* color: #002957; */
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .companyidea ul {
+        list-style: none;
+        padding-top: 0px;
+    }
+
+    .companyidea ul li {
+        float: none;
+        width: 96%;
+        min-height: auto;
+        padding: 4%;
+        margin:20px auto;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .companyidea ul li .title {
+        padding-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+
+    /*公司-圖片文字*/
+    .company_imagesbox {
+        padding: 100px 0;
+        margin: auto;
+        text-align: center;
+        background: url(../enfrontimages/page-company-images.png)no-repeat center;
+        background-size: cover;
+    }
+
+    .company_imagesbox p {
+        text-align: center;
+        max-width: 700px;
+        width: 80%;
+        display: inline-block;
+        color: #fff;
+    }
+    /*----page-commodity-------------------商品頁面*/
+    /*----------風味香精*/
+    .imagesgroup {
+        background: #fff url(../enfrontimages/page-05.png)no-repeat -80px -15px;
+        background-size: 250px;
+    }
+
+    .imagesgroup .imagesgroupbox {
+        max-width: auto;
+        width: 90%;
+        padding: 30px 0;
+        margin: auto;
+    }
+
+    /*---文字*/
+    .imagesgroupbox .textbox {
+        float: left;
+        width: 100%;
+        padding: 60px 0 0 0;
+    }
+
+    .imagesgroupbox .textbox .title {
+        color: #B90000;
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /*---圖片*/
+    .imagesgroupbox .imgbox {
+        float: right;
+        width: 100%;
+        text-align: center;
+    }
+
+    .imagesgroupbox .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*---------水果系列*/
+    .fruitgroup {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .fruitgroup .fruitgroupbox {
+        position: relative;
+        max-width: auto;
+        width: 90%;
+        padding: 20px 0;
+        margin: auto;
+        z-index: 3;
+    }
+
+    .fruitgroup .img-bg {
+        width: 70%;
+    }
+
+    .fruitgroup .img-bg img {
+        width: 100%;
+    }
+
+    .fruitgroupbox .fruitbox {
+        height: auto;
+        background: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+        border-radius: 25px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    .fruitgroupbox .fruitbox .imgbox {
+        position: relative;
+        float: none;
+        width: 100%;
+        height: 302px;
+        text-align: center;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .fruitgroupbox .fruitbox:nth-child(even) .imgbox {
+        float: none;
+    }
+
+    .fruitgroupbox .fruitbox .imgbox img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 302px;
+        transition: .8s ease-out;
+    }
+
+    .fruitgroupbox .fruitbox:hover .imgbox img {
+        width: 110%;
+        height: 110%;
+    }
+
+    .fruitgroupbox .fruitbox .textbox {
+        position: inherit;
+        transform: translateY(0);
+        padding: 30px 30px 50px 30px;
+
+    }
+
+    .fruitgroupbox .fruitbox .title {
+        padding-bottom: 10px;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .fruitgroupbox .fruitbox p {
+        color: #616161;
+    }
+
+    /*聯絡我們*/
+    .contactlist {
+        padding: 60px 0;
+    }
+
+    .contactlistbox {
+        max-width: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    .contactlistbox .titlebox {
+        text-align: center;
+        margin: 0 0 40px 0;
+    }
+
+    .contactlistbox .titlebox .title {
+        display: inline-block;
+        font-size: 30px;
+        text-align: left;
+        background-color: transparent;
+    }
+
+    .contactlistbox .titlebox .bottom_line {
+        width: 50px;
+        border-bottom: 2px #D1000F solid;
+        margin: auto;
+    }
+
+    .contactlistbox .imgbox {
+        float: none;
+        width: 100%;
+        font-size: 0;
+    }
+
+    .contactlistbox .imgbox img {
+        width: 100%;
+    }
+
+    .contactlistbox .textbox {
+        float: none;
+        width: 100%;
+        padding: 5% 0 5% 0;
+    }
+
+    .contactlistbox .textbox ul {
+        list-style: none;
+    }
+
+    .contactlistbox .textbox ul li {
+        margin: 15px 0 0 0;
+        font-size: 20px;
+        background: #fff;
+        border: 1px #B0B0B0 solid;
+        padding: 10px;
+    }
+
+    .contactlistbox .textbox ul li:first-child {
+        margin: 0;
+    }
+
+    .contactlistbox .textbox ul li b {
+        color: #616161;
+        vertical-align: middle;
+        padding-right: 5px;
+    }
+
+    .contactlistbox .textbox ul li span {
+        color: #B81A1A;
+    }
+
+    .contactlistbox .textbox input,
+    .contactlistbox .textbox textarea {
+        width: calc(100% - 59px);
+        border: 0;
+        font-size: 20px;
+        vertical-align: middle;
+        border: transparent 0px solid;
+        outline: none;
+    }
+
+    .contactlistbox .textbox textarea {
+        padding-top: 3px;
+        vertical-align: top;
+    }
+
+    /*加入我們*/
+    .joinin {
+        background-color: #F5F5F5;
+    }
+
+    .joininbox .textbox {
+        float: left;
+        padding-right: 0;
+    }
+
+    .joininbox .imgbox {
+        float: right;
+    }
+
+    .joininbox .textbox .title {
+        color: #B10000;
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /*公司沿革*/
+    .companyhistorybox .everstyle_text {
+        float: none;
+        margin: 8% auto;
+    }
+
+    .companyhistorybox .img img {
+        min-height: 480px;
+    }
+
+    /*歷史沿革*/
+    .companyhistory .companyhistorybox {
+        max-width: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    .companyhistorybox .historybox {
+        width: calc(50% - 40px);
+        min-height: 50px;
+        display: inline-block;
+        background: #EDEDED;
+        border-right: 1px solid #B4B4B4;
+    }
+
+    .companyhistorybox ul li {
+        width: 90%;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    .companyhistorybox li .historybox:last-child {
+        border-left: 1px solid #B4B4B4;
+        border-right: 0;
+    }
+
+    .companyhistorybox li .boxnone {
+        background: transparent;
+        border: 0 !important;
+    }
+
+    .companyhistorybox .history_line {
+        width: 80px;
+        max-width: none;
+        display: inline-block;
+        margin: 0 -6px;
+    }
+
+    .companyhistorybox .history_line .date {
+        color: #B30000;
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .companyhistorybox .history_line .line {
+        width: 1px;
+        height: 300px;
+        border-left: 4px solid #FF0000;
+    }
+
+    .companyhistorybox li .historybox .imgbox {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: none;
+        width: 100%;
+        font-size: 0;
+    }
+
+    .companyhistorybox li .historybox .imgbox img {
+        width: 100%;
+    }
+
+    .companyhistorybox li .historybox .textbox {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        padding: 10px 2%;
+        word-wrap: break-word;
+    }
+
+    /*品質管理*/
+    .qualitycontent {
+        padding: 0;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .qualitycontent .imgbox {
+        width: 100%;
+        font-size: 0;
+    }
+
+    .qualitycontent .imgbox img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 450px;
+    }
+
+    .qualitycontent .wap {
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .qualitycontent .wap .textbox {
+        float: none;
+        margin: 8% auto;
+        width: 95%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .qualitycontent .wap .textbox .title {
+        color: #B90000;
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .qualitycontent .wap .textbox .line {
+        width: 100px;
+        border-bottom: #B90000 2px solid;
+        margin: 25px auto;
+    }
+
+   /*品管兩格*/
+   .qualityidea {
+    padding: 40px 0;
+}
+.qualityidea {
+    background: #020A1F url(../enfrontimages/bottom_bg.png)no-repeat center bottom;
+    background-size: 100% auto;
+}
+.qualityideabox {
+    max-width: none;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.qualityideabox .testbox {
+    width: 100%;
+    margin: auto;
+}
+
+.qualityideabox .testbox .title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.qualityideabox .testbox p {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.qualityideabox ul {
+    list-style: none;
+    padding-top: 0px;
+}
+
+.qualityideabox ul li {
+    float: none;
+    width: 90%;
+    padding: 4%;
+    margin: 20px auto;
+    min-height:auto;
+    box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+}
+
+.qualityideabox ul li .title {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.qualityideabox ul li .title p {
+    font-size: 20px;
+    font-weight: normal;
+    color: #474747;
+    padding: 4% 0;
+}
+
+.qualityideabox ul li .imagesbox {
+    float: left;
+    width: 80px;
+    height: 106px;
+}
+
+.qualityideabox ul li .imagesbox img {
+    width: 100%;
+}
+
+    /*專業認證*/
+    .certified {
+        background-color: #1B2E36;
+    }
+
+    .certified .everstyle_text {
+        float: none;
+        width: 90%;
+        padding: 60px 0;
+        margin: auto;
+        background: transparent;
+    }
+
+    .certified .everstyle_text .title {
+        color: #FFF38D;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .certified .everstyle_text p {
+        color: #fff;
+        padding: 20px 0 0 0;
+    }
+
+    .certified .img {
+        width: 100%;
+        overflow: hidden;
+        min-height: auto;
+    }
+
+    .certified .img img {
+        display: block;
+        width: 200%;
+        height: auto;
+        margin-top: -30px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 300px;
+    }
+
+    .certified .wap {
+        width: 100%;
+        margin: auto;
+        position: initial;
+        top: 50%;
+        left: 50%;
+        transform: translatex(0);
+        background: url(../enfrontimages/page-certified-bg-3.png)no-repeat top center;
+        background-size: cover;
+    }
+
+    /*專業認證四格*/
+    .certifiedidea {
+        background: #F5F5F5 url(../enfrontimages/page-certified-bg-2.png)no-repeat top center;
+        background-size: 100% auto;
+        padding: 100px 0;
+    }
+
+    .certifiedidea .testbox {
+        width: 600px;
+        margin: 0;
+    }
+
+    .certifiedidea .testbox .title,
+    .certifiedidea .testbox p {
+        text-align: left;
+    }
+
+    /*專業認證四格*/
+    .certifiedidea {
+        background: #F5F5F5 url(../enfrontimages/page-certified-bg-2.png)no-repeat top center;
+        background-size: 100% auto;
+        padding: 60px 0;
+    }
+
+    .certifiedidea .pagecontentbox {
+        overflow: initial;
+        width: 90%;
+    }
+
+    .certifiedidea .testbox {
+        width: 70%;
+        margin: 0;
+    }
+
+    .certifiedidea .testbox .title,
+    .certifiedidea .testbox p {
+        text-align: left;
+    }
+
+    .certifiedidea ul li {
+        float: none;
+        width: 98%;
+        padding: 4% 2%;
+        margin: 4% auto;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+        border-bottom: 2px solid #B30000;
+        transition: .5s;
+        min-height: auto;
+    }
+
+    .certifiedidea ul li .imgbox {
+        position: relative;
+        float: left;
+        width: 50%;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .certifiedidea ul li .imgbox img {
+        position: absolute;
+        max-width: 250px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+    }
+
+    .certifiedidea ul li img:first-child {
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+
+    .certifiedidea ul li:hover img:last-child {
+        opacity: 0;
+    }
+
+    .certifiedidea ul li:hover img:first-child {
+        opacity: 100;
+    }
+
+    .certifiedidea ul li .title {
+        float: right;
+        width: 50%;
+        font-size: 25px;
+        font-weight: bold;
+        color: #990000;
+        padding-left: 3%;
+    }
+
+    /*研究開發*/
+    .page_research {
+        background-color: #fff;
+        padding: 0px 0;
+    }
+
+    .page_researchbox {
+        width: 90%;
+        margin: auto;
+    }
+
+    .page_researchbox ul {
+        list-style: none;
+    }
+
+    .page_researchbox ul li {
+        list-style: none;
+        overflow: hidden;
+        padding: 30px 0;
+        border-bottom: 1px dashed #CCCCCC;
+    }
+
+    .page_researchbox ul li:last-child {
+        border: 0;
+    }
+
+    .page_researchbox ul li .imgbox {
+        float: none;
+        width: 100%;
+        font-size: 0;
+        padding-bottom: 20px;
+    }
+
+    .page_researchbox ul li .imgbox img {
+        width: 100%;
+    }
+
+    .page_researchbox ul li .textbox {
+        float: none;
+        width: 100%;
+        padding-left: 0px;
+    }
+
+    .page_researchbox ul li .textbox .title {
+        font-size: 25px;
+        font-weight: bold;
+        border-left: 3px solid #B30000;
+        padding-left: 5px;
+        line-height: 25px;
+    }
+
+    .page_researchbox ul li .textbox p {
+        color: #4A4A4A;
+        padding: 15px 0;
+        line-height: 25px;
+    }
+
+    .page_researchbox ul li:nth-child(3) .imgbox {
+        float: none;
+    }
+
+    .page_researchbox ul li:nth-child(3) .textbox {
+        padding: 0;
+    }
+
+    /*------------服務項目與產品應用*/
+    .application {
+        width: 100%;
+        background: url(../enfrontimages/application-bg.png)no-repeat center center;
+        background-size: 100% auto;
+        padding: 40px 0;
+        background-color: #fff;
+    }
+
+    .application .applicationbox {
+        width: 95%;
+        margin: auto;
+    }
+
+    .application .applicationbox .titlebox {
+        font-size: 30px;
+        color: #3B3B3B;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .application .applicationbox .titlebox .line {
+        margin: 5px auto;
+        width: 65px;
+        border-bottom: 2px solid #DB0000;
+    }
+
+    .applicationbox .groupbox {
+        list-style: none;
+        padding: 0px 0;
+    }
+
+    .applicationbox .groupbox .title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .applicationbox .groupbox li {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .applicationbox .groupbox li .imgbox {
+        text-align: center;
+    }
+
+    .applicationbox .groupbox li .imgbox img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .applicationbox .groupbox li .title {
+        text-align: center;
+        color: #3B3B3B;
+    }
+
+    .applicationbox .groupbox li p {
+        color: #3B3B3B;
+        padding: 20px 0;
+    }
+
+    /*產品應用*/
+    .product {
+        width: 100%;
+        margin: 0;
+        padding: 40px 0;
+        background: linear-gradient(to bottom, #F4F7FF 0%, #D8DFF5 50%, #F0F4FF 100%);
+    }
+
+    .product .productbox {
+        width: 90%;
+        margin: auto;
+    }
+
+    /*產品分類*/
+    .productbox .tabs {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .productbox .tabs li {
+        display: inline-block;
+        position: relative;
+        margin-right: -6px;
+        width: 50%;
+        height: 100px;
+        padding: 0 2%;
+        vertical-align: middle;
+    }
+    .productbox .tabs li a{
+        font-size: 18px;
+    }
+    .productbox .tabs li.active a,
+    .productbox .tabs li:hover a {
+        color: #fff;        
+        border-radius: 8px;
+        padding: 20px 0;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .productbox .tab-content {
+        display: none;
+        margin: 35px auto;
+        padding: 4%;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .tab-content .typebox {
+        display: block;
+        margin: 20px auto 0px auto;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .productbox .tabs li:nth-child(even):after {
+        content: '';
+        position: initial;
+    }
+    /**/
+    .tab-content .flex{
+        font-size: 16px;
+    }
+    .tab-content .flex .item {
+        flex: 0 0 50%;
+        align-self: stretch;
+        padding: 2% 3%;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+
+    /*最新消息---------------*/
+
+    .listgroup{
+        /* background: #fff; */
+    }
+    .listgroup .newsgroupbox {
+        width: 100%;
+        padding: 20px 0;
+        list-style: none;
+        /* background: #fff; */
+        border: 0;
+        border-top: 1px rgba(221, 221, 221, 0.315) dashed;
+        margin: auto;
+        overflow: hidden;
+        transition: .5s;
+        box-shadow: none;
+        border-radius:0;
+        /* transform: scale(1, 1); */
+    }
+    .listgroup .newsgroupbox:first-child{
+        border: 0;
+    }
+    .listgroup .newsgroupbox .textbox {
+        float: none;
+        width:100%;
+        padding:10px 0px;
+    }
+    .listgroup .newsgroupbox .textbox .title {
+        display:block;
+        margin-bottom: 0;
+        font-size: 20px;
+        line-height: 25px;
+        font-weight: bold;
+        overflow: hidden;
+         
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp:initial;
+        height:auto;
+    }
+    .listgroup .newsgroupbox .textbox .date {
+        display: inline-block;
+        /* color: #ec7a00; */
+        font-size: 16px;         
+        padding-bottom: 5px;
+    }
+    .listgroup .newsgroupbox .imgbox {
+        float: none;
+        position: relative;
+        width:100%;
+        height: 125px;
+        text-align: center;
+        font-size: 0;
+        overflow: hidden;
+        filter: contrast(0.6);
+        transition: .5s;
+    }
+    
+    .listgroup .newsgroupbox:hover .imgbox {
+        filter: inherit;
+    }
+    
+    .listgroup .newsgroupbox .imgbox img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 303px;
+    }
+
+
+    .newsgroup ul {
+        overflow: inherit;
+    }
+
+    .newsgroupbox {
+        width: 100%;
+        float: none;
+        list-style: none;
+        /* background: #fff; */
+        box-shadow: 0 4px 4px rgb(0 0 0 / 21%);
+        border-radius: 10px;
+        border: 1px #ddd solid;
+        margin: 20px auto;
+        overflow: hidden;
+    }
+
+    /*最新消息---------------*/
+    .newsgroupbox .textbox .title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        /* color: #2B2B2B; */
+        font-weight: bold;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        height: 55px;
+    }
+
+    /**/
+}
+
+@media screen and (max-width: 550px) {
+    .tab-content .flex .item::before {
+        content: 'Application:';
+        display: block;
+        font-weight: normal;
+        color: #7e7e7e;
+        font-size: 17px;
+    }
+
+    .tab-content .flex .title::before {
+        content: 'Product:';
+        display: block;
+    }
+
+    /**/
+    .tab-content .flex .item {
+        flex: 0 0 100%;
+        align-self: stretch;
+        padding: 2% 3%;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .companyhistorybox .history_line {
+        width: 100px;
+        max-width: none;
+        display: inline-block;
+        margin: 0 -6px;
+    }
+
+    .companyhistorybox .historybox {
+        width: calc(100% - 100px);
+        float: right;
+        min-height: 50px;
+        display: inline-block;
+        background: #EDEDED;
+        border-right: 1px solid #B4B4B4;
+    }
+
+    .companyhistorybox li .historybox:last-child {
+        border-left: 1px solid #B4B4B4;
+        border-right: 0;
+    }
+
+    .companyhistorybox li .boxnone {
+        display: none;
+        background: transparent;
+        border: 0 !important;
+    }
+
+}
+
+/* == 平板版型區 ============================================================================================================ */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+    /*adv標題*/
+    .adv .ADVbox .page_title {
+        display: inline-block;
+        width: 90%;
+        max-width: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        font-size:30px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /*page內容*/
+    .pagecontent {
+        width: 100%;
+        margin: auto;
+    }
+
+    .pagecontent .pagecontentbox {
+        width: 100%;
+        max-width: none;
+        margin: auto;
+    }
+
+    .pagecontent .pagecontentbox .titlebox {
+        font-size: 28px;
+        color: #ffc528;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+
+    /*ul列表*/
+    .ullist {
+       
+        padding: 20px 0;
+    }
+
+    .ullist ul {
+        width: 95%;
+        margin: auto;
+    }
+
+    .ullist li {
+        border-top:1px #dadada70 dashed;
+        padding: 25px 0;
+    }
+
+    .ullist li:first-child {
+        border-top: 0;
+    }
+
+    .ullist li .titlebox {
+        font-size: 30px;
+        color: #ffc528;
+        font-weight: bold;
+        padding: 20px 0;
+    }
+
+ /*公司logo介紹*/
+.pagecontent .companycontent {
+    width: 95%;
+    position: relative;
+    padding: 60px 0;
+}
+
+.companycontentbox {
+    background-color: #fff;
+    overflow: hidden;
+    max-height: 400px;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 20%);
+}
+
+/*---圖片*/
+.companycontent .woodpecker_logo {
+    float: left;
+    width: 50%;
+    margin: auto;
+    height: 430px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.woodpecker_logo img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height:100%;
+}
+
+/*---文字*/
+.woodpecker_text {
+    float: right;
+    width: 50%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.woodpecker_text .title {
+    color: #213066;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.woodpecker_text .line {
+    width: 100px;
+    border-bottom: 1px solid transparent;
+    border-width: 0 0 4px 0;
+    border-image: linear-gradient(to right, #F4AD46 0%, #8FFFD7 50%, #2FA2F5 100%);
+    border-image-slice: 1;
+    margin: 15px 0;
+}
+
+.woodpecker_text p {
+    line-height: 22px;
+     
+}
+/*公司*/
+.companytext {
+    padding: 80px 0;
+    background-color: #002957;
+}
+
+/*---文字*/
+.companytextbox .text_box {
+    width: 100%;
+    background: none;
+    text-align: center;
+}
+
+.companytextbox .text_box .title {
+    color: #FFB742;
+    font-size: 35px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_box p {
+    width: 80%;
+    margin: auto;
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+     
+}
+
+/*---圖片*/
+.companytextbox .companytext_img {
+    width: 80%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 0;
+}
+
+.companytextbox .companytext_img img {
+    width: 100%;
+}
+
+/*白皮書*/
+.whitePaper {
+    padding: 60px 0;
+    text-align: left;
+}
+.whitePaper .companytextbox{
+    width: 90%;
+}
+.whitePaper .text_box {
+    text-align: left;
+}
+.whitePaper .text_box .title {
+    width: calc(100% - 220px);
+    font-size: 25px;
+    padding: 10px 0;
+    float: left;
+    text-align: left;
+    color: #ffc528;
+}
+.whitePaper p {
+    width: 100%;
+    color: #4d4d4d;
+    text-align: left;
+}
+
+.whitePaper .text_box ul {
+    width: 100%;
+    margin: auto;
+}
+
+.whitePaper .text_box li {
+    padding:10px;
+}
+
+.whitePaper .text_box li .title {
+    color: #0a6aae;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.blue_bg {
+    background: #002957;
+}
+
+.blue_bg .text_box .title {
+    text-align: left;
+    color: #fff;
+}
+
+.blue_bg .text_box li .title {
+    color: #eaa503;
+    font-size: 25px;
+}
+
+.blue_bg p {
+    color: #ffffff;
+    text-align: left;
+}
+.downloadbox{
+    padding: 60px 0;
+}
+.downloadbox .contactlistbox .textbox {
+    float: none;
+    width: 500px;
+    margin: auto;
+    padding: 0;
+}
+.downloadbox .contactlistbox .textbox .btnbox{
+    margin: auto;
+    text-align: center;
+}
+.downloadbox .contactlistbox .textbox input{
+    width: calc(100% - 71px);
+    border: 0;
+    font-size: 20px;
+    vertical-align: middle;
+    border: transparent 0px solid;
+    outline: none;
+}
+.downloadbox .contactlistbox .titlebox {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+.downloadbox .contactlistbox .titlebox .title{
+    padding-right: 0px;
+}
+/*公司-技術*/
+.technology_content {
+    background-color: #fff;
+}
+.technology_content .companytextbox{
+    width: 95%;
+}
+.technology_content .text_box {
+    border: 2px solid #a3c9de;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.technology_content .text_box .title {
+    color: #002957;
+    margin-top: -23px;
+    background: #fff;
+    display: inline-block;
+    padding: 0 15px 35px 15px;
+}
+
+.technology_content .text_box p {
+    width: 90%;
+    text-align: left;
+    line-height: 25px;
+    color: #4A4A4A;
+}
+
+/*support*/
+.support-conter .companycontentbox {
+    overflow: hidden;
+    max-height: 350px;
+}
+
+.support-conter .woodpecker_logo {
+    float: right;
+    width: 50%;
+    margin: auto;
+    height: 350px;
+    padding: 0 2%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.support-conter .woodpecker_text {
+    float: left;
+    width: 50%;
+    padding: 20px 0px 20px 20px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.support-conter .woodpecker_logo img {
+    width: 100%;
+    font-size: 0;
+    height: auto;
+}
+
+
+    /*公司-四格理念*/
+    .companyidea {
+        width: 100%;
+    }
+
+    .companyidea .companyideabox {
+        max-width: none;
+        width: 95%;
+        margin: auto;
+        padding: 80px 0;
+        overflow: hidden;
+    }
+
+    .companyidea ul {
+        list-style: none;
+    }
+
+    .companyidea ul li {
+        float: left;
+        width: 48%;
+        min-height: 210px;
+        padding: 3% 2%;
+        margin: 1%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .companyidea ul li .title {
+        padding-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+
+    /*公司-圖片文字*/
+    .company_imagesbox {
+        padding: 100px 0;
+        margin: auto;
+        text-align: center;
+        background: url(../enfrontimages/page-company-images.png)no-repeat center;
+        background-size: cover;
+    }
+
+    .company_imagesbox p {
+        text-align: center;
+        max-width: 700px;
+        width: 80%;
+        display: inline-block;
+        color: #fff;
+    }
+
+    /*----page-commodity-------------------商品頁面*/
+    /*----------風味香精*/
+    .imagesgroup {
+        background: #fff url(../enfrontimages/page-05.png)no-repeat -50px 20px;
+    }
+
+    .imagesgroup .imagesgroupbox {
+        max-width: auto;
+        width: 90%;
+        padding: 40px 0;
+        margin: auto;
+    }
+
+    /*---文字*/
+    .imagesgroupbox .textbox {
+        float: left;
+        width: 50%;
+        padding: 40px 0 0 0;
+    }
+
+    .imagesgroupbox .textbox .title {
+        color: #B90000;
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /*---圖片*/
+    .imagesgroupbox .imgbox {
+        float: right;
+        width: 50%;
+        text-align: center;
+    }
+
+    .imagesgroupbox .imgbox img {
+        height: 250px;
+    }
+
+    /*---------水果系列*/
+    .fruitgroup {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .fruitgroup .fruitgroupbox {
+        position: relative;
+        max-width: auto;
+        width: 90%;
+        padding: 40px 0;
+        margin: auto;
+        z-index: 3;
+    }
+
+    .fruitgroupbox .fruitbox {
+        height: 302px;
+        background: #fff;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.207);
+        border-radius: 35px;
+        margin: 20px 0;
+        overflow: hidden;
+    }
+
+    .fruitgroupbox .fruitbox .imgbox {
+        position: relative;
+        float: left;
+        width: 330px;
+        height: 302px;
+        text-align: center;
+        font-size: 0;
+        overflow: hidden;
+    }
+
+    .fruitgroupbox .fruitbox:nth-child(even) .imgbox {
+        float: right;
+    }
+
+    .fruitgroupbox .fruitbox .imgbox img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 302px;
+        transition: .8s ease-out;
+    }
+
+    .fruitgroupbox .fruitbox:hover .imgbox img {
+        width: 110%;
+        height: 110%;
+    }
+
+    .fruitgroupbox .fruitbox .textbox {
+        position: relative;
+        top: 50%;
+        left: 3%;
+        transform: translateY(-50%);
+    }
+
+    .fruitgroupbox .fruitbox .title {
+        padding-bottom: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .fruitgroupbox .fruitbox p {
+        color: #616161;
+    }
+
+    /*聯絡我們*/
+
+    .contactlistbox {
+        max-width: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    /*公司沿革*/
+    .companyhistorybox .everstyle_text {
+        float: none;
+        margin-left: 2%;
+    }
+
+    .companycontent .img img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 590px;
+    }
+
+    /*歷史沿革*/
+    .companyhistory .companyhistorybox {
+        max-width: auto;
+        width: 90%;
+        margin: auto;
+    }
+
+    .companyhistorybox .historybox {
+        width: calc(49.5% - 46px);
+        min-height: 50px;
+        display: inline-block;
+        background: #EDEDED;
+        border-right: 1px solid #B4B4B4;
+    }
+
+    .companyhistorybox .history_line {
+        width: 100px;
+        display: inline-block;
+        margin: 0px -6px;
+    }
+
+    .companyhistorybox li .historybox .imgbox {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: auto;
+        width: 49%;
+        font-size: 0;
+        margin-right: -6px;
+    }
+
+    .companyhistorybox li .historybox .imgbox img {
+        width: 100%;
+    }
+
+    .companyhistorybox li .historybox .textbox {
+        display: inline-block;
+        width: 50%;
+        vertical-align: middle;
+        word-wrap: break-word;
+        padding: 1%;
+    }
+
+    /*品質管理*/
+    .qualitycontent {
+        padding: 80px 0;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .qualitycontent .imgbox {
+        width: 70%;
+    }
+
+    .qualitycontent .imgbox img {
+        width: 100%;
+    }
+
+    .qualitycontent .wap {
+        width: 95%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .qualitycontent .wap .textbox {
+        float: right;
+        margin: auto;
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 40px;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .qualitycontent .wap .textbox .title {
+        color: #B90000;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .qualitycontent .wap .textbox .line {
+        width: 100px;
+        border-bottom: #B90000 2px solid;
+        margin: 25px 0;
+    }
+
+    /*品管兩格*/
+    .qualityidea {
+        padding: 80px 0;
+    }
+
+    .qualityideabox {
+        max-width: none;
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .qualityideabox .testbox {
+        width: 550px;
+        margin: auto;
+    }
+
+    .qualityideabox .testbox .title {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .qualityideabox .testbox p {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .qualityideabox ul {
+        list-style: none;
+        padding-top: 30px;
+    }
+
+    .qualityideabox ul li {
+        float: left;
+        width: 46%;
+        padding: 3%;
+        margin: 1% 2%;
+        min-height: 245px;
+        box-shadow: 0px 5px 10px rgba(51, 51, 51, 0.3);
+    }
+
+    .qualityideabox ul li .title {
+        font-size: 23px;
+        font-weight: bold;
+    }
+
+    .qualityideabox ul li .title p {
+        font-size: 20px;
+        font-weight: normal;
+        color: #474747;
+        padding: 4% 0;
+    }
+
+    .qualityideabox ul li .imagesbox {
+        float: left;
+        width: 80px;
+        height: 106px;
+    }
+
+    .qualityideabox ul li .imagesbox img {
+        width: 100%;
+    }
+    .qualityidea {
+        padding: 100px 0;
+        /* background: #536183; */
+        background: #020A21 url(../enfrontimages/bottom_bg.png)no-repeat center 95px;
+        background-size: 100% auto;
+    }
+    /*專業認證*/
+    .certified .everstyle_text {
+        float: right;
+        width: 50%;
+        padding: 40px;
+        background: transparent;
+    }
+
+    .certified .everstyle_text .title {
+        color: #FFF38D;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .certified .everstyle_text p {
+        color: #fff;
+        padding: 20px 0 0 0;
+    }
+
+    .certified .img img {
+        display: block;
+        width: 102%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+        min-height: 450px;
+    }
+
+    /*專業認證四格*/
+    .certifiedidea {
+        background: #F5F5F5 url(../enfrontimages/page-certified-bg-2.png)no-repeat top center;
+        background-size: 100% auto;
+        padding: 100px 0;
+    }
+
+    .certifiedidea .testbox {
+        width: 600px;
+        margin: 0;
+    }
+
+    .certifiedidea .testbox .title,
+    .certifiedidea .testbox p {
+        text-align: left;
+    }
+
+    /*專業認證四格*/
+    .certifiedidea {
+        background: #F5F5F5 url(../enfrontimages/page-certified-bg-2.png)no-repeat top center;
+        background-size: 100% auto;
+        padding: 100px 0;
+    }
+
+    .certifiedidea .pagecontentbox {
+        overflow: initial;
+        width: 90%;
+    }
+
+    .certifiedidea .testbox {
+        width: 600px;
+        margin: 0;
+    }
+
+    .certifiedidea .testbox .title,
+    .certifiedidea .testbox p {
+        text-align: left;
+    }
+
+    .certifiedidea ul li {
+        float: none;
+        width: 98%;
+        padding: 4% 2%;
+        margin: 4% auto;
+        min-height: auto;
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        box-shadow: 0px 5px 10px rgb(51 51 51 / 30%);
+        border-bottom: 2px solid #B30000;
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    .certifiedidea ul li .imgbox {
+        position: relative;
+        float: left;
+        width: 50%;
+        min-height: 430px;
+        font-size: 0;
+    }
+
+    .certifiedidea ul li .imgbox img {
+        position: absolute;
+        max-width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+    }
+
+    .certifiedidea ul li img:first-child {
+        width: 100%;
+        height: auto;
+        opacity: 0;
+    }
+
+    .certifiedidea ul li:hover img:last-child {
+        opacity: 0;
+    }
+
+    .certifiedidea ul li:hover img:first-child {
+        opacity: 100;
+    }
+
+    .certifiedidea ul li .title {
+        float: right;
+        width: 50%;
+        font-size: 25px;
+        font-weight: bold;
+        color: #990000;
+        padding-left: 5px;
+    }
+
+    /*研究開發*/
+    .page_research {
+        background-color: #fff;
+        padding: 0px 0;
+    }
+
+    .page_researchbox {
+        width: 90%;
+        margin: auto;
+    }
+
+    .page_researchbox ul {
+        list-style: none;
+    }
+
+    .page_researchbox ul li {
+        list-style: none;
+        overflow: hidden;
+        padding: 30px 0;
+        border-bottom: 1px dashed #CCCCCC;
+    }
+
+    .page_researchbox ul li:last-child {
+        border: 0;
+    }
+
+    .page_researchbox ul li .imgbox {
+        float: left;
+        width: 400px;
+        font-size: 0;
+    }
+
+    .page_researchbox ul li .imgbox img {
+        width: 100%;
+    }
+
+    .page_researchbox ul li .textbox {
+        float: right;
+        width: calc(100% - 400px);
+        padding-left: 20px;
+    }
+
+    .page_researchbox ul li .textbox .title {
+        font-size: 30px;
+        font-weight: bold;
+        border-left: 3px solid #B30000;
+        padding-left: 5px;
+        line-height: 31px;
+    }
+
+    .page_researchbox ul li .textbox p {
+        color: #4A4A4A;
+        padding: 20px 0;
+        line-height: 25px;
+    }
+
+    .page_researchbox ul li .titletext {
+        float: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    /*------------服務項目與產品應用*/
+    .application {
+        width: 100%;
+        padding: 80px 0;
+        background-color: #fff;
+    }
+
+    .application .applicationbox {
+        width: 95%;
+        margin: auto;
+    }
+
+    .application .applicationbox .titlebox {
+        font-size: 30px;
+        color: #3B3B3B;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .application .applicationbox .titlebox .line {
+        margin: 5px auto;
+        width: 65px;
+        border-bottom: 2px solid #DB0000;
+    }
+
+    .applicationbox .groupbox {
+        list-style: none;
+        padding: 40px 0;
+    }
+
+    .applicationbox .groupbox .title {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .applicationbox .groupbox li {
+        float: left;
+        width: 33.3%;
+        text-align: center;
+    }
+
+    .applicationbox .groupbox li .imgbox {
+        text-align: center;
+    }
+
+    .applicationbox .groupbox li .imgbox img {
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .applicationbox .groupbox li .title {
+        text-align: center;
+        color: #3B3B3B;
+    }
+
+    .applicationbox .groupbox li p {
+        color: #3B3B3B;
+        padding: 20px 0;
+    }
+
+    /*產品應用*/
+    .product {
+        width: 100%;
+        margin: 0;
+        padding: 80px 0;
+        background: linear-gradient(to bottom, #F4F7FF 0%, #D8DFF5 50%, #F0F4FF 100%);
+    }
+
+    .product .productbox {
+        width: 95%;
+        margin: auto;
+    }
+
+    /*產品分類*/
+    .productbox .tabs {
+        list-style: none;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .productbox .tabs li {
+        display: inline-block;
+        position: relative;
+        margin-right: -6px;
+        width: 25%;
+        padding: 0 1%;
+        vertical-align: middle;
+    }
+
+    .productbox .tabs li a {
+        font-size: 18px;
+    }
+
+    .productbox .tabs li.active a,
+    .productbox .tabs li:hover a {
+        color: #fff;        
+        border-radius: 8px;
+        padding: 15px 0;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05, 1.05);
+    }
+
+    .productbox .tab-content {
+        display: none;
+        margin: 35px auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .tab-content .typebox {
+        display: block;
+        margin: 20px auto 0px auto;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .tab-content .css-table {
+        width: 100%;
+        margin: 0 auto 20px auto;
+        background-color: #ffffff;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .tab-content .tbody {
+        border-top: #D10000 1px dashed;
+        border-bottom: #D10000 1px dashed;
+    }
+
+    .css-table .td {
+        width: 25%;
+        color: #545454;
+        padding: 1%;
+        vertical-align: middle;
+    }
+
+    .css-table .tr {
+        border-bottom: #D1D1D1 1px solid;
+    }
+
+    .css-table .tr:last-child {
+        border-bottom: 0;
+    }
+
+    .css-table .title {
+        background-color: #F7F7F7;
+        color: #363636;
+        font-size: 20px;
+        font-weight: bold;
+
+    }
+
+/*最新消息---------------*/
+
+.listgroup{
+    /* background: #fff; */
+}
+.listgroup .newsgroupbox {
+    width: 100%;
+    padding: 20px 0;
+    list-style: none;
+    /* background: #fff; */
+    border: 0;
+    border-top: 1px rgba(221, 221, 221, 0.315) dashed;
+    margin: auto;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: none;
+    border-radius:0;
+    /* transform: scale(1, 1); */
+}
+.listgroup .newsgroupbox:first-child{
+    border: 0;
+}
+.listgroup .newsgroupbox .textbox {
+    float: right;
+    width:calc(100% - 300px);
+    padding:0px 0px 0 20px;
+}
+.listgroup .newsgroupbox .textbox .title {
+    display:block;
+    margin-bottom: 0;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
+    overflow: hidden;
+     
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:initial;
+    height:auto;
+}
+.listgroup .newsgroupbox .textbox .date {
+    display: inline-block;
+    /* color: #ec7a00; */
+     
+    padding-bottom: 10px;
+}
+.listgroup .newsgroupbox .imgbox {
+    float: left;
+    position: relative;
+    width:300px;
+    height: 200px;
+    text-align: center;
+    font-size: 0;
+    overflow: hidden;
+    filter: contrast(0.6);
+    transition: .5s;
+}
+
+.listgroup .newsgroupbox:hover .imgbox {
+    filter: inherit;
+}
+
+.listgroup .newsgroupbox .imgbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    min-height: 303px;
+}
+/*活動*/
+    .newsgroupbox .textbox .title {
+        margin-bottom: 15px;
+        font-size: 25px;
+        /* color: #2B2B2B; */
+        font-weight: bold;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        height: 60px;
+    }
+
+    .newsgroupbox .textbox .title:hover {
+        color: #205975;
+        text-decoration: underline;
+    }
+
+    .newsgroupbox .textbox p {
+        color: #fff;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-height: 25px;
+        height: 72px;
+    }
+
+    /*最新消息內文*/
+    .newslistgroup .newslistbox {
+        margin: auto;
+    }
+
+    .newslistgroup .newslistbox .date {
+        color: #ffbc22;
+    }
+
+    .newslistgroup .newslistbox .title {
+        color: #2B2B2B;
+        font-weight: bold;
+        margin-bottom: 15px;
+        font-size: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px #bebebe dashed;
+    }
+
+    .newslistgroup .newslistbox .textbox p {
+        color: #616161;
+    }
+
+
+}

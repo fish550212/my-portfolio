@@ -1,0 +1,455 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>連江縣議會</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+    <link href="frontcss/page.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!--header-->
+    <div class="header">
+      <div class="headerbox">
+        <!--logo------------>
+        <a href="#" class="logo">連江縣議會</a>
+        <!--toolbar--------->
+        <div class="toolbar">
+          <div class="toolbarmenu">
+            <a
+              title="上層選單區"
+              id="accesskeyU"
+              accesskey="U"
+              style="color: black; text-decoration: none"
+              href="https://www.matsu.gov.tw/#accesskeyU"
+            >
+              :::
+            </a>
+            <a href="index.html" class="iconimg">回首頁</a>
+            |
+            <a href="sitemap.html" class="iconimg">網站導覽</a>
+            |
+            <a href="#">Engilsh</a>
+          </div>
+          <div class="topsearchbar">
+            <input name="qstr1" class="data_field" id="SER_BOX" accesskey="S" type="text" placeholder="全文檢索" value="" />
+            <input type="button" class="searchbtn" value="&nbsp;" />
+          </div>
+        </div>
+
+        <!--MOB-MENU---位置放<div class="headerbox">內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <h1 class="hidden-element">主選單</h1>
+
+          <div class="othermu">
+            <a href="index.html" title="回首頁">回首頁</a>
+            <a href="sitemap.html" title="網站導覽">網站導覽</a>
+            <a href="#" target="blank" title="開新視窗,English" class="EN">English</a>
+          </div>
+          <div class="topsearchbar">
+            <input name="qstr1" class="data_field" id="SER_BOX" accesskey="S" type="text" placeholder="全文檢索" value="" />
+            <input type="button" class="searchbtn" value="&nbsp;" />
+          </div>
+          <ul class="reset">
+            <li>
+              <h2><a title="最新消息" href="newslist.html">最新消息</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="活動剪影" href="activity.html">活動剪影</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="議會簡介" href="">議會簡介</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li><a title="連至議會沿革" href="#">議會沿革</a></li>
+                  <li><a title="連至議會職權" href="#">議會職權</a></li>
+                  <li><a title="連至議會組織" href="#">議會組織</a></li>
+                  <li><a title="連至行政部門" href="#">行政部門</a></li>
+                  <li><a title="連至議長" href="#">議長</a></li>
+                  <li><a title="連至副議長" href="#">副議長</a></li>
+                  <li><a title="連至秘書長" href="#">秘書長</a></li>
+                  <li><a title="連至交通位置" href="#">交通位置</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="本屆概況" href="#">本屆概況</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <a title="連至選區劃分圖" href="#">選區劃分圖</a>
+                  </li>
+                  <li>
+                    <a title="連至議員介紹" href="#">議員介紹</a>
+                  </li>
+                  <li>
+                    <a title="連至議員通訊錄" href="#">議員通訊錄</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="會史館" href="#">會史館</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <a title="連至" href="#">醫政</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">藥政</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">保健</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">傳染病防治</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">預防注射</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">食品衛生</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="便民資訊" href="#">便民資訊</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="質詢影音" href="#">質詢影音</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="議事錄" href="#">議事錄</a></h2>
+            </li>
+            <li>
+              <h2><a title="提案資料" href="#">提案資料</a></h2>
+            </li>
+            <li>
+              <h2><a title="議事法規" href="#">議事法規</a></h2>
+            </li>
+            <li>
+              <h2><a title="相關網站" href="#">相關網站</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <h3><a title="開新視窗,連至馬祖相關網站" href="#" target="_blank">馬祖相關網站</a></h3>
+                  </li>
+                  <li>
+                    <h3><a title="開新視窗,連至縣市議會網站" href="#" target="_blank">縣市議會網站</a></h3>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END--->
+      </div>
+      <div class="adv">
+        <div class="ADVbox"><img src="frontimages/banner.jpg" alt="banner" /></div>
+      </div>
+    </div>
+    <!--header-end-->
+
+    <!--MENU start-->
+    <link href="menu_top/menu_top.css" rel="stylesheet" type="text/css" />
+    <script src="menu_top/jquery-2.0.3.min.js"></script>
+    <script src="menu_top/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="menu_top/menu_top.js" type="text/javascript"></script>
+
+    <div class="MENU" id="menutop">
+      <div class="COM">
+        <ul id="t_menu">
+          <li>
+            <h2><a title="最新消息" href="newslist.html">最新消息</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="活動剪影" href="activity.html">活動剪影</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="議會簡介" href="page.html">議會簡介</a></h2>
+            <ul class="SHUT" id="mm3">
+              <li>
+                <h3><a title="連至議會沿革" href="#">議會沿革</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議會職權" href="#">議會職權</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議會組織" href="#">議會組織</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至行政部門" href="#">行政部門</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議長" href="#">議長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至副議長" href="#">副議長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至秘書長" href="#">秘書長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至交通位置" href="#">交通位置</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="本屆概況" href="#">本屆概況</a></h2>
+            <ul class="SHUT" id="mm5">
+              <li>
+                <h3><a title="連至選區劃分圖" href="#">選區劃分圖</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議員介紹" href="#">議員介紹</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議員通訊錄" href="#">議員通訊錄</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="會史館" href="#">會史館</a></h2>
+            <ul class="SHUT" id="mm8">
+              <li>
+                <h3><a title="連至" href="#">醫政</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">藥政</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">保健</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">傳染病防治</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">預防注射</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">食品衛生</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="便民資訊" href="#">便民資訊</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="質詢影音" href="#">質詢影音</a></h2>
+          </li>
+          <li>
+            <h2><a title="議事錄" href="#">議事錄</a></h2>
+          </li>
+          <li>
+            <h2><a title="提案資料" href="#">提案資料</a></h2>
+          </li>
+          <li>
+            <h2><a title="議事法規" href="#">議事法規</a></h2>
+          </li>
+          <li>
+            <h2><a title="相關網站" href="#">相關網站</a></h2>
+            <ul class="SHUT" id="mm6">
+              <li>
+                <h3><a title="開新視窗,連至馬祖相關網站" href="#" target="_blank">馬祖相關網站</a></h3>
+              </li>
+              <li>
+                <h3><a title="開新視窗,連至縣市議會網站" href="#" target="_blank">縣市議會網站</a></h3>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--MENU end-->
+    <div class="container pagebox">
+      <div class="containerbox">
+        <div class="leftbox">
+          <div class="page-section leftbtn-box">
+            <a href="#">
+              <img src="frontimages/lefticon01.svg" alt="" />
+              <span>議事影音(直播)</span>
+            </a>
+            <a href="#">
+              <img src="frontimages/lefticon02.svg" alt="" />
+              <span>議事日程表</span>
+            </a>
+          </div>
+          <div class="page-section leftmenu-box">
+            <div class="titlebox">
+              <font>常用功能</font>
+              <button class="advanced-search">
+                <img src="frontimages/icon-01.svg" alt="" />
+              </button>
+            </div>
+            <ul class="formlist">
+              <li><a href="#">遊說案件公告</a></li>
+              <li><a href="#">會議紀錄</a></li>
+              <li><a href="#">會計月報</a></li>
+              <li><a href="#">預算資料</a></li>
+              <li><a href="#">決算資料</a></li>
+              <li><a href="#">歷次議事日程</a></li>
+              <li><a href="#">議會內網</a></li>
+            </ul>
+          </div>
+
+          <script>
+            (function waitForjQuery() {
+              if (!window.jQuery) {
+                return setTimeout(waitForjQuery, 50);
+              }
+              (function ($) {
+                var NS = ".advSearch";
+
+                function toggleBox($box) {
+                  $box.toggleClass("active");
+                  $box.find(".formlist").toggleClass("active");
+                  var expanded = $box.hasClass("active");
+                  $box.find(".advanced-search").attr("aria-expanded", expanded);
+                }
+
+                // ensure ARIA and ids
+                $(".leftmenu-box").each(function (i) {
+                  var $b = $(this);
+                  var $list = $b.find(".formlist");
+                  if (!$list.attr("id")) $list.attr("id", "formlist-" + i);
+                  $b.find(".advanced-search").attr({
+                    "aria-controls": $list.attr("id"),
+                    "aria-expanded": false,
+                    type: "button",
+                  });
+                });
+
+                // (re)bind handlers namespaced so we can safely init multiple times
+                $(".advanced-search")
+                  .off("click" + NS)
+                  .on("click" + NS, function (e) {
+                    e.preventDefault();
+                    toggleBox($(this).closest(".leftmenu-box"));
+                  });
+
+                // also allow clicking the titlebox (except clicks on the button itself)
+                $(".leftmenu-box .titlebox")
+                  .off("click" + NS)
+                  .on("click" + NS, function (e) {
+                    if ($(e.target).closest(".advanced-search").length) return;
+                    toggleBox($(this).closest(".leftmenu-box"));
+                  });
+              })(jQuery);
+            })();
+          </script>
+        </div>
+        <div class="mainbox">
+          <div class="page-section">
+            <!-- 麵包屑 -->
+            <div class="" id="topfrom">
+              <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+              <a href="index.html" title="首頁">首頁</a>
+              &gt;
+              <a href="page-list.html" title="議會沿革">議會沿革</a>
+            </div>
+            <!-- 麵包屑 -->
+            <!-- 標題 -->
+            <div class="titlebox">
+              <span>議會簡介</span>
+              <ul class="point_box">
+                <li class="active"><a href="#" class="text-s">會史溯源</a></li>
+                <li><a href="#" class="text-s">議會組職變革</a></li>
+                <li><a href="#" class="text-s">議會沿革</a></li>
+                <li><a href="#" class="text-s">會址變遷</a></li>
+                <li><a href="#" class="text-s">職權變革</a></li>
+              </ul>
+            </div>
+            <!-- 標題 -->
+
+            <!-- 內容區 -->
+            <div class="content">
+              <ul class="member_list tag_box">
+                <li>
+                  <a href="#data01" class="text-s">第七屆縣議會</a>
+                </li>
+            
+              </ul>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p id="data01" class="theme01">
+                        <strong>第七屆縣議會(2018-2022)</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <p>第七屆議員選舉於2018年11月24日投票，選出議員九名，任期四年。2018年12月25完成宣誓就職後隨即進行正副議長選舉，張永江議員當選第七屆議長；周瑞國議員當選第七屆副議長。第七屆議員分別為：第一選區曹爾章、曹以標先生、林明揚先生、陳書建先生、林惠萍小姐；第二選區周瑞國先生、陳玉發先生；第三選區王孝榛先生；第四選區張永江先生。<br>
+				由於福建高等法院金門分院宣告王孝榛當選無效，2021年2月19日由陳貽斌遞補。</p>
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td>
+                      <iframe width="680" height="400" src="https://www.youtube.com/embed/hA-hXLvuuEw" title="馬祖日報2018/12/25影音／第七屆縣議員宣誓就職　正副議長張永江、周瑞國" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer--------------------------------------------------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <span>
+          <div class="logo">
+            <img src="frontimages/logo.png" alt="連江縣議會logo" />
+          </div>
+        </span>
+        <span class="Copyrightinfo">
+          <span>地址:南竿鄉復興村146號</span>
+          |
+          <span>電話: 0836-22755</span>
+          |
+          <span>傳真: 0836-22834</span>
+          <p>Copyright © 版權所有 連江縣議會 • 連江縣(馬祖)</p>
+        </span>
+      </div>
+    </div>
+    <!--footer-end----------------------------------------------------------->
+
+    <div id="top">
+      <img title="top" alt="top" src="frontimages/gotop.svg" title="回到上面" />
+    </div>
+    <script src="frontjs/gotop.js" type="text/javascript"></script>
+  </body>
+</html>

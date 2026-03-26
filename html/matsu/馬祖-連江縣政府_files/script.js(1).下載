@@ -1,0 +1,285 @@
+﻿(function ($) {
+    $.fn.banner = function (options) {
+
+        var opts = $.extend({}, $.fn.banner.defaults, options);
+
+        return this.each(function () {
+
+            //selector各區控制面板
+            var $win = $(window),
+                $container = $(this), // a
+            $box = $container.find('.box'), // b
+            $slide = $box.find('.slide'), // c
+            $dot = $container.find('.dot'), // d
+            $nav = $container.find('.nav'), // e
+            picCount = $slide.length, // f
+
+            // a 最外框 (Carousel Wrapper)
+            // b 滿版圖外框
+            // c 滿版圖
+            // d 下方導覽 (Dot Wrapper)
+            // e 左右導覽(Prev/Next Wrapper)
+            // f 圖片總數
+
+            //參數設定
+            //判斷裝置
+
+            picW, //跑馬圖片寬度
+            picH, //跑馬圖片高度
+            duration = opts.duration, //轉換至下個Slide所需的動畫時間
+            timerSet = opts.timerSet, //自動切換的時間
+            navShow = opts.navShow, //是否顯示左右導覽
+            dotShow = opts.dotShow, //是否顯示索引導覽
+            dotBottom = opts.dotBottom, //下方索引位置
+            autoPlay = opts.autoPlay, //是否自動播放
+            easing = opts.easing, // 轉換至下個Slide的easing種類
+            index = opts.index, // 目前Carousel的索引值
+            timer; // 用以儲存timer
+
+            setElementSize();
+
+            $win.on("resize", function () {
+                setElementSize();
+            }); //resize
+
+            function setElementSize() {
+                var viewportWidth = $(window).width();
+                //var viewportHeight = $(window).height();
+
+                var int = 0;
+                if (viewportWidth >= opts.viewport[0]) {
+                    int = 0;
+                }
+
+                if (viewportWidth <= opts.viewport[1] && viewportWidth >= opts.viewport[2]) {
+                    int = 1;
+                }
+
+                if (viewportWidth <= opts.viewport[2]) {
+                    int = 2;
+                }
+
+                picW = opts.picW[int]; //跑馬圖片寬度
+                picH = opts.picH[int]; //跑馬圖片高度
+
+                // 最外框寬高
+                $container.css({
+                    'width': picW,
+                    'height': picH
+                });
+            }; //setElementSize();
+
+
+            //下索引位置
+
+            $dot.css({
+                'bottom': dotBottom
+            });
+
+
+            //if ($('.activeslide', $box).length == 0) {
+            //    $('.slide:first', $box).addClass('activeslide');
+            //}
+            //$('.activeslide', $box).prev().addClass('prevslide');
+
+
+            var nextslide = $('.slide:first', $box);
+            nextslide.addClass('activeslide');
+            $('.word', nextslide).delay(1000).animate({
+                'left': 0
+            }, 1500, 'easeOutExpo');
+
+            //只有一張圖片時，則隱藏下方導覽!
+            if (picCount == 1) {
+                $nav.hide();
+            }
+
+            //計算頁碼數量
+            var indicatorHTML = '';
+            var TotalGroup = Math.ceil(picCount / 1);
+            for (var i = 0; i < TotalGroup; i++) {
+                indicatorHTML += "<span></span>";
+                //indicatorHTML += "<a href='#' index='" + i + "'></a>";
+            }
+
+            // 插入指標鏈結的內容
+            $dot.html(indicatorHTML);
+
+            //0索引加上.current
+            $("span", $dot).eq(index).addClass("current");
+
+            //左右箭頭隱藏開關
+            if (navShow) {
+                $nav.css('display', 'block');
+            }
+            else {
+                $nav.css('display', 'none');
+            }
+
+            //下方索引隱藏開關
+            if (dotShow) {
+                $dot.css('display', 'block');
+            }
+            else {
+                $dot.css('display', 'none');
+            }
+
+            // 自動輪播
+            function AutoPlay() {
+
+                Animation('R');
+
+                //啟動定時器
+                timer = setTimeout(AutoPlay, timerSet);
+            }
+
+            //淡入淡出動畫
+            function Animation(direction) {
+                //1. selector .activeslide
+                var currentslide = $('.activeslide', $box);
+
+                //2. removeClass .activeslide
+                currentslide.removeClass('activeslide');
+
+                if (direction == 'L') {
+                    //3. ※找尋下一個slide，若無則選擇第一個元素。
+                    var nextslide = currentslide.prev().length ? currentslide.prev() : $('.slide:last', $box);
+
+                    //4. ※找尋上一個slide，若無則選擇最後一個元素。
+                    var prevslide = nextslide.next().length ? nextslide.next() : $('.slide:first', $box);
+                }
+                else if (direction == 'R') {
+                    //3. ※找尋下一個slide，若無則選擇第一個元素。
+                    var nextslide = currentslide.next().length ? currentslide.next() : $('.slide:first', $box);
+
+                    //4. ※找尋上一個slide，若無則選擇最後一個元素。
+                    var prevslide = nextslide.prev().length ? nextslide.prev() : $('.slide:last', $box);
+                }
+
+                //5. removeClass .prevslide
+                $('.prevslide', $box).removeClass('prevslide');
+
+                //6. 上一個slide addClass .prevslide
+                prevslide.addClass('prevslide');
+
+                $('.word', nextslide).css({
+                    'left': -5738
+                });
+
+                $('.word', prevslide).css({
+                    'left': -5738
+                });
+
+                //7. 下一個slide隱藏+addClass .activeslide
+                nextslide.hide().addClass('activeslide');
+
+                //8. 移除下方導覽點擊標記
+                $('span', $dot).removeClass("current");
+
+                //9. 下一個slide索引
+                _Index = nextslide.index();
+
+                //10. 下一個slide，下方導覽點擊標記
+                $('span', $dot).eq(_Index).addClass('current');
+
+                //11. 出場動畫
+                nextslide.fadeIn(duration);
+
+
+
+                $('.word', nextslide).delay(1000).animate({
+                    'left': 0
+                }, 1500, 'easeOutExpo');
+
+            } //Animation
+
+            //啟動定時器
+            if (autoPlay) {
+                timer = setTimeout(AutoPlay, timerSet);
+            }
+
+            // ====================================================================
+
+            // 停止tismer的函數
+            function stopTimer() {
+                //clearInterval(timer);
+                clearTimeout(timer);
+            }
+
+            // 滑鼠移入時暫停timer，移出則啟動timer
+            $container.on({
+            //mouseenter: stopTimer
+            //mouseleave: AutoPlay
+        });
+
+        //左按鈕
+        $(".prev", $nav).click(function () {
+            stopTimer();
+            Animation('L');
+            stopTimer();
+            return false;
+        });
+
+        //右按鈕
+        $(".next", $nav).click(function () {
+            stopTimer();
+            Animation('R');
+            stopTimer();
+            return false;
+        });
+
+        //索引按鈕
+        $dot.find('span').click(function () {
+            _Index = $(this).index();
+            _Current = $('.current', $dot).index();
+
+            $(this).siblings().removeClass("current");
+            $(this).addClass('current');
+
+            $('.activeslide', $box).removeClass('activeslide');
+            $('.prevslide', $box).removeClass('prevslide');
+
+            var nextslide = $('.slide', $box).eq(_Index);
+            var prevslide = $('.slide', $box).eq(_Current);
+
+            //5. 上一個slide addClass .prevslide
+            prevslide.addClass('prevslide');
+
+            //6. 下一個slide隱藏+addClass .activeslide
+            nextslide.hide().addClass('activeslide');
+
+            $('.word', nextslide).css({
+                'left': -738
+            });
+
+            //7. 出場動畫
+            nextslide.fadeIn(duration);
+
+            $('.word', nextslide).delay(1000).animate({
+                'left': 0
+            }, 1500, 'easeOutExpo');
+
+            stopTimer();
+        });
+
+    }); //end each
+    //}; //end banner_func
+
+    //$(window).resize(banner_func).trigger('resize');
+
+}; //end $.fn.banner
+
+$.fn.banner.defaults = {
+    viewport: [1024, 768, 737], //畫面分界點
+    picW: ['100%', '100%', '100%'], //跑馬燈圖片寬度
+    picH: [890, 600, 600], //跑馬燈圖片高度
+    duration: 1000, //動畫時間
+    timerSet: 4000, //定時器時間
+    navShow: true, //左右箭頭隱藏
+    dotShow: true, //下方索引隱藏
+    dotBottom: -40, //下方索引位置
+    autoPlay: true, //自動輪播
+    easing: "easeInOutQuart", //緩衝參數
+    index: 0//初始索引
+}; //end $.fn.banner.defaults
+})(jQuery);

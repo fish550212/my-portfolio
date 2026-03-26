@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/*右側內頁搜尋功能*/
+.qfont{ 
+    width:100%; height:auto; overflow:hidden;
+    font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    line-height:200%;
+    padding:2px 0; margin-bottom:8px; margin-top:8px;
+    color: #6f6f6f;
+}
+.qfontinputcss{font-size: 110%; color:#000;padding:4px 20px;}
+.arrow_l{
+    padding: 4px 20px;
+    background-image: url(../Images/arrow_l.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto 13px;
+}
+.arrow_r{
+    padding: 4px 20px;
+    background-image: url(../Images/arrow_r.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto 13px;
+}
+.btn_day{
+    padding: 4px 20px;
+    background-image: url(../Images/icon_02.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:auto 15px;
+}
+.searchbox{
+    position: relative;
+    padding: 0 5px;
+    margin-top: -1px;
+    vertical-align: middle;
+    border-radius: 7px;
+    line-height: 110%;
+    display: inline-block;
+    background: #fff;
+    border: 1px solid #ababab; color:#000;
+}
+.searchbox input{border: 0;padding: 4.5px 0; font-size: 18px; color:#000;}
+.searchbox input:nth-child(1){width: 100%;padding-right: 25px;}
+.searchbox .search_btn{  
+    position: absolute;  
+    right: 5px;
+    width: 20px;
+    height: 29px;    
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(../Images/icon_search.png);
+    background-repeat: no-repeat;
+    background-position:right center;
+    background-size:20px 20px;
+    cursor: pointer;
+}
+
+.qfont select{width: 100%; padding:4px 7px;border: 1px solid #ababab; border-radius: 7px;font-size: 18px;}
+.qfont span.WW{width: 150px; display:inline-block;}
+.qfont span.Wauto{ width:auto; display:inline-block;}
+input, select, textarea {
+    font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid #BBBBBB;
+    background: #fff;
+    padding: 3px 3px;
+    /* 邊角圓弧化，不同瀏器覧設定不同　*/
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 320px) {
+
+}
+
+@media screen and (max-width: 767px) {
+
+	}
+
+/* == 平板版型區 =============================== */
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+	}
+

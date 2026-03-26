@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Woodpecker</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script> -->
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+            <!--ul class="iconbox">
+                <li>
+                    <a href="#"><img src="./enfrontimages/icon-linked.png" alt=""></a>
+                </li>
+            </ul-->
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id="menu">
+                    <li><a href="index.html" title="Home">Home</a> </li>
+
+                    <li><a href="page-Product.html" title="Product">Product</a>
+                        <ul>
+                            <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                            <li><a href="page-QED.html" title="QED">QED</a></li>
+                            <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                            <li><a href="page-System.html" title=" System">System</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Technology.html" title="Technology">Technology</a>
+                        <ul>
+                            <li><a href="page-solutions.html" title="Solutions">Solutions</a>
+                            </li>
+                            <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical White
+                                    Paper</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-pressrelease.html" title="News &amp; Events">News</a>
+                        <ul>
+                            <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                            <li><a href="page-events.html" title="Events">Events</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Career.html" title="Career ">Career</a>
+                    </li>
+                    <li><a href="page-managementteam.html" title="About us">About us</a>
+                        <ul style="display: none;">
+                            <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                            <li><a href="page-Partners.html" title="Partners">Partners</a> </li>
+                            <li><a href="page-contacts-locations.html" title="Contacts and Locations">Locations</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-contactus.html" title="Contact us">Contact us</a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <a href="#" title="後台管理" class="oa_btn"><img src="" alt=""></a>
+
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class="reset">
+
+                    <li class="nav-first">
+                        <h2><a href="#" title="Home">Home</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="index.html" title="Home">Home</a> </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Product">Product</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Product.html" title="Product">Product</a></li>
+                                <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                                <li><a href="page-QED.html" title="QED">QED</a></li>
+                                <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                                <li><a href="page-System.html" title="System">System</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Technology">Technology</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Technology.html" title="Technology">Technology</a></li>
+                                <li><a href="page-solutions.html" title="Solutions">Solutions</a></li>
+                                <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical
+                                        White Paper</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="News">News</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                                <li><a href="page-events.html" title="Events">Events</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-Career.html" title="Career">Career</a></h2>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="About us">About us</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                                <li><a href="page-Partners.html" title="Partners">Partners</a></li>
+                                <li><a href="page-contacts-locations.html" title="Locations">
+                                        Locations</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-contactus.html" title="Contact us">Contact us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page_topbg.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Technology
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+
+
+    <!--adv-end-->
+
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+
+            <!----Solutions------------------------------>
+            <div class="Solutions">
+                <div class="Solutionsbox">
+                    <!-------↓↓↓↓↓--------------------------->
+                    <div class="titlebox" style="font-size:22px;">
+
+                        Completely de-bug your chip design at the pre-silicon simulation stage.
+                        <br>
+                         BugHunter’s innovative approach de-risks your design in weeks not the usual months of
+                        verification.
+                        <br>
+                        Dramatically faster time to market
+                        Find & eliminate all bugs.
+                   </div>
+
+                    <p>Traditional verification uses selected test sequences as the process is slow and time consuming
+                        so not every possibility is checked. As a result, unexpected corner cases can result in errors
+                        which are costly to fix especially after the design moves on to the silicon stage.</p>
+                    <p> <img src="enfrontimages/Solutions-01.png" alt=".."></p>
+                    <p>BugHunter™ has a completely new approach of using a comprehensive, formal analysis-based
+                        approach. Because it uses mathematical modelling to cover all possible cases rather than testing
+                        data sets, it is ultra-fast as it does not have to churn through masses of possible datasets
+                        that takes months. This novel approach is very flexible and can support any design changes as it
+                        is not locked to the design in the way that traditional verification is plus it is process
+                        independent.</p>
+
+                    <p>Works with the Formal Verification tools such as JasperGold® from Cadence® or VC Formal® from
+                        Synopsys®.</p>
+
+                    <div class="titlebox">How BugHunter works</div>
+
+                    <p>BugHunter is a module that sits outside the DUT (Design Under Test) and interrogates it and the
+                        external memories with instruction sequences and monitors the results. The register file and
+                        memory </p> <img src="enfrontimages/Solutions-02.png" alt="..">
+                    <p>address space are split into
+                        two halves and an identical set of interrogation sequences is run through each half. This should
+                        provide the same results as it is the same sequence of operations and any differences indicate a
+                        bug. The pairs of results are compared at frequent time intervals that provide small time slices
+                        to rapidly pinpoint when the bug is happening.</p>
+
+                    <p>There are four key aspects to BugHunter technology. The first is checking for any different
+                        results from duplicated execution instructions. The second is checking for branch errors where a
+                        different path is taken. The third is noting timeout events where the processor is no longer
+                        responding because of an instruction that is impossible to execute. And lastly, a load/store
+                        error where data has not been correctly placed in its allocated memory.
+                    </p>
+                    <p> <img src="enfrontimages/Solutions-03.png" alt=".."></p>
+                    <p>Needs redrawing into two columns of original and duplicate to make the two paths clearer</p>
+
+                    <div class="titlebox">About Woodpecker Verification</div>
+                    <p>Founded by Stamford alumni, Woodpecker Verification specialises in precisely finding issues with
+                        pre- and post-silicon to improve yields and avoid costly chip failures in the field. Its
+                        disruptive solutions take verification and validation to the next level. Its international
+                        operation in headquartered in Singapore and has offices in Shanghai; Shenzhen, Guangdong, China;
+                        Hsinchu, TW; and Austin, Texas, USA.
+                        Email: projects@woodpeckerx.com
+                        www.woodpeckerverification.com
+                    </p>
+
+                    <p>Woodpecker Verification, BugHunter and BugFinder are trademarks of Woodpecker Verification.
+                        All other trademarks are the properties of their respective owners.
+                    </p>
+
+
+
+
+
+
+                    <p>The engineer team is all from top academic and industry backgrounds.</p>
+
+
+
+
+
+
+                    <!-------↑↑↑↑↑--------------------------->
+                </div>
+            </div>
+            <!----Solutions------------------------------>
+
+
+
+
+
+
+
+            <!--indexsitemap------------------下方選單------->
+            <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="centerbox">
+
+
+                    </div>
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <a href="index.html">
+                                <img src="enfrontimages/footer_logo.png" alt="">
+                            </a>
+                        </div>
+
+                        <ul class="material">
+                            <li>
+                                <a href="#">
+                                    <img src="enfrontimages/icon-email.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="enfrontimages/icon-linked.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>Copyright © 2023 Woodpecker Technologies</p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+
+</body>
+
+</html>

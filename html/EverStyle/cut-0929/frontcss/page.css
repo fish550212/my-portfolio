@@ -1,0 +1,221 @@
+@charset "utf-8";
+/*快捷按鈕-----------------*/
+.fasttool{ display:none;width:100%; height:auto; background-color:#5e5e5e;}
+.fasttool ul{ display:block;width:100%; height:auto;}
+.fasttool ul li{display: inline-block;width:16.66%; height:auto; padding:10px 5px;text-align:center;}
+.fasttool ul li img{ }
+
+/*表單--------------------*/
+#css_addpag { background-color: transparent; text-align:left;font-size:130%;}
+#css_addpag .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 4px; background-color:#FFF;}
+#css_addpag .css_tr:nth-child(odd){ /*background-color:#f6f6f6;*/.display: block;}
+#css_addpag .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:1% 2%; line-height:240%;}
+#css_addpag .line{/*標題底色*/background-color:#e9d7d5;color:#333;}
+#css_addpag .css_tr .css_td h1{ color:#000; margin:0px;}
+#css_addpag .title{.display: block;color:#0277bd;}
+#css_addpag .css_td b{ color:#916361;display: inline-block;.display:inline;padding-right:5px; text-align: right; font-weight:bold;}
+#css_addpag .css_td b:after{ content:"：";}
+#css_addpag .css_td a.link{ color:#ff8a00;}
+#css_addpag .css_td a img{ vertical-align:middle; border:0;}
+#css_addpag .css_td b{ width:14%; vertical-align:top;}
+#css_addpag .css_td .spanbox{ width:85%; display:inline-block; min-height:25px; vertical-align: top;}
+#css_addpag .css_td h3{ color:#783633; font-size:130%;}
+#css_addpag .css_td font{  color:#916361;font-weight:bold;    padding-right: 5px;}
+
+#css_addpag .css_td .spanbox .text_input{width: auto;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:0 2px;}
+#css_addpag .css_td .spanbox select{width: auto;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:0 2px;}
+
+#css_addpag .css_td .spanbox .W100{ width:100%;}
+#css_addpag .css_td .spanbox .W95{ width:95%;}
+#css_addpag .css_td .spanbox .W90{ width:90%;}
+#css_addpag .css_td .spanbox .W85{ width:85%;}
+#css_addpag .css_td .spanbox .W80{ width:80%;}
+#css_addpag .css_td .spanbox .W75{ width:75%;}
+#css_addpag .css_td .spanbox .W70{ width:70%;}
+#css_addpag .css_td .spanbox .W65{ width:65%;}
+#css_addpag .css_td .spanbox .W60{ width:60%;}
+#css_addpag .css_td .spanbox .W55{ width:5%;}
+#css_addpag .css_td .spanbox .W50{ width:50%;}
+#css_addpag .css_td .spanbox .W45{ width:45%;}
+#css_addpag .css_td .spanbox .W40{ width:40%;}
+#css_addpag .css_td .spanbox .W35{ width:35%;}
+#css_addpag .css_td .spanbox .W30{ width:30%;}
+#css_addpag .css_td .spanbox .W25{ width:25%;}
+#css_addpag .css_td .spanbox .W20{ width:20%;}
+#css_addpag .css_td .spanbox .W15{ width:15%;}
+#css_addpag .css_td .spanbox .W10{ width:10%;}
+#css_addpag .css_td .spanbox .W5{ width:5%;}
+
+
+#css_addpag .addbnt{ text-align:center; margin:auto;}
+#css_addpag .addbnt p{text-align:center;padding:10px 2px;}
+#css_addpag .addbnt .abutton{width:150px; text-align:center;}
+
+.index_iconbtn{width:100%; height:auto; margin:10px 0;}
+.index_iconbtn .abutton{ background-color:#602f2b; font-size:145%;padding: 10px 25px; display:inline-block; width:150px; text-align:center;}
+
+.index_iconbtn .abutton img{ margin-right:5px;}
+.index_title{width:100%; height:auto; margin:15px 0;}
+.index_title h2{font-size:22px;border-left: 5px solid rgba(96, 47, 43, 0.7);padding-left: 8px; color:#602f2b;}
+
+/*表格內表格*/
+.table_w_none{width: 350px; margin:5px 0 5px 2px;}
+.table_w_none .table_css_td{display: table-cell;text-align: center;color:#555555;padding:6px 5px; min-width: auto; height:auto;.display: block;border:#a7a7a7 1px solid;font-size:115%; overflow:hidden;}
+.table_w_none .table_css_tr{display: table-row;width:100%;.display: inline-block;line-height:150%;background: #fff;}
+
+.td_left{text-align: left !important;}
+.td_center{text-align: center !important;}
+.td_right{text-align: right !important;}
+
+#css_addpag .spanbox .oderlist .table_box1{border: 0;}
+#css_addpag .spanbox .oderlist .table_box1 .table_w_none{width: 100%; margin: 5px 0;font-size: 14px;}
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 320px) {
+.fasttool{ display:block;width:100%; height:auto; background-color:#5e5e5e;}
+.fasttool ul{ display:block;width:100%; height:auto;}
+.fasttool ul li{display: inline-block;width:16.66%; height:auto; padding:10px 5px;text-align:center;}
+.fasttool ul li img{ }
+.index_iconbtn{ margin:auto; text-align:center;}
+.index_iconbtn .abutton:nth-child(1){ widows:100%;}
+.index_iconbtn .abutton:nth-child(2),.index_iconbtn .abutton:nth-child(3),.index_iconbtn .abutton:nth-child(4),.index_iconbtn .abutton:nth-child(5){ display:none;}
+
+#css_addpag .css_td .spanbox .W100{ width: auto;}
+#css_addpag .css_td .spanbox .W90{ width: auto;}
+#css_addpag .css_td .spanbox .W80{ width: auto;}
+#css_addpag .css_td .spanbox .W70{ width: auto;}
+#css_addpag .css_td .spanbox .W60{ width: auto;}
+#css_addpag .css_td .spanbox .W50{ width: auto;}
+#css_addpag .css_td .spanbox .W40{ width: auto;}
+#css_addpag .css_td .spanbox .W30{ width: auto;}
+#css_addpag .css_td .spanbox .W20{ width: auto;}
+
+	}
+	
+@media screen and (max-width: 767px) {
+.index_iconbtn{ margin:auto; text-align:center;}
+.index_iconbtn .abutton:nth-child(1){ widows:100%; margin:auto;}
+.index_iconbtn .abutton:nth-child(2),.index_iconbtn .abutton:nth-child(3),.index_iconbtn .abutton:nth-child(4),.index_iconbtn .abutton:nth-child(5){ display:none; }
+#go_4,#go_3,#go_2,#go_4{ }
+/*快捷按鈕-----------------*/
+.header{ position:fixed; top:0; z-index:99999;}/*固定上方*/
+
+.fasttool{display:block;width:100%; height:auto; background-color:#5e5e5e;}
+.fasttool ul{ display:block;width:100%; height:auto;}
+.fasttool ul li{display: inline-block;width:16.66%; height:auto; padding:10px 5px;text-align:center;background:linear-gradient(#5e5e5e 50%, #424242 100%); border-left:1px solid rgba(255,255,255,0.5); border-right:1px solid rgba(0,0,0,5);}
+.fasttool ul li:hover{ background:#000; }
+
+/*表單--------------------*/
+#css_addpag { background-color: transparent; text-align:left;}
+#css_addpag .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 0px;}
+#css_addpag .css_tr:nth-child(odd){/* background-color:#f6f6f6;*/.display: block;}
+#css_addpag .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:5px 2%; line-height:200%; }
+#css_addpag .line{}
+#css_addpag .css_tr .css_td h1{ color:#000; margin:0px;}
+#css_addpag .title{.display: block;color:#0277bd;}
+#css_addpag .css_td b{display: block;.display:inline;padding-right:5px; text-align: left; font-weight:bold;}
+#css_addpag .css_td b:after{ content:"：";}
+#css_addpag .css_td a.link{ color:#ff8a00;}
+#css_addpag .css_td a img{ vertical-align:middle; border:0;}
+#css_addpag .css_td b{ width:100px; vertical-align:top;}
+#css_addpag .css_td .spanbox{ width:100%; display:inline-block; min-height: auto;}
+#css_addpag .css_td i{font-style:normal; color:rgba(0,0,0,0.6);}	
+
+#css_addpag .css_td .spanbox input,
+#css_addpag .css_td .spanbox textarea{ width:100%; padding:5px; margin:2px 0;}
+
+#css_addpag .css_td .spanbox .text_input{width:100%;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:2px 0;}
+#css_addpag .css_td .spanbox select{width:100%;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:2px 0;}
+#css_addpag .css_td .spanbox .abutton{ width:100%; text-align:center;}
+#css_addpag .addbnt p .abutton{width:30%;}
+
+#css_addpag .css_td .spanbox .mW100{ width:100%;}
+#css_addpag .css_td .spanbox .mW95{ width:95%;}
+#css_addpag .css_td .spanbox .mW90{ width:90%;}
+#css_addpag .css_td .spanbox .mW88{ width:88%;}
+#css_addpag .css_td .spanbox .mW85{ width:85%;}
+#css_addpag .css_td .spanbox .mW80{ width:80%;}
+#css_addpag .css_td .spanbox .mW75{ width:75%;}
+#css_addpag .css_td .spanbox .mW70{ width:70%;}
+#css_addpag .css_td .spanbox .mW65{ width:65%;}
+#css_addpag .css_td .spanbox .mW60{ width:60%;}
+#css_addpag .css_td .spanbox .mW55{ width:55%;}
+#css_addpag .css_td .spanbox .mW50{ width:50%;}
+#css_addpag .css_td .spanbox .mW45{ width:45%;}
+#css_addpag .css_td .spanbox .mW40{ width:40%;}
+#css_addpag .css_td .spanbox .mW35{ width:35%;}
+#css_addpag .css_td .spanbox .mW30{ width:30%;}
+#css_addpag .css_td .spanbox .mW20{ width:20%;}
+#css_addpag .css_td .spanbox .mW15{ width:15%;}
+#css_addpag .css_td .spanbox .mW10{ width:10%;}
+#css_addpag .css_td .spanbox .mW5{ width:5%;}
+
+/*表格內表格*/
+#css_addpag .table_w_none{width:100%;}
+#css_addpag .css_td .spanbox .table_w_none .table_css_td .abutton {
+	width: auto;
+    padding: 3px 6px;
+    margin: 2px 0.5%;
+}
+	}
+/* == 手機版型區 =============================== */
+
+/* == 平板版型區 =============================== */
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.index_iconbtn .abutton:nth-child(2),.index_iconbtn .abutton:nth-child(3),.index_iconbtn .abutton:nth-child(4),.index_iconbtn .abutton:nth-child(5){}
+/*表格--------------------*/
+#css_addpag { background-color: transparent; text-align:left;}
+#css_addpag .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 0px;}
+#css_addpag .css_tr:nth-child(odd){ /*background-color:#f6f6f6;*/.display: block;}
+#css_addpag .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:4px 2%; }
+#css_addpag .line{}
+#css_addpag .css_tr .css_td h1{ color:#000; margin:0px;}
+#css_addpag .title{.display: block;color:#0277bd;}
+#css_addpag .css_td b{display: inline-block;.display:inline;padding-right:5px; text-align: right; font-weight:bold;}
+#css_addpag .css_td b:after{ content:"：";}
+#css_addpag .css_td a.link{ color:#ff8a00;}
+#css_addpag .css_td a img{ vertical-align:middle; border:0;}
+#css_addpag .css_td b{ width:15%; vertical-align:top;}
+#css_addpag .css_td .spanbox{ width: 80%; display:inline-block; min-height: auto;}
+#css_addpag .css_td i{font-style:normal;color:rgba(0,0,0,0.6);}
+
+#css_addpag .css_td .spanbox input,
+#css_addpag .css_td .spanbox textarea{ width:100%; padding:5px; margin:2px 0;}
+
+#css_addpag .css_td .spanbox .text_input{width:100%;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:2px 0;}
+#css_addpag .css_td .spanbox select{width:100%;font-size: 18px; color:#000;padding:6px 4px;border-radius: 7px;border:0px;border: 1px solid #ababab; margin:2px 0;}
+#css_addpag .css_td .spanbox .abutton{ width:100%; text-align:center;}
+#css_addpag .addbnt p .abutton{width:30%;}
+
+/*#css_addpag .css_td .spanbox .W100{ width:100%;}
+#css_addpag .css_td .spanbox .W90{ width:100%;}
+#css_addpag .css_td .spanbox .W80{ width:100%;}
+#css_addpag .css_td .spanbox .W70{ width:100%;}
+#css_addpag .css_td .spanbox .W60{ width:100%;}
+#css_addpag .css_td .spanbox .W50{ width:100%;}
+#css_addpag .css_td .spanbox .W40{ width:100%;}
+#css_addpag .css_td .spanbox .W30{ width:100%;}
+#css_addpag .css_td .spanbox .W20{ width:100%;}
+
+#css_addpag .css_td .spanbox .mW100{ width:100%;}
+#css_addpag .css_td .spanbox .mW95{ width:100%;}
+#css_addpag .css_td .spanbox .mW90{ width:100%;}
+#css_addpag .css_td .spanbox .mW88{ width:100%;}
+#css_addpag .css_td .spanbox .mW85{ width:100%;}
+#css_addpag .css_td .spanbox .mW80{ width:100%;}
+#css_addpag .css_td .spanbox .mW75{ width:100%;}
+#css_addpag .css_td .spanbox .mW70{ width:100%;}
+#css_addpag .css_td .spanbox .mW65{ width:100%;}
+#css_addpag .css_td .spanbox .mW60{ width:100%;}
+#css_addpag .css_td .spanbox .mW55{ width:100%;}
+#css_addpag .css_td .spanbox .mW50{ width:100%;}
+#css_addpag .css_td .spanbox .mW45{ width:100%;}
+#css_addpag .css_td .spanbox .mW40{ width:100%;}
+#css_addpag .css_td .spanbox .mW35{ width:100%;}
+#css_addpag .css_td .spanbox .mW30{ width:100%;}
+#css_addpag .css_td .spanbox .mW20{ width:100%;}
+#css_addpag .css_td .spanbox .mW15{ width:100%;}
+#css_addpag .css_td .spanbox .mW10{ width:100%;}
+#css_addpag .css_td .spanbox .mW5{ width:100%;}*/
+	}
+@media screen and (min-width: 1025px) and (max-width: 1119px) {}

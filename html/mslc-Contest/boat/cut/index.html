@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>帆船比賽</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script> -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+
+        <div class="logo">
+          <a href="#" target="_self" title="回首頁">
+              <img src="./frontimages/h_logo.png" alt="國立海洋科技博物館LOGO">
+          </a>
+      </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="#" title="最新消息">最新消息</a>
+              <ul>
+                <li><a href="page-Lockstep.html"  title="下拉選單一">下拉選單一</a></li>
+                <li><a href="page-QED.html" title="下拉選單二">下拉選單二</a></li>
+            </ul>
+            </li>
+            <li><a href="#" title="活動辦法">活動辦法</a></li>
+            <li><a href="#" title="競賽方式與規範">競賽方式與規範</a></li>
+            <li><a href="#" title="我要報名">我要報名</a></li>
+            <li><a href="#" title="帆船航行原理">帆船航行原理</a></li>
+            <li><a href="#" title="活動集錦">活動集錦</a></li>
+          </ul>
+        </div>
+        <div class="topbox">瀏覽人數:21726</div>
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="#" title="最新消息">
+                  <img src="./frontimages/icon-m-01.svg" alt="" />
+                  最新消息
+                </a>
+              </h2>
+              <div class="nav-second">
+                <ul class="reset">
+                    <li><a href="index.html"  title="下拉選單一" >下拉選單一</a> </li>
+                    <li><a href="index.html" title="下拉選單二" target="_blank">下拉選單二</a> </li>
+                </ul>
+
+            </div>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="活動辦法">
+                  <img src="./frontimages/icon-m-02.svg" alt="" />
+                  活動辦法
+                </a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="競賽方式與規範">
+                  <img src="./frontimages/icon-m-03.svg" alt="" />
+                  競賽方式與規範
+                </a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="我要報名">
+                  <img src="./frontimages/icon-m-04.svg" alt="" />
+                  我要報名
+                </a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="帆船航行原理">
+                  <img src="./frontimages/icon-m-05.svg" alt="" />
+                  帆船航行原理
+                </a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="#" title="活動集錦">
+                  <img src="./frontimages/icon-m-06.svg" alt="" />
+                  活動集錦
+                </a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <div class="adv">
+      <div class="advbox">
+        <link href="ADVbox/ADV.css" rel="stylesheet" />
+        <script src="ADVbox/responsiveslides.min.js"></script>
+        <script>
+          $(function () {
+            // Slideshow 1
+            $("#slider4").responsiveSlides({
+              auto: true,
+              /*false手動 / true自動*/
+              pager: true,
+              nav: true,
+              speed: 650,
+              namespace: "centered-btns",
+            });
+          });
+        </script>
+        <div class="bannerbox">
+          <div class="wrapper1">
+            <!-- Slideshow 1 -->
+            <div class="rslides_container">
+              <ul class="rslides" id="slider4">
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字</div>
+                  </div>
+                  <img src="frontimages/banner.png" />
+                </li>
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字2</div>
+                  </div>
+                  <img src="frontimages/banner01.png" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!-- 帆船貼圖 -->
+
+      <div class="bg-img">
+        <img src="./frontimages/pageimg-bg.svg" alt="" />
+      </div>
+     
+
+      <!--topfrom麵包屑-->
+      <div id="topfrom">
+        <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+        <a href="https://mslc.nmmst.gov.tw/evtsite/index/Forum2025" title="首頁">首頁</a>
+        &gt;
+        <a href="https://mslc.nmmst.gov.tw/evtsite/content/Forum2025/544" title="最新消息">最新消息</a>
+      </div>
+      <!--topfrom麵包屑-->
+
+      <!----------------內容-->
+      <div class="articlebox">
+        <!-- 最新消息 -->
+        <div class="page-section news-section">
+          <div class="sectionbox">
+            <div class="section-title">最新消息</div>
+            <ul class="news-list">
+              <li class="news-item">
+                <div class="news-date">2024/12/10</div>
+                <div class="news-tag">New!</div>
+                <a href="#" class="news-text">
+                  「2024全國學生遙控帆船STEAM創客大賽」競賽花絮照片雲端開放下載至2024/12/31止。「2024全國學生遙控帆船STEAM創客大賽」競賽花絮照片雲端開放下載至2024/12/31止。
+                </a>
+                <a class="news-download" href="#">PDF下載</a>
+              </li>
+              <li class="news-item">
+                <div class="news-date">2024/12/10</div>
+                <a href="#" class="news-text">「2024 創意魔方遙控帆船爭霸賽」得獎名單公告。</a>
+                <a class="news-download" href="#">PDF下載</a>
+              </li>
+              <li class="news-item">
+                <div class="news-date">2024/12/10</div>
+                <a href="#" class="news-text">
+                  「2024全國學生遙控帆船STEAM創客大賽」全國賽-競賽方式、佔比及評比標準與規範說明(1025版)已提供下載，詳下方資料下載區。
+                </a>
+                <!-- <a class="news-download" href="#">PDF下載</a> -->
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 內容 -->
+        <div class="page-section content-section">
+          <div class="sectionbox">
+            <div class="section-title">重要日程/地點</div>
+            <div class="section-content-border">
+              <div class="schedule-item">
+                <h3>報名</h3>
+                <p>
+                  自2024.8.26 12:00 至 2024.9.10 23:59 止(第一階段已截止報名)
+                  <br />
+                  自2024.8.26 12:00 至 2024.9.10 23:59 止(第一階段已截止報名)
+                </p>
+              </div>
+              <div class="schedule-item">
+                <h3>說明會</h3>
+                <ul class="event-list">
+                  <li>09.07(六)中：國立自然科學博物館－科學教室</li>
+                  <li>09.14(六)南：國立高雄科技大學-楠梓校區</li>
+                  <li>09.21(六)東：慈濟大學附屬高級中學</li>
+                  <li>09.22(日)北：國立海洋科技博物館教育中心</li>
+                </ul>
+              </div>
+              <div class="schedule-item">
+                <h3>競賽</h3>
+                <h4>區賽</h4>
+                <ul class="event-list">
+                  <li>10.06(日)中區區賽：國立自然科學博物館</li>
+                  <li>10.13(日)南區區賽：國立高雄科技大學-楠梓校區</li>
+                  <li>10.20(日)北區區賽：國立海洋科技博物館教育中心</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 下載 -->
+        <div class="page-section download-section">
+          <div class="sectionbox">
+            <div class="section-title">資料下載</div>
+
+            <div class="section-content-border">
+              <div class="download-list">
+                  <a class="download-btn" href="#">檔案名稱.txt</a>
+                  <a class="download-btn" href="#">檔案名稱.txt</a>
+                  <a class="download-btn" href="#">檔案名稱兩行<br>.txt</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 貼檔案圖片 -->
+        <div class="page-section content-section">
+          <div class="sectionbox">
+            <div class="section-title">活動錦集</div>
+            <div class="gallery-group">
+              <div class="gallery-item">
+                <div class="gallery-image-container">
+                  <img class="gallery-image" src="http://www.nmmst.gov.tw/attached/image/20160923/20160923203038_4196.jpg" alt="..." />
+                </div>
+                <p class="gallery-caption">圖片說明</p>
+              </div>
+
+              <div class="gallery-item">
+                <div class="gallery-image-container">
+                  <img class="gallery-image" src="http://www.nmmst.gov.tw/attached/image/20160923/20160923202653_8753.jpg" alt="..." />
+                </div>
+                <p class="gallery-caption">圖片說明</p>
+              </div>
+              <div class="gallery-item">
+                <div class="gallery-image-container">
+                  <img class="gallery-image" src="http://www.nmmst.gov.tw/attached/image/20160923/20160923202653_8753.jpg" alt="..." />
+                </div>
+                <p class="gallery-caption">圖片說明</p>
+              </div>
+
+              <div class="gallery-item">
+                <div class="gallery-image-container">
+                  <img class="gallery-image" src="http://www.nmmst.gov.tw/attached/image/20160923/20160923202653_8753.jpg" alt="..." />
+                </div>
+                <p class="gallery-caption">圖片說明</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <p>
+          指導單位：教育部、國家科學與技術委員會
+          <br />
+          主辦單位：國立海洋科技博物館
+          <br />
+          協辦單位：國立自然科學博物館、國立高雄科技大學造船及海洋工程系、慈濟大學附屬高級中學
+          <br />
+          贊助單位：廣天國際有限公司
+        </p>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

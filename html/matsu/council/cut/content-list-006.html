@@ -1,0 +1,929 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>連江縣議會</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+    <link href="frontcss/page.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!--header-->
+    <div class="header">
+      <div class="headerbox">
+        <!--logo------------>
+        <a href="#" class="logo">連江縣議會</a>
+        <!--toolbar--------->
+        <div class="toolbar">
+          <div class="toolbarmenu">
+            <a
+              title="上層選單區"
+              id="accesskeyU"
+              accesskey="U"
+              style="color: black; text-decoration: none"
+              href="https://www.matsu.gov.tw/#accesskeyU"
+            >
+              :::
+            </a>
+            <a href="index.html" class="iconimg">回首頁</a>
+            |
+            <a href="sitemap.html" class="iconimg">網站導覽</a>
+            |
+            <a href="#">Engilsh</a>
+          </div>
+          <div class="topsearchbar">
+            <input name="qstr1" class="data_field" id="SER_BOX" accesskey="S" type="text" placeholder="全文檢索" value="" />
+            <input type="button" class="searchbtn" value="&nbsp;" />
+          </div>
+        </div>
+
+        <!--MOB-MENU---位置放<div class="headerbox">內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <h1 class="hidden-element">主選單</h1>
+
+          <div class="othermu">
+            <a href="index.html" title="回首頁">回首頁</a>
+            <a href="sitemap.html" title="網站導覽">網站導覽</a>
+            <a href="#" target="blank" title="開新視窗,English" class="EN">English</a>
+          </div>
+          <div class="topsearchbar">
+            <input name="qstr1" class="data_field" id="SER_BOX" accesskey="S" type="text" placeholder="全文檢索" value="" />
+            <input type="button" class="searchbtn" value="&nbsp;" />
+          </div>
+          <ul class="reset">
+            <li>
+              <h2><a title="最新消息" href="newslist.html">最新消息</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="活動剪影" href="activity.html">活動剪影</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="議會簡介" href="">議會簡介</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li><a title="連至議會沿革" href="#">議會沿革</a></li>
+                  <li><a title="連至議會職權" href="#">議會職權</a></li>
+                  <li><a title="連至議會組織" href="#">議會組織</a></li>
+                  <li><a title="連至行政部門" href="#">行政部門</a></li>
+                  <li><a title="連至議長" href="#">議長</a></li>
+                  <li><a title="連至副議長" href="#">副議長</a></li>
+                  <li><a title="連至秘書長" href="#">秘書長</a></li>
+                  <li><a title="連至交通位置" href="#">交通位置</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="本屆概況" href="#">本屆概況</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <a title="連至選區劃分圖" href="#">選區劃分圖</a>
+                  </li>
+                  <li>
+                    <a title="連至議員介紹" href="#">議員介紹</a>
+                  </li>
+                  <li>
+                    <a title="連至議員通訊錄" href="#">議員通訊錄</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="會史館" href="#">會史館</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <a title="連至" href="#">醫政</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">藥政</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">保健</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">傳染病防治</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">預防注射</a>
+                  </li>
+                  <li>
+                    <a title="連至" href="#">食品衛生</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <h2><a title="便民資訊" href="#">便民資訊</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="質詢影音" href="#">質詢影音</a></h2>
+            </li>
+
+            <li>
+              <h2><a title="議事錄" href="#">議事錄</a></h2>
+            </li>
+            <li>
+              <h2><a title="提案資料" href="#">提案資料</a></h2>
+            </li>
+            <li>
+              <h2><a title="議事法規" href="#">議事法規</a></h2>
+            </li>
+            <li>
+              <h2><a title="相關網站" href="#">相關網站</a></h2>
+              <div class="nav-second">
+                <ul class="reset">
+                  <li>
+                    <h3><a title="開新視窗,連至馬祖相關網站" href="#" target="_blank">馬祖相關網站</a></h3>
+                  </li>
+                  <li>
+                    <h3><a title="開新視窗,連至縣市議會網站" href="#" target="_blank">縣市議會網站</a></h3>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END--->
+      </div>
+      <div class="adv">
+        <div class="ADVbox"><img src="frontimages/banner.jpg" alt="banner" /></div>
+      </div>
+    </div>
+    <!--header-end-->
+
+    <!--MENU start-->
+    <link href="menu_top/menu_top.css" rel="stylesheet" type="text/css" />
+    <script src="menu_top/jquery-2.0.3.min.js"></script>
+    <script src="menu_top/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="menu_top/menu_top.js" type="text/javascript"></script>
+
+    <div class="MENU" id="menutop">
+      <div class="COM">
+        <ul id="t_menu">
+          <li>
+            <h2><a title="最新消息" href="newslist.html">最新消息</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="活動剪影" href="activity.html">活動剪影</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="議會簡介" href="page.html">議會簡介</a></h2>
+            <ul class="SHUT" id="mm3">
+              <li>
+                <h3><a title="連至議會沿革" href="#">議會沿革</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議會職權" href="#">議會職權</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議會組織" href="#">議會組織</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至行政部門" href="#">行政部門</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議長" href="#">議長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至副議長" href="#">副議長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至秘書長" href="#">秘書長</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至交通位置" href="#">交通位置</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="本屆概況" href="#">本屆概況</a></h2>
+            <ul class="SHUT" id="mm5">
+              <li>
+                <h3><a title="連至選區劃分圖" href="#">選區劃分圖</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議員介紹" href="#">議員介紹</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至議員通訊錄" href="#">議員通訊錄</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="會史館" href="#">會史館</a></h2>
+            <ul class="SHUT" id="mm8">
+              <li>
+                <h3><a title="連至" href="#">醫政</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">藥政</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">保健</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">傳染病防治</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">預防注射</a></h3>
+              </li>
+              <li>
+                <h3><a title="連至" href="#">食品衛生</a></h3>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2><a title="便民資訊" href="#">便民資訊</a></h2>
+          </li>
+
+          <li>
+            <h2><a title="質詢影音" href="#">質詢影音</a></h2>
+          </li>
+          <li>
+            <h2><a title="議事錄" href="#">議事錄</a></h2>
+          </li>
+          <li>
+            <h2><a title="提案資料" href="#">提案資料</a></h2>
+          </li>
+          <li>
+            <h2><a title="議事法規" href="#">議事法規</a></h2>
+          </li>
+          <li>
+            <h2><a title="相關網站" href="#">相關網站</a></h2>
+            <ul class="SHUT" id="mm6">
+              <li>
+                <h3><a title="開新視窗,連至馬祖相關網站" href="#" target="_blank">馬祖相關網站</a></h3>
+              </li>
+              <li>
+                <h3><a title="開新視窗,連至縣市議會網站" href="#" target="_blank">縣市議會網站</a></h3>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--MENU end-->
+    <div class="container pagebox">
+      <div class="containerbox">
+        <div class="leftbox">
+          <div class="page-section leftbtn-box">
+            <a href="#">
+              <img src="frontimages/lefticon01.svg" alt="" />
+              <span>議事影音(直播)</span>
+            </a>
+            <a href="#">
+              <img src="frontimages/lefticon02.svg" alt="" />
+              <span>議事日程表</span>
+            </a>
+          </div>
+          <div class="page-section leftmenu-box">
+            <div class="titlebox">
+              <font>常用功能</font>
+              <button class="advanced-search">
+                <img src="frontimages/icon-01.svg" alt="" />
+              </button>
+            </div>
+            <ul class="formlist">
+              <li><a href="#">遊說案件公告</a></li>
+              <li><a href="#">會議紀錄</a></li>
+              <li><a href="#">會計月報</a></li>
+              <li><a href="#">預算資料</a></li>
+              <li><a href="#">決算資料</a></li>
+              <li><a href="#">歷次議事日程</a></li>
+              <li><a href="#">議會內網</a></li>
+            </ul>
+          </div>
+
+          <script>
+            (function waitForjQuery() {
+              if (!window.jQuery) {
+                return setTimeout(waitForjQuery, 50);
+              }
+              (function ($) {
+                var NS = ".advSearch";
+
+                function toggleBox($box) {
+                  $box.toggleClass("active");
+                  $box.find(".formlist").toggleClass("active");
+                  var expanded = $box.hasClass("active");
+                  $box.find(".advanced-search").attr("aria-expanded", expanded);
+                }
+
+                // ensure ARIA and ids
+                $(".leftmenu-box").each(function (i) {
+                  var $b = $(this);
+                  var $list = $b.find(".formlist");
+                  if (!$list.attr("id")) $list.attr("id", "formlist-" + i);
+                  $b.find(".advanced-search").attr({
+                    "aria-controls": $list.attr("id"),
+                    "aria-expanded": false,
+                    type: "button",
+                  });
+                });
+
+                // (re)bind handlers namespaced so we can safely init multiple times
+                $(".advanced-search")
+                  .off("click" + NS)
+                  .on("click" + NS, function (e) {
+                    e.preventDefault();
+                    toggleBox($(this).closest(".leftmenu-box"));
+                  });
+
+                // also allow clicking the titlebox (except clicks on the button itself)
+                $(".leftmenu-box .titlebox")
+                  .off("click" + NS)
+                  .on("click" + NS, function (e) {
+                    if ($(e.target).closest(".advanced-search").length) return;
+                    toggleBox($(this).closest(".leftmenu-box"));
+                  });
+              })(jQuery);
+            })();
+          </script>
+        </div>
+        <div class="mainbox">
+          <div class="page-section">
+            <!-- 麵包屑 -->
+            <div class="" id="topfrom">
+              <a href="#C" name="C" id="mainlist" title="中央內容區" accesskey="C" style="color: black; font-size: 7pt; text-decoration: none">:::</a>
+              <a href="index.html" title="首頁">首頁</a>
+              &gt;
+              <a href="page-list.html" title="議會沿革">議會沿革</a>
+            </div>
+            <!-- 麵包屑 -->
+            <!-- 標題 -->
+            <div class="titlebox">
+              <span>議會簡介</span>
+              <ul class="point_box">
+                <li class="active"><a href="#" class="text-s">會史溯源</a></li>
+                <li><a href="#" class="text-s">議會組職變革</a></li>
+                <li><a href="#" class="text-s">議會沿革</a></li>
+                <li><a href="#" class="text-s">會址變遷</a></li>
+                <li><a href="#" class="text-s">職權變革</a></li>
+              </ul>
+            </div>
+            <!-- 標題 -->
+
+            <!-- 內容區 -->
+            <div class="content">
+              <ul class="member_list tag_box">
+                <li>
+                  <a href="#data01" class="text-s">第六屆縣議會</a>
+                </li>
+                <li>
+                  <a href="#data02" class="text-s">宣誓就職典禮</a>
+                </li>
+                <li>
+                  <a href="#data03" class="text-s">議員玉照暨簡經歷</a>
+                </li>
+                <li>
+                  <a href="#data04" class="text-s">正副議長選舉</a>
+                </li>
+                <li>
+                  <a href="#data05" class="text-s">議員選舉區及人數統計</a>
+                </li>
+              </ul>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p id="data01" class="theme01">
+                        <strong>第六屆縣議會(2014-2018)</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <p>
+                        第六屆議員選舉於2014年11月29日投票，選出議員九名，任期四年。2014年12月25完成宣誓就職後隨即進行正副議長選舉，張永江議員當選第六屆議長；陳書建議員當選第六屆副議長。第六屆議員分別為：第一選區曹以標先生、林貽祥先生、林明揚先生、陳書建先生、曹丞君小姐；第二選區周瑞國先生、陳貴忠先生；第三選區陳貽斌先生；第四選區張永江先生。
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <img src="/attached/image/20260302/20260302145539_1027.jpg" width="440" height="300" alt="議員縣政考察" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <p>▲縣議員縣政考察</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <img src="/attached/image/20260302/20260302145546_1496.jpg" width="440" height="300" alt="縣議員考察" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <p>▲縣議員在環資局長張壽華陪同下參訪高雄園區汙水處理廠</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <iframe
+                        width="680"
+                        height="400"
+                        src="https://www.youtube.com/embed/w8ddGnFzhg0"
+                        title="連江縣議會第六屆簡介"
+                        frameborder="0"
+                      ></iframe>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p class="theme01">
+                        <strong>宣誓就職典禮</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <img
+                        src="/attached/image/20260302/20260302145558_5871.jpg"
+                        width="440"
+                        height="300"
+                        alt="第六屆正、副議長宣誓就職典禮"
+                        class="imageye-selected"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">▲第六屆正、副議長宣誓就職典禮</td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <img
+                        src="/attached/image/20260302/20260302145605_1496.jpg"
+                        width="440"
+                        height="298"
+                        alt="第六屆議員就職典禮(議長交接印信)"
+                        class="imageye-selected"
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">▲第六屆議員就職典禮(議長交接印信)</td>
+                  </tr>
+                  <tr>
+                    <td class="theme">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p class="theme01">
+                        <strong><br /></strong>
+                      </p>
+                      <p id="data03" class="theme01">
+                        <strong>議員玉照暨簡經歷</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302142539_6926.jpg" width="170" height="190" alt="議員張永江" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議長
+                                <br />
+                                姓名：張永江
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國四十九年出生
+                                <br />
+                                選區：第四選區(東引鄉)
+                                <br />
+                                黨籍：無黨
+                                <br />
+                                簡歷：航運公司經理、東引義消顧問、連江縣議會第三、四、五屆縣議員
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="3">
+                              <img src="/attached/image/20260302/20260302145623_7590.jpg" width="170" height="190" alt="副議陳書建" />
+                            </td>
+                            <td colspan="2" valign="top">
+                              <p>
+                                職稱：副議長
+                                <br />
+                                姓名：陳書建
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國四十六年出生
+                                <br />
+                                選區：第一選區(南竿鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：第八、九屆商業會理事長、第三、四屆介壽村村長、馬祖高中家長會長、連江縣議會第一、二、三、四屆議員
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302142501_2395.jpg" width="170" height="190" alt="議員曹以標" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：曹以標
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國五十二年出生
+                                <br />
+                                選區：第一選區(南竿鄉)
+                                <br />
+                                黨籍：無黨
+                                <br />
+                                簡歷：南竿鄉第四、五、七屆鄉民代表、義勇消防大隊分隊長、連江縣議會第四屆議員、第五屆副議長、連江縣工會理事長
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302145734_9154.jpg" width="170" height="190" alt="議員林貽祥" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：林貽祥
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國四十八年出生
+                                <br />
+                                選區：第一選區(南竿鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：排長、連長、旅級幕僚、連江縣工會總幹事、連江縣後備軍人輔導中心秘書暨主任、連江縣議會第二屆副議長、第三、四、五屆縣議員
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302145742_9623.jpg" width="170" height="190" alt="議員林明揚" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：林明揚
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國五十二出生
+                                <br />
+                                選區：第一選區(南竿鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：南竿鄉第七屆及第九屆鄉民代表、 南竿鄉第八屆鄉代會主席、福沃社區發展協會理事長
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302142613_4583.jpg" width="170" height="190" alt="議員曹丞君" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：曹丞君
+                                <br />
+                                性別：女
+                                <br />
+                                年齡：民國六十五年出生
+                                <br />
+                                選區：第一選區(南引鄉)
+                                <br />
+                                黨籍：無黨
+                                <br />
+                                簡歷：南竿鄉民代表、連江縣議員
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302145751_4936.jpg" width="170" height="190" alt="議員周瑞國" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：周瑞國
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國年出生
+                                <br />
+                                選區：第二選區(北竿鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：北竿鄉第六屆鄉代會主席、北竿鄉第七屆鄉民代表、北竿鄉第八屆及第九屆鄉長
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302145759_2593.jpg" width="170" height="190" alt="議員陳貴忠" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：陳貴忠
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國五十年出生
+                                <br />
+                                選區：第二選區(北竿鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：北竿鄉第三屆鄉民代表、連江縣諮詢代表、連江縣議會第一、二、三屆議員、第四屆副議長、第五屆議長、北竿文化協會理事長
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <table border="0" cellpadding="1" cellspacing="1" class="ke-zeroborder">
+                        <tbody>
+                          <tr>
+                            <td width="170" rowspan="2" valign="top">
+                              <img src="/attached/image/20260302/20260302145806_0249.jpg" width="170" height="190" alt="議員陳貽斌" />
+                            </td>
+                            <td width="455" valign="top">
+                              <p>
+                                職稱：議員
+                                <br />
+                                姓名：陳貽斌
+                                <br />
+                                性別：男
+                                <br />
+                                年齡：民國五十八出生
+                                <br />
+                                選區：第三選區(莒光鄉)
+                                <br />
+                                黨籍：國民黨
+                                <br />
+                                簡歷：莒光鄉第七屆鄉代會副主席、第八屆鄉民代表、青帆社區發展協會理事長、敬恒國中小家長會會長
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p class="theme01">
+                        <strong>正副議長選舉紀錄</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      一百零三年十二月二十五日
+                      <br />
+                      本會第六屆成立大會辦理議員宣誓就職典禮，上午九時，假本會議事廳舉行，全體議員當選人（九人）到齊，公推曹以標議員擔任大會主持人，在內政部總務司司長林清淇及連江地方法院院長蔡新毅監誓下，連袂完成宣誓，隨即舉行正副議長選舉。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      第六屆議長選舉結果：
+                      <br />
+                      議員數：九人
+                      <br />
+                      出席議員：九人
+                      <br />
+                      總投票數：九人
+                      <br />
+                      有效票：九票
+                      <br />
+                      張永江八票
+                      <br />
+                      陳書建一票
+                      <br />
+                      張永江議員當選連任第六屆連江縣議會議長
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      <p>
+                        第六屆副議長選舉結果：
+                        <br />
+                        議員總數：九人
+                        <br />
+                        出席議員：九人
+                        <br />
+                        總投票數：九票
+                        <br />
+                        有效票：九票
+                        <br />
+                        陳書建議員得五票
+                        <br />
+                        曹以標議員得四票
+                        <br />
+                        陳書建議員當選連江縣議會第六屆副議長
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">
+                      議長副議長宣誓就職
+                      <br />
+                      一百零三年十二月二十五日
+                      <br />
+                      連江縣議會第六屆議會，議長當選人張永江、副議長當選人陳書建，內政部總務司司長林清淇及連江地方法院院長蔡新毅的監誓下完成宣誓就職並接篆視事。議長當選人張永江從議會秘書長陳益興手中接過印信，正式上任縣議會第六屆的議長。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="theme">&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table border="0" cellpadding="2" cellspacing="2" class="ke-zeroborder">
+                <tbody>
+                  <tr>
+                    <td class="theme">
+                      <p>
+                        <strong>第六屆議員選舉區及人數統計</strong>
+                        <br />
+                        <br />
+                        第一選區:南竿鄉
+                        <br />
+                        曹以標、林貽祥、林明揚、陳書建、曹丞君
+                        <br />
+                        <br />
+                        第二選區:北竿鄉
+                        <br />
+                        周瑞國、陳貴忠
+                        <br />
+                        <br />
+                        第三選區:莒光鄉
+                        <br />
+                        陳貽斌
+                        <br />
+                        <br />
+                        第四選區:東引鄉
+                        <br />
+                        張永江
+                      </p>
+                      <p>
+                        連江縣總面積:29.6055平方公里
+                        <br />
+                        人口數:10066人
+                        <br />
+                        鄉鎮數:4鄉鎮
+                        <br />
+                        行政村:22個行政村
+                        <br />
+                        四選區合計:9名議員
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer--------------------------------------------------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <span>
+          <div class="logo">
+            <img src="frontimages/logo.png" alt="連江縣議會logo" />
+          </div>
+        </span>
+        <span class="Copyrightinfo">
+          <span>地址:南竿鄉復興村146號</span>
+          |
+          <span>電話: 0836-22755</span>
+          |
+          <span>傳真: 0836-22834</span>
+          <p>Copyright © 版權所有 連江縣議會 • 連江縣(馬祖)</p>
+        </span>
+      </div>
+    </div>
+    <!--footer-end----------------------------------------------------------->
+
+    <div id="top">
+      <img title="top" alt="top" src="frontimages/gotop.svg" title="回到上面" />
+    </div>
+    <script src="frontjs/gotop.js" type="text/javascript"></script>
+  </body>
+</html>

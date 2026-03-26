@@ -1,0 +1,14 @@
+<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 52" style="transform: scaleX(-1); transform-origin: center;">
+  <defs>
+    <style>.cls-1,.cls-8{fill:none;}.cls-2{opacity:0.75;}.cls-3{fill:#f1f3f6;}.cls-4{opacity:0.5;}.cls-5{clip-path:url(#clip-path);}.cls-6{fill:#f2f2f2;}.cls-7{fill:#dce2e8;}.cls-8{stroke:#828282;stroke-linecap:round;stroke-linejoin:round;stroke-width:4.55px;fill-rule:evenodd;}</style>
+    <clipPath id="clip-path"><rect class="cls-1" x="-1523.32" y="15.79" width="1366.48" height="270.36"/></clipPath>
+  </defs>
+  <g class="cls-2"><rect class="cls-3" x="-1523.32" y="-785.38" width="1366" height="1202.55"/></g>
+  <g class="cls-4">
+    <g class="cls-5">
+      <path class="cls-6" d="M420.85,141.59c-196.14,125-470.66,181.35-727,149.13-92.23-11.59-189.34-1.4-273.4,28.69L-766.35,113.59C-682.29,83.5-585.18,73.31-492.94,84.9c256.37,32.22,530.9-24.09,727-149.13Z"/>
+      <path class="cls-7" d="M-583.48,315.94c-4.2-25.24,7.25-78.65,55.84-114.51,35.25-26,82-36.81,139-32.1,142.67,11.79,298.61,5.55,417.14-16.7,103-19.34,230.75-60.37,254.38-146l1.34.19C260.48,93,132.25,134.19,28.86,153.6c-79.12,14.86-174.92,22.58-272.31,22.59-48.67,0-97.72-1.93-145.32-5.87-56.56-4.68-103,6-137.9,31.81-48.25,35.62-59.62,88.63-55.45,113.69Z"/>
+    </g>
+  </g>
+  <polyline class="cls-8" points="21.87 12.54 8.13 25.67 21.87 39.46"/>
+</svg>

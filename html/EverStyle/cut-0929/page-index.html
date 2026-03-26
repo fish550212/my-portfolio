@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>柏泰金牌業務</title>
+
+  <link rel="stylesheet" type="text/css" href="frontcss/erpcss.css" />
+  <link rel="stylesheet" type="text/css" href="frontcss/leftmenu.css" />
+  <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  <script type="text/javascript">
+    function MM_swapImgRestore() { //v3.0
+      var i, x, a = document.MM_sr;
+      for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+    }
+
+    function MM_preloadImages() { //v3.0
+      var d = document;
+      if (d.images) {
+        if (!d.MM_p) d.MM_p = new Array();
+        var i, j = d.MM_p.length,
+          a = MM_preloadImages.arguments;
+        for (i = 0; i < a.length; i++)
+          if (a[i].indexOf("#") != 0) {
+            d.MM_p[j] = new Image;
+            d.MM_p[j++].src = a[i];
+          }
+      }
+    }
+
+    function MM_findObj(n, d) { //v4.01
+      var p, i, x;
+      if (!d) d = document;
+      if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+        d = parent.frames[n.substring(p + 1)].document;
+        n = n.substring(0, p);
+      }
+      if (!(x = d[n]) && d.all) x = d.all[n];
+      for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+      for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+      if (!x && d.getElementById) x = d.getElementById(n);
+      return x;
+    }
+
+    function MM_swapImage() { //v3.0
+      var i, j = 0,
+        x, a = MM_swapImage.arguments;
+      document.MM_sr = new Array;
+      for (i = 0; i < (a.length - 2); i += 3)
+        if ((x = MM_findObj(a[i])) != null) {
+          document.MM_sr[j++] = x;
+          if (!x.oSrc) x.oSrc = x.src;
+          x.src = a[i + 2];
+        }
+    }
+  </script>
+</head>
+
+<body onLoad="MM_preloadImages('Images/btn_02_O.png','Images/btn_04_O.png')">
+<div id="TOP">
+                <a href="javascript:void(0)" style="display: block;" role="button"><img src="https://www.land.moi.gov.tw/frontimages/gotop.png" alt="回到上面" /></a>
+            </div>
+  <!----header-------------------------------->
+  <div class="header">
+    <div class="headerbox">
+
+
+      <!--logo------------>
+      <H1>
+        <P><a href="#" class="logo"><img src="Images/logo.jpg" title="後台標題名稱" />
+            <span>柏泰金牌業務<br>銷售顧問服務管理系統
+            </span></a>
+
+            <a href="#" class="logo-mob">
+              <img src="Images/logo-mob.png" title="後台標題名稱" />
+              <span>柏泰金牌業務</span>
+            </a>
+          </P>
+      </H1>
+
+
+      <!--toolbar--------->
+
+      <div class="toolbar">
+
+        <div class="toolbarsearch">
+          <p class="user_info_name">
+            <img src="./Images/user.png">管理者 (mark)
+          </p>
+          <p class="timebox">
+            <span class="time">
+              <font id='gotime' name='gotime'>星期一 上午&nbsp;11:22:47</font>
+              <script>
+                var TimeClock = new set_time_Clock('gotime');
+                TimeClock.startClock();
+              </script>
+            </span>
+            <a href="#" class="out"><img src="./Images/out.png">登出</a>
+          </p>
+        </div>
+
+      </div>
+      <!--toolbar-end-------->
+
+      <!--MOB-MENU---位置放<div class="headerbox">內----------------->
+      <!--手機選單-漢堡圖-->
+      <div class="mu2 nav-button"><A title="Menu" class="animate" href="#">MENU</A></div>
+      <!--手機選單-END-->
+      <!-- Nav手機選單 -->
+      <LINK href="mobmu/common.css" rel="stylesheet">
+      <!--[if gte IE 9]><!-->
+      <SCRIPT src="mobmu/jquery-2.2.4.min.js"></script>
+      <!--<![endif]-->
+      <SCRIPT src="mobmu/jquery.mobile-1.4.5.custom.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/jquery.bxslider-4.1.1.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/common.js"></SCRIPT>
+
+      <div class="nav-panel" id="nav">
+
+        <H1 class="hidden-element">主選單</H1>
+
+        <div class="othermu">
+<a href="#2"><img src="Images/icon_01.png">首頁</a><a href="#1"><img src="Images/icon_01.png">登出</a>
+</div>
+
+        <!--DIV class="search-panel clearfix">
+<FORM action="search.php"><INPUT class="inText" type="text" placeholder="請輸入關鍵字" value="請輸入關鍵字">
+<INPUT class="submit" type="submit" value="搜尋"></FORM>
+</DIV-->
+
+        <UL class="reset">
+            <LI>
+            <H2><A href="#"><img src="Images/icon_02.png">業務日誌</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">行事曆</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+          <LI>
+            <H2><A href="#"><img src="Images/icon_03.png">資料查詢</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">客戶資料</a></LI>
+                <LI><a href="#">產品資料</a></LI>
+                <LI><a href="#">銷(退)貨單</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_04.png">報表</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">分區月報表</a></LI>
+                <LI><a href="#">大區報表</a></LI>
+                <LI><a href="#">業績目標</a></LI>
+                <LI><a href="#">客戶業績</a></LI>
+                <LI><a href="#">產品銷售</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_05.png">業務通告</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">業務通告列表</a></LI>
+              </UL>
+            </DIV>
+            
+          </LI>
+
+          <LI>
+            <H2><A href="#"><img src="Images/icon_06.png">送樣記錄</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">送樣記錄列表</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+          
+          <LI>
+            <H2><A href="#"><img src="Images/icon_07.png">系統管理</A></H2>
+            <DIV class="nav-second">
+              <UL class="reset">
+                <LI><a href="#">客戶警示設定</a></LI>
+                <LI><a href="#">共用資料編輯</a></LI>
+                <LI><a href="#">帳號資料列表</a></LI>
+                <LI><a href="#">資料匯出</a></LI>
+              </UL>
+            </DIV>
+          </LI>
+
+        </UL>
+
+      </div>
+      <!--MOB-MENU--END-------------------------------->
+
+
+    </div>
+  </div>
+  <!----header--end------------------------------>
+
+
+
+  <!----container-------------------------------->
+  <div class="container">
+    <div class="containerbox">
+
+    <!-- leftbox -->
+      <div class="leftbox">
+        <div id='leftDivId' class='leftDiv'>
+          <div id='menu_list'>
+            <div class="container">
+              <div class="menuTitle"><a href='#' title='首頁'><img src="Images/icon_01.png">首頁</a></div>
+              <div class="menuContent" style=''><ul style='list-style:none;'>
+                 
+                </ul></div>
+                
+              <div class="menuTitle"><img src="Images/icon_02.png">業務日誌<i class="down"></i></div>
+              <div class="menuContent" style=''>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='行事曆'>行事曆</a></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menuTitle"><img src="Images/icon_03.png">資料查詢<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶資料'>客戶資料</a></span>
+                  </li>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='產品資料'>產品資料</a></span>
+                  </li>
+                  <li>
+                    <span class='tfont'><a href='contact.php?sid=581&realsid=646' title='銷(退)貨單'>銷(退)貨單</a></span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menuTitle"><img src="Images/icon_04.png">報表<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='分區月報表'>分區月報表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='大區報表'>大區報表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='業績目標'>業績目標</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶業績'>客戶業績</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='產品銷售'>產品銷售</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_05.png">業務通告<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'>
+                      <a href='contact.php?sid=581&realsid=646' title='業務通告列表'>業務通告列表
+                      </a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_06.png">送樣記錄<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='送樣記錄列表'>送樣記錄列表</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+              <div class="menuTitle"><img src="Images/icon_07.png">系統管理<i class="down"></i></div>
+              <div class="menuContent" style='display:none'>
+                <ul style='list-style:none;'>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='客戶警示設定'>客戶警示設定</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='共用資料編輯'>共用資料編輯</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='帳號資料列表'>帳號資料列表</a></span>
+                  </li>
+                  <li><span class='tfont'><a href='contact.php?sid=581&realsid=646' title='資料匯出'>資料匯出</a></span>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+    $(document).ready(function () {
+        //Examples of how to assign the Colorbox event to elements
+        //$(".iframe").colorbox({ iframe: true, width: "50%", height: "60%" });
+        //$(".kabutton").colorbox({ iframe: true, width: "85%", height: "80%" });
+        $(".menuTitle").click(function () {
+            $(this).next("div").slideToggle("slow")
+            .siblings(".menuContent:visible").slideUp("slow");
+            $(this).toggleClass("activeTitle");
+            $(this).siblings(".activeTitle").removeClass("activeTitle");
+        });
+        /*$(".date_picker").datepicker({
+            showOn: 'button',
+            changeMonth: true,
+            changeYear: true,
+            buttonImage: "/Images/show-calendar.gif",
+            buttonImageOnly: true,
+            dateFormat: 'yy/mm/dd',
+            yearRange: "2000:2020"
+        });*/
+
+        //$("#selpage").change(function () {
+        //    var Tmppage = $("#selpage").val();
+        //    $("#page").val(Tmppage);
+        //    $("form:first").submit();
+        //});     
+
+
+     });
+</script>
+      <!-- leftbox end-->
+
+      <!-- rightbox -->
+      <div class="rightbox">
+
+        <div class="minabg">
+
+          <div class="title-tlink">
+            <h2 class="tlink">首頁</h2>
+          </div>
+          
+    
+
+<!----內容放置-------------------------------->
+<div class="index_iconbtn"><a href="#" class="abutton"><img src="Images/icon_17.png">打卡</a> <a href="#go_1" class="abutton"><img src="Images/icon_05.png">業務通告</a> <a href="#go_2" class="abutton"><img src="Images/icon_18.png">客戶警示</a> <a href="#go_3" class="abutton"><img src="Images/icon_06.png">送樣記錄</a> <a href="#go_4" class="abutton"><img src="Images/icon_04.png">業績目標</a></div>
+
+<!--------------------------------------------------------->
+<div id="go_1">&nbsp;</div>
+<div class="index_title"><h2>業務通告</h2></div>
+
+    <div class="oderlist">
+        <div class="table_box1 table_overflowx">
+            <div id="business_table">
+                <table id="myTable" class="tablesorter">
+                    <thead>
+                        <tr class="css_tr title">
+                           
+                            <th class="css_td line">內容</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="css_tr">
+                            
+                            <td class="css_td">
+                                <strong>更新日期：2022/09/12 14:56:00</strong>
+                                <br>
+                                【NOW健康 葉立斌／台北報導】國際失智症協會訂定每年9月21日為「國際失智症日」，實際上我們寵愛的貓狗也會失智！隨著寵物壽命延長，高齡化照護議題日益受到重視，新北動保處關注毛寶貝晚年需求，推廣寵物長照政策，新北市設有125間特定寵物長照醫療、照護機構，協助飼主完備毛寶貝晚年醫療照護，提升生活品質，守護毛寶貝安度終老。
+                            </td>
+                         
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------------------------->
+<div id="go_2"> &nbsp;</div>
+<div class="index_title"><h2>客戶警示</h2></div>
+
+<div class="oderlist">
+        <div class="table_box1 table_overflowx">
+            <div id="business_table">
+                <table id="myTable" class="tablesorter">
+                    <thead>
+                        <tr class="css_tr title">
+                            <th class="css_td line W10">客戶編號</th>
+                            <th class="css_td line W15">客戶名稱</th>
+                            <th class="css_td line W10">燈號</th>
+                            <th class="css_td line W10">品名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="css_tr">
+                            <td class="css_td" style="text-align:center">AA000</td>
+                            <td class="css_td" style="text-align:center">大大食品A0</td>
+                            <td class="css_td" style="text-align:center">紅/黃</td>
+                            <td class="css_td" style="text-align:center">顯示規則名稱</td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td" style="text-align:center">AA000</td>
+                            <td class="css_td" style="text-align:center">大大食品A0</td>
+                            <td class="css_td" style="text-align:center">紅/黃</td>
+                            <td class="css_td" style="text-align:center">顯示規則名稱</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------------------------->
+<div id="go_3">&nbsp;</div>
+<div class="index_title"><h2>送樣記錄</h2></div>
+ <div class="oderlist">
+        <div class="table_box1 table_overflowx">
+            <div id="business_table">
+                <table id="myTable" class="tablesorter table_w_medium">
+                    <thead>
+                        <tr class="css_tr title">
+                            
+                            <th class="css_td line W10">送樣日期<span><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowup.png" alt="遞增" title="遞增" /><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowdown.png" alt="遞減" title="遞減" /></span></th>
+                            <th class="css_td line W10">產品編號<span><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowup.png" alt="遞增" title="遞增" /><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowdown.png" alt="遞減" title="遞減" /></span></th>
+                            <th class="css_td line W10 tdnone320 tdnone767">樣品編號<span><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowup.png" alt="遞增" title="遞增" /><img src="http://ESCRM.netdoing.com.tw:8888/Images/arrowdown.png" alt="遞減" title="遞減" /></span></th>
+                            <th class="css_td line">品名</th>
+                            <th class="css_td line tdnone320 tdnone767">規格</th>
+                            <th class="css_td line W5">數量</th>
+                            <th class="css_td line">客戶</th>
+                            <th class="css_td line">業務</th>
+                            <th class="css_td line tdnone320 tdnone767">運送方式</th>
+                            <th class="css_td line tdnone320 tdnone767">備註</th>
+                          
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="css_tr">
+                            
+                            <td class="css_td" style="text-align:center">2021/09/01</td>
+                            <td class="css_td" style="text-align:center">OIL00-1L</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">28656862</td>
+                            <td class="css_td">覆盆子香精 186053</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">50G</td>
+                            <td class="css_td" style="text-align:center">4箱</td>
+                            <td class="css_td" style="text-align:center">鑫元茶葉C2</td>
+                            <td class="css_td" style="text-align:center">635-H區-蔡詩倩</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center">2021.09.06郵寄</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center"></td>
+                      
+                        </tr>
+                         <tr class="css_tr">
+                            
+                            <td class="css_td" style="text-align:center">2021/09/01</td>
+                            <td class="css_td" style="text-align:center">OIL00-1L</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">28656862</td>
+                            <td class="css_td">覆盆子香精 186053</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">50G</td>
+                            <td class="css_td" style="text-align:center">4箱</td>
+                            <td class="css_td" style="text-align:center">鑫元茶葉C2</td>
+                            <td class="css_td" style="text-align:center">635-H區-蔡詩倩</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center">2021.09.06郵寄</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center"></td>
+                         
+                        </tr>
+                         <tr class="css_tr">
+                            
+                            <td class="css_td" style="text-align:center">2021/09/01</td>
+                            <td class="css_td" style="text-align:center">OIL00-1L</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">28656862</td>
+                            <td class="css_td">覆盆子香精 186053</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">50G</td>
+                            <td class="css_td" style="text-align:center">4箱</td>
+                            <td class="css_td" style="text-align:center">鑫元茶葉C2</td>
+                            <td class="css_td" style="text-align:center">635-H區-蔡詩倩</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center">2021.09.06郵寄</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center"></td>
+                          
+                        </tr>
+                        <tr class="css_tr">
+                           
+                            <td class="css_td" style="text-align:center">2021/09/01</td>
+                            <td class="css_td" style="text-align:center">OIL00-1L</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">28656862</td>
+                            <td class="css_td">覆盆子香精 186053</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">50G</td>
+                            <td class="css_td" style="text-align:center">4箱</td>
+                            <td class="css_td" style="text-align:center">鑫元茶葉C2</td>
+                            <td class="css_td" style="text-align:center">635-H區-蔡詩倩</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center">2021.09.06郵寄</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center"></td>
+                      
+                        </tr>
+                        <tr class="css_tr">
+                          
+                            <td class="css_td" style="text-align:center">2021/09/01</td>
+                            <td class="css_td" style="text-align:center">OIL00-1L</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">28656862</td>
+                            <td class="css_td">覆盆子香精 186053</td>
+                            <td class="css_td tdnone320 tdnone767" style="text-align:center">50G</td>
+                            <td class="css_td" style="text-align:center">4箱</td>
+                            <td class="css_td" style="text-align:center">鑫元茶葉C2</td>
+                            <td class="css_td" style="text-align:center">635-H區-蔡詩倩</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center">2021.09.06郵寄</td>
+                            <td class="css_td  tdnone320 tdnone767" style="text-align:center"></td>
+                       
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<!--------------------------------------------------------->
+<div id="go_4">&nbsp;</div>
+<div class="index_title"><h2>業績目標</h2></div>
+ <div class="oderlist">
+          <div class="table_bgbox table_overflowx">
+            <div class="table_overflowx">
+            <div id="business_table">
+                <p class="business_name">635-H區-蔡詩倩</p>
+                <table id="myTable" class="tablesorter table_w_small">
+                    <thead>
+                        <tr class="css_tr title">
+                            <!--標題列-->
+                            <th class="css_td line W20"></th>
+                            <th class="css_td line W20">10</th>
+                            <th class="css_td line W20">11</th>
+                            <th class="css_td line W20">12</th>
+                            <th class="css_td line W20">年度業績</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="css_tr">
+                            <td class="css_td">達成業績</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">業績目標</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">達成比例</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">業績差額</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>                       
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+        <div class="table_bgbox">
+          <div class="table_overflowx">
+            <div id="business_table">
+                <p class="business_name">623-K區-謝淑萍</p>
+                <table id="myTable" class="tablesorter table_w_small">
+                    <thead>
+                        <tr class="css_tr title">
+                            <!--標題列-->
+                            <th class="css_td line"></th>
+                            <th class="css_td line W20">10</th>
+                            <th class="css_td line W20">11</th>
+                            <th class="css_td line W20">12</th>
+                            <th class="css_td line W20">年度業績</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="css_tr">
+                            <td class="css_td">達成業績</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">業績目標</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">達成比例</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+
+                            <td class="css_td"></td>
+                        </tr>
+                        <tr class="css_tr">
+                            <td class="css_td">業績差額</td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                            <td class="css_td"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+<!--------------------------------------------------------->
+          
+<!----內容放置-------------------------------->
+        </div>
+
+      </div>
+      <!-- rightbox end-->
+
+    </div>
+  </div>
+  <!----container--end------------------------------>
+  <!----footer-------------------------------->
+  <div class="footer"><div class="footerbox">
+      <div class="copyright">
+        Copyright © 2022 All Rights Reserved.本網站所有著作權均屬本站所有，非經允許，不得任意轉載
+      </div>
+
+  </div></div>
+
+
+
+
+
+
+  <!----footer--end------------------------------>
+
+
+
+</body>
+
+
+</html><script type="text/javascript" src="frontjs/gotop.js"></script>

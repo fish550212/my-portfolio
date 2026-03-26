@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Woodpecker</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+
+    <!-- <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script> -->
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+            <!--ul class="iconbox">
+                <li>
+                    <a href="#"><img src="./enfrontimages/icon-linked.png" alt=""></a>
+                </li>
+            </ul-->
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id="menu">
+                    <li><a href="index.html" title="Home">Home</a> </li>
+
+                    <li><a href="page-Product.html" title="Product">Product</a>
+                        <ul>
+                            <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                            <li><a href="page-QED.html" title="QED">QED</a></li>
+                            <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                            <li><a href="page-System.html" title=" System">System</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Technology.html" title="Technology">Technology</a>
+                        <ul>
+                            <li><a href="page-solutions.html" title="Solutions">Solutions</a>
+                            </li>
+                            <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical White
+                                    Paper</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-pressrelease.html" title="News &amp; Events">News</a>
+                        <ul>
+                            <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                            <li><a href="page-events.html" title="Events">Events</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-Career.html" title="Career ">Career</a>
+                    </li>
+                    <li><a href="page-managementteam.html" title="About us">About us</a>
+                        <ul style="display: none;">
+                            <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                            <li><a href="page-Partners.html" title="Partners">Partners</a> </li>
+                            <li><a href="page-contacts-locations.html" title="Contacts and Locations">Locations</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="page-contactus.html" title="Contact us">Contact us</a>
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <a href="#" title="後台管理" class="oa_btn"><img src="" alt=""></a>
+
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class="reset">
+
+                    <li class="nav-first">
+                        <h2><a href="#" title="Home">Home</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="index.html" title="Home">Home</a> </li>
+
+                            </ul>
+
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Product">Product</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Product.html" title="Product">Product</a></li>
+                                <li><a href="page-Lockstep.html" title="Lockstep">Lockstep</a></li>
+                                <li><a href="page-QED.html" title="QED">QED</a></li>
+                                <li><a href="page-EQED.html" title="EQED">EQED</a></li>
+                                <li><a href="page-System.html" title="System">System</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="Technology">Technology</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-Technology.html" title="Technology">Technology</a></li>
+                                <li><a href="page-solutions.html" title="Solutions">Solutions</a></li>
+                                <li><a href="page-technical-WhitePaper.html" title="Technical White Paper">Technical
+                                        White Paper</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="News">News</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-pressrelease.html" title="Press release">Press release</a></li>
+                                <li><a href="page-events.html" title="Events">Events</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-Career.html" title="Career">Career</a></h2>
+                    </li>
+                    <li class="nav-first">
+                        <h2><a href="#" title="About us">About us</a></h2>
+                        <div class="nav-second">
+                            <ul class="reset">
+                                <li><a href="page-managementteam.html" title="Management Team">Management Team</a></li>
+                                <li><a href="page-Partners.html" title="Partners">Partners</a></li>
+                                <li><a href="page-contacts-locations.html" title="Locations">
+                                        Locations</a> </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <h2><a href="page-contactus.html" title="Contact us">Contact us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page_topbg-career.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Career
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+
+
+    <!--adv-end-->
+
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+            <div class="pagecontent ullist">
+                <div class="pagecontentbox">
+                    <ul>
+                        <li>
+                            <div class="titlebox">
+                                HR Statement
+                            </div>
+                            <p>
+                                Woodpecker firmly believe that our employees are our most valuable assets. We are
+                                dedicated to creating a positive and supportive work environment to attract, nurture,
+                                and retain exceptional talent. We expect our automated verification solutions would
+                                become the go-to choice for businesses worldwide.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="titlebox">
+                                Explore Life at Woodpecker
+                            </div>
+                            <p>
+                                We are a diverse and passionate group of professionals who thrive on collaboration,
+                                shared success, and individuality. At Woodpecker, we foster an environment of seamless
+                                collaboration and embrace the unique contributions of every team member. Join us, and
+                                you'll truly belong.
+                            </p>
+                        </li>
+
+                        <li>
+                            <div class="titlebox">
+                                Join Our Elite Team
+                            </div>
+                            <p>
+                                This is an exceptional opportunity to join an elite team and contribute to
+                                groundbreaking innovation in a challenging field. You have the opportunity to become an
+                                integral partner in our company's success.
+                            </p>
+                        </li>
+                        <li>
+                            <div class="titlebox">
+                                Help Us Transform Entire Industries
+                            </div>
+                            <p>
+                                At Woodpecker, you'll have the chance to solve some of the world's toughest problems and
+                                discover groundbreaking ways. The breakthroughs we achieve at Woodpecker have a profound
+                                impact on businesses worldwide, enabling them to work faster, better, and smarter. Join
+                                our team and be part of the transformation.
+                            </p>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            
+
+            
+            <!---------------------產品應用-->
+            <div class="application product">
+                <div class="applicationbox productbox">
+                    <div class="titlebox">
+                       Open Positions
+                    </div>
+                    <div class="careerbox">
+                        <ul class="tabs">
+                            <li class="active"><a href="#tab1"><b>C++ Software Engineer</b></a></li>
+                            <li><a href="#tab2"><b>RTL Design Engineer</b></a></li>
+                            <li><a href="#tab3"><b>Sr.RTL Design Engineer</b></a></li>
+                            <li><a href="#tab4"><b>Sr.Software Engineer-Compiler Expert</b></a></li>
+                        </ul>
+                        <div id="tab1" class="tab-content">
+                            <p class="font_text">
+                                C++ Software Engineer
+                            <a href="Mailto: HR@Woodpeckerx.com?Subject=Please specify the position you like to apply&body=Please attach your CV in .pdf format, thank you." class="btn">Apply Now</a></p>
+                            <!--頁簽應用-->
+                            <div class="typebox">
+                                Location
+                            </div>
+                            <div class="flex">
+                                Shanghai, Hangzhou, Taiwan is preferred
+                            </div>
+                            <div class="typebox">
+                                Job Description
+                            </div>
+                            <div class="flex">
+                                We are seeking a highly-motivated and detail-oriented senior software engineer with
+                                expertise in compilers to join our company. The role will be focused on verifying
+                                products that are based on innovative verification techniques that came from years of
+                                research at Stanford University and we are expanding and moving them into an industrial
+                                use. You will be responsible for building and maintaining a compiler (on top of LLVM and
+                                GCC) that is used to generate tests for HW verification and validation.
+                                This is a great opportunity to join an elite team and learn, contribute and innovate in an area that is
+                                so in need of a big improvement. The individual will also work with customers to
+                                integrate the tool in their verification flow.
+                            </div>
+
+                            <div class="typebox">
+                                Primary responsibilities
+                            </div>
+
+                            <div class="flex">
+                                <p>
+                                The responsibilities will be tailored to the candidate's skills and expertise and will
+                                include several of the following, but not be limited to:
+                            </p>
+                                <ul>
+                                    <li>Modifying LLVM and/or GCC and building a compiler with a particular kind of
+                                        output.</li>
+                                    <li>Writing testplans and maintaining them.</li>
+                                    <li>
+                                        Creating the verification environment for testing the new compiler for different
+                                        ISAs such as RISC-V, ARM, etc.
+                                    </li>
+                                    <li>
+                                        Innovating new features and techniques for our verification solutions.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Minimum Qualifications
+                            </div>
+                            <div class="flex">
+                                <ul>
+                                    <li>BS, MS, or PhD in EE/CS or equivalent degree.</li>
+                                    <li>2+ (with BS) or 1+ (with MS/PhD) years of experience in SW engineering and
+                                        verification.</li>
+                                    <li>
+                                        Expert Linux user with experience in at least one programming language like C,
+                                        C++ or Java and one scripting language for setting up verification process
+                                        automation including regressions.
+                                    </li>
+                                    <li>
+                                        Good knowledge and experience with SW verification tools and concepts.
+                                    </li>
+                                    <li>
+                                        Experience with revision control methodology/systems such as Perforce or GIT.
+                                    </li>
+                                    <li>
+                                        Strong analytical and problem-solving skills.
+                                    </li>
+                                    <li>
+                                        Ability to work independently and at various levels of abstraction.
+                                    </li>
+                                    <li>
+                                        Strong communication, inter-personal and teamwork skills.
+                                    </li>
+                                    <li>
+                                        Strong desire to learn various skills needed in a start-up environment.
+                                    </li>
+                                    <li>
+                                        Ability to work effectively with both internal and external teams/customers.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Preferred Skills
+                            </div>
+                            <div class="flex">
+                                The ideal candidate will be able to demonstrate the following behaviors:
+                                <ul>
+                                    <li>Some experience in post-Si validation/debug.</li>
+                                    <li>Experience with using cloud computing platforms such as AWS or GCP.</li>
+                                </ul>
+
+                            </div>
+                            <!--應用-->
+                        </div>
+                        <div id="tab2" class="tab-content">
+                            <p class="font_text">
+                                RTL Design Engineer
+                             <a href="Mailto: HR@Woodpeckerx.com?Subject=Please specify the position you like to apply&body=Please attach your CV in .pdf format, thank you." class="btn">Apply Now</a></p>
+                            <!--應用-->
+                            <div class="typebox">
+                                Location
+                            </div>
+                            <div class="flex">
+                                Shanghai, Hangzhou, Taiwan is preferred
+                            </div>
+                            
+                            <div class="typebox">
+                                Job Description
+                            </div>
+                            <div class="flex">
+                                We are seeking a highly-motivated and detail-oriented RTL design and verification
+                                engineer to join our company. The role will be focused on implementing and verifying
+                                products that are based on innovative verification techniques that came from years of
+                                research at Stanford University and we are expanding and moving them into an industrial
+                                use. You will be responsible for developing, debugging, and maintaining code for
+                                Woodpecker’s verification IPs, and testing it in formal verification environments that
+                                the verification IPs would be used in. This is a great opportunity to join an elite team
+                                and learn, contribute and innovate in an area that is in need of a big improvement. The
+                                individual will also work with customers to integrate the IPs in their verification
+                                flow.
+                                <br><br>
+                                Woodpecker offers an attractive and competitive compensation with meaningful equity for
+                                the selected candidate.
+                            </div>
+
+                            <div class="typebox">
+                                Primary responsibilities
+                            </div>
+
+                            <div class="flex">
+                                The responsibilities will be tailored to the candidate's skills and expertise and will
+                                include several of the following, but not be limited to:
+                                <ul>
+                                    <li>Developing deep understanding of Woodpecker’s IPs and products.</li>
+                                    <li>Innovating new features and techniques for our verification solutions.</li>
+                                    <li>Writing specification documents and maintaining them.</li>
+                                    <li>Working with verification engineers on testplans.</li>
+                                    <li>Writing RTL and PSL or SVA code.</li>
+                                    <li>Ensuring the logic design meets the architectural specifications.</li>
+                                    <li>Setting up RTL design environment, tools, methodologies, and infrastructure.</li>
+                                    <li>Analyzing verification coverage and debugging failures.</li>
+                                    <li>Expanding our IPs’ features list by analyzing micro-architectural features  of target designs.</li>
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Qualifications
+                            </div>
+                            <div class="flex">
+                                <ul>
+                                    <li>BS, MS, or PhD in EE/CS or equivalent degree.</li>
+                                    <li>2+ (with BS) or 1+ (with MS/PhD) years of experience in verification of ASICs or IP blocks or SoCs.</li>
+                                    <li>Strong background in computer architecture and advanced knowledge of CPU.</li>
+                                    <li>Strong experience in parameterized and configurable Verilog/ System Verilog coding.</li>
+                                    <li>Strong experience with chip front-end design process including related 3rd-party RTL verification tools and revision control methodology/systems such as Perforce or GIT.</li>
+                                    <li>Proficient Linux user with experience in at least one programming language like C, C++ or Java and one scripting language for setting up a front-end design infrastructure and build environment.</li>
+                                    <li>Demonstrable knowledge and experience with formal model checking tools and concepts.</li>
+                                    <li>Familiarity with using cloud computing platforms such as AWS or GCP.</li>
+                                    <li>Strong analytical and problem-solving skills.</li>
+                                    <li>Ability to work independently and at various levels of abstraction.</li>
+                                    <li>Strong communication, inter-personal and teamwork skills.</li>
+                                    <li>Strong desire to learn various skills needed in a start-up environment.</li>
+                                    <li>Ability to work effectively with both internal and external teams/customers.</li>
+
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Preferred Skills
+                            </div>
+                            <div class="flex">
+                                
+                                <ul>
+                                    <li>Experience with SoC architecture, integration and/or verification.</li>
+                                    <li>Familiarity with IP encryption methodologies and implementation.</li>
+                                    <li>Experience with on-chip bus protocols like ACE, AHB, AXI etc.</li>
+                                    <li>Knowledge of DFT (design for test), DFD (design for debug), and manufacturing test flow.</li>
+                                    <li>Experience in post-Si validation/debug.</li>
+                                    <li>Basic understanding of high-level language compiler technology.</li>                                    
+                                </ul>
+
+                            </div>
+
+                            <!--應用-->
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <p class="font_text">
+                                Sr.RTL Design Engineer
+                             <a href="Mailto: HR@Woodpeckerx.com?Subject=Please specify the position you like to apply&body=Please attach your CV in .pdf format, thank you." class="btn">Apply Now</a></p>
+                             <!--應用-->
+                             <div class="typebox">
+                                Location
+                            </div>
+                            <div class="flex">
+                                Worldwide
+                            </div>
+                             <div class="typebox">
+                                Job Description
+                            </div>
+                            <div class="flex">
+                                We are seeking a highly-motivated and detail-oriented RTL design and verification engineer to join our company.  The role will be focused on implementing and verifying products that are based on innovative verification techniques that came from years of research at Stanford University and we are expanding and moving them into an industrial use.  You will be responsible for developing, debugging, and maintaining code for Woodpecker’s verification IPs, and testing it in formal verification environments that the verification IPs would be used in.  This is a great opportunity to join an elite team and learn, contribute and innovate in an area that is in need of a big improvement.  The individual will also work with customers to integrate the IPs in their verification flow.
+                                <br><br>
+                                Woodpecker offers an attractive and competitive compensation with meaningful equity for the selected candidate.
+                            </div>
+
+                            <div class="typebox">
+                                Primary responsibilities
+                            </div>
+
+                            <div class="flex">
+                                The responsibilities will be tailored to the candidate's skills and expertise and will include several of the following, but not be limited to:
+                                <ul>
+                                    <li>Developing deep understanding of Woodpecker’s IPs and products.</li>
+                                    <li>Innovating new features and techniques for our verification solutions.</li>
+                                    <li>Writing specification documents and maintaining them.</li>
+                                    <li>Working with verification engineers on testplans.</li>
+                                    <li>Writing RTL and PSL or SVA code.</li>
+                                    <li>Ensuring the logic design meets the architectural specifications.</li>
+                                    <li>Setting up RTL design environment, tools, methodologies, and infrastructure.</li>
+                                    <li>Analyzing verification coverage and debugging failures.</li>
+                                    <li>Expanding our IPs’ features list by analyzing micro-architectural features  of target designs.</li>
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Qualifications
+                            </div>
+                            <div class="flex">
+                                <ul>
+                                    <li>BS, MS, or PhD in EE/CS or equivalent degree.</li>
+                                    <li>7+ (with BS) or 5+ (with MS/PhD) years of experience in verification of ASICs or IP blocks or SoCs.</li>
+                                    <li>Strong background in computer architecture and advanced knowledge of CPU.</li>
+                                    <li>Strong experience in parameterized and configurable Verilog/ System Verilog coding.</li>
+                                    <li>Strong experience with chip front-end design process including related 3rd-party RTL verification tools and revision control methodology/systems such as Perforce or GIT.</li>
+                                    <li>Proficient Linux user with experience in at least one programming language like C, C++ or Java and one scripting language for setting up a front-end design infrastructure and build environment.</li>
+                                    <li>Demonstrable knowledge and experience with formal model checking tools and concepts.</li>
+                                    <li>Familiarity with using cloud computing platforms such as AWS or GCP.</li>
+                                    <li>Strong analytical and problem-solving skills.</li>
+                                    <li>Ability to work independently and at various levels of abstraction.</li>
+                                    <li>Strong communication, inter-personal and teamwork skills.</li>
+                                    <li>Strong desire to learn various skills needed in a start-up environment.</li>
+                                    <li>Ability to work effectively with both internal and external teams/customers.</li>
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Preferred Skills
+                            </div>
+                            <div class="flex">
+                                
+                                <ul>
+                                    <li>Experience with SoC architecture, integration and/or verification.</li>
+                                    <li>Familiarity with IP encryption methodologies and implementation.</li>
+                                    <li>Experience with on-chip bus protocols like ACE, AHB, AXI etc.</li>
+                                    <li>Knowledge of DFT (design for test), DFD (design for debug), and manufacturing test flow.</li>
+                                    <li>Experience in post-Si validation/debug.</li>
+                                    <li>Basic understanding of high-level language compiler technology.</li>    
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tab4" class="tab-content">
+                            <p class="font_text">
+                                Sr. Software Engineer-Compiler Expert
+                             <a href="Mailto: HR@Woodpeckerx.com?Subject=Please specify the position you like to apply&body=Please attach your CV in .pdf format, thank you." class="btn">Apply Now</a></p>
+                            
+                             <!--應用-->
+                             <div class="typebox">
+                                Location
+                            </div>
+                            <div class="flex">
+                                Worldwide (Have chance to WFH)
+                            </div>
+                             <div class="typebox">
+                                Job Description
+                            </div>
+                            <div class="flex">
+                                We are seeking a highly-motivated and detail-oriented senior software engineer with expertise in compilers to join our company.  The role will be focused on verifying products that are based on innovative verification techniques that came from years of research at Stanford University and we are expanding and moving them into an industrial use.  You will be responsible for building and maintaining a compiler (on top of LLVM and GCC) that is used to generate tests for HW verification and validation.  This is a great opportunity to join an elite team and learn, contribute and innovate in an area that is so in need of a big improvement.  The individual will also work with customers to integrate the tool in their verification flow. 
+                            </div>
+
+                            <div class="typebox">
+                                Primary responsibilities
+                            </div>
+
+                            <div class="flex">
+                                The responsibilities will be tailored to the candidate's skills and expertise and will include several of the following, but not be limited to:
+                                <ul>
+                                    <li>Modifying LLVM and/or GCC and building a compiler with a particular kind of output.</li>
+                                    <li>Writing testplans and maintaining them.</li>
+                                    <li>Creating the verification environment for testing the new compiler for different ISAs such as RISC-V, ARM, etc.</li>
+                                    <li>Innovating new features and techniques for our verification solutions.</li>                                    
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Minimum Qualifications
+                            </div>
+                            <div class="flex">
+                                <ul>
+                                    <li>BS, MS, or PhD in EE/CS or equivalent degree.</li>
+                                    <li>8+ (with BS) or 5+ (with MS/PhD) years of experience in SW engineering and verification.</li>
+                                    <li>Strong background in compiler technology.</li>
+                                    <li>Demonstrable experience writing code in LLVM and/or GCC environments and tools.</li>
+                                    <li>Expert Linux user with experience in at least one programming language like C, C++ or Java and one scripting language for setting up verification process automation including regressions.</li>
+                                    <li>Good knowledge and experience with SW verification tools and concepts.</li>
+                                    <li>Familiarity with some ISAs (instruction set architecture) such as RISC-V, ARM, x86.</li>
+                                    <li>Experience with revision control methodology/systems such as Perforce or GIT.</li>
+                                    <li>Strong analytical and problem-solving skills.</li>
+                                    <li>Ability to work independently and at various levels of abstraction.</li>
+                                    <li>Strong communication, inter-personal and teamwork skills.</li>
+                                    <li>Strong desire to learn various skills needed in a start-up environment.</li>         
+                                    <li>Ability to work effectively with both internal and external teams/customers.</li>                           
+                                </ul>
+                            </div>
+                            <div class="typebox">
+                                Preferred Skills
+                            </div>
+                            <div class="flex">
+                                The ideal candidate will be able to demonstrate the following behaviors:
+                                <ul>
+                                    <li>Some experience in post-Si validation/debug.</li>
+                                    <li>Experience with using cloud computing platforms such as AWS or GCP</li>   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--產品分類語法-->
+            <script>
+                $(document).ready(function () {
+                    // 將第一個頁簽的內容設置為可見
+                    $('.tab-content').first().show();
+                    // 顯示第一個頁籤的顏色
+                    $('.tabs li:first-child').addClass('active');
+                    // 檢查超連結中是否包含有效的 ID
+                    if (window.location.hash) {
+                        // 根據超連結中的 ID 選擇對應的頁簽
+                        var target = $(window.location.hash);
+                        if (target.length) {
+                            // 隱藏所有頁簽內容
+                            $('.tab-content').hide();
+                            // 顯示選擇的頁簽內容
+                            target.show();
+                            // 移除所有頁簽的選中狀態
+                            $('.tabs li').removeClass('active');
+                            // 將選擇的頁簽設置為選中狀態
+                            target.parent().addClass('active');
+                        }
+                    }
+                    // 頁簽點擊事件
+                    $('.tabs li a').click(function () {
+                        // 隱藏所有頁簽內容
+                        $('.tab-content').hide();
+                        // 顯示所選擇的頁簽內容
+                        $($(this).attr('href')).show();
+                        // 移除所有頁簽的選中狀態
+                        $('.tabs li').removeClass('active');
+                        // 將所選擇的頁簽設置為選中狀態
+                        $(this).parent().addClass('active');
+                        // 防止默認的超連結操作
+                        return false;
+                    });
+                });
+            </script>
+
+       <!--indexsitemap------------------下方選單------->
+                     <div class="indexsitemap">
+                        <div class="indexsitemapbox">                    
+    
+                            <div class="centerbox">
+    
+                                                            
+                            </div>
+                            <div class="detailbox">
+                                <div class="title_logo">
+                                    <a href="index.html">
+                                    <img src="enfrontimages/footer_logo.png" alt="">
+                                </a>
+                                </div>
+                                
+                                <ul class="material">
+                                                                       <li>
+                                        <a href="#">
+                                            <img src="enfrontimages/icon-email.png" alt="">
+                                        </a>                                  
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="enfrontimages/icon-linked.png" alt="">
+                                        </a>                                   
+                                    </li>                                
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>Copyright © 2023 Woodpecker Technologies</p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#menutop div,
+#menutop dl,
+#menutop dt,
+#menutop dd,
+#menutop ul,
+#menutop ol,
+#menutop li,
+#menutop h1,
+#menutop h2,
+#menutop h3,
+#menutop h4,
+#menutop h5,
+#menutop h6,
+#menutop pre,
+#menutop form,
+#menutop fieldset,
+#menutop input,
+#menutop textarea,
+#menutop p,
+#menutop blockquote,
+#menutop th,
+#menutop td {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.SHUT {
+  display: none;
+}
+
+.MENU {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-bottom: -11px;
+  position: relative;
+  z-index: 5; /*box-shadow: 1px 1px 5px #000; */
+}
+#menutop .COM {
+  margin: 0px auto;
+  width: calc(100% - 50px);
+  height: auto;
+  clear: both;
+  background-color: #246eae;
+}
+.MENU::before {
+  content: "";
+  width: 25px;
+  height: 50px;
+  background-color: #1a4e7a;
+  transform: skewY(25deg);
+  margin-top: -6px;
+}
+.MENU::after {
+  content: "";
+  width: 25px;
+  height: 50px;
+  background-color: #1a4e7a;
+  transform: skewY(-25deg);
+  margin-top: -6px;
+}
+.MENU_F {
+  top: 0px;
+  position: fixed;
+  z-index: 1000;
+}
+.MENU h2 {
+  font-size: 1.2em;
+}
+.MENU h3 {
+  font-size: 1em;
+  font-weight: inherit;
+}
+.MENU > ul {
+  width: 100%;
+  display: flex;
+  height: 50px;
+
+}
+.MENU ul li {
+  width: calc(100% / 12);
+  height: 50px;
+  float: left;
+  position: relative;
+}
+
+.MENU ul li a {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  text-decoration: none;
+  display: block;
+}
+.MENU ul li:hover {
+  background-color: #003e73;
+}
+.MENU ul li:hover a {
+  color: rgb(255, 255, 255);
+}
+
+/*MENU第二層*/
+.MENU ul li > ul {
+  width:140px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: 999;
+   box-shadow: 0px 2px 5px 0px #0000003d;
+}
+.MENU ul li > ul li {
+  width: 100%;
+  height: 50px;
+  
+  color: #fff;
+}
+
+.MENU ul li > ul li a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: left;
+  text-indent: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color:#06589feb;
+  font-size: 18px;
+}
+.MENU ul li > ul li a:hover {
+  background-color: #003E73;
+}
+
+/* == 手機版型區 =============================== */
+
+@media screen and (max-width: 767px) {
+  .MENU {
+    display: none;
+  }
+}
+
+/* == 平板版型區 =============================== */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .MENU {
+    display: none;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1119px) {
+}

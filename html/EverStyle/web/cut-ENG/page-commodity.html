@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ever Style</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+        .flexslider {
+            width: 100%;
+        }
+
+        div.flexslider_6 ol {
+            bottom: 0px;
+            display: none;
+            /*點點*/
+        }
+
+        div.flexslider_6 div.flex-pauseplay {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        function save_currentSlide() {
+            this.currentSlide_1 = null;
+            this.set_1 = function (num) {
+                this.currentSlide_1 = num;
+            }
+            this.get_1 = function () {
+                return this.currentSlide_1;
+            }
+            this.currentSlide_2 = null;
+            this.set_2 = function (num) {
+                this.currentSlide_2 = num;
+            }
+            this.get_2 = function () {
+                return this.currentSlide_2;
+            }
+
+            this.set_paging_OL_Event = function (slider) {
+                const CurrentSlide_X = this;
+                const slides_a_all = slider.slides.children();
+                const paging_OL_a_all = slider.controlNav;
+                const paging_UL_a_all = slider.directionNav;
+
+                $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+                    let slides_a = slides_a_all[index];
+                    if (slides_a.title != "") {
+                        let content = slides_a.title.replace("開新視窗,", "");
+                        $(this).children().attr("title", slides_a.title);
+                        $(this).children().html(content);
+                    }
+                    $(this).keydown(function (event) {
+                        if (event.which == 13) {
+                            slides_a.click();
+                        }
+                    });
+                });
+
+                //離開 1
+                paging_UL_a_all[1].addEventListener("keydown",
+                    function (event) {
+                        if (event.which === 9) {
+                            CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                            slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                            slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                            slider.play();
+                        }
+                    });
+
+                //離開 2
+                $("body").click(function () {
+                    let sliderIsFocus = false;
+                    for (let i = 0; i < slides_a_all.length; i++) {
+                        sliderIsFocus |= slides_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_OL_a_all.length; i++) {
+                        sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_UL_a_all.length; i++) {
+                        sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+                    }
+                    if (!sliderIsFocus && !slider.playing) {
+                        CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                        slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                        slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                        slider.play();
+                    }
+                });
+            }
+        }
+    </script>
+
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script>
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id='menu'>
+                    <li><a href='index.html' title='Home'>Home</a>
+                        <!-- <ul>
+                            <li><a href='index.html' title='Home'>Home</a> </li>
+                            <li><a href='page-news.html' title='News'>News</a></li>
+                        </ul> -->
+                    </li>
+
+                    <li><a href='page-company.html' title='About Us'>About Us</a>
+                        <ul>
+                            <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                            <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                        <ul>
+                            <li><a href='page-quality.html' title='QM'>QM</a></li>
+                            <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                            <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-application.html' title='Products'>Products</a>
+                        <ul>
+                            <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a></li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <!-- <a href='#' title='後台管理' class="oa_btn">後台管理</a> -->
+                <select onchange="gotoUrl(this)">
+                    <option value="../cut/page-commodity.html">中文</option>
+                    <option value="../cut-ENG/page-commodity.html" selected>ENG</option>
+                </select>
+                <script>
+                    function gotoUrl(selectObject) {
+                      var value = selectObject.value;
+                      if (value) {
+                        window.location.href = value;
+                      }
+                    }
+                    </script>
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class='reset'>
+
+                    <li>
+                        <h2><a href='#' title='Home'>Home</a></h2>
+                        <!-- <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='index.html' title='Home'>Home</a> </li>
+                                <li><a href='page-news.html' title='News'>News</a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='About Us'>About Us</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h2><a href='#' title='QC and R&D'>QC and R&D</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                                <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='Products'>Products</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                            <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='page-contact.html' title='Contact Us'>Contact Us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page-commodity-bg.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Food Flavor Series
+                <div class="bottom_line"></div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+
+    <!--article-->
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+            <div class="pagecontent imagesgroup">                
+                <div class="pagecontentbox imagesgroupbox">                        
+                        <div class="textbox">
+                            <div class="title">Flavor, Flavor&Color, Flavor Powder</div>                            
+                            <p>
+                                Improve aroma, stabilize flavor quality, enrich taste, enhance color and luste, also the diversity of product. In addition, we provide customized services too, welcome to inquire.
+                            </p>
+                        </div>
+                        <div class="imgbox">
+                            <img src="enfrontimages/page-top-img.png" alt="公司介紹">
+                        </div>
+                        <div class="clear-fix"></div>
+                </div>
+            </div>
+            <!---------------------水果圖-->
+            <div class="pagecontent fruitgroup">
+                <div class="pagecontentbox fruitgroupbox">
+                    <ul>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-1.png" alt="水果系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Fruit</div>
+                                <p> Citrus, Berries, Grape, Apple, Tropical fruit, Melon, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-2.png" alt="奶系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Milk</div>
+                                <p>Milk, Butter, Cheese, Yogurt, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-3.png" alt="糖果/甜味系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Sweetness</div>
+                                <p>Honey, Brown sugar, Caramel, Maple sugar, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-4.png" alt="飲料系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Beverage</div>
+                                <p>Coffee, Tea, Soft drink, Hard drink, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-5.png" alt="核果/堅果系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Drupe/Nut</div>
+                                <p>Vanilla, Chocolate, Almond, Hazelnut, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-6.png" alt="花草系列">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Flora/Herb</div>
+                                <p>Rose, Jasmine, Osmanthus, Lavender, Mint, etc.</p>
+                            </div>
+                        </li>
+                        <li class="fruitbox">
+                            <div class="imgbox">
+                                <img src="enfrontimages/page-fruit-7.png" alt="其他">
+                            </div>
+                            <div class="textbox">
+                                <div class="title">Other</div>
+                                <p>Vegetable, Savoury, etc Customized Flavor.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="img-bg img-bg-1">
+                    <img src="enfrontimages/page-fruitbg-1.png" alt="">
+                </div>
+                <div class="img-bg img-bg-2">
+                    <img src="enfrontimages/page-fruitbg-2.png" alt="">
+                </div>
+                <div class="img-bg img-bg-3">
+                    <img src="enfrontimages/page-fruitbg-3.png" alt="">
+                </div>
+                <div class="img-bg img-bg-4">
+                    <img src="enfrontimages/page-fruitbg-4.png" alt="">
+                </div>
+            </div>
+
+
+             <!--indexsitemap------------------下方選單------->
+             <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <img src="enfrontimages/footer_logo.png" alt="">
+                            <p>Ever Style Foodstuff Industrial Co., Ltd.</p>
+                        </div>
+                        <ul class="material">
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone.png" alt="">
+                                </span>
+                                <b>(+886 2)2917-9617</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone2.png" alt="">
+                                </span>
+                                <b>(+886 2)2918-5719</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-web.png" alt="">
+                                </span>
+                                <b>http://www.everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-email.png" alt="">
+                                </span>
+                                <b>service@everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-map.png" alt="">
+                                </span>
+                                <b>5F., No.30, Ln.54, Zhongzheng Rd.,<br>
+                                    Xindian Dist., New Taipei City 231, Taiwan.</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="centerbox">
+
+                        <ul id='sitemap'>
+                            <li class="title"><a href='index.html' title='Home'>Home</a>
+                                <!-- <ul>
+                                    <li><a href='index.html' title='Home'>Home</a> </li>
+                                    <li><a href='page-news.html' title='News'>News</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li class="title"><a href='page-company.html' title='About Us'>About Us</a>
+                                <ul>
+                                    <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                    <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                                <ul>
+                                    <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                    <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a>
+                                    </li>
+                                    <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-application.html' title='Products'>Products</a>
+                                <ul>
+                                    <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                        Product Applications</a> </li>
+                                <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                                <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                                <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                                <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                                <li><a href='page-color.html' title='Color'>Color</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-contact.html' title='Contact Us'>Contact Us</a>
+                                <ul>
+                                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a> </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>
+                Copyright © 2022 Ever Style Foodstuff Industrial Co., Ltd.
+            </p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+    <!--動態語法-->
+    <script src="dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+</body>
+
+</html>

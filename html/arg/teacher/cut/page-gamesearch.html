@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>學習體驗平台-教師入口</title>
+
+  <link rel="stylesheet" type="text/css" href="argtercss/erpcss.css" />
+  <link rel="stylesheet" type="text/css" href="argtercss/leftmenu.css" />
+
+
+</head>
+
+<body>
+
+  <!---客服--->
+  <div class="service_chatbox">
+    <a href="#" class="teacher_service" onclick="toggleChatBox(); return false;">
+      <img src="./argterimages/service-icon.png" alt="老師客服">
+    </a>
+    <div id="chatBox" class="chat-box">
+      <div class="title">
+        <span class="close-btn" onclick="closeChatBox();">&times;</span>
+        <b>陳珮華 對話中...</b>
+      </div>
+      <div class="contentbox">
+        <div class="contentin">
+          <div class="content">
+            <div class="gm_message">
+              <p class="stu_name">陳珮華</p>
+              <!--學生名稱-->
+              <div class="innerText">
+                <p>
+                  <!--放文字敘述的地方-->
+                  這題我不會
+                </p>
+              </div>
+              <p class="message_time">
+                下午4:21:05
+              </p>
+            </div>
+
+            <div class="chat_message">
+              <div class="innerText">
+                <p>
+                  <!--放文字敘述的地方-->
+                  給你小提示
+                  <!--放文字敘述的地方-->
+                </p>
+
+              </div>
+              <p class="message_time">
+                下午4:21:05
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="dialogbox">
+        <input class="question" type="text" placeholder="請輸入您要詢問的問題">
+        <input class="send" type="button" value="發送">
+      </div>
+    </div>
+
+    <script>
+      function toggleChatBox() {
+        var chatBox = document.getElementById("chatBox");
+        chatBox.classList.toggle("show");
+      }
+
+      function closeChatBox() {
+        var chatBox = document.getElementById("chatBox");
+        chatBox.classList.remove("show");
+      }
+    </script>
+  </div>
+  <!----header-------------------------------->
+  <div class="header">
+    <div class="headerbox">
+
+
+      <!--logo------------>
+      <H1>
+        <P><a href="#" class="logo"><img src="argterimages/login-logo.png" title="後台標題名稱" />
+            <span>學習體驗平台<b>教師入口</b>
+            </span></a>
+
+          <a href="#" class="logo-mob">
+            <img src="argterimages/login-mob.png" title="後台標題名稱" />
+            <span>學習體驗平台<b>教師入口</b> </span>
+          </a>
+        </P>
+      </H1>
+
+      <!-- <div id="TOP"><img class="TOP" src="./argterimages/gotop.png" title="回到上面" /></div> -->
+      <!--toolbar--------->
+
+      <div class="toolbar">
+
+        <div class="toolbarbox">
+          <span><img src="./argterimages/user.png">管理者 (mark)</span>
+          <span class="outbox"><a href="#" class="out"><img src="./argterimages/out.png">登出</a></span>
+
+
+          <ul class="navbox">
+            <li><a href="#">遊戲建置</a></li>
+            <li><a href="#">ARG參考模板</a></li>
+            <li><a href="page-gamelist.html">遊戲實況</a></li>
+            <li><a href="#">紀錄查詢</a></li>
+          </ul>
+        </div>
+
+      </div>
+      <!--toolbar-end-------->
+
+      <!--MOB-MENU---位置放<div class="headerbox">內----------------->
+      <!--手機選單-漢堡圖-->
+      <div class="mu2 nav-button"><A title="Menu" class="animate" href="#">MENU</A></div>
+      <!--手機選單-END-->
+      <!-- Nav手機選單 -->
+      <LINK href="mobmu/common.css" rel="stylesheet">
+      <!--[if gte IE 9]><!-->
+      <SCRIPT src="mobmu/jquery-2.1.3.min.js"></SCRIPT>
+      <!--<![endif]-->
+      <SCRIPT src="mobmu/jquery.mobile-1.4.5.custom.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/jquery.bxslider-4.1.1.min.js"></SCRIPT>
+      <SCRIPT src="mobmu/common.js"></SCRIPT>
+
+      <div class="nav-panel" id="nav">
+
+        <H1 class="hidden-element">主選單</H1>
+
+        <!-- <div class="othermu">
+          <a href="#2"><img src="argterimages/icon_01.png">回首頁</a>
+          <a href="#1"><img src="argterimages/icon_01.png">登出</a>
+        </div> -->
+
+        <!--DIV class="search-panel clearfix">
+        <FORM action="search.php"><INPUT class="inText" type="text" placeholder="請輸入關鍵字" value="請輸入關鍵字">
+        <INPUT class="submit" type="submit" value="搜尋"></FORM>
+        </DIV-->
+
+        <ul class="reset">
+
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-01.png">遊戲建置</a></h2>
+          </li>
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-02.png">ARG參考模板</a></h2>
+          </li>
+          <li>
+            <h2><a href="page-gamelist.html"><img src="argterimages/menu-03.png">遊戲實況</a></h2>
+          </li>
+          <li>
+            <h2><a href="#"><img src="argterimages/menu-04.png">紀錄查詢</a></h2>
+          </li>
+          <li>
+            <h2><a href="#1"><img src="argterimages/menu-out.png">登出</a></h2>
+          </li>
+        </ul>
+
+      </div>
+      <!--MOB-MENU--END-------------------------------->
+
+
+    </div>
+  </div>
+  <!----header--end------------------------------>
+
+
+
+  <!----container-------------------------------->
+  <div class="container">
+    <div class="containerbox">
+      <!-- rightbox -->
+      <div class="rightbox">
+        <div class="minabg">
+
+          <!---------------標題--------------------->
+          <div class="title-tlink">
+            <h2 class="tlink">
+              <img src="./argterimages/nav-04.png" alt="遊戲紀錄">
+              <span>遊戲紀錄</span>
+            </h2>
+          </div>
+          <!---------------標題-end-------------------->
+          <div class="contentbox">
+            <!-----------內容替換------------------------->
+            <div class="gamesearchbox">
+              <div class="search">
+                <ul>
+                  <li>
+                    <b>活動日期起迄:</b>
+                    <span class="searchdate">
+                    <input type="text" placeholder="輸入日期" style="width: 150px">
+                    <img src="./argterimages/show-calendar.gif" alt="" style="cursor: pointer"></span>
+                    ~
+                    <span class="searchdate">
+                    <input type="text" placeholder="輸入日期" style="width: 150px">
+                    <img src="./argterimages/show-calendar.gif" alt="" style="cursor: pointer"></span>
+                  </li>
+                  <li>
+                    <b>關鍵字:</b>
+                    <input type="text" placeholder="搜尋" style="width: 150px">
+                  </li>
+                </ul>
+                <div class="buttonbox">
+                  <input type="button" value="搜尋" class="abutton" onclick="goBack()">
+                  <input type="button" value="清除" class="abutton" onclick="goBack()">
+                </div>
+              </div>
+              <div class="oderlist">
+                <div class="table_box1 table_overflowx">
+                  <div id="business_table">
+                    <table id="myTable" class="tablesorter table_w_large" border="1">
+                      <tbody>
+                        <tr>
+                          <th align="center">尋寶活動標題</th>
+                          <th align="center">編號</th>
+                          <th align="center">回答日期</th>
+                          <th align="center">回答時間</th>
+                          <th align="center">會員編號</th>
+                          <th align="center">暱稱</th>
+                          <th align="center">作答</th>
+                          <th align="center">答案</th>
+                          <th align="center">答對/錯</th>
+                          <th align="center">回答時間</th>
+                        </tr>
+                        <tr>
+                          <td align="center">重返城中城(N測試)</td>
+                          <td align="center">1</td>
+                          <td align="center">2023/05/09</td>
+                          <td align="center">15:58:09</td>
+                          <td align="center">markchen</td>
+                          <td align="center">陳洨汶</td>
+                          <td align="center">A,B,C,D,E</td>
+                          <td align="center">A,B,C,D,E</td>
+                          <td align="center">正確</td>
+                          <td align="center">17</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="buttonbox">
+              <input type="button" value="上一頁" class="abutton" onclick="goBack()">          
+              <input type="button" value="下一頁" class="abutton" onclick="goBack()">
+              
+            </div>
+            <!---------------內容替換end--------------------->
+          </div>
+          <!------------------------------------>
+
+        </div>
+      </div>
+      <!-- rightbox end-->
+
+    </div>
+  </div>
+  <!----container--end------------------------------>
+  <!----footer-------------------------------->
+  <div class="footer">
+    <div class="footerbox">
+      <div class="copyright">
+        Copyright © 2023 All Rights Reserved.本網站所有著作權均屬本站所有，非經允許，不得任意轉載
+      </div>
+
+    </div>
+  </div>
+  <!----footer--end------------------------------>
+
+
+  <script type="text/javascript" src="argterjs/gotop.js"></script>
+</body>
+<script>
+  function goBack() {
+    history.go(-1);
+  }
+</script>
+
+</html>

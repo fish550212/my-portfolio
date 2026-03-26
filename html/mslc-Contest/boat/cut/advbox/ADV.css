@@ -1,0 +1,272 @@
+/** {	margin: 0px; padding: 0px;}*/
+html {
+    background: rgb(255, 255, 255);
+}
+
+.bannerbox {
+    font: 14px/24px sans-serif;
+    margin: 0px auto;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size-adjust: none;
+    font-stretch: normal;
+    _width: 100%;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+}
+
+.bannerbox.wrapper1 {
+    width: 100%;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.rslides {
+    margin: 0px auto;
+    position: relative;
+}
+
+.rslides {
+    width: 100%;
+    list-style: none;
+    margin: auto;
+    padding: 0px;
+    height:auto;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.rslides li {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+.rslides li:first-child {
+    float: left;
+    display: block;
+}
+
+.rslides img {
+    border: 0px currentColor;
+    border-image: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+}
+
+.rslides_container {
+    width: 100%;
+    margin-bottom: 0px;
+    float: left;
+    position: relative;
+    text-indent: 0px;
+    -webkit-box-sizing: border-box;
+}
+
+.mesk {
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.mesk .box {
+    width: 100%;
+    font-size: 18px;
+    color: #FFF;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+    top: 0px;
+}
+
+
+/*slider1點點設定*/
+.centered-btns_nav {
+    display: block;
+    background: url(../frontimages/ADVbtn.png) no-repeat left top;
+    left: 0px;
+    top: 50%;
+    width: 47px;
+    height: 56px;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: -30px;
+    position: absolute;
+    z-index: 999;
+    opacity: 0.6;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.centered-btns_nav:active {
+    opacity: 1;
+    top: 50%;
+}
+
+.next.centered-btns_nav {
+    background-position: right top;
+    left: auto;
+    right: 0px;
+    top: 50%;
+}
+
+.centered-btns_nav:focus {}
+
+.centered-btns_tabs {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+    /*小圓點位置*/
+}
+
+.centered-btns_tabs li {
+    margin-right: 5px;
+    float: none;
+    display: inline;
+    _float: left;
+}
+
+.centered-btns_tabs a {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    width: 10px;
+    height: 10px;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: inline-block;
+    box-shadow: inset 0px 0px 2px 0px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    _display: block;
+    -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+    -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);
+}
+
+.centered-btns_here a {
+    /*background: rgba(0,117,194,0.9);*/
+    background: rgba(43, 43, 43, 0.62)
+        /*小圓點顏色*/
+}
+
+
+/*==============================手機版型區==============================*/
+@media screen and (max-width: 767px) {
+    .bannerbox {
+        font: 14px/24px sans-serif;
+        margin: 0px auto;
+        text-align: center;
+        color: rgb(51, 51, 51);
+        max-width: 100%;
+        max-height: auto;
+        overflow: hidden;
+        font-size-adjust: none;
+        font-stretch: normal;
+        _width: 1280px;
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+    }
+
+    .rslides img {
+        width: 100%;
+        max-width: 767px;
+        height: auto;
+        max-height: 35%;
+    }
+
+    .rslides_container {
+        width: 100%;
+        margin-bottom: 0px;
+        float: left;
+        position: relative;
+        text-indent: 0px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .centered-btns_nav {
+        display: block;
+        opacity: 1;
+        /*左右按鍵*/
+    }
+
+    .centered-btns_tabs,
+    .transparent-btns_tabs,
+    .large-btns_tabs {
+        text-align: center;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding-bottom: 5px;
+        /*小圓點位置*/
+    }
+}
+
+@media screen and (min-width: 768px)and (max-width: 1024px) {
+    .bannerbox {
+        font: 14px/24px sans-serif;
+        margin: 0px auto;
+        text-align: center;
+        color: rgb(51, 51, 51);
+        max-width: 100%;
+        max-height: auto;
+        overflow: hidden;
+        font-size-adjust: none;
+        font-stretch: normal;
+    }
+
+    .rslides img {
+        width: 100%;
+        height: auto;
+        max-height: auto;
+    }
+
+    .rslides_container {
+        width: 100%;
+        margin-bottom: 0px;
+        float: left;
+        position: relative;
+        text-indent: 0px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .centered-btns_nav {
+        display: block;
+        opacity: 1;
+        /*左右按鍵*/
+    }
+
+    .centered-btns_tabs,
+    .transparent-btns_tabs,
+    .large-btns_tabs {
+        text-align: center;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding-bottom: 5px;
+        /*小圓點位置*/
+    }
+}

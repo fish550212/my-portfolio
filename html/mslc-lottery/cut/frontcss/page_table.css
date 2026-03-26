@@ -1,0 +1,150 @@
+@charset "utf-8";
+@import url("index.css");
+/*表格--------------------*/
+
+
+#css_table_01 { background-color: transparent; text-align:left;}
+#css_table_01 .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 4px;background:#efefef;}
+#css_table_01 .css_tr:nth-child(odd){ background-color:#fff;.display: block;}
+#css_table_01 .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:1% 2%; }
+#css_table_01 .line{/*標題底色*/background-color:#003399  ;color:#333;}
+#css_table_01 .css_tr .css_td h1{ font-size:100%;color:#000; margin:0px;}
+#css_table_01 .title{.display: block;color:#0277bd;font-size:87.5%;}
+#css_table_01 .css_td b{ color:#000;display: inline-block;.display:inline;padding-right:5px; text-align: right; font-weight:bold;}
+#css_table_01 .css_td b:after{ content:"：";}
+#css_table_01 .css_td a.link{ color:#ff8a00;}
+#css_table_01 .css_td a img{ vertical-align:middle; border:0;}
+#css_table_01 .line{background-color:#000;}
+#css_table_01 .css_td b{ width:100px; vertical-align:top;}
+#css_table_01 .css_td .spanbox{ width: auto; display:inline-block; min-height:25px;}
+#css_table_01 .css_td .spanbox .file{ background-color:#005db5; color:#FFF; padding:3px 5px; margin-right:10px; border-radius:6px; line-height:180%; font-size:90%;}
+/*box014驗證碼*/
+#css_table_01 .box14 .spanbox .voice{ background:#72a779 url(../frontimages/icon-voice.png) no-repeat 5px center; padding:4px 5px 5px 27px; color:#FFF; border-radius:6px; border:0;}
+#css_table_01 .box14 .spanbox .voice:hover{background:#478550 url(../frontimages/icon-voice.png) no-repeat 5px center;}
+#css_table_01 .css_td .spanbox .text_img{ width:auto; height:20px;} 
+
+/*地政信箱mail*/
+.article .content .title{ color:#003f7a;}
+.article .content .content_font .fontbox{ color: #ef5306; padding:5px 0;}
+.member_mail02{width:100%; height:auto; padding:0; margin:0;}
+.member_mail02 #css_table_01 .css_td H3{ font-size:130%;color:#FFF;padding:5px 5px;}
+.member_mail02 #css_table_01 .css_td img{ height:30px; vertical-align:middle;display:inline-block;}
+.member_mail02 #css_table_01 .css_td b{ width:24%; vertical-align:top; margin-right:1%;display:inline-block;}
+.member_mail02 #css_table_01 .css_td i{ display:inline-block;}
+.member_mail02 #css_table_01 .css_td .spanbox{ width:72%; height:auto; display:inline-block; overflow:hidden;}
+.member_mail02 #css_table_01 .css_td .spanbox i{ color:#ff6600; font-style:normal; font-size:80%; line-height:120%;}
+.member_mail02 #css_table_01 .css_td .checkboxin{ float:right;}
+.member_mail02 #css_table_01 .css_td .checkboxin input{display:inline-block; }
+.member_mail02 #css_table_01 .box01{background-color:#003f7a;}
+.member_mail02 #css_table_01 .css_td .alink{ color: #F60;display:inline-block;}
+.member_mail02 #css_table_01 .css_td b .imp{ color: #F60; font-size:120%; line-height:100%;}
+.member_mail02 #css_table_01 .css_td:nth-child(even) {background:#f1f9ff;}
+.member_mail02 #css_table_01 .css_td .spanbox select{ padding:2px; margin:0 2px;}
+
+.member_mail02 .mailbox{ width:100%; border:2px solid #a7b63b; padding:3%; border-radius:0 5px 5px 5px; margin:0% auto;}
+.member_mail02 .mailbox ul{ list-style:none;/* font-size:95%; color:#666666; margin-bottom:5px;*/}
+.member_mail02 .mailbox ul li{ margin-left:3%;}
+.member_mail02 .mailbox ul li i{color: #F60; font-style:normal; font-size:100%; padding:0 3px;}
+
+.member_mail02 .mailtopbtn{ width:100%; padding-top:0px; margin:0px auto; margin-bottom:1%; text-align:left;}
+.member_mail02 .mailtopbtn a{ color:#fff; letter-spacing:1px; background-color:#909e2a; padding:8px 20px; border-radius:6px 6px 0 0; /*border-bottom:3px solid #a7b63b;*/}
+.member_mail02 .mailtopbtn a.on,
+.member_mail02 .mailtopbtn a:hover{background-color:#717c25;}
+
+
+/* == content_QA=============================== */
+.qaboxlist .qabox{width:100%;height:auto; padding:10px 0; overflow:hidden;  margin-top:10px;}
+.qaboxlist .qabox:nth-child(odd){ background-color:#f1f9ff;}
+.qaboxlist .qabox .qatop{ width:100%; overflow:hidden; border-bottom:#9B9B9B 1px solid; padding:2px;}
+.qaboxlist .qabox .qatop .icon{ float:left;width:10%; height:0; padding-bottom:8%; text-align:center; background:url(../frontimages/icon_QA.png) no-repeat center top; background-size:60% auto;}
+.qaboxlist .qabox:nth-child(odd) .qatop .icon{background:url(../frontimages/icon_QA2.png) no-repeat center top; background-size:60% auto;}
+.qaboxlist .qabox .qatop .qa_question{ float:left; width:90%;color:#003f7a;font-size:120%; font-weight:bold; padding-bottom:15px; }
+
+.qaboxlist .qabox .qa_text{ width:88%; color:#474747;font-size:110%; float:left; margin:10px 10px 10px 5px;text-align: justify;text-justify:inter-ideograph;}
+.qaboxlist .qabox .icon_a{float:left;width:10%; height:0; padding-bottom:8%; text-align:center; background:url(../frontimages/icon_A.png) no-repeat center 10px; background-size:60% auto; margin-left:0px;}
+.qaboxlist .qabox img{ width:100%;}
+/*tablelist*/
+.tablelist{width:100%; height:auto; padding:0; margin:0; font-size:15px;}
+.tablelist #css_table_01 .css_td H3{ font-size:130%;color:#FFF;padding:5px 5px;}
+.tablelist #css_table_01 .css_td img{ height:30px; vertical-align:middle;display:inline-block;}
+.tablelist #css_table_01 .css_td b{ width:30%; vertical-align:top; margin-right:1%;display:inline-block;}
+.tablelist #css_table_01 .css_td i{ display:inline-block;}
+.tablelist #css_table_01 .css_td .spanbox{ width:66%; height:auto; display:inline-block; overflow:hidden;}
+.tablelist #css_table_01 .css_td .spanbox i{ color:#ff6600; font-style:normal; font-size:80%; line-height:120%;}
+.tablelist #css_table_01 .css_td .checkboxin{ float:right;}
+.tablelist #css_table_01 .css_td .checkboxin input{display:inline-block; }
+.tablelist #css_table_01 .box01{background-color:#003f7a;}
+.tablelist #css_table_01 .css_td:nth-child(even) {background:#f1f9ff;}
+
+/*.article .articlebox .Datalist .classbox>.table_box1>#css_table .title{ background-color:#fff;}*/
+
+/* == 手機版型區 =============================== */
+
+@media screen and (max-width: 767px) {
+/*表格--------------------*/
+#css_table_01 { background-color: transparent; text-align:left;}
+#css_table_01 .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 0px;background:#ffffff;}
+#css_table_01 .css_tr:nth-child(odd){ background-color:#fbfbfb;.display: block;}
+#css_table_01 .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:4px 2%; }
+#css_table_01 .line{/*標題底色*/background-color:#003399;color:#333;}
+#css_table_01 .css_tr .css_td h1{ font-size:100%;color:#000; margin:0px;}
+#css_table_01 .title{.display: block;color:#0277bd;font-size:87.5%;}
+#css_table_01 .css_td b{display: inline-block;.display:inline;padding-right:5px; text-align: right; font-weight:bold;}
+#css_table_01 .css_td b:after{ content:"：";}
+#css_table_01 .css_td a.link{ color:#ff8a00;}
+#css_table_01 .css_td a img{ vertical-align:middle; border:0;}
+#css_table_01 .line{background-color:#000;}
+#css_table_01 .css_td b{ width:100px; vertical-align:top;}
+#css_table_01 .css_td .spanbox{ width: auto; display:inline-block; min-height: auto;}
+#css_table_01 .css_td i{font-style:normal; font-size:80%; color:rgba(0,0,0,0.6);}	
+
+
+/*地政信箱mail*/
+.member_mail02 .mailbox{ width:100%; border:2px solid #a7b63b; padding:3%; border-radius:0 5px 5px 5px; margin:0% auto;   }
+.member_mail02 .mailtopbtn{ width:100%; padding-top:10px; margin:0px auto; margin-bottom:1%; text-align:left;}
+.member_mail02 .mailtopbtn a{ letter-spacing:1px;  padding:8px 8px; border-radius:6px 6px 0 0;}
+.member_mail02 #css_table_01 .css_td b{ width:26%; vertical-align:top;}
+.member_mail02 #css_table_01 .css_td .spanbox{ width:70%; height:auto; display:inline-block;min-height: auto;}
+
+/* == content_QA=============================== */
+.qaboxlist .qabox{width:100%;height:auto; padding:10px 10px; overflow:hidden;}
+.qaboxlist .qabox:nth-child(odd){ background-color:#f1f9ff;}
+.qaboxlist .qabox .qatop{ width:100%; overflow:hidden; border-bottom:#9B9B9B 1px solid; padding:2px;}
+.qaboxlist .qabox .qatop .icon{ float:left;width:10%; height:0; padding-bottom:8%; text-align:center; background:url(../frontimages/icon_QA.png) no-repeat center top; background-size:80% auto;}
+.qaboxlist .qabox:nth-child(odd) .qatop .icon{background:url(../frontimages/icon_QA2.png) no-repeat center top;background-size:80% auto;}
+.qaboxlist .qabox .qatop .qa_question{ float:right; width:90%;color:#003f7a;font-size:120%; font-weight:bold;}
+
+.qaboxlist .qabox .qa_text{ float:left; width:85%; color:#474747;font-size:110%; margin:10px 10px 10px 5px;text-align: justify;text-justify:inter-ideograph;}
+.qaboxlist .qabox .icon_a{ float:left;width:10%; height: auto; overflow:hidden; padding-bottom:8%; text-align:center; background:url(../frontimages/icon_A.png) no-repeat center 10px;; background-size:80% auto;}
+
+/*tablelist*/
+.tablelist .mailbox{ width:100%; border:2px solid #a7b63b; padding:3%; border-radius:0 5px 5px 5px; margin:0% auto;   }
+.tablelist .mailtopbtn{ width:100%; padding-top:10px; margin:0px auto; margin-bottom:1%; text-align:left;}
+.tablelist .mailtopbtn a{ letter-spacing:1px;  padding:8px 8px; border-radius:6px 6px 0 0;}
+.tablelist #css_table_01 .css_td b{ width:40%; vertical-align:top;}
+.tablelist #css_table_01 .css_td .spanbox{ width:56%; height:auto; display:inline-block;min-height: auto;}
+
+	}
+
+/* == 平板版型區 =============================== */
+ 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/*表格--------------------*/
+#css_table_01 { background-color: transparent; text-align:left;}
+#css_table_01 .css_tr { display:block; width:100%; height:auto; overflow:hidden;margin-bottom: 0px;background:#ffffff;}
+#css_table_01 .css_tr:nth-child(odd){ background-color:#f6f6f6;.display: block;}
+#css_table_01 .css_td { display:inline-block;border-bottom: #ddd 1px solid;width: 100%;text-align:left; padding:4px 2%; }
+#css_table_01 .line{/*標題底色*/background-color:#003399;color:#333;}
+#css_table_01 .css_tr .css_td h1{ font-size:100%;color:#000; margin:0px;}
+#css_table_01 .title{.display: block;color:#0277bd;font-size:87.5%;}
+#css_table_01 .css_td b{display: inline-block;.display:inline;padding-right:5px; text-align: right; font-weight:bold;}
+#css_table_01 .css_td b:after{ content:"：";}
+#css_table_01 .css_td a.link{ color:#ff8a00;}
+#css_table_01 .css_td a img{ vertical-align:middle; border:0;}
+#css_table_01 .line{background-color:#000;}
+#css_table_01 .css_td b{ width:100px; vertical-align:top;}
+#css_table_01 .css_td .spanbox{ width: auto; display:inline-block; min-height: auto;}
+#css_table_01 .css_td i{font-style:normal; font-size:80%; color:rgba(0,0,0,0.6);}
+
+
+	}

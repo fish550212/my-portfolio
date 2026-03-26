@@ -1,0 +1,75 @@
+﻿@charset "utf-8";
+@import url("all_shared.css");
+@import url("rwderp.css");
+@import url("patty.css");
+/*後台*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,/*p,*/blockquote,/*th,td*/ {
+	margin:0;padding:0;vertical-align: top;font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;	}
+ol,ul {list-style: none;}
+table{border-collapse:collapse;}
+body{
+	font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing:1px;
+	line-height:18px;
+	margin:0;
+	background-color:#FFF;
+}
+a:link{
+color:000;
+text-decoration: none;
+}
+a:hover{
+color:000;
+text-decoration: underline;
+}
+
+
+.time>font{ display:inline-block;}
+.copyright {width:100%; height:auto;font-size: 100%;color: #333;text-decoration: none; text-align:center;}
+
+
+/*按鈕*/
+.abutton {
+    font-size: 16px;
+	color: #fff;
+	background-color: #5d5d5d;
+    border: 1px solid #5d5d5d;
+    border-radius: 7px;
+	padding: 3px 20px;
+	margin: 2px 2px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;
+    cursor:pointer; vertical-align:middle;
+}
+.abutton a {color: #fff;text-decoration: none;cursor:pointer}
+.abutton:hover {color: #fff;text-decoration: none;background-color: #000;cursor:pointer}
+
+.buttontd{width:100%;font-size: 18px;color: #444444;font-weight: bold;}
+/*標題*/
+.title-tlink{ width:100%; height:auto; overflow:hidden;padding:6px 4px;margin-bottom:5px;}
+
+.tlink {
+	color: #272727;
+    border-bottom: 3px solid rgba(129, 129, 129, 0.4);
+    padding-bottom: 8px;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bolder;
+    font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;	
+}
+
+/*右側內頁搜尋功能*/
+
+
+
+@media screen and (max-width: 767px) {
+/*搜尋功能*/
+.qfont span{ display:block;width: 100%;}
+.qfont select{width: 100%; padding:4px 7px;border: 1px solid #ababab; border-radius: 7px;}
+
+.searchbox{width: 100%;}
+
+
+}

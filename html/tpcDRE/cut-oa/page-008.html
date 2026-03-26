@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>台電光電站tpcDRE</title>
+<link href="frontcss/index.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="header">
+
+  <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖--><div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div><!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="mobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="mobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="mobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class='reset'>
+                
+                <li><h2><a href='#' title=''>太陽光電</a></h2>
+                    <div class='nav-second'> 
+                    <ul class='reset'> 
+                    <li><a href='#' title=''>太陽光電1</a> </li>
+                    <li><a href='#' title=''>太陽光電2</a> </li>
+                    </ul>
+                    </div>
+                </li>
+                
+                <li><h2><a href='#' title=''>發電資料</a></h2> </li>
+                
+                <li><h2><a href='#' title=''>電氣室</a></h2>
+                    <div class='nav-second'>
+                    <ul class='reset'>
+                    <li><a href='#' title=''>電氣室1</a></li>
+                    <li><a href='#' title=''>電氣室2</a></li>
+                    <li><a href='#' title=''>電氣室3</a></li>
+                    <li><a href='#' title=''>電氣室4</a></li>
+                    <li><a href='#' title=''>電氣室5</a></li>
+                    <li><a href='#' title=''>電氣室6</a></li>
+                    </ul>
+                    </div>
+                </li>
+                
+                
+                <li><h2><a href='#' title=''>警報</a></h2> </li>
+                <li><h2><a href='#' title=''>示範站全覽</a></h2> </li>
+                <li><h2><a href='#' title=''>再生能源處</a></h2> </li>
+                
+                </ul>
+               
+                 <div class="othermu">
+                    <a href="#" tabindex="-1" title="">會員專區</a>
+                     <a href="#" tabindex="-1" title="">詢價清單</a>                     
+                </div>
+               
+            </div>
+            <!--MOB-MENU--END--->
+
+<div class="logo"><img src="frontimages/logo.jpg" width="auto" height="80"></div>
+<div class="logotitle">太陽光電</div>
+
+ <!--topmenu-->
+    <div class="topmenu">
+        <div class="topmenbox">
+            <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+            <noscript>本Script功能在出現選單項目，您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。</noscript>
+            <script type="text/javascript">
+                $(function () {
+                    // 幫 #menu li 加上 hover 事件
+                    $('#menu>li').hover(function () {
+                        // 先找到 li 中的子選單
+                        var _this = $(this),
+                            _subnav = _this.children('ul');
+
+                        // 變更目前母選項的背景顏色
+                        // 同時顯示子選單(如果有的話)
+                        //_this.css('backgroundColor', '#000');
+                        _subnav.css('display', 'block');
+                    }, function () {
+                        // 變更目前母選項的背景顏色
+                        // 同時隱藏子選單(如果有的話)
+                        // 也可以把整句拆成上面的寫法
+                        $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                    });
+
+                    // 取消超連結的虛線框
+                    //$('a').focus(function(){
+                    //  this.blur();
+                    //});
+                });
+            </script>
+            <noscript>本Script功能在變換選單顏色，您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。</noscript>
+              <ul id='menu'>
+              <li><a href='#' title='太陽光電'>太陽光電</a> 
+                  <ul>
+                  <li><a href='#' title=''>太陽光電1</a> </li>
+                  <li><a href='#' title=''>太陽光電2</a> </li>
+                  </ul>
+              </li>
+              
+              <li><a href='#' title='發電資料'>發電資料</a> </li>
+              
+              <li><a href='#' title='電氣室'>電氣室</a>
+                  <ul>
+                  <li><a href='#' title=''>電氣室1</a></li>
+                  <li><a href='#' title=''>電氣室2</a></li>
+                  <li><a href='#' title=''>電氣室3</a></li>
+                  <li><a href='#' title=''>電氣室4</a></li>
+                  <li><a href='#' title=''>電氣室5</a></li>
+                  <li><a href='#' title=''>電氣室6</a></li>
+                  </ul>
+              </li>
+              
+              <li><a href='#' title=''>警報</a></li>
+              
+              <li><a href='#' title=''>示範站全覽</a></li>
+              
+              <li><a href='#' title=''>再生能源處</a></li>
+              </ul>
+        </div>
+    </div>
+    <!--------topmenu-end-------->
+
+
+
+</div>
+
+<!---------container---------------->
+<div class="container"><div class="cbox">
+
+
+<!---------layout-Left---------------->
+<SCRIPT src="frontjs/Left_mu.js"></SCRIPT>
+<div class="layout-Left">
+<div class="mu1 nav-close"><a title="" class="animate" href="#">MENU CLOSE</a></div>
+<div class="Left_mu"  id="navmu">
+                <ul class='reset'>
+                
+                <li><h2><a href='#' title=''>太潭生水池</a></h2>
+                    <div class='nav-second'> 
+                    <ul class='reset'> 
+                    <li><a href='#' title=''>首頁1</a> </li>
+                    <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                    <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                    <li><a href='#' title=''>氣象及其他資料</a> </li>
+                    <li><a href='#' title=''>發電曲線</a>
+                           <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            <li><a href='#' title='' >04</a></li>
+                            <li><a href='#' title='' >05</a></li>
+                            <li><a href='#' title='' >06</a></li>
+                            </ul>
+                            </div>
+                    </li>
+  
+                    </ul>
+                    </div>
+                </li>
+                
+                <li><h2><a href='#' title=''  tabindex='-1'>中大(北區)</a></h2>
+                    <div class='nav-second'>
+                        <ul class='reset'>
+                        <li><a href='#' title=''>首頁1</a> </li>
+                        <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                        <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                        <li><a href='#' title=''>氣象及其他資料</a> </li>
+                        <li><a href='#' title=''>發電曲線</a>
+                        <li><a href='#' title=''>發電曲線</a>
+                            <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    
+                 <li><h2><a href='#' title=''>龍潭(北區)</a></h2>
+                   <div class='nav-second'>
+                        <ul class='reset'>
+                        <li><a href='#' title=''>首頁1</a> </li>
+                        <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                        <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                        <li><a href='#' title=''>氣象及其他資料</a> </li>
+                        <li><a href='#' title=''>發電曲線</a>
+                        <li><a href='#' title=''>發電曲線</a>
+                            <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                    
+                <li><h2><a href='#' title=''>竹工(北區)</a></h2>
+                  <div class='nav-second'>
+                        <ul class='reset'>
+                        <li><a href='#' title=''>首頁1</a> </li>
+                        <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                        <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                        <li><a href='#' title=''>氣象及其他資料</a> </li>
+                        <li><a href='#' title=''>發電曲線</a>
+                        <li><a href='#' title=''>發電曲線</a>
+                            <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                
+                <li><h2><a href='#' title=''>台中電廠示範(中區)</a></h2>
+                  <div class='nav-second'>
+                        <ul class='reset'>
+                        <li><a href='#' title=''>首頁1</a> </li>
+                        <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                        <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                        <li><a href='#' title=''>氣象及其他資料</a> </li>
+                        <li><a href='#' title=''>發電曲線</a>
+                        <li><a href='#' title=''>發電曲線</a>
+                            <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                
+                <li><h2><a href='#' title=''>台中電廠B-C生水池(中區)</a></h2>
+                  <div class='nav-second'>
+                        <ul class='reset'>
+                        <li><a href='#' title=''>首頁1</a> </li>
+                        <li><a href='#' title=''>即時發電資料(Inverter)</a> </li>
+                        <li><a href='#' title=''>即時發電資料(電表)</a> </li>
+                        <li><a href='#' title=''>氣象及其他資料</a> </li>
+                        <li><a href='#' title=''>發電曲線</a>
+                        <li><a href='#' title=''>發電曲線</a>
+                            <div class='nav-3'>
+                            <ul class='reset'>
+                            <li><a href='#' title='' >01</a></li>
+                            <li><a href='#' title='' >02</a></li>
+                            <li><a href='#' title='' >03</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                        </ul>
+                    </div>
+                    </li>
+                
+                
+                </ul>
+               
+               
+</div>
+</div>
+<!---------layout-Left-end---------------->
+
+<!---------layout-Right---------------->
+<div class="layout-Right">
+	<div class="Right-main">發電曲線-金門金沙文創園區光電站</div>
+
+<div class="contentbox">
+	<h2 class="contenttitle">直流&交流電表資料<p class="line">&nbsp;</p></h2>
+	
+	
+    <div class="databox_1">
+    	<div class="datain">
+        <table class="data">
+        <tr><td class="leftbox">組別</td><td><b>1</b><span> &nbsp;</span></td></tr>
+        <tr><td class="leftbox">日照強度</td><td><b>602.3</b><span>W/m2</span></td></tr>
+        <tr><td class="leftbox">模組溫度</td><td><b>22.8</b><span>°C</span></td></tr>
+        </table>
+        </div>
+        
+    	<div class="datain">
+        <table class="data">
+        <tr><td class="leftbox">直流電壓</td><td><b>652.0</b><span>V</span></td></tr>
+        <tr><td class="leftbox">直流電流</td><td><b>34.4</b><span>A</span></td></tr>
+        <tr><td class="leftbox">直流發電功率</td><td><b>22.5</b><span>kW</span></td></tr>
+        </table>
+        </div>
+        
+    	<div class="datain">
+        <table class="data">
+        <tr><td class="leftbox">交流電壓</td><td><b>491.0</b><span>V</span></td></tr>
+        <tr><td class="leftbox">交流電流</td><td><b>51.8</b><span>A</span></td></tr>
+        <tr><td class="leftbox">交流發電功率</td><td><b>44.1</b><span>kW</span></td></tr>
+        </table>
+        </div>
+    </div>
+    
+    <div class="curvebox">
+    	<div class="curve"><img src="frontimages/curve.jpg"></div> 
+    </div>    
+    
+</div>
+
+</div>
+<!----------layout-Right-end--------------->
+
+</div>
+</div>
+<!---------container-end---------------->
+
+
+
+
+
+</body>
+</html>

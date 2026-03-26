@@ -1,0 +1,389 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>海科科學學習中心Marine Science Learning Center</title>
+    <link href="cleancss/index.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+    function dokSubmit() {
+        if ($("#querykey").val() == "")
+        { alert('請輸入關鍵字!'); }
+        else
+        {           
+            $("#queryForm").submit();
+        }
+
+    }
+    function mobdokSubmit() {
+        if ($("#querykey1").val() == "")
+        { alert('請輸入關鍵字!'); }
+        else
+        {            
+            $("#querymobForm").submit();
+        }
+
+    }
+        </script>
+
+
+    <script type="text/javascript" src="/js/date/js/jscal2.js"></script>
+    <script type="text/javascript" src="/js/date/js/lang/en.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/date/css/jscal2.css" />
+    <link rel="stylesheet" type="text/css" href="/js/date/css/steel/steel.css" />
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) { cal.hide() },
+            showTime: 0
+        });
+        //]]>
+    </script>
+</head>
+    <body>
+        <!--header-->
+        <div class="header">
+            <div class="headerbox">
+                <div id="TOP"><img src="http://mslc.nmmst.gov.tw/frontimages/gotop.png" alt="回到上面" /></div>
+                <!--logo------------>
+                <p><a href="http://mslc.nmmst.gov.tw/html/index" title="海科科學學習中心" class="logo">海科科學學習中心</a></p>
+                <!--toolbar--------->
+                <form name="queryForm" id="queryForm" method="post" action="http://mslc.nmmst.gov.tw/html/searchall">
+                    <div class="toolbar">
+                        <ul class="toolbarmenu">
+                            <li><a href="http://mslc.nmmst.gov.tw/html/index" title="回首頁">回首頁</a></li>
+                            <li>|</li>
+                            <li><a href="http://www.nmmst.gov.tw/chhtml/index.aspx" title="海科官網(開新視窗)" target="_blank">海科官網</a></li>
+                            <li>|</li>
+                            <li><a href="http://mslc.nmmst.gov.tw/onactions/calender1/426" title="學習中心行事曆">學習中心行事曆</a></li>
+                            <li>|</li>
+                            <li><a href="http://mslc.nmmst.gov.tw/html/sitemap" title="網站導覽">網站導覽</a></li>
+                            <li><a href="https://www.facebook.com/NMMST.TW" class="fb" title="FB(開新視窗)" target="_blank"><img src="http://mslc.nmmst.gov.tw/frontimages/icon-fb.png" alt="fb(開新視窗)" /></a></li>
+                            <li class="search"><input type="text" id="querykey" name="querykey" placeholder="全文檢索" /><a href="javascript:void(0)"><img src="http://mslc.nmmst.gov.tw/frontimages/icon-01.png" alt="搜尋" onclick="dokSubmit();" /></a></li>
+                        </ul>
+                    </div>
+                </form>
+
+                <!--MOB-MENU---位置放<div class="headerbox">內--->
+                <!--手機選單-漢堡圖--><div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div><!--手機選單-END-->
+                <!-- Nav手機選單 -->
+                <link href="http://mslc.nmmst.gov.tw/mobmu/common.css" rel="stylesheet">
+                <!--[if gte IE 9]><!-->
+                <script src="http://mslc.nmmst.gov.tw/mobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="http://mslc.nmmst.gov.tw/mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="http://mslc.nmmst.gov.tw/mobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="http://mslc.nmmst.gov.tw/mobmu/common.js"></script>
+            <script src="http://mslc.nmmst.gov.tw/js/checkdata.js"></script>
+            <div class="nav-panel" id="nav">
+
+                <h1 class="hidden-element">主選單</h1>
+
+                <div class="search-panel clearfix">                  
+                    <form name="querymobForm" id="querymobForm" method="post" action="http://mslc.nmmst.gov.tw/html/searchall">
+                        <input class="inText" type="text" id="querykey1" name="querykey1" placeholder="全文檢索" value="">
+                        <input class="submit gradient-blue" type="button" value="搜尋" onclick="mobdokSubmit();">
+                    </form>
+                </div>
+                <UL class="reset">
+ 	<LI><H2><A href="#" title="中心及課程簡介">淨灘介紹</A></H2>	
+		 <DIV class="nav-second"><UL class="reset">		   
+			<LI><a href="#">課程簡介</a></LI>
+			<LI><a href="#">收費標準</a></LI>
+		 </UL></DIV>	 
+	</LI>
+	
+    <LI><H2><A href="#" title="最新消息">淨灘過程</A></H2></LI>
+    
+	<LI><H2><A href="#" title="線上報名">我要淨灘</A></H2>	
+		 <DIV class="nav-second"><UL class="reset">		   
+			<LI><a href="#">服務與活動</a></LI>			
+            <li><a href="#">預約課程</a></li>
+		 </UL></DIV>	 
+	</LI>
+	
+	<LI><H2><A href="#" title="會員專區">進度查詢</A></H2>	
+		 <DIV class="nav-second"><UL class="reset">		   
+			<li><a href="#">會員登入/註冊</a></li>
+            <li><a href="#">會員專區</a></li>
+            <li><a href="#">中心行事曆</a></li>
+		 </UL></DIV>	 
+	</LI>
+	
+	<LI><H2><A href="#">成果紀錄</A></H2>
+         <DIV class="nav-second"><UL class="reset">		   
+			<li><a href="#">檔案下載</a></li>
+		 </UL></DIV>
+    </LI>
+    
+    <LI><H2><A href="#">心得分享</A></H2></LI>
+    <LI><H2><A href="#">活動花絮</A></H2></LI>
+    <LI><H2><A href="#">聯絡我們</A></H2></LI>
+   
+   </UL>
+            </div>
+            <!--MOB-MENU--END--->
+
+        </div>
+    </div>
+    <!--header-end-->
+    <!--topmenubox-->
+    <div class="topmenubox">
+
+        <!--------topmenu--------->
+        <div class="topmenu">
+            <div class="container">
+                <script src="http://mslc.nmmst.gov.tw/js/jquery-latest.min.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                    $(function () {
+                        // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        $('a').focus(function () {
+                            this.blur();
+                        });
+                    });
+                </script>
+                <UL id="menu">
+  <LI><A href="#">淨灘介紹</A>
+ <UL>
+  <li><a href="#">淨灘過程</a></li>
+<li><a href="#">我要淨灘</a></li>
+<li><a href="#">進度查詢</a></li>
+</UL>
+  </LI>
+    
+   <LI><A href="#">淨灘過程</A></LI>
+   
+  
+    <LI><A href="#">我要淨灘</A>
+      <UL>
+      <li><a href="#">服務與活動</a></li>
+      <li><a href="#">預約課程</a></li>
+      </UL>
+    </LI>
+    <LI><A href="#">進度查詢</A></LI>
+    <LI><A href="#">成果紀錄</A>
+      <UL>
+      <li><a href="#">會員登入/註冊</a></li>
+      <li><a href="#">會員專區</a></li>
+      <li><a href="#">中心行事曆</a></li>
+      </UL>
+    </LI>
+    
+    <LI><A href="#">心得分享</A></LI>
+    <LI><A href="#">活動花絮</A></LI> 
+    <LI><A href="#">聯絡我們</A></LI>
+</UL>
+
+            </div>
+        </div>
+        <!--------topmenu-end-------->
+
+    </div>
+    <!--topmenubox-end-->
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <link href="cleanADVbox/ADV.css" rel="stylesheet">
+            <script src="cleanADVbox/responsiveslides.min.js"></script>
+            <script>
+                $(function () {
+
+                    // Slideshow 1
+                    $("#slider4").responsiveSlides({
+                        auto: true,/*false手動 / true自動*/
+                        pager: true,
+                        nav: true,
+                        speed: 763,
+                        maxwidth: 2526,
+                        namespace: "centered-btns"
+                    });
+                });
+
+            </script>
+            <div class="bannerbox">
+                <div class="wrapper1">                 
+                    <div class="rslides_container">
+                        <ul class="rslides" id="slider4">
+                         <li><div class='mesk'><div class='box'>&nbsp;</div></div><a href='http://mslc.nmmst.gov.tw/onactions/prelessondet/429?eid=86' target='_blank' title='開新視窗,2019全民科學週-海洋Fun學趣'><img src="cleanimages/advimg.png" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+    
+<!--article-->
+<div class="article">
+    <div class="articlebox">
+
+         <!--topfrom麵包屑-->
+	 <div id='topfrom'><a href='http://mslc.nmmst.gov.tw/html/index' title='首頁'>首頁</a> > <a href='#'>活動列表</a>> <a href='#'>活動資訊</a></div>
+            <!--topfrom麵包屑-->
+
+     <h3 class="toptitle title">活動資訊</h3>
+
+        
+<!--內容-↓↓↓↓↓↓↓----------------------->
+<!--classbox------------------->
+    <div class="classbox">
+                <!-------prelessonmain_tablist------------->
+      <div class="prelessonmain_tablist">                    
+      	<h1 class="classname">海洋科學學習中心 科普體驗課</h1>
+                    <!-------css_table_01----------->
+         <div id="css_table_01">
+         <div class="css_tr">
+         <div class='css_td box01'><b>報名起訖</b><span class='spanbox'>2019-02-25~2020-12-30</span></div>
+         <div class='css_td box02'><b>課程人數</b><span class='spanbox'>20(一場)</span></div>
+         <input type=hidden name=allEcount id=allEcount value='20'><div class='css_td box03'><b>承辦人</b>
+         <span class='spanbox'>王惟萱小姐 2469-6000#7023</span>
+         </div>
+         <div class='css_td box04'><b>結業時數</b><span class='spanbox'>1</span></div>
+         <div class='css_td box05'><b>課程時間</b><span class='spanbox'>13:30~17:00</span></div> 
+         <div class='css_td box06'><b>課程地點</b><span class='spanbox'>海科館-教育中心-探索教室</span></div>
+         <div class='css_td box07'><b>課程對象</b><span class='spanbox'>一般民眾、國小中年級以上</span></div>
+         <div class='css_td box09'><b>課程內容</b><span class='spanbox'><i></i></span><div class='maininboxinfo'>
+         <p>	♦課程主題：&nbsp;</p>
+         <p>1.&nbsp; <a href="http://mscloud.nmmst.gov.tw/Learning/html/content/391?mcid=2635" target="_blank"><u>水下滑翔機 </u><u>體驗課程</u></a></p>
+		 <p>
+			<img title="" style="height:191px;width:341px;" alt="" src="http://mscloud.nmmst.gov.tw/attached/image/20190225/20190225123511_5892.jpg" width="341" align="left" height="191" /> 
+		</p>
+        <p>&nbsp;
+            
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            &emsp;&emsp;本館實施水下滑翔機教材的製作至今已有五年的時間，本活動具高度趣味性，能從中預測、觀察、評估之歷程體驗浮與沈的關係，讓參與者透過「水下滑翔機」動手做活動，相較於科學課室中實施之浮力與重力實驗，更能對於水中浮沈關鍵「浮力-重力」關連性有所理解。
+        </p>
+        
+        <p>
+            2.&nbsp; <a href="http://mscloud.nmmst.gov.tw/Learning/html/content/391?mcid=2633" target="_blank"><u>珊瑚大作戰 </u><u>體驗課程</u></a> <img title="" style="height:232px;width:324px;" alt="" src="http://mscloud.nmmst.gov.tw/attached/image/20190225/20190225123539_0452.jpg" width="291" align="right" height="202" /> 
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            &emsp;&emsp;珊瑚的生長受到許多海洋環境因子的限制，經常被當作是海洋岩岸環境的指標生物之一，對於珊瑚生長情形及數量的調查研究，可提供海洋學家對於附近海洋岩岸環境的瞭解，因此設計以「人為因子」、「生物因子」及「環境因子」三個主要影響珊瑚生存的因素做為變因，設計桌遊。
+        </p>
+        <p>
+            &emsp;&emsp;每位玩家一開始具有固定數量的共生藻，接著玩家們以卡牌進攻對手與自我防禦來模擬珊瑚遭遇到的各種狀況，例如盜採珊瑚造成珊瑚死亡、海水酸化造成珊瑚骨骼脆化、共生藻細胞分裂使得珊瑚共生藻變多等，以增減珊瑚身上共生藻的數量，最後存活下來的玩家就是贏家。希望以有趣的方式呈現，並藉由體驗遊戲增加學生的知識及提昇學生愛護海洋環境的心態。
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            3.&nbsp; <a href="http://mscloud.nmmst.gov.tw/Learning/html/content/391?mcid=2625" target="_blank"><u>魚兒辦辨辨 體驗課程</u></a> 
+        </p>
+        <p>
+            <img title="" style="height:186px;width:304px;" alt="" src="http://mscloud.nmmst.gov.tw/attached/image/20190225/20190225123548_3897.jpg" width="304" align="left" height="186" />&emsp;&emsp;這個活動分成兩個部份來進行，第一部份稱為「魚兒一家人」，以魚類的外型辨識作為課題，讓學生瞭解魚類學家在面對各式各樣的魚類時，會先依據外型上的特徵來進行魚類辨識，例如看魚類身上的斑點數量、斑點位置、魚鰭形狀等特徵，能夠快速將長相相似的魚類分門別類。
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            &emsp;&emsp;第二部分稱為「送魚回家」，以實際魚類的相片讓學生依據魚類的體色送到適合的環境中，環境分成大洋表層、珊瑚礁及深海三種環境。在大洋表層的魚類顏色較單一、且通常魚背部份顏色較深、魚腹部份較白；在珊瑚礁地區生長的魚類顏色多彩多姿，易有條紋及斑點；深海的魚類通常為紅色。不同區域的魚類顏色差異主要是長久演化下的結果，這些結果容易被學生注意到，透過探究活動可以讓學生瞭解不同顏色的魚類代表不同的生活環境。
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            4. &nbsp;<a href="http://mscloud.nmmst.gov.tw/Learning/html/content/391?mcid=2637" target="_blank"><u>瓶中信</u><u>的秘密－寶箱解謎 體驗課程</u></a>&emsp;
+        </p>
+        <p>
+            <img title="" style="height:229px;width:380px;" alt="" src="http://mscloud.nmmst.gov.tw/attached/image/20190225/20190225123602_5233.jpg" width="380" align="right" height="229" /> 
+        </p>
+        <p>&nbsp;
+            
+        </p>
+        <p>
+            &emsp;&emsp;這項活動目的是希望將海洋廢棄物對人類、各種海洋生物及環境的危害之想法，藉由課堂、闖關活動及實作的過程中傳遞給參與者，並期望讓參與活動的學生更注意也更關心海洋廢棄物的議題，進而達到垃圾減量及永續海洋環境的最終目的。因此設計了海洋廢棄物密室解謎的活動，但為了更能夠滿足到各校推廣的功能，進一步改良成為寶箱解謎，讓原本密室內的謎題變成一個個的寶箱。
+        </p>
+        <p>&nbsp;
+            
+     
+        <p>
+            ♦活動費用：依<a href="http://mslc.nmmst.gov.tw/html/content/444" target="_blank"><u>收費標準</u></a><s>每人150元</s>，108年教育推廣價100元/人<span>。</span><span style="background-color:#ffe500;"> (若親子同行</span><span style="background-color:#ffe500;">，</span><span style="background-color:#ffe500;">一位</span><span style="background-color:#ffe500;">免費</span><span style="background-color:#ffe500;">)&nbsp;</span> 
+        </p>
+        <p>
+            <span style="color:#e53333;"></span>&nbsp;
+        </p>
+        <p>
+            <span style="color:#e53333;">♦<span style="color:#e53333;">注意事項：</span><span style="color:#e53333;">&nbsp;</span> </span>
+        </p>
+        <p>
+            <span style="color:#e53333;">1. 活動進行時間約 50 ~ 100 分鐘，視參與者對象及年齡不定，6 歲至 96 歲皆可體驗喔<span style="color:#e53333;">。</span></span> 
+        </p>
+        <p>
+            <span style="color:#e53333;"><span style="color:#e53333;"><span style="color:#e53333;">2.</span><span style="color:#e53333;">&nbsp;<span style="color:#e53333;">課程採預約制，</span>歡迎學校、</span>團體預約，課程及時間客製安排，請來電洽詢。</span></span> 
+        </p>
+        <p>
+            <span style="color:#e53333;">3. 更多體驗活動，請參考</span><a href="http://mslc.nmmst.gov.tw/html/news/391" target="_blank"><span style="color:#e53333;">課程簡介</span></a><span style="color:#e53333;">。</span> 
+        </p></div></div>
+                        </div>
+                    </div>
+                    <!-------css_table_01-end------->
+                          
+                        <div class="buttonbox"><input type="button" value="我要報名" class="btnbtn_next" onclick="javascript:location.href='http://mslc.nmmst.gov.tw/onactions/prelessonmain/429';"></div>
+                </div>
+                <!-------actionindet_tablist--end----------->
+
+            </div>
+            <!--classbox---end----------------->
+            <!--內容-↑↑↑↑↑↑--end----------------->
+            
+             <div class="buttonbox"><input type="button" value="回上頁" class="btnbtn" onclick="javascript:window.history.go(-1);"></div>
+    </div>
+</div>
+<!--article-end-->
+
+    <!--indexsitemap------------------------->
+    <div class="sitemaptopbox"></div>
+
+    <!--indexsitemap-end------------------------->
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <div class="footer-logo"><img src="http://mslc.nmmst.gov.tw/frontimages/footer-logo.png" alt="海科科學學習中心logo" /></div>
+            <p>Copyright © National Museum of Marine Science & Technology All rights reserved.</p>
+        </div>
+    </div>
+    <!--footer-end-->
+    <script type="text/javascript" src="http://mslc.nmmst.gov.tw/frontjs/gotop.js"></script>
+</body>
+</html>
+

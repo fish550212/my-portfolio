@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>茶樹育種數位化資訊系統</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="frontcss/showLayer.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script type="text/javascript" src="frontjs/showLayer.js"></script> -->
+  </head>
+
+  <body class="bg page">
+    <div class="wrapper">
+      <div class="headerbox">
+        <div class="Rtop">
+          <div class="logo">
+            <img src="http://wisetea.netdoing.com.tw:8888/upload/COIPlogo.png" />
+            <font>
+              農業部茶及飲料作物改良場
+              <span>茶樹育種數位化資訊系統</span>
+            </font>
+          </div>
+
+          <div class="rtop_menugroup">
+            <div class="tola">
+              <input type="button" value="回首頁" class="input-style" onclick="location.href='/main/index'" />
+              <input type="button" value="登出" class="input-style" onclick="location.href='/login/logout'" />
+            </div>
+          </div>
+
+          <!--MOB-MENU---位置放class="header"內--->
+          <!--手機選單-漢堡圖-->
+          <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+          <!--手機選單-END-->
+          <!-- Nav手機選單 -->
+          <link href="mobmu/common.css" rel="stylesheet" />
+          <!--[if gte IE 9]><!-->
+          <script src="mobmu/jquery-2.1.3.min.js"></script>
+          <!--<![endif]-->
+          <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+          <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+          <script src="mobmu/common.js"></script>
+
+          <div class="nav-panel" id="nav">
+            <ul class="reset">
+              <li>
+                <h2>
+                  <a href="page-newmovie.html" title="掃描條碼">掃描條碼</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="page-tvshow.html" title="調查記錄">調查記錄</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="page-shop.html" title="氣候記錄">氣候記錄</a>
+                </h2>
+              </li>
+            </ul>
+          </div>
+          <!--MOB-MENU--END------------->
+        </div>
+
+        <ul class="toptitle">
+          <li>
+            <a href="#">
+              <img src="frontimages/icon-qr.svg" alt="" />
+              掃描條碼
+            </a>
+          </li>
+          <li class="active">
+            <a href="#">
+              <img src="frontimages/icon-check.svg" alt="" />
+              調查記錄
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="frontimages/icon-weather.svg" alt="" />
+              氣候紀錄
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mainbox">
+        <!-- 內容 -->
+        <div class="conterbox">
+          <div class="groupbox bg-w bg-shadow">
+            <div class="titlebox">
+              <div class="title">調查紀錄</div>
+            </div>
+
+            <ul class="addbox inputbox">
+              <li>
+                <div class="box W50">
+                  <div class="title">日期</div>
+                  <input type="text" class="input-style" />
+                </div>
+                <div class="box W50">
+                  <div class="title">地點</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">地點</option>
+                    <option value="">地點</option>
+                    <option value="">地點</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div class="box W50">
+                  <div class="title">調查階段</div>
+                  <input type="text" class="input-style" />
+                </div>
+                <div class="box W50">
+                  <div class="title">調查項目</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">調查項目</option>
+                  </select>
+                </div>
+              </li>
+
+              <li>
+                <div class="box W50">
+                  <div class="title">相片上傳</div>
+                  <input type="file" class="input-style" />
+                  <input type="file" class="input-style" />
+                </div>
+                <div class="box W50">
+                  <div class="title">照片解說</div>
+                  <input type="text" class="input-style" placeholder="內容" />
+                  <input type="text" class="input-style" placeholder="內容" />
+                </div>
+              </li>
+            </ul>
+
+            <div class="titlebox green_line">
+              <img src="frontimages/icon-leaf.svg" alt="" />
+              <div class="title">植株</div>
+            </div>
+            <ul class="addbox inputbox">
+              <li>
+                <div class="box W50">
+                  <div class="title">生長勢</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">強</option>
+                    <option value="">中</option>
+                    <option value="">弱</option>
+                  </select>
+                </div>
+                <div class="box W50">
+                  <div class="title">茶芽密度</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">強</option>
+                    <option value="">中</option>
+                    <option value="">弱</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+
+            <div class="titlebox green_line">
+              <img src="frontimages/icon-leaf.svg" alt="" />
+              <div class="title">葉</div>
+            </div>
+            <ul class="addbox inputbox">
+              <li>
+                <div class="box W50">
+                  <div class="title">一心一葉期</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">強</option>
+                    <option value="">中</option>
+                    <option value="">弱</option>
+                  </select>
+                </div>
+                <div class="box W50">
+                  <div class="title">茶芽葉柄基部花青素顏色</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">有</option>
+                    <option value="">無</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div class="box W50">
+                  <div class="title">葉片形狀</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">長橢圓形</option>
+                  </select>
+                </div>
+                <div class="box W50">
+                  <div class="title">葉面曲度</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">平坦</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div class="box W50">
+                  <div class="title">葉緣形態</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">中波浪</option>
+                  </select>
+                </div>
+                <div class="box W50">
+                  <div class="title">葉基形狀</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">漸尖形</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+
+            <div class="titlebox green_line">
+              <img src="frontimages/icon-leaf.svg" alt="" />
+              <div class="title">花</div>
+            </div>
+            <ul class="addbox inputbox">
+              <li>
+                <div class="box W50">
+                  <div class="title">花柄長度</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">中(9.36-1.09mm)</option>
+                  </select>
+                </div>
+                <div class="box W50">
+                  <div class="title">花冠直徑</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">中小(34.3-2.5mm)</option>
+                  </select>
+                </div>
+              </li>
+              <li>
+                <div class="box W50">
+                  <div class="title">花柱長度</div>
+                  <select class="input-style" name="" id="">
+                    <option value="">短(11.6-0.8mm)</option>
+                  </select>
+                </div>
+              </li>
+            </ul>
+            <div class="btnbox">
+              <input type="button" class="input-style btn-archive btn-c-black-deep W50" value="存檔" />
+              <input type="button" class="W50 input-style btn-archive btn-c-gray-deep W50" value="清除" />
+            </div>
+          </div>
+        </div>
+        <!-- 內容 -->
+      </div>
+    </div>
+  </body>
+</html>

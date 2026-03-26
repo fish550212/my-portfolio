@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.port": 5501, "[csharp]": { "editor.semanticHighlighting.enabled": false },
+  "[razor]":  { "editor.semanticHighlighting.enabled": false }
+    
+}

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>采昌國際多媒體</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+
+    <!-- 電影宣傳輪播 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- 電影宣傳輪播 -->
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+      .flexslider {
+        width: 100%;
+      }
+
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
+
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
+    </style>
+    <script>
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
+
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
+
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
+            }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
+    </script>
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="header">
+      <div class="headerbox">
+        <div class="logo">
+          <a href="index.html" target="_self" title="回首頁">
+            <img src="frontimages/logo.svg" alt="LOGO" />
+          </a>
+        </div>
+
+        <!--topmenu-->
+        <div class="topmenu">
+          <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+          <script type="text/javascript">
+            $(function () {
+              // 幫 #menu li 加上 hover 事件
+              $("#menu>li").hover(
+                function () {
+                  // 先找到 li 中的子選單
+                  var _this = $(this),
+                    _subnav = _this.children("ul");
+
+                  // 變更目前母選項的背景顏色
+                  // 同時顯示子選單(如果有的話)
+                  //_this.css('backgroundColor', '#000');
+                  _subnav.css("display", "block");
+                },
+                function () {
+                  // 變更目前母選項的背景顏色
+                  // 同時隱藏子選單(如果有的話)
+                  // 也可以把整句拆成上面的寫法
+                  $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                }
+              );
+
+              // 取消超連結的虛線框
+              //$('a').focus(function(){
+              //  this.blur();
+              //});
+            });
+          </script>
+          <ul id="menu">
+            <li>
+              <a href="page-newmovie.html" title="電影">電影</a>
+            </li>
+            <li>
+              <a href="page-tvshow.html" title="頻道">頻道</a>
+            </li>
+            <li><a href="page-shop.html" title="公播">公播</a></li>
+            <li><a href="page-about.html" title="采昌">采昌</a></li>
+          </ul>
+          <ul class="linkgroup">
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img" target="_blank" href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+          </ul>
+          <div class="searchbox">
+            <input type="search" class="input-search" placeholder="搜尋" />
+            <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+          </div>
+        </div>
+
+        <!--------topmenu-end-------->
+
+        <!--MOB-MENU---位置放class="header"內--->
+        <!--手機選單-漢堡圖-->
+        <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+        <!--手機選單-END-->
+        <!-- Nav手機選單 -->
+        <link href="mobmu/common.css" rel="stylesheet" />
+        <!--[if gte IE 9]><!-->
+        <script src="mobmu/jquery-2.1.3.min.js"></script>
+        <!--<![endif]-->
+        <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+        <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+        <script src="mobmu/common.js"></script>
+
+        <div class="nav-panel" id="nav">
+          <ul class="linkgroup">
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09-1.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11-1.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30-1.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img" target="_blank" href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29-1.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+
+            <li class="searchbox">
+              <input type="search" class="input-search" placeholder="搜尋" />
+              <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+            </li>
+          </ul>
+          <ul class="reset">
+            <li>
+              <h2>
+                <a href="page-newmovie.html" title="電影">電影</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-tvshow.html" title="頻道">頻道</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-shop.html" title="公播">公播</a>
+              </h2>
+            </li>
+            <li>
+              <h2>
+                <a href="page-about.html" title="采昌">采昌</a>
+              </h2>
+            </li>
+          </ul>
+        </div>
+        <!--MOB-MENU--END------------->
+      </div>
+    </div>
+    <!---------hearder-end--------------->
+    <!---------advbox-------------------->
+
+    <div class="adv">
+      <div class="advbox">
+        <link href="ADVbox/ADV.css" rel="stylesheet" />
+        <script src="ADVbox/responsiveslides.min.js"></script>
+        <script>
+          $(function () {
+            // Slideshow 1
+            $("#slider4").responsiveSlides({
+              auto: true,
+              /*false手動 / true自動*/
+              pager: true,
+              nav: true,
+              speed: 650,
+              namespace: "centered-btns",
+            });
+          });
+        </script>
+        <div class="bannerbox">
+          <div class="wrapper1">
+            <!-- Slideshow 1 -->
+            <div class="rslides_container">
+              <ul class="rslides" id="slider4">
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字</div>
+                  </div>
+                  <img src="frontimages/images-23.png" />
+                </li>
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字2</div>
+                  </div>
+                  <img src="frontimages/bg-2.png" />
+                </li>
+                <li>
+                  <div class="mesk">
+                    <div class="box">文字2</div>
+                  </div>
+                  <img src="frontimages/images-24.png" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--advbox-end--------------->
+
+    <!--article------------------>
+    <div class="article">
+      <!----------------內容-->
+      <div class="articlebox">
+        <div class="page-section sitemap-section">
+          <div class="sectionbox">
+            <div class="section-title blackfont">網站導覽</div>
+            <div class="page-sitemap">
+              <ul id="sitemap">
+                <li class="title" align="left">
+                  <a title="電影" href="#">電影</a>
+                  <ul>
+                    <li>
+                      <a href="page-newmovie.html#movie-section" title="上映中">上映中</a>
+                    </li>
+                    <li>
+                      <a href="page-newmovie-2.html#movie-section" title="即將上映">即將上映</a>
+                    </li>
+                    <li>
+                      <a href="page-movie.html#movie-section" title="歷年電影">歷年電影</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="title" align="left">
+                  <a href="page-tvshow.html" title="頻道">頻道</a>
+                  <ul>
+                    <li>
+                      <a href="page-tvshow.html#tvshow-section" title="采昌影劇台">采昌影劇台</a>
+                    </li>
+                    <li>
+                      <a href="page-tvshow.html#tvshow-section" title="影迷數位電影台">影迷數位電影台</a>
+                    </li>
+                    <li>
+                      <a href="page-tvshow.html#tvshow-section" title="影迷數位紀實台">影迷數位紀實台</a>
+                    </li>
+                    <li>
+                      <a href="page-tvshow.html#tvshow-section" title="麥哲倫頻道(MagellanTV)">麥哲倫頻道(MagellanTV)</a>
+                    </li>
+                    <li>
+                      <a href="page-tvshow.html#tvshow-qa-section" title="客服處理報告(MagellanTV)">客服處理報告</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="title" align="left">
+                  <a href="page-shop.html#shop-section" title="公播">公播</a>
+                  <ul>
+                    <li>
+                      <a href="page-shop.html#shop-section" title="歐美">歐美</a>
+                    </li>
+                    <li>
+                      <a href="page-shop.html#shop-section" title="亞洲">亞洲</a>
+                    </li>
+                    <li>
+                      <a href="page-shop.html#shop-section" title="紀錄">紀錄</a>
+                    </li>
+                    <li>
+                      <a href="page-shop.html#shop-section" title="社會議題">社會議題</a>
+                    </li>
+
+                    <li>
+                      <a href="page-shop.html#shop-section" title="知識教育">知識教育</a>
+                    </li>
+                    <li>
+                      <a href="page-shop.html#shop-section" title="勵志成長">勵志成長</a>
+                    </li>
+                    
+                    <li>
+                      <a href="page-shop.html#shopform-section" title="公播需求單">公播需求單</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="title" align="left">
+                  <a href="page-about.html#company-section" title="采昌">采昌</a>
+                  <ul>
+                    <li>
+                      <a href="page-about.html#company-section" title="關於采昌">關於采昌</a>
+                    </li>
+                    <li>
+                      <a href="page-about.html#history-section" title="采昌紀事">采昌紀事</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!----------------內容end-->
+      </div>
+    </div>
+
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">
+        <a href="index.html" class="footer-logo">
+          <img src="frontimages/footer-logo.svg" alt="采昌國際多媒體" />
+        </a>
+        <div class="footer-text">
+          <div class="title">采昌國際多媒體股份有限公司</div>
+          <div class="f-menu">
+            <a href="page-sitemap.html">網站導覽</a>
+            <a href="page-privacy.html">隱私權政策</a>
+            <a href="page-faq.html">常見問題</a>
+            <a href="https://www.ccii.com.tw/chhtml/product_menu.asp?pbid=D04">采昌商城</a>
+            <a href="page-contact.html">聯絡我們</a>
+          </div>
+          <div class="text">
+            <span>地址：台北市11491內湖區瑞光路258巷56號6樓之3</span>
+            <span>客服專線：0800-308-868</span>
+            <p class="copyright">
+              本網站所有著作權均屬采昌國際多媒體所有，非經允許，不得任意轉載 Copyright © 2025 CaiChang International, Inc. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-09.svg" alt="" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.facebook.com/ccii.com.tw" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌國際多媒體fb" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccasiaworld" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌亞洲電影世界fb" />
+                    采昌亞洲電影世界
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccindependent" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="CAI CHANG Independent fb" />
+                    CAI CHANG Independent
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/ccii.videos" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="采昌影音館fb" />
+                    采昌影音館
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.facebook.com/MagellanTVTaiwan/" target="_blank">
+                    <img src="frontimages/icon-09.svg" alt="麥哲倫頻道fb" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.youtube.com/channel/UCiGH3UCDyO2Bu7P3SVRl3Ug" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="采昌國際多媒體youtube" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@MagellanTVTaiwan" target="_blank">
+                    <img src="frontimages/icon-11.svg" alt="麥哲倫頻道youtube" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="btn-img">
+                <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+              </div>
+              <ul class="btn-listbox">
+                <li>
+                  <a href="https://www.instagram.com/caichang_film/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="采昌國際多媒體IG" />
+                    采昌國際多媒體
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/magellantv.tw/" target="_blank">
+                    <img src="frontimages/icon-30.svg" alt="麥哲倫頻道IG" />
+                    麥哲倫頻道
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="btn-img" target="_blank" href="https://www.threads.com/@caichang_film">
+                <img src="frontimages/icon-29.svg" alt="采昌國際threads" />
+              </a>
+            </li>
+          </ul>
+          <p>
+            訪客人數
+            <b>19980742</b>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

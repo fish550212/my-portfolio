@@ -1,0 +1,77 @@
+﻿@model NDO.Models.Logoin
+@{   Layout = null;}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>興達發電廠-QR code設備巡檢管理平台</title>
+    <link href="../css/login.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        
+    </style>
+
+    <script language=javascript>
+        function checkdata() {
+            var errmsg = "";
+            if (document.form1.UserName.value == "") {
+                errmsg = "帳號\n";
+            }
+            if (document.form1.Password.value == "") {
+                errmsg = errmsg + "密碼";
+            }
+            if (errmsg != "") {
+                alert(errmsg)
+                return false
+            }
+        }
+    </script>
+</head>
+
+<body><div class="bgbox">
+<div class="loginimg"> 
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @name = "form1", @id = "form1", @onsubmit = "return checkdata()" }))
+    {
+        @Html.AntiForgeryToken()
+        <center>@Html.ValidationSummary(true)</center>
+                  
+                <div class="loginbox">
+
+                    <div class="inputbox">                       
+                        <div class="title">
+                            <img src="../images/login-images-title.png" alt="">
+                         </div>
+                        <div>
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form_text", @Value = "mark" })
+                        </div> 
+                        
+
+                        <div>
+                        @Html.PasswordFor(m => m.Password, new { @class = "form_text", @Value = "123456" })
+                        </div>
+                        
+                    </div>
+                    <div class="btnbox">
+                        <input name="Login" type="submit" id="Login" value="登 入" class="button">
+
+                        <input name="clean" type="reset" id="clean" value="清 除" class="button" >
+
+                    </div>
+                    <div class='bottomimg'>
+                        <img src="../images/login-images-bghouse.png" alt="">
+                    </div>
+                   
+                </div>  
+                <div class='bottombox'>       
+                </div>
+                
+      
+
+    }  
+    </div>
+
+</div>
+</body>
+</html>

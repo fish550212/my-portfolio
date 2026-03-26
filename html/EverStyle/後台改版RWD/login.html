@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>後台改版</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <script language=javascript>
+        function checkdata() {
+            var errmsg = "";
+            if (document.form1.account.value == "") {
+                errmsg = "請輸入帳號\n";
+            }
+            if (document.form1.passwd.value == "") {
+                errmsg = errmsg + "請輸入密碼";
+            }
+            if (errmsg != "") {
+                alert(errmsg)
+                return false
+            }
+        }
+    </script>
+</head>
+  
+<body >
+    <form action="../admin/login.php" id="form1" name="form1" onsubmit="return checkdata()" method="post">
+        <div class="main">
+            <div class="login">
+                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <td align="left" valign="bottom" style="color:rgba(105,179,182,1); font-size:38px;margin:0;border-bottom: 0px solid #57c0d0;padding-left:50px; "><strong>　</strong></td>
+                    </tr>
+
+                    <tr>
+                        <td align="left" valign="bottom" style="color:rgba(0,0,0,1); font-size:20px; padding-left:55px; ">　</td>
+                    </tr>
+                    <tr>
+                       
+                        <td align="left" style=" color: #fff;"><input Value="mark" class="form_text" data-val="true" data-val-required="請輸入帳號" id="account" name="account" type="text" /></td>
+                    </tr>
+                    <tr>
+                       
+                        <td align="left" style=" color: #fff;"><input Value="a123456" autocomplete="off" class="form_text" data-val="true" data-val-required="密碼 欄位是必要項。" id="passwd" name="passwd" type="password" /></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><input name="Login" type="submit" id="Login" value="登 入" class="button" /><input name="clean" type="reset" id="clean" value="清 除" class="button" /></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>

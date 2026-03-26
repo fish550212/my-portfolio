@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ever Style</title>
+    <link href="enfrontcss/index.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dist/aos.css" />
+    <script type="text/javascript" src="frontjs/checkdata.js"></script>
+
+    <!---輪播必須程式--------------------------------------------------------------------------->
+    <style type="text/css">
+        .flexslider {
+            width: 100%;
+        }
+
+        div.flexslider_6 ol {
+            bottom: 0px;
+            display: none;
+            /*點點*/
+        }
+
+        div.flexslider_6 div.flex-pauseplay {
+            display: none !important;
+        }
+    </style>
+
+    <script>
+        function save_currentSlide() {
+            this.currentSlide_1 = null;
+            this.set_1 = function (num) {
+                this.currentSlide_1 = num;
+            }
+            this.get_1 = function () {
+                return this.currentSlide_1;
+            }
+            this.currentSlide_2 = null;
+            this.set_2 = function (num) {
+                this.currentSlide_2 = num;
+            }
+            this.get_2 = function () {
+                return this.currentSlide_2;
+            }
+
+            this.set_paging_OL_Event = function (slider) {
+                const CurrentSlide_X = this;
+                const slides_a_all = slider.slides.children();
+                const paging_OL_a_all = slider.controlNav;
+                const paging_UL_a_all = slider.directionNav;
+
+                $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+                    let slides_a = slides_a_all[index];
+                    if (slides_a.title != "") {
+                        let content = slides_a.title.replace("開新視窗,", "");
+                        $(this).children().attr("title", slides_a.title);
+                        $(this).children().html(content);
+                    }
+                    $(this).keydown(function (event) {
+                        if (event.which == 13) {
+                            slides_a.click();
+                        }
+                    });
+                });
+
+                //離開 1
+                paging_UL_a_all[1].addEventListener("keydown",
+                    function (event) {
+                        if (event.which === 9) {
+                            CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                            slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                            slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                            slider.play();
+                        }
+                    });
+
+                //離開 2
+                $("body").click(function () {
+                    let sliderIsFocus = false;
+                    for (let i = 0; i < slides_a_all.length; i++) {
+                        sliderIsFocus |= slides_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_OL_a_all.length; i++) {
+                        sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+                    }
+                    for (let i = 0; i < paging_UL_a_all.length; i++) {
+                        sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+                    }
+                    if (!sliderIsFocus && !slider.playing) {
+                        CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+                        slider.animatingTo = CurrentSlide_X.currentSlide_1;
+                        slider.currentSlide = CurrentSlide_X.currentSlide_1;
+                        slider.play();
+                    }
+                });
+            }
+        }
+    </script>
+
+    <!---輪播必須程式END--------------------------------------------------------------------------->
+    <script>
+        $(document).ready(function () {
+            $("#moreThemeicon").bind("click", function () {
+                $("#Themeicon").show(1000);
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        var cal = Calendar.setup({
+            onSelect: function (cal) {
+                cal.hide()
+            },
+            showTime: 0
+        });
+        //]]>
+    </script>
+</head>
+
+
+<body>
+    <div id="TOP"><img src="enfrontimages/gotop.png" alt="回到上面" /></div>
+
+    <!---------hearder---------------->
+    <div class="header">
+        <div class="headerbox">
+
+
+            <div class="logo"><img src="enfrontimages/logo.png"></div>
+
+
+            <!--topmenu-->
+            <div class="topmenu">
+                <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+                <script type="text/javascript">
+                    $(function () { // 幫 #menu li 加上 hover 事件
+                        $('#menu>li').hover(function () {
+                            // 先找到 li 中的子選單
+                            var _this = $(this),
+                                _subnav = _this.children('ul');
+
+                            // 變更目前母選項的背景顏色
+                            // 同時顯示子選單(如果有的話)
+                            //_this.css('backgroundColor', '#000');
+                            _subnav.css('display', 'block');
+                        }, function () {
+                            // 變更目前母選項的背景顏色
+                            // 同時隱藏子選單(如果有的話)
+                            // 也可以把整句拆成上面的寫法
+                            $(this).css('backgroundColor', '').children('ul').css('display', 'none');
+                        });
+
+                        // 取消超連結的虛線框
+                        //$('a').focus(function(){
+                        //  this.blur();
+                        //});
+                    });
+                </script>
+
+                <ul id='menu'>
+                    <li><a href='index.html' title='Home'>Home</a>
+                        <!-- <ul>
+                            <li><a href='index.html' title='Home'>Home</a> </li>
+                            <li><a href='page-news.html' title='News'>News</a></li>
+                        </ul> -->
+                    </li>
+
+                    <li><a href='page-company.html' title='About Us'>About Us</a>
+                        <ul>
+                            <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                            <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                        <ul>
+                            <li><a href='page-quality.html' title='QM'>QM</a></li>
+                            <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                            <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-application.html' title='Products'>Products</a>
+                        <ul>
+                            <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                        </ul>
+                    </li>
+                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a></li>
+
+
+                </ul>
+
+
+            </div>
+            <div class="topbox">
+                <!-- <a href='#' title='後台管理' class="oa_btn">後台管理</a> -->
+                <select onchange="gotoUrl(this)">
+                    <option value="../cut/page-application.html">中文</option>
+                    <option value="../cut-ENG/page-application.html" selected>ENG</option>
+                </select>
+                <script>
+                    function gotoUrl(selectObject) {
+                      var value = selectObject.value;
+                      if (value) {
+                        window.location.href = value;
+                      }
+                    }
+                    </script>
+            </div>
+            <!--------topmenu-end-------->
+            <!--MOB-MENU---位置放class="header"內--->
+            <!--手機選單-漢堡圖-->
+            <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+            <!--手機選單-END-->
+            <!-- Nav手機選單 -->
+            <link href="enmobmu/common.css" rel="stylesheet">
+            <!--[if gte IE 9]><!-->
+            <script src="enmobmu/jquery-2.1.3.min.js"></script>
+            <!--<![endif]-->
+            <script src="enmobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+            <script src="enmobmu/jquery.bxslider-4.1.1.min.js"></script>
+            <script src="enmobmu/common.js"></script>
+
+            <div class="nav-panel" id="nav">
+
+                <ul class='reset'>
+
+                    <li>
+                        <h2><a href='#' title='Home'>Home</a></h2>
+                        <!-- <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='index.html' title='Home'>Home</a> </li>
+                                <li><a href='page-news.html' title='News'>News</a></li>
+                            </ul>
+                        </div> -->
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='About Us'>About Us</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <li>
+                        <h2><a href='#' title='QC and R&D'>QC and R&D</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                                <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a></li>
+                                <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='#' title='Products'>Products</a></h2>
+                        <div class='nav-second'>
+                            <ul class='reset'>
+                            <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                    Product Applications</a> </li>
+                            <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                            <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                            <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                            <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                            <li><a href='page-color.html' title='Color'>Color</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h2><a href='page-contact.html' title='Contact Us'>Contact Us</a></h2>
+                    </li>
+
+                </ul>
+                <!-- <div class="othermu">
+                    <a href='#' title='後台管理' class="oa_btn">後台管理</a>
+                </div> -->
+            </div>
+            <!--MOB-MENU--END------------->
+
+
+
+
+
+        </div>
+    </div>
+    <!---------hearder-end--------------->
+
+
+    <!--adv-->
+    <div class="adv">
+
+        <div class="ADVbox">
+            <img src="enfrontimages/page-commodity-bg.png" alt="">
+            <div class="page_title">
+                <div class="title">
+                    Services and Product Applications 
+                    <div class="bottom_line"></div>
+                </div>
+            </div>
+        </div>
+        <!--advbox-end-->
+    </div>
+    <!--adv-end-->
+
+    <!--article-->
+    <div class="article">
+        <div class="articlebox">
+            <!----------------分頁圖---------------------------->
+            <div class="application">
+                <div class="applicationbox">
+                    <div class="titlebox">
+                        Services
+                        <div class="line"></div>
+                    </div>
+                    <ul class="groupbox">
+                        <li>
+                            <div class="imgbox">
+                                <img src="enfrontimages/application-top-1.png" alt="客製研發">
+                            </div>
+                            <div class="title">Customized service</div>
+                            <p>Particular flavor compounding and development</p>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <img src="enfrontimages/application-top-2.png" alt="產品應用">
+                            </div>
+                            <div class="title">Product applications</div>
+                            <p>Product implementation, formula application and adjustment</p>
+                        </li>
+                        <li>
+                            <div class="imgbox">
+                                <img src="enfrontimages/application-top-3.png" alt="實體銷售">
+                            </div>
+                            <div class="title">Brick and mortar sales</div>
+                            <p>Various flavors and food additives.</p>
+                        </li>
+                        <div class="clear-fix"></div>
+                    </ul>
+                </div>
+            </div>
+            <!---------------------產品應用-->
+            <div class="application product">
+                <div class="applicationbox productbox">
+                    <div class="titlebox">
+                        Product Applications
+                        <div class="line"></div>
+                    </div>
+                    <ul class="tabs">
+                        <li class="active"><a href="#tab1"><b>Beverage</b></a></li>
+                        <li><a href="#tab2"><b>Syrup</b></a></li>
+                        <li><a href="#tab3"><b>Bakery</b></a></li>
+                        <li><a href="#tab4"><b>Frozen dessert</b></a></li>
+                    </ul>
+                    <div id="tab1" class="tab-content">
+                        <!--飲品應用-->
+                        <div class="typebox">
+                            Soft Drink
+                        </div>
+                        <div class="flex">
+                            <div class="item title">Taro Milk Tea</div>
+                            <div class="item">FCL013 Taro Flavor<br>
+                                FLA004 Taro Flavor
+                                </div>
+                            <div class="item title">Hojicha Milk Tea</div>
+                            <div class="item">FLA639 Roasted Tea Flavor 05395</div>
+
+                            <div class="item title">Green Milk Tea</div>
+                            <div class="item">FCL046 Green Tea Flavor</div>
+                            <div class="item title"> Brown Sugar Milk Tea</div>
+                            <div class="item">FLA198 White Gourd & Brown Sugar Mix Flavor 20832C</div>
+
+                            <div class="item title">Churros Flavored Caffè Latte(with Popcorn Flavored Milk Cap)</div>
+                            <div class="item">Popcorn Flavor 05384<br>
+                                FLA641 Churros Flavor 05386
+                                
+                            </div>
+                            <div class="item title">Warm Time(Brown Sugar Drink)
+                            </div>
+                            <div class="item">Lemongrass Flavor 05394
+                            </div>
+
+                            <div class="item title">Pandan Lemon Juice
+                            </div>
+                            <div class="item">FCL029 Pandan Flavor
+                            </div>
+                            <div class="item title">Sea Salt Lychee Juice
+                            </div>
+                            <div class="item">Lychee Flavor 05484
+                            </div>
+
+                            <div class="item title">Passionfruit Green Tea Yakult
+                            </div>
+                            <div class="item">Passionfruit Flavor 05194
+                            </div>
+                            <div class="item title">Yogurt Flavored Soda
+
+                            </div>
+                            <div class="item">FLA317 Yoghourt Flavor 20934C<br>
+                                FLA432 Yoghourt Flavor 30861C
+                                </div>
+                        </div>
+
+                        <div class="typebox">
+                            Cocktail
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Summer Confidant(Red wine, Sprite)
+                            </div>
+                            <div class="item">Cookies Flavor 05409
+                            </div>
+                            <div class="item title">Coffee Cream Liqueur
+                            </div>
+                            <div class="item">Coffee Flavor 05331
+                            </div>
+
+                            <div class="item title">Squeezed Apple Chu-Hi
+
+                            </div>
+                            <div class="item">FLA290 Green Apple Flavor 20949C<br>
+                                FLA312 Apple Flavor 20959C
+                                </div>
+                            <div class="item title">White Grape Sour
+                            </div>
+                            <div class="item">Grape Flavor 05483
+                            </div>
+
+                            <div class="item title">Green Amazement(Cointreau, Sparkling Water)
+                            </div>
+                            <div class="item">Kiwi Flavor 05446
+                            </div>
+                            <div class="item title">Summer Harmony Mojito
+                            </div>
+                            <div class="item">Peppermint Flavor 05428
+                            </div>
+                        </div>
+
+                        <!--飲品應用-->
+                    </div>
+                    <div id="tab2" class="tab-content">
+                        <!--糖漿應用-->
+                        <div class="typebox">
+                            Fruit
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Peach Syrup
+
+                            </div>
+                            <div class="item">FLA241 Peach Flavor 20896C
+
+                            </div>
+                            <div class="item title">Grape Syrup
+
+                            </div>
+                            <div class="item">FLA339 Grape Flavor 20999C
+
+                            </div>
+
+                            <div class="item title">Blue Curacao Syrup
+
+                            </div>
+                            <div class="item">FLA423 Tangerine Flavor 00843
+
+                            </div>
+                            <div class="item title">Pink Grapefruit Syrup
+
+                            </div>
+                            <div class="item">Grapefruit Flavor 05464
+
+                            </div>
+
+                            <div class="item title">Cranberry Apple Syrup
+
+                            </div>
+                            <div class="item">FLA312 Apple Flavor 20959C<br>
+                                FLA436 Cranberry concentrate
+                                
+                            </div>
+                        </div>
+
+
+
+                        <div class="typebox">
+                            Drupe/Nut
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Cappuccino Syrup
+
+                            </div>
+                            <div class="item">FLA226 Cappuccino Flavor 20912C
+
+                            </div>
+                            <div class="item title">Walnut Brownie Syrup
+                            </div>
+                            <div class="item">Walnut Flavor 05542<br>
+                                Brownie Flavor 05559
+                                
+                            </div>
+
+                            <div class="item title">Hazelnut Syrup
+
+
+                            </div>
+                            <div class="item">FLA422 Hazelnut Flavor 00830<br>
+                                FLA223 Vanilla Essence 20854C
+                            </div>
+                        </div>
+
+                        <div class="typebox">
+                            Flora/Herb
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Jasmine Syrup
+                            </div>
+                            <div class="item">FLA412 Jasmine Flavor 30823C
+                            </div>
+                            <div class="item title">Osmanthus Syrup
+                            </div>
+                            <div class="item">FLA369 Osmanthus Flavor 30822C
+                            </div>
+
+                            <div class="item title">Elder Flower Syrup
+                            </div>
+                            <div class="item">Elder Flower Flavor 05468
+                            </div>
+                            <div class="item title">Green Mint Syrup
+
+                            </div>
+                            <div class="item">Peppermint Flavor 05537
+
+                            </div>
+                        </div>
+
+                        <div class="typebox">
+                            Sweetness
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Salted Caramel Syrup
+
+                            </div>
+                            <div class="item">Caramel Flavor 05407
+
+                            </div>
+                            <div class="item title">Brown Sugar Syrup
+
+                            </div>
+                            <div class="item">FLA618 Brown Sugar Flavor 30708C
+
+                            </div>
+
+                            <div class="item title">Caramel Milk Syrup
+
+                            </div>
+                            <div class="item">FCL164 Caramel Milk Flavor 20989C
+
+                            </div>
+
+                        </div>
+
+                        <div class="typebox">
+                            Beverage
+                        </div>
+
+                        <div class="flex">
+                            <div class="item title">Cola syrup
+
+
+                            </div>
+                            <div class="item">Coke Flavor 02115
+
+
+                            </div>
+                            <div class="item title">Ice Cream Soda Syrup
+
+
+                            </div>
+                            <div class="item">Ice Cream Soda Flavor 05452
+
+
+                            </div>
+                        </div>
+
+                        <div class="typebox">Milk
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Irish Cream Syrup
+
+                            </div>
+                            <div class="item">Irish Cream Flavor 05539
+
+                            </div>
+                        </div>
+
+                        <!--糖漿應用-->
+                    </div>
+                    <div id="tab3" class="tab-content">
+
+                        <div class="typebox">Bread
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Scallion Bread
+
+                            </div>
+                            <div class="item">ATV031 Bread Improver Paste
+
+                            </div>
+                            <div class="item title ">Apple Bread
+
+
+                            </div>
+                            <div class="item">FLA186 Apple Bread Flavor 8018C<br>
+                                Cinnamon Oil 02152
+                                
+
+                            </div>
+                        </div>
+
+                        <div class="typebox">Pastry
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Unicorn Snowskin Mooncake
+                                
+                            </div>
+                            <div class="item">FOD117 Ice Cake Jello Powder<br>
+                                POW264 Taro Flavor Powder 03848C<br>
+                                Food Color Series
+                                
+
+                            </div>
+                            <div class="item title ">Milk Stick
+                            </div>
+                            <div class="item">Fresh Milk Flavor 05378<br>
+                                ATV028 Baking Powder
+                                
+                            </div>
+                        </div>
+
+                        <div class="typebox">Cake
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Oolong Hojicha Cake with Chestnut
+
+
+
+                            </div>
+                            <div class="item">POW296 Oolong Tea Flavor Powder 068127<br>
+                                FLA639 Roasted Tea Flavor 05395<br>
+                                Roasted Tea Flavor Powder 16821
+                                
+                            </div>
+                            <div class="item title ">Matcha Friand
+
+
+                            </div>
+                            <div class="item">FOD119 Matcha Powder
+
+                            </div>
+                            <div class="item title ">Classic Chocolate Cake
+
+
+                            </div>
+                            <div class="item">FOD181 Chocolate Flavor Syrup<br>
+                                ATV001 Cream Of Tartar 
+                                
+                            </div>
+                            <div class="item title ">Passionfruit Bavarois
+                            </div>
+                            <div class="item">FLA223 Vanilla Essence 20854C<br>
+                                FOD074 Instant Gelatine Powder 16814<br>
+                                FLA497 Orange Flavor 00782<br>
+                                FLA334 Passionfruit Flavor 20985C
+                                
+                            </div>
+
+                            <div class="item title ">Berries Jello Mousse Cake
+                            </div>
+                            <div class="item">FLA169 Cranberry Flavor<br>
+                                FLA477 Cherry Flavor 30865C<br>
+                                FOD074 Instant Gelatine Powder 16814
+                                
+                            </div>
+                        </div>
+
+                        <div class="typebox">Candy
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Brown Sugar Nougat
+
+
+                            </div>
+                            <div class="item">FOD172 Meringue Powder BD<br>
+                                FLA618 Brown Sugar Flavor 30708C
+                                
+
+                            </div>
+                            <div class="item title ">Lemon Yogurt Meringue
+                            </div>
+                            <div class="item">FOD172 Meringue Powder BD<br>
+                                FLA473 Lemon Flavor 02109<br>
+                                Food Color Series
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab4" class="tab-content">
+                        <div class="typebox">Ice Cream
+
+                        </div>
+                        <div class="flex">
+                            <div class="item title ">Cantaloupe Ice Cream
+
+                            </div>
+                            <div class="item">POW055 Cantaloupe Flavor Powder
+
+                            </div>
+                            <div class="item title ">Banana Ice Cream
+
+                            </div>
+                            <div class="item">POW158 Banana Flavor Powder
+
+                            </div>
+                            <div class="item title ">Tropical Fruit Ice Cream
+                            </div>
+                            <div class="item">POW159 Pineapple Flavor Powder<br>
+                                POW157 Mango Flavor Powder<br>
+                                Passionfruit Flavor Powder 12802
+                                
+                            </div>
+                            <div class="item title ">Chocolate Silk Ice Cream
+
+
+                            </div>
+                            <div class="item">Chocolate Flavor 05493
+
+
+                            </div>
+                            <div class="item title ">Black Forest Ice Cream
+
+
+                            </div>
+                            <div class="item">Blackforest Flavor Powder 02807
+
+
+                            </div>
+                            <div class="item title ">Pudding Ice Cream
+
+
+                            </div>
+                            <div class="item">Pudding Flavor 00849
+
+
+                            </div>
+                            <div class="item title ">Bubble Gum Ice Cream
+
+
+                            </div>
+                            <div class="item">Bubble Gum Flavor Powder 068251
+
+
+                            </div>
+                            <div class="item title ">Milk Ice Cream
+
+
+                            </div>
+                            <div class="item">Milk Flavor Powder 068379
+
+
+                            </div>
+                            <div class="item title ">Earl Grey Ice Cream
+
+
+                            </div>
+                            <div class="item">FOD180 Earl Grey Tea Flavor Powder
+
+
+                            </div>
+                            <div class="item title ">Thai Tea Ice Cream
+
+
+
+                            </div>
+                            <div class="item">Thai Milk Tea Flavor Powder 068262<br>
+                                POW004 Vanilla Flavor BN
+                                
+                            </div>
+                            <div class="item title ">Coconut Milk Ice Cream
+
+
+                            </div>
+                            <div class="item">Coconut Milk Flavor Powder 068359
+
+
+                            </div>
+                        </div>
+                        <div class="typebox">Sherbet
+                        </div>
+                        <div class="flex">
+                            <div class="item title">Green Apple Yogurt Sherbet
+
+                            </div>
+                            <div class="item">POW195 Green Apple Flavor Powder 12801
+
+                            </div>
+                            <div class="item title ">Lemon Yogurt Sherbet
+
+                            </div>
+                            <div class="item">POW155 Lemon Flavor Powder
+
+                            </div>
+                            <div class="item title">Blackcurrant Yogurt Sherbet
+
+                            </div>
+                            <div class="item">POW187 Blackcurrant Flavor Powder 10809
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--產品分類語法-->
+            <script>
+                $(document).ready(function () {
+                    // 將第一個頁簽的內容設置為可見
+                    $('.tab-content').first().show();
+                    // 顯示第一個頁籤的顏色
+                    $('.tabs li:first-child').addClass('active');
+                    // 檢查超連結中是否包含有效的 ID
+                    if (window.location.hash) {
+                        // 根據超連結中的 ID 選擇對應的頁簽
+                        var target = $(window.location.hash);
+                        if (target.length) {
+                            // 隱藏所有頁簽內容
+                            $('.tab-content').hide();
+                            // 顯示選擇的頁簽內容
+                            target.show();
+                            // 移除所有頁簽的選中狀態
+                            $('.tabs li').removeClass('active');
+                            // 將選擇的頁簽設置為選中狀態
+                            target.parent().addClass('active');
+                        }
+                    }
+                    // 頁簽點擊事件
+                    $('.tabs li a').click(function () {
+                        // 隱藏所有頁簽內容
+                        $('.tab-content').hide();
+                        // 顯示所選擇的頁簽內容
+                        $($(this).attr('href')).show();
+                        // 移除所有頁簽的選中狀態
+                        $('.tabs li').removeClass('active');
+                        // 將所選擇的頁簽設置為選中狀態
+                        $(this).parent().addClass('active');
+                        // 防止默認的超連結操作
+                        return false;
+                    });
+                });
+            </script>
+           
+
+
+            <!--indexsitemap------------------下方選單------->
+            <div class="indexsitemap">
+                <div class="indexsitemapbox">
+
+                    <div class="detailbox">
+                        <div class="title_logo">
+                            <img src="enfrontimages/footer_logo.png" alt="">
+                            <p>Ever Style Foodstuff Industrial Co., Ltd.</p>
+                        </div>
+                        <ul class="material">
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone.png" alt="">
+                                </span>
+                                <b>(+886 2)2917-9617</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-phone2.png" alt="">
+                                </span>
+                                <b>(+886 2)2918-5719</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-web.png" alt="">
+                                </span>
+                                <b>http://www.everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-email.png" alt="">
+                                </span>
+                                <b>service@everstyle.com</b>
+                            </li>
+                            <li>
+                                <span>
+                                    <img src="enfrontimages/icon-map.png" alt="">
+                                </span>
+                                <b>5F., No.30, Ln.54, Zhongzheng Rd.,<br>
+                                    Xindian Dist., New Taipei City 231, Taiwan.</b>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="centerbox">
+
+                        <ul id='sitemap'>
+                            <li class="title"><a href='index.html' title='Home'>Home</a>
+                                <!-- <ul>
+                                    <li><a href='index.html' title='Home'>Home</a> </li>
+                                    <li><a href='page-news.html' title='News'>News</a></li>
+                                </ul> -->
+                            </li>
+
+                            <li class="title"><a href='page-company.html' title='About Us'>About Us</a>
+                                <ul>
+                                    <li><a href='page-company.html' title='Our Company'>Our Company</a></li>
+                                    <li><a href='page-companyhistory.html' title='Our History'>Our History</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-quality.html' title='QC and R&D'>QC and R&D</a>
+                                <ul>
+                                    <li><a href='page-quality.html' title='QM'>QM</a></li>
+                                    <li><a href='page-quality-certified.html' title='Certifications'>Certifications</a>
+                                    </li>
+                                    <li><a href='page-quality-research.html' title='RD'>RD</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-application.html' title='Products'>Products</a>
+                                <ul>
+                                    <li><a href='page-application.html' title='Services and Product Applications'>Services and
+                                        Product Applications</a> </li>
+                                <li><a href='page-commodity.html' title='Flavor'>Flavor</a> </li>
+                                <li><a href='page-bakery.html' title='Bakery'>Bakery</a></li>
+                                <li><a href='page-powderflavor.html' title='Powder Flavor '>Powder Flavor </a></li>
+                                <li><a href='page-syrup.html' title='Syrup'>Syrup</a></li>
+                                <li><a href='page-color.html' title='Color'>Color</a></li>
+                                </ul>
+                            </li>
+                            <li class="title"><a href='page-contact.html' title='Contact Us'>Contact Us</a>
+                                <ul>
+                                    <li><a href='page-contact.html' title='Contact Us'>Contact Us</a> </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
+            <!--indexsitemap-end------------------------->
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="footerbox">
+            <p>Copyright © 2022 Ever Style Foodstuff Industrial Co., Ltd.</p>
+        </div>
+    </div>
+
+    <!--footer-end-->
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+
+    <!--動態語法-->
+    <script src="dist/aos.js"></script>
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+</body>
+
+</html>

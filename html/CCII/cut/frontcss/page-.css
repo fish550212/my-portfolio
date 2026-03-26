@@ -1,0 +1,1740 @@
+﻿@charset "utf-8";
+
+.font_red {
+  color: #bd0000;
+}
+.page-content ul li {
+  list-style: disc;
+  margin-left: 28px;
+}
+.page-content ol li {
+  list-style: decimal;
+  margin-left: 28px;
+}
+.page-content img {
+  max-width: 90%;
+  padding: 10px 0;
+  margin: auto;
+}
+.btnbox {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btnbox a {
+  color: #efefef;
+  background-color: #a2a2a2;
+  display: inline-block;
+  padding: 8px 50px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.btnbox a:hover {
+  color: #fff;
+  background-color: #333333;
+}
+/* 導覽------- */
+#sitemap {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  overflow: hidden;
+}
+
+#sitemap .title {
+  width: calc(100% / 4 - 8px);
+  float: left;
+  text-align: left;
+  color: #1f1f1f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+#sitemap .title a {
+  color: #1f1f1f;
+  transition: 0.3s;
+}
+#sitemap .title > a {
+  display: block;
+  width: 100%;
+  background-color: #848484;
+  color: #fff;
+  padding: 10px 15px;
+  font-weight: 400;
+}
+#sitemap .title > a:hover {
+  text-decoration: none;
+  background-color: #757575;
+  color: #efefef;
+}
+
+#sitemap .title ul {
+  padding: 10px;
+  border: 1px #dbdbdb solid;
+}
+
+#sitemap .title ul li {
+  list-style: circle;
+  text-align: left;
+  font-weight: normal;
+  margin-left: 25px;
+}
+
+#sitemap .title ul li a {
+  color: #1f1f1f;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  line-height: 160%;
+}
+
+#sitemap .title ul li a:hover {
+  border: 0;
+  text-decoration: underline;
+}
+/**/
+
+/*共用版-間距*/
+.page-section {
+  padding: 30px 0;
+  position: relative;
+}
+.page-section .sectionbox {
+  position: relative;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  z-index: 1;
+}
+
+/*標題*/
+.page-section .section-title {
+  position: relative;
+  font-size: 30px;
+  display: inline-block;
+  font-weight: 500;
+  padding-left: 23px;
+  color: #d3d3d3;
+}
+.page-section .section-title::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 10px;
+  height: 30px;
+  border-radius: 30px;
+  background: #d3d3d3;
+}
+.page-section .section-title.blackfont {
+  color: #000000;
+  position: relative;
+}
+.page-section .flex-center,
+.flex-center {
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+.page-section .title-2 {
+  display: block;
+  font-size: 25px;
+  text-align: center;
+}
+/* 串流連結 */
+.linkbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.linkbox a {
+  width: calc(100% / 12 - 14px);
+  border: 1px solid #eee;
+  background: #ffffff;
+  transition: 0.3s;
+}
+.linkbox a img {
+  width: 100%;
+}
+.linkbox a:hover {
+  border: 1px solid #d4d4d4;
+}
+/*電影相關*/
+.about-section .sectionbox {
+  gap: 20px;
+  align-items: center;
+}
+.about-section .section-content-border {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.about-section .section-content-border .about-img {
+  width: calc(25% - 20px);
+  font-size: 0;
+}
+.about-section .section-content-border .about-img img {
+  width: 100%;
+}
+.about-section .section-content-border .about-text {
+  width: calc(50% - 20px);
+}
+.about-section .section-content-border .about-text-2 {
+  width: calc(25% - 40px);
+  margin-left: auto;
+}
+.about-section .section-content-border .about-text h3,
+.about-section .section-content-border .about-text-2 h3 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.about-section .section-content-border .about-text .text {
+  overflow-y: auto;
+  height: 500px;
+}
+.about-section .section-content-border .text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.about-section .section-content-border .about-text-2 .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.about-section .section-content-border .video-link-box {
+  width: 100%;
+  padding: 30px 35px;
+  border-radius: 15px;
+  background: #fff;
+}
+.about-section .section-content-border .video-link {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+.about-section .section-content-border .video-link .video {
+  width: calc(100% / 3.3 - 5px);
+
+  flex: 0 0 auto;
+
+  position: relative;
+  padding-bottom: 16.8%; /* 16:9 比例 */
+  height: 0;
+  overflow: hidden;
+}
+.about-section .section-content-border .video-link .video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/*電影照輪播*/
+.movie-photobox {
+  padding: 40px 0 0 0;
+  text-align: center;
+}
+.page-section .movie-photobox .section-title.blackfont {
+  margin-bottom: 15px;
+}
+/* 讓圖片等比縮放、居中對齊 */
+.movie-photobox .swiper {
+  width: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.movie-photobox .swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.movie-photobox .swiper-button-next {
+  right: 19%;
+  color: #ffffff;
+}
+.movie-photobox .swiper-button-prev {
+  left: 19%;
+  color: #ffffff;
+}
+.movie-photobox .swiper-button-next:after,
+.movie-photobox .swiper-button-prev:after {
+  font-weight: bold;
+}
+/* 控制左右圖片半透明 */
+.movie-photobox .swiper-slide {
+  transition: opacity 0.3s;
+  background-color: #fff;
+  aspect-ratio: 14 / 9;
+}
+.movie-photobox .swiper-slide img {
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.movie-photobox .swiper-slide.swiper-slide-active img {
+  opacity: 1;
+}
+/*電影新聞*/
+
+.news-section .news-list {
+  display: flex;
+  gap: 10px;
+}
+.news-section .news-list li {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 4 - 7px);
+  border: 1px solid #c9c9c9;
+}
+.news-section .news-list li:hover {
+  background-color: #edededc3;
+}
+
+.news-section .news-list .news-group {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.news-section .news-list .news-img {
+  aspect-ratio: 15.5 / 9; /* 或其他比例，例如 4 / 3、3 / 2 */
+  object-fit: contain;
+  overflow: hidden;
+  background-color: #b2b2b2;
+}
+.news-section .news-list .news-img img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+.news-section .news-list .news-date {
+  padding: 8px 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #a6a6a6;
+  font-weight: 500;
+}
+.news-section .news-list .news-text {
+  font-weight: 500;
+  font-size: 20px;
+  color: #1f1f1f;
+  height: 58px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 28px;
+}
+.news-section .news-list .text-2 {
+  height: 125px;
+  color: #808080;
+  font-size: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-height: 24px;
+}
+.news-section .news-list li .news-text:hover {
+  text-decoration: underline;
+}
+.news-section .news-list .news-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.news-section .news-list .news-share a {
+  display: inline-block;
+}
+.news-section .news-list .news-share a img {
+  height: 20px;
+  width: auto;
+}
+.news-section .news-list .news-share a:hover {
+  opacity: 0.6;
+}
+.news-section .news-list .news-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.news-section .more-btn {
+  margin: auto;
+}
+.news-section .more-btn a {
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 30px;
+  background-color: #d3d3d3;
+  color: #fff;
+}
+.news-section .more-btn a:hover {
+  background-color: #bfbfbf;
+}
+/*內容框--*/
+.line {
+  width: 100%;
+  border-top: 1px solid #cccccc;
+}
+.section-content-border {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 40px;
+  padding: 20px 35px;
+}
+
+/* 時刻表 */
+.ticket-group {
+  display: flex;
+  gap: 25px;
+}
+.ticket-img {
+  width: 30%;
+  max-width: 430px;
+  font-size: 0;
+}
+.ticket-img img {
+  width: 100%;
+}
+.ticket-listbox {
+  width: 70%;
+  height: 615px;
+  font-size: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ticket-search {
+  display: flex;
+  gap: 10px;
+}
+.ticket-search .select-style {
+  width: calc(50% - 55px);
+}
+.ticket-listbox .title {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 10px;
+  color: #a6a6a6;
+}
+.ticket-listbox .title span:last-child {
+  font-size: 16px;
+}
+.ticket-listbox ul {
+  overflow-y: auto;
+  height: 530px;
+  border-top: 1px solid #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+}
+.ticket-listbox ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 25px 10px;
+}
+.ticket-listbox ul li:hover {
+  background-color: #f3f3f3;
+}
+.ticket-listbox ul li:last-child {
+  border-bottom: 0px solid #d1d1d1;
+}
+.ticket-listbox ul li .moviename {
+  font-size: 20px;
+}
+.ticket-listbox .timebox {
+  font-size: 16px;
+  color: #8a8a8a;
+}
+.moviename {
+  font-weight: 500;
+}
+.ticket-listbox .timebox span:first-child {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+.time-btn {
+  width: calc(100% - 45px);
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  color: #8a8a8a;
+}
+.time-btn a {
+  display: inline-block;
+  padding: 6px 18px;
+  color: #fff;
+  background-color: #828282;
+}
+.time-btn a:hover {
+  display: inline-block;
+  background-color: #454545;
+}
+
+/* 電影列表 */
+.movie-section .sectionbox {
+  padding-top: 20px;
+  gap: 40px;
+}
+.movie-section .section-title {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 30px;
+}
+.movie-section .section-title::before {
+  display: none;
+}
+.movie-section .movietitle-link {
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+}
+.movie-section .movietitle-link a {
+  color: #b5b5b5;
+  padding: 0 20px 0 20px;
+  font-weight: 400;
+  border-right: 1px solid #ddd;
+  transition: 0.2s;
+  line-height: 40px;
+}
+.movie-section .movietitle-link div {
+  color: #525252;
+  font-weight: 400;
+  line-height: 40px;
+}
+.movie-section .movietitle-link a:first-child {
+  padding-left: 0;
+}
+.movie-section .movietitle-link a:last-child {
+  border-right: 0px solid #ddd;
+  padding-right: 0;
+}
+.movie-section .movietitle-link a.active,
+.movie-section .movietitle-link a:hover {
+  color: #525252;
+}
+.movie-section .movietitle-list {
+  display: flex;
+  gap: 15px;
+}
+.movie-section .section-title .movietitle-list-searchbox {
+  display: none;
+}
+.movie-section .movietitle-list a {
+  color: #9c9c9c;
+  font-size: 18px;
+  font-weight: 400;
+  display: inline-block;
+  border-bottom: 2px solid #ffffff00;
+  transition: 0.2s;
+}
+.movie-section .movietitle-list a.active,
+.movie-section .movietitle-list a:hover {
+  color: #666666;
+  border-bottom: 2px solid #adadad;
+}
+.movie-section .section-title .searchbox {
+  margin-left: auto;
+}
+.movie-section .section-title .searchbox .select-style {
+  height: 40px;
+  padding: 0 35px 0 10px;
+  width: 130px;
+  font-size: 16px;
+}
+.movie-section .section-title .searchbox .input-style {
+  height: 40px;
+}
+.movie-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.movie-group .image-block {
+  width: calc(100% / 4 - 12px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 25px;
+}
+
+.movie-section .movie-img {
+  aspect-ratio: 3.2 / 4.5;
+  overflow: hidden;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie-section .movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.movie-text {
+  display: flex;
+  gap: 5px;
+}
+.movie-group .movie-date {
+  width: 60px;
+  font-size: 22px;
+  color: #7a7a7a;
+}
+.movie-group .movie-name {
+  width: calc(100% - 65px);
+  font-size: 22px;
+  color: #212121;
+}
+.movie-group .movie-name span {
+  display: block;
+  font-size: 14px;
+  color: #8c8c8c;
+  padding-top: 5px;
+  line-height: 16px;
+}
+.movie-group .movie-name font:hover {
+  text-decoration: underline;
+}
+.community-group {
+  overflow-y: auto;
+  height: 1000px;
+}
+.grid {
+  column-count: 3;
+  column-gap: 1rem;
+}
+.grid-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.grid-item iframe {
+  width: 100%;
+  /* height: 500px; */
+  display: inline-block; /* 關鍵 */
+}
+.grid-item .content{
+  padding: 15px;
+}
+.grid-item .media img {
+  width: 100%;
+}
+
+/* 公播 */
+.shop-section .sectionbox {
+  gap: 30px;
+}
+.shop-section .shoptitle-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex: 0 0 auto;
+}
+.shop-section .shoptitle-list-searchbox {
+  display: none;
+}
+.shop-section .group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.searchbox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+.searchbox .text-input {
+  width: 80%;
+}
+.searchbox .input-style {
+  flex: 0 0 auto;
+}
+.shop-section .shoptitle-list a {
+  color: #9c9c9c;
+  font-size: 22px;
+  height: 40px;
+  font-weight: 400;
+  display: inline-block;
+  border-bottom: 2px solid #ffffff00;
+  transition: 0.2s;
+}
+
+.shop-section .shoptitle-list a.active,
+.shop-section .shoptitle-list a:hover {
+  color: #666666;
+  border-bottom: 2px solid #adadad;
+}
+.shop-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.shop-group .image-block {
+  width: calc(100% / 6 - 12.5px);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  line-height: 25px;
+}
+.shop-group .movie-img {
+  aspect-ratio: 3 / 4.5;
+  overflow: hidden;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-group .movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.shop-group .image-block .movie-text {
+  display: inline-block;
+  color: #1f1f1f;
+}
+.shop-group .image-block:hover .movie-text {
+  text-decoration: underline;
+}
+.shopform-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.shopform-section .sectionbox {
+  gap: 30px;
+}
+.formlist {
+  width: calc(100% / 2 - 5px);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.shopform-section .formlist {
+  align-items: center;
+  font-size: 16px;
+}
+.formlist b {
+  width: 126px;
+  text-align: right;
+  flex: 0 0 auto;
+}
+.formlist .text-input {
+  width: calc(100% - 126px);
+}
+.formlist .text-input-box {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: calc(100% - 135px);
+}
+.formlist .text-input-box .text-input-2 {
+  width: calc(50% - 7px);
+}
+.width100 {
+  width: 100%;
+}
+textarea.text-input {
+  height: auto;
+  resize: both;
+}
+.formlist .textbox {
+  width: calc(100% - 80px);
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 100%;
+  border: 1px solid #c9c9c9;
+  background-color: #eee;
+  overflow-y: auto;
+  height: 110px;
+}
+.shopform-section .btnbox {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.shopform-section .btnbox .btnbtn:first-child {
+  background-color: #474747;
+}
+.shopform-section .btnbox .btnbtn:first-child:hover {
+  color: #fff;
+  background: #333333;
+}
+.page {
+  width: 100%;
+  clear: both;
+}
+.page ul {
+  padding: 0;
+  font-size: 0;
+  width: 100%;
+  text-align: center;
+}
+.page ul li {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  border-radius: 15px;
+  width: 55px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+}
+.page ul li a,
+.page ul li span {
+  display: inline-block;
+  width: 55px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #333;
+}
+.page ul li .active {
+  background-color: #ccc;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 30px;
+  cursor: default;
+  line-height: 30px;
+}
+.page ul li .active:hover {
+  color: #fff;
+  background-color: #bdbdbd;
+}
+.page ul li:after {
+  content: "|";
+  position: absolute;
+  right: -2px;
+  top: 0;
+  font-size: 14px;
+}
+.page ul li:last-child:after {
+  content: "";
+}
+.page ul li a:hover {
+  color: #8a8a8a;
+}
+
+/* 頻道 */
+.tvshow-section .sectionbox .searchbox {
+  justify-content: flex-start;
+  align-items: center;
+}
+.tvshow-section .sectionbox .searchbox .text {
+  margin-left: auto;
+  color: #757575;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 16px;
+}
+.movie-section .movietitle-link.tv-link{
+  font-size: 30px;
+}
+.tvshow-section .sectionbox .searchbox .select-style {
+  width: 300px;
+}
+.tvshow-section .sectionbox .group {
+  display: flex;
+  gap: 5px;
+}
+.tvshow-section .channelslist {
+  width: 300px;
+  height: fit-content;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #c9c9c9;
+}
+.tvshow-section .channelslist li {
+  width: 100%;
+}
+.tvshow-section .channelslist li a {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 20px;
+  color: #a6a6a6;
+  transition: 0.3s;
+}
+.tvshow-section .channelslist li.active a {
+  background: #d9d9d9;
+  color: #1f1f1f;
+}
+.tvshow-section .channelslist li a:hover,
+.tvshow-section .channelslist li.active a:hover {
+  background: #d9d9d9;
+  color: #1f1f1f;
+}
+.tvshow-section .channelslist li a img {
+  height: 60px;
+}
+.channelsgroup {
+  width: calc(100% - 310px);
+  height: fit-content;
+  display: inline-flex;
+  flex-direction: column;
+  border: 1px solid #c9c9c9;
+  background-color: #fff;
+}
+.channelsgroup .text {
+  padding: 20px 15px;
+  border-bottom: 1px solid #c9c9c9;
+  background: #f5f5f5;
+  color: #8c8c8c;
+  font-size: 14px;
+}
+.channelsgroup .channels {
+  display: flex;
+  flex-direction: column;
+}
+.channelsgroup .channels li {
+  font-size: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e5e5;
+  transition: 0.3s;
+}
+.channelsgroup .channels li:last-child {
+  border: 0;
+}
+.channelsgroup .channels li:hover {
+  background-color: #d9d9d9;
+}
+.channelsgroup .channels li b {
+  padding: 0 50px 0 80px;
+}
+
+.tvshow-section .tvshow_qabox .text {
+  width: 95%;
+  margin: auto;
+}
+.tvshow-section .tvshow_qabox .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+}
+.tvshow-section .tvshow_qabox .title h3 {
+  font-weight: 500;
+  font-size: 22px;
+}
+/* 關於 */
+.company-section .sectionbox {
+  padding: 30px 0;
+  align-items: center;
+  gap: 20px;
+}
+.company-section .company-logo {
+  width: 300px;
+}
+.company-section .company-text {
+  width: 1000px;
+}
+.companytitle-list {
+  display: flex;
+  justify-content: center;
+}
+.companytitle-list a {
+  padding: 0 20px;
+  border-right: 1px solid #9c9c9c;
+  color: #aaaaaa;
+  transition: 0.3s;
+  line-height: 25px;
+  font-size: 22px;
+  font-weight: 400;
+}
+.companytitle-list a.active,
+.companytitle-list a:hover {
+  color: #363636;
+  font-weight: 500;
+}
+.companytitle-list a:last-child {
+  border: 0;
+}
+
+.company-texts {
+  padding-top: 10px;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.company-text b {
+  width: 20px;
+}
+/*采昌紀事*/
+.history-group {
+  display: flex;
+  flex-direction: column;
+}
+.history-group .year-group {
+  display: flex;
+  gap: 20px;
+}
+.history-group .year-group .year {
+  line-height: 20px;
+  font-size: 40px;
+  color: #bfbfbf;
+  font-weight: bold;
+}
+.history-group .monthbox {
+  display: flex;
+  gap: 15px;
+}
+.history-group .monthbox .monthline {
+  position: relative;
+  width: 27px;
+  left: 8px;
+  display: inline-block;
+  border-left: 1px solid #b0b0b0;
+  flex: 0 0 auto;
+}
+.history-group .monthbox .monthline::before {
+  content: "";
+  position: absolute;
+  left: calc(-27px / 2);
+  display: inline-block;
+  width: 25px;
+  border-radius: 25px;
+  height: 25px;
+  background-color: #fff;
+  border: 1px solid #b0b0b0;
+}
+.history-group .monthbox .box {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.history-group .monthbox:last-child .box {
+  padding-bottom: 40px;
+}
+.history-group .monthbox .box font {
+  display: block;
+  width: 100%;
+  font-size: 25px;
+  line-height: 28px;
+}
+.history-group .monthbox .imggroup {
+  position: relative;
+  width: calc(100% / 2 - 5px);
+  font-size: 0;
+}
+.history-group .monthbox .imggroup .imgbox {
+  aspect-ratio: 18 / 9;
+  overflow: hidden;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.history-group .monthbox .imggroup:hover .img-text {
+  text-decoration: underline;
+}
+.history-group .monthbox .imggroup:hover img {
+  transform: scale(1.05, 1.05);
+}
+.history-group .monthbox .imggroup .imgbox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: ease-in-out.4s;
+}
+.history-group .monthbox .imggroup .img-text {
+  position: absolute;
+  display: inline-flex;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, #00000000 0%, rgba(0, 0, 0, 0.5) 80%);
+  padding: 15px;
+  z-index: 99;
+  font-size: 18px;
+  align-items: flex-end;
+}
+
+/* 聯絡我們 */
+.font-mark {
+  color: #e61e32;
+  font-weight: bold;
+  align-self: center;
+}
+.check-box {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.check-box-in {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+.check-box input[type="radio"],
+input[type="radio"] {
+  width: 20px !important;
+  height: 20px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+/* 電影新聞 */
+.news-section .page-news {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.news-section .page-news li {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+}
+.news-section .page-news .news-img {
+  width: 400px;
+  object-fit: contain;
+  overflow: hidden;
+  background-color: #b2b2b2;
+  flex: 0 0 auto;
+}
+.news-section .page-news .news-group {
+  width: calc(100% - 400px);
+}
+.news-section .page-news .news-text {
+  height: auto;
+}
+/*新聞內容*/
+.newscontent-share {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px #cccccc solid;
+}
+.newscontent-share .news-share {
+  display: inline-flex;
+  gap: 10px;
+}
+.newscontent-share .news-share a {
+  display: inline-block;
+}
+.newscontent-share .news-share a img {
+  height: 22px;
+  width: auto;
+}
+.news-section .page-newscontent .btnbox {
+  padding-top: 20px;
+}
+
+/**/
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px) {
+  .page-content img {
+    max-width: 100%;
+    padding: 5px 0;
+  }
+  /*共用版-間距*/
+  .page-section {
+    padding: 30px 0;
+  }
+  .page-section .sectionbox {
+    width: 90%;
+    font-size: 90%;
+  }
+  .page-section .section-title {
+    font-size: 25px;
+    padding-left: 15px;
+  }
+  .page-section .section-title::before {
+    height: 25px;
+  }
+  /* sitemap */
+  #sitemap .title {
+    width: calc(100% / 2 - 5px);
+    float: left;
+    text-align: left;
+    color: #1f1f1f;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 8px;
+  }
+
+  /* 電影介紹 */
+  .linkbox {
+    gap: 10px;
+  }
+  .linkbox a {
+    width: calc(100% / 2 - 5px);
+    border: 1px solid #eee;
+    background: #ffffff;
+  }
+  .about-section .section-content-border {
+    flex-direction: column;
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .about-section .section-content-border .about-img {
+    width: 90%;
+    margin: auto;
+  }
+  .about-section .section-content-border .about-text {
+    width: 100%;
+  }
+  .about-section .section-content-border .about-text .text {
+    overflow-y: inherit;
+    height: auto;
+    line-height: 23px;
+  }
+  .about-section .section-content-border .about-text-2 {
+    width: 100%;
+  }
+  .about-section .section-content-border .about-text h3,
+  .about-section .section-content-border .about-text-2 h3 {
+    font-size: 23px;
+  }
+  .about-section .section-content-border .video-link {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .about-section .section-content-border .video-link-box {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+  }
+  .about-section .section-content-border .video-link .video {
+    width: 80%;
+    padding-bottom: 45.3%;
+  }
+  .movie-photobox {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+  .news-section .news-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .news-section .news-list li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #c9c9c9;
+  }
+  .page-section .title-2 {
+    font-size: 20px;
+  }
+  .movie-photobox .swiper {
+    width: 220%;
+  }
+  .movie-photobox .swiper-button-next {
+    right: 28%;
+    color: #ffffff;
+  }
+  .movie-photobox .swiper-button-prev {
+    left: 28%;
+    color: #ffffff;
+  }
+
+  /*票*/
+  .ticket-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .ticket-search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .ticket-search .select-style {
+    width: calc(100% / 2 - 5px);
+  }
+  .ticket-search .input-style {
+    width: 100%;
+    text-align: center;
+  }
+  .ticket-img {
+    width: 100%;
+    max-width: inherit;
+    margin: auto;
+  }
+  .ticket-listbox {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ticket-listbox ul {
+    overflow-y: auto;
+    height: 600px;
+  }
+  .ticket-listbox ul li {
+    padding: 20px 10px;
+  }
+
+  .movie-section .sectionbox {
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .movie-section .section-title {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .movie-section .movietitle-link {
+    text-align: center;
+    font-size: 25px;
+    display: flex;
+    width: 100%;
+  }
+  .movie-section .movietitle-link a {
+    padding: 0 10px 0 10px;
+    line-height: 25px;
+  }
+  .movie-section .movietitle-list {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    overflow-x: auto;
+  }
+
+  .movie-section .section-title .movietitle-list-searchbox {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .movie-group .image-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 25px;
+  }
+  .grid {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
+  /* 公播 */
+  .shop-section .sectionbox {
+    gap: 20px;
+  }
+  .shop-section .group {
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .shop-group .image-block {
+    width: calc(100% / 2 - 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 25px;
+  }
+  .searchbox {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .shoptitle-list {
+    display: none;
+    gap: 10px;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+  }
+  .shop-section .shoptitle-list-searchbox {
+    display: flex;
+  }
+  .shop-section .shoptitle-list-searchbox .select-style {
+    width: auto;
+    font-size: 16px;
+  }
+  .shop-section .shoptitle-list a {
+    color: #9c9c9c;
+    font-size: 18px;
+    height: 35px;
+  }
+
+  /* 頻道 */
+  .shopform-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .formlist {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .formlist b {
+    width: 117px;
+  }
+  .formlist .text-input-box {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 127px);
+    gap: 2px;
+  }
+  .formlist .text-input-box .text-input-2 {
+    width: calc(50% - 6px);
+  }
+
+  .tvshow-section .channelslist {
+    width: 100%;
+    height: fit-content;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    background: #fff;
+    border: 1px solid #c9c9c9;
+    overflow-x: auto;
+  }
+  .tvshow-section .channelslist li font {
+    display: none;
+  }
+  .tvshow-section .channelslist li a {
+    width: 120px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 20px;
+    color: #a6a6a6;
+    transition: 0.3s;
+  }
+  .tvshow-section .sectionbox .group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .tvshow-section .channelslist li a img {
+    width: 80%;
+    height: auto;
+    max-height: 50px;
+  }
+  .channelsgroup {
+    width: 100%;
+  }
+  .channelsgroup .channels li b {
+    padding: 0 20px;
+  }
+  .tvshow-section .sectionbox .searchbox .select-style {
+    width: calc(100% - 93px);
+  }
+  .tvshow-section .sectionbox .searchbox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .tvshow-section .sectionbox .searchbox .text {
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  .tvshow-section .tvshow_qabox .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: -10px;
+  }
+  .tvshow-section .tvshow_qabox .searchbox select {
+    width: calc(100% / 2 - 24px);
+  }
+  .tvshow-section #css_table.twshoe_qa .css_td b {
+    width: 80px;
+  }
+
+  .movie-section .movietitle-link.tv-link{
+  font-size: 20px;
+}
+  /* 關於 */
+  .companytitle-list a {
+    padding: 6px 15px;
+    font-size: 20px;
+  }
+  .company-section .company-logo {
+    width: 200px;
+  }
+  .company-section .sectionbox {
+    padding: 20px 0;
+    align-items: center;
+    gap: 20px;
+  }
+  .company-section .company-text {
+    width: 100%;
+  }
+  .companytitle-list {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+  .companytitle-list a {
+    padding: 4px 15px;
+    flex: 0 0 auto;
+  }
+  .company-texts {
+    padding-top: 0px;
+  }
+
+  .history-group .year-group {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .history-group .monthbox .box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 20px;
+    flex-direction: column;
+  }
+  .history-group .monthbox .imggroup {
+    position: relative;
+    width: 100%;
+    font-size: 0;
+  }
+  .history-group .year-group .year {
+    line-height: 20px;
+    font-size: 35px;
+    color: #bfbfbf;
+    font-weight: bold;
+  }
+  .history-group .monthbox .monthline {
+    position: relative;
+    width: 27px;
+    left: 15px;
+  }
+  .history-group .monthbox .imggroup .img-text {
+    font-size: 16px;
+  }
+  .history-group {
+    gap: 15px;
+  }
+
+  /* 電影新聞 */
+  .news-section .page-news .news-group {
+    width: 100%;
+  }
+  .news-section .page-news .news-img {
+    width: 100%;
+  }
+  .news-section .page-newscontent {
+    gap: 20px;
+  }
+}
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  /*共用版-間距*/
+  .page-section .sectionbox {
+    width: 90%;
+  }
+  /* 電影介紹 */
+  .linkbox a {
+    width: calc(100% / 6 - 13px);
+    border: 1px solid #eee;
+    background: #ffffff;
+  }
+  .about-section .section-content-border {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .about-section .section-content-border .about-text {
+    width: calc(50% - 10px);
+  }
+  .about-section .section-content-border .about-text-2 {
+    width: calc(25% - 10px);
+  }
+  .about-section .section-content-border .video-link-box {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    background: #fff;
+  }
+  .about-section .section-content-border .video-link {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+  .about-section .section-content-border .video-link .video {
+    width: calc(100% / 2.3 - 5px);
+    flex: 0 0 auto;
+    position: relative;
+    padding-bottom: 23.7%;
+    height: 0;
+    overflow: hidden;
+  }
+  .news-section .news-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .news-section .news-list li {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 2 - 8px);
+    border: 1px solid #c9c9c9;
+  }
+
+  .movie-group .image-block {
+    width: calc(100% / 2 - 8px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 25px;
+  }
+  .grid {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+
+  /* 公播 */
+  .shop-section .shoptitle-list a {
+    color: #9c9c9c;
+    font-size: 18px;
+    height: 35px;
+  }
+  .shop-group .image-block {
+    width: calc(100% / 4 - 12px);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 25px;
+  }
+
+  /* 頻道 */
+  .channelsgroup .channels li b {
+    padding: 0 30px;
+    font-size: 16px;
+  }
+  .tvshow-section .channelslist {
+    width: 220px;
+  }
+  .tvshow-section .channelslist li a {
+    height: 150px;
+    font-size: 16px;
+  }
+  .channelsgroup {
+    width: calc(100% - 220px);
+  }
+  .tvshow-section .sectionbox .searchbox .select-style {
+    width: 220px;
+  }
+.movie-section .movietitle-link.tv-link{
+  font-size: 25px;
+}
+  /* 關於 */
+  .companytitle-list {
+    display: flex;
+  }
+  .companytitle-list a {
+    padding: 0 15px;
+    font-size: 20px;
+  }
+  .company-section .company-text {
+    width: 100%;
+  }
+  .history-group .year-group .year {
+    line-height: 20px;
+    font-size: 35px;
+    color: #bfbfbf;
+    font-weight: bold;
+  }
+  .history-group .monthbox .imggroup .img-text {
+    font-size: 16px;
+  }
+  /* 電影新聞 */
+  .news-section .page-news li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid #c9c9c9;
+  }
+  .news-section .page-newscontent {
+    gap: 20px;
+  }
+  .ticket-group {
+    display: flex;
+    gap: 20px;
+  }
+  .movie-section .movietitle-link {
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    width: 100%;
+  }
+  .movie-section .section-title {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .movie-section .movietitle-link a {
+    line-height: 30px;
+  }
+  .movie-section .sectionbox {
+    padding-top: 0px;
+  }
+}

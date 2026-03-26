@@ -1,0 +1,588 @@
+
+/*------------團隊*/
+.Team{
+    width: 100%;
+    line-height:180%;
+}
+.Team .Teambox{
+    width: 1200px;
+    margin: auto;
+    padding: 100px 0;
+}
+.Team .Teambox .titlebox {
+    font-size: 35px;
+    color: #e0a608;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+}
+.Team .Teambox .titlebox .line{
+    margin:5px auto;
+    width: 65px;
+    border-bottom: 2px solid #DB0000;
+}
+.Teambox .groupbox{
+    list-style: none;
+    padding: 40px 0;
+    text-align: center;
+}
+.Teambox .groupbox .title{    
+    font-weight: bold;
+    font-size: 25px;
+}
+.Teambox .groupbox li{
+    display: inline-block;
+    width: 32%; 
+    height: auto;
+    text-align: center;
+    padding: 25px 0; 
+    margin-bottom:20px;
+    margin:1% .5%;
+    background-color: #fff;
+    border-radius:10px;
+}
+.Teambox .groupbox li .imgbox{
+    text-align: center;
+}
+.Teambox .groupbox li .imgbox img{
+    width: auto;
+}
+.Teambox .groupbox li .title{
+    text-align: center;
+    color: #4c4c4c;
+}
+.Teambox .groupbox li p{    
+    color: #575757; 
+    display:block; 
+    line-height:135%;
+    font-size: 18px;
+    padding: 10px; 
+    width:100%; 
+    height:auto; 
+}
+.Teambox .groupbox li .jobbox {
+    height: 90px;
+}
+.Teambox .groupbox li.two_box{
+    width: 48.7%;
+}
+.Teambox .groupbox li .team_logo{
+    padding: 10px 0;
+    height: auto;
+    line-height: 100%;
+}
+.Teambox .groupbox li .team_logo img{
+    display: inline-block;
+    height: 20px;
+    margin: 0 10px;
+}
+.Team .Teambox .titlebox{
+    font-size: 30px;
+    color: #ffc528;
+    font-weight: bold;
+    padding: 50px 0; text-align:left;
+}
+.Team .Teambox .titlebox:first-child{
+    padding:0 0 50px 0;
+}
+.Team .Teambox .titlebox p{font-size: 100%;}
+
+/*內容*/
+
+.Team .Teambox .lockgroupbox{
+    padding: 60px 0;
+    border-top: 1px solid #eeeeee42;
+}
+.Team .Teambox .lockgroupbox:first-child{
+    padding-top: 0;
+    border-top: 0;
+}
+.Team .Teambox div,.Team .Teambox p{
+    line-height: 25px;
+    /* color: #474747; */
+    color: #fff;
+}
+.fontbox{
+    display: block;
+    padding: 20px 0;
+    color: #b8e9ff;
+    font-size: 25px;
+}
+.Team .Teambox .imgbox{
+    width: 100%;
+    line-height: 0px;
+    overflow: hidden;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+.Team .Teambox .imgbox img{
+    width: 100%;
+    font-size: 0;
+}
+/*ul灰底分格*/
+.Team .Teambox .ul_boxgroup{
+    overflow: hidden;
+}
+.Team .Teambox .ul_boxgroup .imgbox{
+    padding: 0;
+}
+.Team .Teambox .ul_boxgroup > li{
+    float: left;
+    width: 49.5%;
+    margin: 0 1% 0 0;
+}
+.Team .Teambox .ul_boxgroup.bg > li{
+    background-color: #F5F5F5;
+    border: 1px solid #D0D3D6;    
+    border-radius: 5px;
+    padding: 2%;
+}
+.Team .Teambox .ul_boxgroup > li:last-child{
+    margin: auto;
+}
+.Team .Teambox .ul_boxgroup li .title{
+    font-size: 25px;
+    color: #044981;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.Coveragebox>ul>li{
+    height: 555px;
+}
+
+/*加點點*/
+.ul_discbox{
+    padding: 10px 0 10px 30px;
+}
+.ul_boxgroup.bg .ul_discbox li{
+    color: #616161;
+}
+.ul_boxgroup .ul_discbox li .ul_discbox li{
+    font-size: 18px;
+    line-height: 20px;
+    padding: 7px 0;
+}
+.ul_boxgroup .ul_discbox li .ul_discbox li::marker{
+    color: #707070;
+}
+.ul_discbox li{
+    list-style:disc !important;
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    padding:0 0 10px 0;
+}
+.ul_discbox li::marker{
+    color: #609dd1;
+}
+/* .Team .Teambox .ul_discbox li:nth-child(even)::marker{
+    color: #FE9802;
+} */
+/**/
+.Team .Teambox .in_box{
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #ffffff33;
+    color: #a0d4e0;
+    margin: 10px 0;
+}
+.icon_tick{
+    display: block;
+    padding-left:35px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    background: url(../enfrontimages/icon_tick.png)no-repeat center left;
+    background-size:25px auto ;
+}
+.box_table{
+    background-color: #F5F5F5;
+    border: 1px solid #D0D3D6; 
+    border-radius: 5px; 
+    border-collapse:collapse;
+}
+.box_table .box{
+    padding: 2%;
+    height: 100%;
+    font-size: 25px;
+    line-height: 30px;
+    color: #424B61;
+}
+.box_table>li{
+    width: 50%;
+    margin: auto;
+}
+.box_table>li .ul_discbox{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box_table>li .ul_discbox li{
+    color: #424B61;
+}
+.ul_table tr {
+    background-color: #D0E3F2;
+    color:#404040 ;
+}
+.ul_table tr:nth-child(even) {
+    background-color: #C0D7EB;
+}
+.ul_table tr .color{
+    color: #0070C0;
+    text-align: center;
+}
+.ul_table tr td, .ul_table tr th{
+    padding: 5px 8px;
+    border: 1px solid #eee;
+}
+.ul_table tr th{
+    background-color: #5a94bc;
+    color: #fff;
+}
+.Team .Teambox .ul_boxgroup.box_four{
+    padding: 20px 0;
+}
+.Team .Teambox .ul_boxgroup.box_four li{
+    width: 24.2%;
+    height: 120px;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    padding: 0;
+    line-height: 110px;
+    background-color: #2b598b;
+    border: 1px solid #78a8db;
+}
+.Team .Teambox .ul_boxgroup.box_four li b{
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+.Team .Teambox .ul_boxgroup.box_four li div{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.Team .Teambox .ul_boxgroup.box_three>li{
+    width: 32.6%;
+    background-color: #F5F5F5;
+    border: 1px solid #D0D3D6; 
+    padding: 20px;
+    height: 200px;
+    border-radius: 5px;
+}
+.Team .Teambox .ul_boxgroup.box_three>li .ul_discbox li{
+    color: #616161;
+}
+.Team .Teambox .ul_boxgroup.box_seven li{
+    width: 13.4%;
+    height: 95px;
+    line-height: 85px;
+}
+.Team .Teambox .ul_boxgroup.hightbox_auto>li{
+    height: auto;color: #474747 ;
+}
+.ul_table.small_size{
+    font-size: 20px;
+}
+.ul_discbox.inbox{
+    padding: 2%;
+}
+.hightbox{
+    height: 280px;
+}
+.hightbox_1{
+    height: 300px;
+}
+.hightbox_2{
+    height: 200px;
+}
+.hightbox_auto{
+    height: auto;
+}
+.tickbox li b{
+    color: #0c942e;
+    font-size: 30px;
+    padding-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tickbox li span{
+    display: inline-block;
+    width: calc(100% - 35px);
+    vertical-align: middle;
+}
+/*------------Solutions*/
+.Solutions{
+    width: 100%;
+    
+     line-height:180%;
+     color: #fff;
+}
+.Solutions .Solutionsbox{
+    width: 1200px;
+    margin: auto;padding: 100px 0;
+}
+.Solutions .Solutionsbox .titlebox{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffc528;
+    padding: 20px 0; text-align:left;
+}
+.Solutions .Solutionsbox p{font-size: 100%; padding: 20px 0;}
+.Solutions .Solutionsbox p img{border-radius: 10px;float: right;
+    width: 45%; margin:10px 20px;}
+
+.Solutionstable_box{
+    width: 100%;
+    overflow: auto;
+}
+.Solutions_table{
+    border-collapse:collapse;
+    border: 1px solid #bcd1e5a3;
+    color: #404040;
+}
+.Solutions_table tr td{
+    background-color: #fff;
+    border: 1px solid #bcd1e5a3;
+    vertical-align: baseline;
+}
+.Solutions_table tr th{
+    background-color: #1F4E79;
+    border: 1px solid #bcd1e5a3;
+    color: #FFC000;
+    text-align: center;
+}
+.Solutions_table tr td:first-child{
+    color: #2B5881;
+    font-weight: bold;
+    text-align: center;
+}
+.Solutions_table tr:nth-child(even) td{
+    background-color: #DEEBF7;
+}
+.Solutions_table tr .logo_img{
+    padding: 0;
+    text-align: center;
+}
+.Solutions_table .ul_discbox li{
+    color: #404040;
+}
+.logo_img img{
+    width: 50%;    
+    vertical-align: bottom;
+    padding-top: 15px;
+}
+/*QED*/
+.ulbox1{width: 100%; margin:2% auto; display:inline-block;padding:20px; border:1px solid #96afc8; border-radius:10px;}
+.ulbox2{    
+    width: 46.6%;
+    margin: 1% 1.5% 1% 1.5%;
+    display:inline-block;padding:20px; border:1px solid #96afc8; border-radius:10px;}
+.ulbox3{width: 30%; margin:2%;display:inline-block;padding:20px; border:1px solid #96afc8; border-radius:10px;}
+.ulbox4{width: 22%; margin:1%;display:inline-block;padding:20px; border:1px solid #96afc8; border-radius:10px;}
+.ulbox1 ul,.ulbox2 ul,.ulbox3 ul,.ulbox4 ul{ list-style:circle;}
+.ulbox1 ul li,.ulbox2 ul li,.ulbox3 ul li,.ulbox4 ul li{ margin-left:30px; padding-left:10px;list-style:disc;
+    color: #fff;
+}
+.ulbox1 ul li::marker,.ulbox2 ul li::marker,.ulbox3 ul li::marker,.ulbox4 ul li::marker{ 
+    /* color: #5a94bc; */
+    color: #66bbf4;
+}
+
+.Team .Teambox .ulbox1 .ul_discbox{
+    padding: 0;
+}
+/*client客戶與夥伴*/
+.client{
+    width: 100%;height:auto;
+    line-height:180%;
+}
+.client .clientbox{
+    width: 1200px;height:auto;
+    margin: auto;padding: 100px 0;
+}
+.client{width:1200px;height:auto;margin:0 auto;}
+.client .clientbox .imgbox{ width:100%;height:auto; list-style:none; float:left; padding:50px 0;}
+.client .clientbox .imgbox li{float:left; width:23%; margin:1% 1%; border-radius:10px;}
+.client .clientbox .imgbox li img{ width:100%;height:auto;text-align:center;border-radius:10px;}
+
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px) {
+.Team .Teambox{ width:90%; margin: auto;    padding: 40px 0;}
+.Teambox .groupbox li{
+    float: none;    
+    max-width: 450px;
+    width: 100%; height: auto;
+    text-align: center;padding: 20px 0; margin-bottom:20px;
+}
+.Team .Teambox .titlebox {
+    font-size: 25px;
+}
+.Team .Teambox .fontbox {
+    display: block;
+    padding: 20px 0;
+    color: #b8e9ff;
+    font-size: 20px;
+}
+.icon_tick {
+    display: block;
+    padding-left: 35px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    background: url(../enfrontimages/icon_tick.png)no-repeat center left;
+    background-size: 25px auto;
+}
+.box_table .box {
+    padding: 2%;
+    height: 100%;
+    font-size: 20px;
+    line-height: 25px;
+    color: #424B61;
+}
+.Team .Teambox .ul_boxgroup li .title {
+    font-size: 20px;
+    color: #044981;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.Team .Teambox .titlebox:first-child {
+    padding: 0 0 20px 0;
+}
+.Team .Teambox .lockgroupbox {
+    padding: 40px 0;
+    border-top: 1px solid #eeeeee42;
+}
+.Team .Teambox .ul_boxgroup > li{
+    float: none;
+    width: 100%;
+    margin:1% auto;
+}
+.Team .Teambox .in_box {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 10px;
+    background-color: #ffffff33;
+    color: #a0d4e0;
+    margin: 10px 0;
+}
+.Team .Teambox .ul_boxgroup.bg > li {
+    
+    padding: 10px;
+}
+.Team .Teambox .ul_boxgroup.box_four li {
+    width: 100%;
+    height:auto;
+    border-radius: 5px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 20px;
+    margin: 2% auto;
+    padding: 0;
+    line-height: 100px;
+    background-color: #2b598b;
+    border: 1px solid #78a8db;
+}
+.Team .Teambox .ul_boxgroup.box_three>li {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    border-radius: 5px;
+}
+.Teambox .groupbox li.two_box {
+    width:100%;
+}
+.hightbox {
+    height: auto;
+}
+.Coveragebox>ul>li {
+    height: auto;
+}
+.hightbox_1 {
+    height: auto;
+}
+.Team .Teambox .ul_boxgroup.box_three>li {
+    width: 100%;
+    margin: 1% auto;
+    height: auto;
+    border-radius: 5px;
+}
+.hightbox_2{
+    height: auto;
+}
+
+.Teambox .groupbox li p{
+    height: auto;
+}
+.Teambox .groupbox li .jobbox{
+    height: auto;
+}
+.Solutions .Solutionsbox{ width:90%; margin: auto;    padding: 40px 0;}
+.Solutions .Solutionsbox p {
+    font-size: 100%;
+    padding: 10px 0;
+    line-height: 25px;
+}
+.Solutions .Solutionsbox .titlebox {
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffc528;
+    padding: 15px 0;
+    text-align: left;
+}
+/*QED*/
+.ulbox1{width: 96%; margin:2% 0; display:inline-block;padding:20px; border-radius:10px;}
+.ulbox2{width: 96%; margin:2% 0;display:inline-block;padding:20px;  border-radius:10px;}
+.ulbox3{width: 96%; margin:2% 0;display:inline-block;padding:20px;  border-radius:10px;}
+.ulbox4{width: 196%; margin:1% 0;display:inline-block;padding:20px; border-radius:10px;}
+.ulbox1 ul li,.ulbox2 ul li,.ulbox3 ul li,.ulbox4 ul li{ margin-left:40px; padding-left:20px;}
+/*client客戶與夥伴*/
+.client{
+    width: 100%;
+    padding: 0px 0;
+    line-height:180%;
+}
+.client .clientbox{
+    width: 96%;
+    margin: auto;padding: 20px 0;
+}
+.client .clientbox .imgbox{ list-style:none; float:left;}
+.client .clientbox .imgbox li{float:left; width:48%; margin:1%;}
+.client .clientbox .imgbox li img{ width:95%; height:auto;}
+}
+
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+.Team .Teambox{
+    width: 95%;
+    margin: auto;
+    padding: 60px 0;
+}
+.Team .Teambox .ul_boxgroup.box_three>li {
+    width: 100%;
+    margin: 1% auto;
+    height: auto;
+    border-radius: 5px;
+}
+
+.hightbox_2{
+    height: 315px;
+}
+.Solutions .Solutionsbox{ width:95%; margin: auto;    padding: 60px 0;}
+.Teambox .groupbox li.two_box {
+    width: 40%;
+}
+.Teambox .groupbox li {
+    display: inline-block;
+    width: 40%;
+}
+.Teambox .groupbox li p{
+    height: auto;
+}
+.Teambox .groupbox li .jobbox{
+    height: 95px;
+}
+}

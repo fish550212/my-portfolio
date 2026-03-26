@@ -1,0 +1,585 @@
+﻿@charset "utf-8";
+@import url("../frontcss/all_shared.css");
+* {
+  outline: none;
+}
+html,
+body {
+  height: 100%; /*外層高度100%*/
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+input {
+  border: 0;
+}
+
+.bg {
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1 url(../frontimages/bg.png) no-repeat fixed;
+  background-size: cover;
+}
+.wrapper {
+  width: 100%;
+  position: relative;
+  height: calc(100vh); /*外層高度100%*/
+  /* margin-bottom: -90px;  */
+  /*隨footer高度需做調整*/
+}
+.clear-fix {
+  clear: both;
+}
+.bg-w {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+}
+.bg-shadow {
+  box-shadow: 0 2px 6px rgb(0 0 0 / 10%);
+}
+
+/*hearder----------------------------*/
+.headerbox {
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #fff;
+}
+.headerbox .logobox {
+  width: 178px;
+  margin: auto;
+  padding: 90px 0 0 0;
+}
+.headerbox .topbox {
+  background-color: #668642;
+}
+
+.headerbox .Rtop {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+  box-sizing: border-box;
+  border-bottom: 4px solid #668642;
+}
+.headerbox .Rtop .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.headerbox .Rtop .logo font {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 8px;
+}
+.headerbox .Rtop .logo font span {
+  color: #125f04;
+}
+.headerbox .Rtop .logo img {
+  width: auto;
+  height: 45px;
+}
+
+.headerbox .Rtop .rtop_menugroup {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.headerbox .toptitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+  padding: 8px 15px;
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+  background-color: #487835;
+  color: #fff;
+}
+.headerbox .toptitle a {
+  color: #fff;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 12px 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.headerbox .toptitle a:hover,
+.headerbox .toptitle .active a {
+  background-color: #315323;
+}
+.headerbox .toptitle a img {
+  height: 20px;
+}
+.tola {
+  display: flex;
+  gap: 10px;
+}
+.tola .input-style {
+  height: 40px;
+  background-color: #519635;
+  color: #fff;
+}
+.tola .input-style:hover {
+  background-color: #46832e;
+}
+
+/*hearder----------------------------*/
+
+/*mainbox----------------------------*/
+.mainbox {
+  width: 100%;
+  margin: auto;
+  /* background-color: #fff; */
+}
+.mainbox .meunbox {
+  width: 100%;
+  height: 62vh;
+  margin: auto;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  background: url(../frontimages/login_box.png) no-repeat;
+  background-size: cover;
+  border-radius: 30px 30px 0 0;
+}
+.mainbox .meunbox .orderbtn {
+  display: inline-block;
+  width: 178px;
+  margin: -50px auto 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  font-size: 0;
+}
+.mainbox .meunbox .iconbox {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+}
+.mainbox .meunbox .iconbox ul {
+  width: 325px;
+  margin: auto;
+  text-align: center;
+  /* padding: 0 30px; */
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.mainbox .meunbox .iconbox ul li {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 31.2%;
+  height: 80px;
+  justify-content: center;
+  border-radius: 10px;
+}
+.mainbox .meunbox .iconbox ul li:hover {
+  background-color: rgba(42, 75, 110, 0.35);
+}
+.mainbox .meunbox .iconbox ul li img {
+  width: 33px;
+}
+.mainbox .meunbox .iconbox ul li a {
+  color: #fff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.databox .inputbox {
+  padding: 20px 15px;
+}
+/*輸入日期*/
+.mainbox .topbox.circle-style .inputbox {
+  padding: 20px 15px;
+  display: flex;
+  text-align: left;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.mainbox .topbox.circle-style .inputbox .box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.topbox.circle-style .inputbox .box .title {
+  margin: 0;
+  font-size: 16px;
+}
+
+.inputbox .box .input-style {
+  width: 100%;
+  font-size: 18px;
+  font-weight: 500;
+}
+/* --------------------2025內容 */
+.groupbox {
+  width: 100%;
+  margin: auto;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+} /* page下方按鈕列表 */
+.groupbox .list_btnbox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.groupbox .list_btnbox li {
+  width: calc(50% - 5px);
+  text-align: center;
+}
+.groupbox .list_btnbox li a {
+  width: 100%;
+  height: 55px;
+  padding-left: 15px;
+  color: #333333;
+  font-weight: bold;
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+.groupbox .list_btnbox li a:hover {
+  background-color: #668642;
+  color: #fff;
+}
+.groupbox .list_btnbox li a img {
+  width: 22px;
+}
+.groupbox .login_box {
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+.groupbox .login_box li {
+  width: 100%;
+}
+.groupbox .login_box li a {
+  justify-content: center;
+  height: 100px;
+  font-size: 25px;
+    background-color: #668642;
+  color: #fff;
+}.groupbox .login_box li a:hover{
+   background-color: #526d33;
+}
+.groupbox .login_box li a img {
+    width: auto;
+    height: 25px;
+}
+.groupbox .login_box li:nth-child(1) a::before {
+  content: "";
+  display: inline-block;
+  width: 31px;
+  height: 25px;
+  background: url(../frontimages/icon-search-w.svg) no-repeat;
+  background-size: auto 25px;
+}
+
+.groupbox .login_box li:nth-child(2) a::before {
+  content: "";
+  display: inline-block;
+  width: 31px;
+  height: 25px;
+  background: url(../frontimages/icon-setting-w.svg) no-repeat;
+  background-size: auto 25px;
+}
+
+/* --------------------2025內容 */
+/* 內容小標題 */
+.groupbox .titlebox {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  gap: 5px;
+  font-size: 24px;
+}
+.groupbox .titlebox .title {
+  font-weight: 500;
+  color: #3f3f3f;
+}
+.groupbox .titlebox.green_line {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0 8px 0;
+  width: calc(100% - 30px);
+  border-bottom: 2px solid #77a685;
+}
+.groupbox .titlebox img {
+  width: 18px;
+}
+/* 有圖的按鈕 */
+
+.groupbox .titlebox li:nth-child(1) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-01.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(2) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-02.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(3) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-03.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(4) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-04.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(5) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-05.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(6) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-06.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(7) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-07.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(8) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-08.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(9) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-09.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(10) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-10.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(11) a::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-11.svg) no-repeat;
+  background-size: auto 19px;
+}
+
+.groupbox .btngroup_img li:nth-child(1) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-01-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(2) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-02-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(3) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-03-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(4) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-04-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(5) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-05-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(6) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-06-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(7) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-07-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(8) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-08-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(9) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-09-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(10) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-10-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+.groupbox .btngroup_img li:nth-child(11) a:hover::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 19px;
+  background: url(../frontimages/page-icon-11-b.svg) no-repeat;
+  background-size: auto 19px;
+}
+
+.overflowbox-y {
+  overflow-y: scroll;
+  height: calc(100% - 60px);
+}
+.updatedbox {
+  width: 100%;
+  padding: 15px 15px;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(255, 255, 255);
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+.updatedbox input.btn-style {
+  color: #fff;
+}
+.updatedbox input.btn-style:hover {
+  background-color: var(--btn-yellow);
+}
+
+/*資料填寫*/
+.conterbox .groupbox .inputbox {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  flex-direction: column;
+  padding: 0 15px;
+}
+.conterbox .groupbox .inputbox li {
+  display: flex;
+  gap: 10px;
+}
+.conterbox .groupbox .inputbox .box {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.conterbox .groupbox .inputbox .box .title {
+  color: #333333;
+  font-size: 18px;
+}
+.btnbox {
+  display: flex;
+  gap: 10px;
+}
+.btn-archive {
+  color: #fff;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .headerbox .Rtop .rtop_menugroup {
+    display: none;
+  }
+  .headerbox .toptitle {
+    display: none;
+  }
+  .headerbox .Rtop {
+    border-bottom: 4px solid #668642;
+  }
+  .conterbox .groupbox .inputbox {
+    gap: 15px;
+    padding: 0;
+  }
+  .conterbox .groupbox .inputbox li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .groupbox .titlebox.green_line {
+    width: 100%;
+  }
+  .conterbox .groupbox .inputbox .box {
+    width: 100%;
+  }
+}

@@ -1,0 +1,1902 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset, img {
+	border:0;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+}
+ol, ul {
+	list-style:none;
+}
+caption, th {
+	text-align:left;
+}
+/*h1, h2, h3, h4, h5, h6 {
+	font-size:100%;
+	font-weight:normal;
+}*/
+q:before, q:after {
+	content:'';
+}
+abbr, acronym {
+	border:0;
+}
+
+*{/*-webkit-box-sizing:border-box;給手機用*/
+-webkit-text-size-adjust:none;
+text-decoration:none;
+font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+
+p{
+	font-size:1em;
+	color:#333;}
+img{
+	margin:0 auto;}
+	
+	
+.SHUT{/* 消失用*/
+	display:none;}
+	
+/*文字區*/	
+a.LINK01{
+	color:#3b6fa8;}
+	
+a.LINK02{
+	color:#ffd200;}
+	
+a.LINK04{
+	color:#01a6e3;}
+a.LINK05{
+	color:#ff6824;}
+	
+a:hover{
+	text-decoration:underline;}
+	
+a.LINK03{
+	color:#333;}
+	
+a.LINK03:hover{
+	color:#3b6fa8;
+	text-decoration:underline;}
+	
+a.LINK06{
+	color:#fff;}
+	
+a.LINK06:hover{
+	color:#ffd200;
+	text-decoration:underline;}
+	
+.T01{
+	color:#fff;
+	font-size:1.7em;
+	line-height:1em;
+	-webkit-text-shadow: 2px 2px 3px #005c8c;
+	-moz-text-shadow: 2px 2px 3px #005c8c;
+	text-shadow: 2px 2px 3px #005c8c;
+
+	}
+.T01_S{
+	color:#fff;
+	font-size:1em;
+	line-height:1.1em;
+	-webkit-text-shadow: 2px 2px 3px #005c8c;
+	-moz-text-shadow: 2px 2px 3px #005c8c;
+	text-shadow: 2px 2px 3px #005c8c;
+	}
+.T01_SS{
+	color:#fff;
+	font-size:1em;
+	-webkit-text-shadow: 2px 2px 3px #005c8c;
+	-moz-text-shadow: 2px 2px 3px #005c8c;
+	text-shadow: 2px 2px 3px #005c8c;
+	}
+.T02{
+	color:#d35b5c;
+	font-size:0.9em;
+	
+	}
+	
+.T03{
+	color:#333;
+	font-size:0.9em;
+	line-height:1.6em;	
+	}
+.T04{
+	color:#3b6fa8;
+	font-size:1.1em;
+	line-height:1.6em;	
+	}
+	
+.T05{
+	color:#fff;
+	font-size:0.9em;
+	line-height:1.6em;	
+	}
+.T06 {
+	color: rgb(51, 51, 51); line-height: 1.4em; font-size: 0.9em;
+}
+/*patty*/
+.T03 .LINK05{color: rgb(1, 166, 227); }
+#news1 .CON_P,#news2 .CON_P,#news3 .CON_P,#news4 .CON_P{ margin-top:10px;}
+
+.BOX04 {width: 390px; height: 350px; overflow: hidden; margin-top: 30px; margin-right: 15px; float: left;}
+.BOX04 .NEWS_BG {width: 100%; height: 274px; margin-bottom: 20px; border-left:0px solid #eee; border-radius:6px 6px 0px 0px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+background:#f1f1f1;.background:#f1f1f1;/*IE6/.IE7*/
+background:linear-gradient(#f1f1f1 40%, #fff 100%);
+background: -webkit-linear-gradient(#f1f1f1 40%, #fff 100%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#f1f1f1 40%, #fff 100%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#fff',GradientType=0);/*IE6-9*/
+}
+
+.BOX04 .NEWS_BG .CON_P {
+	margin: 0px auto; padding-top:8px; padding-bottom:10px; width: 92%; color: rgb(59, 111, 168); list-style-type: none; list-style-position: inside;
+}
+.BOX04 .NEWS_BG .CON_P li {
+	height: auto; line-height: 110%; clear: both; margin-left: 0px; position: relative; border-bottom:1px solid #cdd5de;
+}
+.BOX04 .NEWS_BG .CON_P li a {
+	width: 73%; overflow: hidden; margin-left: 0px;margin: 7px 0px 3px 0px; color:#3b6fa8;  display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; -webkit-text-overflow: ellipsis; font-size:1em;
+}
+.BOX04 .NEWS_BG .CON_P span.T02 {
+	top: 0px; height: auto; right: 0px; position: absolute;margin: 7px 0px 3px 0px;}
+	
+.BOX08{
+	float:left;
+	width:390px;
+	height:337px;
+	margin-right:15px;
+	margin-top:30px;
+	overflow:hidden;
+	background:url(/frontimages/box04bg.jpg) no-repeat right bottom;
+	
+	}
+.BOX08 .NEWS_BG{margin-top:25px;}
+.BOX08 .NEWS_BG .NEWS_T{width:250px;height:100px;margin-left:120px;	
+	}
+	
+/*0331+++*/
+
+.BOX01 {width: 390px; height: 350px;/* overflow: hidden;*/ margin-top: 30px; margin-right: 15px; float: left;}
+.BOX01 .NEWS_BG {width: 48%; height:130px; margin-bottom:15px;/*border-left:0px solid #eee; border-radius:6px 6px 0px 0px;/*-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;*/  float:left; }
+/*.BOX01 .NEWS_T{width:100%;height:50px;margin-left:0px;}*/
+.BOX01 .B_120X100_2{ height:100%; width:96%; background-color:#FFF; margin:0 auto; position:relative;overflow:hidden;/*box-sizing:border-box;*/}
+.BOX01 .B_120X100_2 img{ width:100% ; height:auto;}
+.BOX01 .B_120X100_2 p{ display:block; width:100%; position:absolute; bottom:0px; background-color:rgba(247,128,0,0.9);color:#FFFFFF; text-align:center; overflow:hidden; height:30px; line-height:30px;padding:0px 2%;overflow:hidden;text-overflow:ellipsis;white-space: nowrap; text-shadow:1px 1px 2px rgba(51,51,51,0.8);   }
+
+.W_CON .T01_SS span i{ display: block;font-style:normal; background-color: rgba(0,0,0,0.4); color:#FFF;
+-webkit-text-shadow:none;-moz-text-shadow:none;	text-shadow:none; border-radius:5px; padding:0px 3px; margin:2px 2px; display:inline-block; margin-left:5px; font-size:13px;}
+
+
+/*歷年人口成長趨線圖20190902-ADD*/
+.Demographics{ background:#eee url(../frontimages/graphics_Limg.png) no-repeat left bottom; width:96%; height:auto; min-height:364px; overflow:hidden; padding:2%;}
+.Demographics .graphics_L{ float:left; width:28%;}
+.Demographics .graphics_L h2{ color:#3b6fa8;}
+.Demographics .graphics_R{float:left; width:72%; height:auto; min-height:370px; background-color:#FFF;}
+
+
+/*住宿資訊*/	
+.TITLE_BG_01{
+	width:100%;
+	height:52px;
+	margin-bottom:10px;
+	background:#FF9900;.background:#FF9900;/*IE6/.IE7*/
+background:linear-gradient(#FF9900 50%, #f78000 50%);
+background: -webkit-linear-gradient(#FF9900 50%, #f78000 50%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#FF9900 50%, #f78000 50%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF9900', endColorstr='#f78000',GradientType=0);/*IE6-9*/
+	position:relative;
+	}
+.BBG01{background:#22a8bb;.background:#22a8bb;/*IE6/.IE7*/
+background:linear-gradient(#2ab8cc 50%, #22a8bb 50%);
+background: -webkit-linear-gradient(#2ab8cc 50%, #22a8bb 50%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#2ab8cc 50%, #22a8bb 50%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2ab8cc', endColorstr='#22a8bb',GradientType=0);/*IE6-9*/
+}
+.BBG02{background-color:#ea609e;
+background:#ea609e;.background:#ea609e;/*IE6/.IE7*/
+background:linear-gradient(#ea609e 50%, #d14584 50%);
+background: -webkit-linear-gradient(#ea609e 50%, #d14584 50%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#ea609e 50%, #d14584 50%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea609e', endColorstr='#d14584',GradientType=0);/*IE6-9*/}
+.TITLE_BG_01 .TITLE{
+	position:absolute;
+	left:45px;
+	top:-2px;
+	font-size:1.3em;
+	line-height:52px;
+	color:#FFF;
+	font-weight:bold;
+	}
+.TITLE_BG_01 img{ padding:5px;}
+.BOX05{
+	float:left;
+	width:263px;
+	height:350px;
+	margin-right:0px;
+	margin-top:30px;
+	}
+.BOX05 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX05 .NEWS_BG font{ font-size: 1.1em;/* font-weight:bold;*/ color:#000;}
+.BOX06{
+	float:left;
+	width:263px;
+	height:350px;
+	margin-right:0px;
+	margin-top:30px;
+	}
+.BOX06 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat right bottom; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX06 .NEWS_BG font{ font-size: 1.1em;/* font-weight:bold;*/ color:#000;}
+.BOX07{
+	float:left;
+	width:250px;
+	height:350px;
+	margin-left:15px;
+	margin-top:30px;
+	/*overflow:hidden;*/
+	}
+.BOX07 .NEWS_BG{ width:100%;height:275px;overflow: auto; background:url(/frontimages/box06bg.jpg) no-repeat right bottom; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX07 .NEWS_BG font{font-size:1.1em;color:#3f240c; line-height:150%}
+
+/*patty*/
+
+/*======桌機版========*/
+@media screen and (min-width: 1025px) {	
+
+/*最外框加底圖*/
+.INTER_CON{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-size: 100% auto;
+}
+	
+/*==============共用==============*/	
+.COM{
+	clear:both;
+	width:1240px;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;	
+	}
+.COM_B{
+	width:1240px;
+	clear:both;
+	margin:0 auto;
+	margin-top:20px;
+	}
+	
+.COM02{
+	width:1200px;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+	background-color:#fff;
+	-webkit-box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0px 0px 15px #000;
+	box-shadow: 0px 0px 15px #000;
+	padding:0px 20px 0px 20px;
+	}
+	
+.COM03{
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	}
+
+
+	
+.BT{ 
+	width:100px;
+	height:35px;
+	}
+	
+.BT a{
+	display:block; border-radius:6px;
+	width:100%;
+	height:35px;
+	background-color:#ffd200;
+	color:#000;
+	line-height:35px;
+	text-align:center;
+	text-decoration:none;
+	border-radius:6px;}
+	
+.BT a:hover{
+	background-color:#ffde44;
+	}
+
+	
+/*==============中間內容區塊=============*/
+
+/*氣象區塊*/	
+.WEATHER{
+	width:410px;
+	height:60px;
+	float:right;
+	margin-top:20px;
+	background: #00a6cf; /* Old browsers */
+	background: -moz-linear-gradient(left, #00a6cf 0%, #006ccf 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #00a6cf 0%,#006ccf 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #00a6cf 0%,#006ccf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6cf', endColorstr='#006ccf',GradientType=1 ); /* IE6*/
+	opacity:0.6;
+	filter:alpha(opacity=60);/* IE6*/
+	padding:10px 0px 10px 0px;}
+.W_CON{
+	float:left;
+	width:194px;
+	height:65px;
+	padding-left:10px;	
+	border-right:1px solid #fff;	
+	text-shadow: 3px 3px 3px #448ca5;
+	}	
+.W_ICON{
+	width:65px;
+	height:65px;
+	float:left;
+	margin-right:5px;}
+.WEATHER{ position:relative;}
+.WEATHER .XX{ position:absolute;z-index:999999;cursor:pointer; right:0px;top:0;width: 30px;height: 25px;background:#0033aa; color:#FFF; vertical-align:central; text-align:center; font-weight:bold; padding-top:3px;}	
+.goplane{position:absolute;left:10px;top:0px;z-index:99;cursor:pointer; color:#FFF; text-align:center; font-size:14px;}
+/*縣長區塊-舊航班*/
+.FLIGHT{
+	clear:both;
+	float:right;
+	width:410px;
+	height:340px;
+	margin-top:20px;
+	/* opacity:0.8; */
+	
+	}
+/*-----*/	
+.F_MENU{
+	width:410px;
+	height:45px;
+	}
+	
+.F_MENU ul{
+	width:100%;
+	height:45px;
+	}
+	
+.F_MENU ul li{
+	float:left;
+	width:33.33333%;
+	height:45px;
+	}
+.F_MENU ul li.L{
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:45px;
+	text-align:center;
+	background-color:#3b6fa8;
+	color:#ffd200;
+	}
+.F_MENU ul li a{
+	display:block;
+	width:100%;
+	height:45px;
+	background-color:#FFF;
+	color:#3b6fa8;
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:45px;
+	text-align:center;
+	text-decoration:none;
+	}
+.F_MENU ul li a:hover{
+	background-color:#3b6fa8;
+	color:#ffd200;
+	}
+.F_BOX{
+	width:390px;
+	height:285px;
+	background-color:#3b6fa8;
+	padding:0px 10px 10px 10px;
+	}
+	
+.F_BOX ul{
+	width:100%;
+	height:40px;
+	border-bottom:1px solid #fff;}
+.F_BOX ul.LOW{
+	width:100%;
+	height:40px;
+	border-bottom:1px solid #71b3db;}
+	
+.F_BOX ul li{
+	float:left;
+	width:16.666666%;
+	height:40px;
+	font-size:1em;
+	line-height:40px;
+	color:#FFF;
+	text-align:center;
+	text-shadow: 2px 2px 3px #005c8c;}
+.F_BOX ul.LOW li:first-child{overflow:hidden;white-space:nowrap;}/*20210506*/
+.F_BOX p.T01_SS{ float:left;line-height:150%;font-size:0.7em; letter-spacing:normal; padding-top:2px; width:300px;}
+.F_BOX .BT{ width:70px;height:30px;}
+.F_BOX .BT a{
+	display:block; 
+	width:100%;
+	height:30px;
+	background-color:#ffd200;
+	color:#000;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	border-radius:6px;}
+.F_BOX .BT{ float:right; margin-top:5px; font-size:12px;}
+.F_BOX p.T01_SS i{ font-style:normal; background-color: rgba(0,0,0,0.4); color:#FFF;
+-webkit-text-shadow:none;-moz-text-shadow:none;	text-shadow:none; border-radius:5px; padding:0px 3px; margin:2px 2px; display:inline-block; margin-left:5px;}
+.F_BOX p.T01_SS i:first-child{ margin-left:0px;}
+
+/*============中間最新消息住宿縣長區塊==========*/
+
+.BOX01{
+	float:left;
+	width:390px;
+	height:350px;
+	margin-right:15px;
+	margin-top:30px;
+	overflow:hidden;
+	}
+/*最新消息*/
+ul.N_MENU{
+	width:100%;
+	height:35px;
+	margin-bottom:10px;
+	}
+	
+ul.N_MENU li{
+	float:left;
+	width:25%;
+	height:35px;
+	background-image:url(/frontimages/line02.jpg);
+	background-repeat:no-repeat;
+	background-position:right center;
+	text-align:center;
+	border-right:1px solid #CCC;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+	background:#f1f1f1;.background:#f1f1f1;/*IE6/.IE7*/
+background:linear-gradient(#f1f1f1 40%, #fff 100%);
+background: -webkit-linear-gradient(#f1f1f1 40%, #fff 100%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#f1f1f1 40%, #fff 100%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#fff',GradientType=0);/*IE6-9*/
+	}
+/*ul.N_MENU li:last-child{
+	background:none;
+	}*/
+ul.N_MENU li:first-child{border-left:1px solid #CCC;}		
+	
+	
+ul.N_MENU li a{
+	display:block;
+	width:100%;
+	height:35px;
+	border-top:2px solid #c7c7c7;
+	color:#000;
+	font-size:1.1em;
+	line-height:35px;
+	text-decoration:none;
+	}
+	
+ul.N_MENU li a:hover{
+	font-size:1.1em;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}
+ul.N_MENU li.L a{
+	font-size:1.1em;
+	line-height:35px;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}	
+.NEWS_BOX_BG{
+	width:1560px;
+	height:315px;	
+	}	
+.NEWS_BOX{
+	float:left;
+	width:390px;
+	height:315px;	
+	}
+	
+/*區塊一樣式一*/		
+ul.CON_P{
+	width:98%;
+	margin:0 auto;
+	list-style-type:disc;
+	list-style-position:inside; 
+	color:#3b6fa8;
+	margin-bottom:10px;}
+ul.CON_P li{
+	clear:both;
+	height:29px;
+	line-height:29px;
+	position:relative;margin-left:0px;
+	}
+ul.CON_P li a{
+	display:inline-block;	
+	width:70%;
+	overflow:hidden;/*超過寬度的內容會自動消失*/
+white-space:nowrap; 	/*文字不折行*/
+text-overflow:ellipsis; /*省略符號*/
+	margin-bottom:-9px;
+	margin-left:0px;
+	}
+
+ul.CON_P span.T02{
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:30px;
+		}
+	
+/*區塊二樣式二*/
+.NEWS_BG{
+	width:100%;
+	height:100px;
+	margin-bottom:20px;}
+.B_120X100{
+	float:left;
+	width:120px;
+	height:100px;
+	margin-right:10px;
+	margin-left:15px;
+	}
+.NEWS_T{
+	width:270px;
+	height:100px;
+	margin-left:120px;	
+	}
+	
+.BOX01 .LINK01{
+	font-size:1.1em;
+	font-weight:bold;}
+	
+.BOX01 .LINK05{
+	font-size:0.9em;
+	font-weight:bold;}
+	
+
+	
+/*住宿資訊BAR	*/
+.TITLE_BG{
+	width:100%;
+	height:35px;
+	margin-bottom:10px;
+	border-top:2px solid #c7c7c7;
+	position:relative;
+	}
+.TITLE_BG .TITLE{
+	position:absolute;
+	left:0px;
+	top:-2px;
+	font-size:1.3em;
+	line-height:35px;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}
+	
+	
+/*縣長區塊樣式	*/
+.IMG{
+	float:right;
+	margin-right:12px;
+	}
+.BOX02{
+	float:left;
+	width:390px;
+	height:350px;
+	}
+	
+.BOX02 .COM_BG{
+	width:370px;
+	height:345px;
+	margin:0 auto;
+	background-color:#3b6fa8;
+	padding:0px 10px 5px 10px; 
+	overflow:hidden; 
+	}
+	
+.BOX02 .COM_BG img{
+	width: auto;
+	height:213px;
+	margin:0 auto;
+	}
+	
+.BOX02 .COM_BG .BT02{
+	width:370px;
+	height:35px;
+	margin-top:8px;}
+.BOX02 .COM_BG .T01{
+	font-size: 1.4em;
+	line-height: 1.5em;
+}	
+.BT02 ul{}
+	
+.BT02 li{
+	float:left;
+	width:50%;
+	height:35px;
+	margin-bottom:5px;
+	text-align:center;
+	}
+	
+.BT02 li a{
+	display:block;
+	width:95%;
+	margin:0 auto;
+	height:35px;
+	line-height:35px;
+	border:1px solid #f2cb0b;
+	color:#f2cb0b;
+	padding-left:5px;
+	text-decoration:none;
+	background-repeat:no-repeat;
+	background-position-x:30px;/*IE用*/
+	background-position-y:center;/*IE用*/
+	background-position:left 30px center;
+	-webkit-background-position:left 30px center;
+	-moz-background-position:left 30px center;
+	-ms-background-position:left 30px center;
+	}
+	
+.BT02 li a:hover{
+	background-color:#f2cb0b;
+	color:#000;}
+	
+.BT02 li a.AA{
+	background-image:url(/frontimages/bt_icon01_s.png);}
+.BT02 li a.BB{
+	background-image:url(/frontimages/bt_icon02_s.png);}	
+.BT02 li a.CC{
+	background-image:url(/frontimages/bt_icon03_s.png);}
+.BT02 li a.DD{
+	background-image:url(/frontimages/bt_icon04_s.png);}
+		
+.BT02 li a.AA:hover{
+	background-image:url(/frontimages/bt_icon01a_s.png);}
+.BT02 li a.BB:hover{
+	background-image:url(/frontimages/bt_icon02a_s.png);}	
+.BT02 li a.CC:hover{
+	background-image:url(/frontimages/bt_icon03a_s.png);}
+.BT02 li a.DD:hover{
+	background-image:url(/frontimages/bt_icon04a_s.png);}
+		
+/*各景點區塊*/
+.BOX03{
+	float:left;
+	width:292px;
+	height:238px;
+	position:relative;
+	margin-right:10px;
+	
+	}
+	
+.TITLE02{
+	width:100%;
+	height:50px;
+	text-align:center;
+	color:#fff;
+	line-height:50px;
+	font-size:1.3em;
+	background-color:#d35b5c;}	
+.TITLE02_B{
+	background-color:#56b9c9;}
+	
+.TITLE02_C{
+	background-color:#78b519;}
+.TITLE02_D{
+	background-color:#db7a3f;}
+	
+
+.BOX03 .BOX03_IMG{
+	position:absolute;
+	width:100%;
+	height:188px;
+	background-size:100% auto;
+	z-index:888;	
+	}
+
+.BOX03 .BLACK{
+	position:absolute;
+	width:100%;
+	height:188px;
+	background-color:#000;
+	opacity:0.75;
+	z-index:999;
+	}
+.BLACK ul.CON_P02{
+	width:90%;
+	margin:0 auto;
+	list-style-type:disc;
+	list-style-position:inside; 
+	color:#fff;
+	margin-bottom:10px;
+	margin-top:10px;
+	margin-left:30px;}
+.BLACK ul.CON_P02 li{
+	clear:both;
+	height:30px;
+	line-height:30px;
+	}
+.BLACK ul.CON_P02 li a{
+	display:inline-block;	
+	width:90%;
+	color:#fff;
+	font-size:1em;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	margin-bottom:-9px;
+	margin-left:-10px;
+	}	
+	
+.BLACK ul.CON_P02 li a:hover{
+	color:#ffe851;
+	}
+
+	
+.BOX03 .BT03{
+	width:50px;
+	height:25px;
+	margin:0 auto;
+	margin-top:5px;
+	}
+	
+.BOX03 .BT03 a{
+	display:block;
+	width:50px;
+	height:25px;
+	text-align:center;
+	color:#FFF;
+	font-size:0.8em;
+	line-height:25px;
+	text-decoration:none;
+	border-radius:6px;}
+.BOX03 .BT03 a.B_01{
+	background-color:#d35b5c;}
+.BOX03 .BT03 a.B_02{
+	background-color:#56b9c9;}
+.BOX03 .BT03 a.B_03{
+	background-color:#78b519;}
+.BOX03 .BT03 a.B_04{
+	background-color:#db7a3f;}
+	
+.BOX03 .BT03 a.B_01:hover{
+	background-color:#e58283;}
+.BOX03 .BT03 a.B_02:hover{
+	background-color:#81d2df;}
+.BOX03 .BT03 a.B_03:hover{
+	background-color:#9cd741;}
+.BOX03 .BT03 a.B_04:hover{
+	background-color:#f09f6d;}
+	
+/*各相關按鈕*/
+
+.MENU02{
+	width:100%;
+	height:140px;
+	margin:0 auto;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+	
+.MENU02 ul{
+	width:100%;
+	height:140px;}
+	
+.MENU02 ul li{
+	float:left;
+	width:140px;
+	height:140px;
+	margin-right:11px;
+	margin-bottom:10px;}
+	
+.MENU02 ul li a{
+	display:block;
+	width:140px;
+	height:40px;
+	text-align:center;
+	color:#000;
+	font-size:1.2em;
+	text-decoration:none;
+	padding-top:100px;
+	border:1px solid #3b6fa8;
+	background-color:#FFF;
+	background-repeat:no-repeat;
+	background-position-x:center;/*IE用*/
+	background-position-y:20px;/*IE用*/
+	background-position:top 20px center;
+	-moz-background-position:top 20px center;
+	-webkit-background-position:top 20px center;
+	}
+.MENU02 ul li a:hover{
+	color:#fff;
+	font-weight:bold;
+	background-color:#3b6fa8;
+	}
+.MENU02 ul li a.M01{
+	background-image:url(/frontimages/bt_icon05.png);}	
+.MENU02 ul li a.M02{
+	background-image:url(/frontimages/bt_icon06.png);}	
+.MENU02 ul li a.M03{
+	background-image:url(/frontimages/bt_icon07.png);}	
+.MENU02 ul li a.M04{
+	background-image:url(/frontimages/bt_icon08.png);}	
+.MENU02 ul li a.M05{
+	background-image:url(/frontimages/bt_icon09.png);}	
+.MENU02 ul li a.M06{
+	background-image:url(/frontimages/bt_icon10.png);}	
+.MENU02 ul li a.M07{
+	background-image:url(/frontimages/bt_icon11.png);}	
+.MENU02 ul li a.M08{
+	background-image:url(/frontimages/bt_icon12.png);}
+	
+.MENU02 ul li a.M01:hover{
+	background-image:url(/frontimages/bt_icon05a.png);}	
+.MENU02 ul li a.M02:hover{
+	background-image:url(/frontimages/bt_icon06a.png);}	
+.MENU02 ul li a.M03:hover{
+	background-image:url(/frontimages/bt_icon07a.png);}	
+.MENU02 ul li a.M04:hover{
+	background-image:url(/frontimages/bt_icon08a.png);}	
+.MENU02 ul li a.M05:hover{
+	background-image:url(/frontimages/bt_icon09a.png);}	
+.MENU02 ul li a.M06:hover{
+	background-image:url(/frontimages/bt_icon10a.png);}	
+.MENU02 ul li a.M07:hover{
+	background-image:url(/frontimages/bt_icon11a.png);}	
+.MENU02 ul li a.M08:hover{
+	background-image:url(/frontimages/bt_icon12a.png);}		
+
+/*AD_BANNER*/
+
+.AD_BG{
+	width:100%;
+	height:60px;
+	position:relative;
+	margin-bottom:30px;
+	}
+	
+.AD_BG .BT_PR a{
+	display:block;
+	width:30px;
+	height:60px;
+	background:url(/frontimages/pre_icon.png) no-repeat center center;
+	background-color:#7f7f7f;
+	text-indent:-9999px;
+	position:absolute;
+	left:0px;	
+	}
+.AD_BG .BT_NEXT a{
+	display:block;
+	width:30px;
+	height:60px;
+	background:url(/frontimages/next_icon.png) no-repeat center center;
+	background-color:#7f7f7f;
+	text-indent:-9999px;
+	position:absolute;
+	right:0px;	
+	}
+.AD_BANNER_BG{
+	width:1150px;
+	height:60px;
+	position:absolute;
+	left:40px;		
+	}
+.AD_BANNER{
+	width:1130px;
+	height:60px;
+	overflow:hidden;		
+	}
+.AD_BANNER img{
+	width:180px;
+	height:60px;}
+	
+.AD_BANNER ul{
+	width:100%;
+	height:60px;	
+	}
+	
+.AD_BANNER ul li{
+	float:left;
+	width:180px;
+	height:60px;
+	margin-right:8px;
+	}
+.AD_BANNER ul li a{
+	display:block;
+	width:180px;
+	height:60px;
+	}
+
+
+
+/*BANNER*/
+.bannerbox{width:100%; height: auto; background-color:#ededed; overflow:hidden;}
+.bannerbox li{float:left;width:20%;height:90px; overflow:hidden; background-color:#ededed; padding:5px 0;}
+.bannerbox li a{ display:block;}
+.bannerbox li img{ width:90%; height: auto; margin-left:5%;}
+
+/*機場資訊*/
+.BOX02 .COM_BG-2{
+	width: 390px;
+    height: 345px;
+    margin: 0 auto;
+    background-color: #3b6fa8;
+    padding: 0px 0px 5px 0px;
+    overflow: hidden;
+
+}
+.div-airport{
+	width: 100%;
+	margin: auto;
+	background: #e0f2ff url(../馬祖-連江縣政府_files/airport-02.png)no-repeat center center ;
+	background-size: 100% auto;
+}
+.div-airport ul{
+	width: 100%;
+	margin: auto;
+	padding: 15px 0;
+	text-align: center;
+}
+.div-airport ul li{
+	width: 250px;
+	margin: auto;
+	overflow: hidden;
+}	
+.div-airport ul li a{
+	text-decoration: none;
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	vertical-align: middle;
+	margin:15px auto;
+	text-align: center;
+	background: #1c5182dc;
+	border: 2px #2e5b82 solid;
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 150%;
+	border-radius: 11px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.div-airport ul li:nth-child(2) a{
+	background: #007dc6db;
+	border: 2px #00679c solid;
+}
+.div-airport ul li:nth-child(3) a{
+	background: #318638d3;
+	border: 2px #367b3a solid;
+}
+.div-airport ul li a{
+	color: #fff;
+}
+.div-airport ul li a{
+	
+	color: #fff;
+	
+}
+.div-airport ul li a::before{
+	content: "";
+	width: 30px;
+	height: 33px;
+	background: url(../馬祖-連江縣政府_files/airport-04.png)no-repeat center center;
+	background-size: 30px 25px;
+	display: inline-block;
+	vertical-align: text-top;
+}
+
+	
+}
+
+
+
+/*======手機版========*/
+@media screen and (max-width: 1024px) {	
+
+*{-webkit-box-sizing:border-box;
+box-sizing:border-box;
+-webkit-text-size-adjust:none;
+text-decoration:none;
+font-family: "微軟正黑體", "新細明體", "細明體",Arial, Helvetica, sans-serif;}
+
+.IMG{display:none;}
+/*最外框加底圖*/
+.INTER_CON{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-position:left 30% top ;
+	-moz-background-position:left 30% top;
+    -webkit-background-position:left 30% top;
+	-ms-background-position:left 30% top;
+	background-size:cover;
+	
+	}
+	
+/*==============共用==============*/	
+.COM{
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+	}
+.COM_B{
+	width:100%;
+	clear:both;
+	margin:0 auto;
+	margin-top:20px;
+	}
+	
+.COM02{
+	width:100%;
+	clear:both;
+	margin:0 auto;
+	background-color:#fff;
+	padding:0px 3% 0px 3%;
+	border-radius:10px 10px 0px 0px;
+	-webkit-border-radius:10px 10px 0px 0px;
+	-moz-border-radius:10px 10px 0px 0px;
+	-o-border-radius:10px 10px 0px 0px;
+	-webkit-box-shadow: 0px 0px 15px #000;
+	-moz-box-shadow: 0px 0px 15px #000;
+	box-shadow: 0px 0px 15px #000;
+	}
+	
+.COM03{
+	clear:both;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	}
+	
+.BT{ 
+	width:100%;
+	height:45px;
+	}
+	
+.BT a{
+	display:block; 
+	width:100%;
+	height:45px;
+	background-color:#ffd200;
+	font-size:1.2em;
+	color:#000;
+	line-height:45px;
+	text-align:center;
+	text-decoration:none;
+	border-radius:6px;}
+	
+
+
+
+	
+/*==============中間內容區塊=============*/
+
+/*氣象區塊*/	
+.WEATHER{
+	width:95%;
+	height:80px;
+	margin:0 auto;
+	margin-top:30%;
+	background: #00a6cf; /* Old browsers */
+	background: -moz-linear-gradient(left, #00a6cf 0%, #006ccf 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #00a6cf 0%,#006ccf 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #00a6cf 0%,#006ccf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6cf', endColorstr='#006ccf',GradientType=1 ); /* IE6*/
+	opacity:0.6;
+	padding:7px;}
+.W_CON{
+	float:left;
+	width:50%;
+	height:65px;
+	border-right:1px solid #fff;	
+	text-shadow: 3px 3px 3px #448ca5;
+	}	
+.W_ICON{
+	width:65px;
+	height:65px;
+	float:left;
+	margin-right:5px;}
+.WEATHER{ position:relative;}
+.WEATHER .XX{ position:absolute;z-index:999999;cursor:pointer; right:0px;top:0;width: 30px;height: 25px;background:#0033aa; color:#FFF; vertical-align:central; text-align:center; font-weight:bold; padding-top:3px;}		
+.goplane{position:absolute;left:10px;top:0px;z-index:999;cursor:pointer; color:#FFF; text-align:center;font-size:14px;}
+/*航班區塊*/	
+.FLIGHT{
+	clear:both;
+	width:95%;
+	height:auto;
+	margin:0 auto;
+	overflow:hidden;
+	margin-top:20px;
+	/* opacity:0.8; */
+	}
+	
+.F_MENU{
+	width:100%;
+	height:45px;
+	}
+	
+.F_MENU ul{
+	width:100%;
+	height:45px;
+	}
+	
+.F_MENU ul li{
+	float:left;
+	width:33.33333%;
+	height:45px;
+	}
+.F_MENU ul li.L{
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:45px;
+	text-align:center;
+	background-color:#3b6fa8;
+	color:#ffd200;
+	}
+.F_MENU ul li a{
+	display:block;
+	width:100%;
+	height:45px;
+	background-color:#FFF;
+	color:#3b6fa8;
+	font-size:1.1em;
+	font-weight:bold;
+	line-height:45px;
+	text-align:center;
+	text-decoration:none;
+	}
+.F_MENU ul li a:hover{
+	background-color:#3b6fa8;
+	color:#ffd200;
+	}
+.F_BOX{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	background-color:#3b6fa8;
+	padding:0px 10px 10px 10px;}
+	
+.F_BOX ul{
+	width:100%;
+	height: auto;overflow:hidden;
+	border-bottom:1px solid #fff;}
+.F_BOX ul.LOW{
+	width:100%;
+	height: auto;overflow:hidden;
+	border-bottom:1px solid #71b3db;}
+	
+.F_BOX ul li{
+	float:left;
+	width:16.666666%;
+	height: auto;
+	font-size:1em;
+	line-height:130%; padding:5px 2px;overflow:hidden;
+	color:#FFF;
+	text-align:center;
+	text-shadow: 2px 2px 3px #005c8c;}
+.F_BOX p.T01_SS{ height:40px; line-height:40px;}
+.F_BOX p.T01_SS{ float:left;line-height:150%;font-size:0.7em; letter-spacing:normal; padding-top:2px; width:100%;}
+.F_BOX .BT{ width:70px;height:30px;}
+.F_BOX .BT a{
+	display:block; 
+	width:100%;
+	height:30px;
+	background-color:#ffd200;
+	color:#000;
+	line-height:30px;
+	text-align:center;
+	text-decoration:none;
+	border-radius:6px;}
+.F_BOX .BT{ float:right; margin-top:5px; font-size:12px;}
+.F_BOX p.T01_SS i{ font-style:normal; background-color: rgba(0,0,0,0.4); color:#FFF;
+-webkit-text-shadow:none;-moz-text-shadow:none;	text-shadow:none; border-radius:5px; padding:0px 3px; margin:2px 2px; display:inline-block; margin-left:5px;}
+.F_BOX p.T01_SS i:first-child{ margin-left:0px;}
+	
+
+
+/*============中間最新消息住宿縣長區塊==========*/
+
+.BOX01{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-top:20px;
+	margin-bottom:15px;
+	}
+/*最新消息*/
+ul.N_MENU{
+	width:100%;
+	height:35px;
+	margin-bottom:10px;
+	margin-top:20px;
+	}
+	
+ul.N_MENU li{
+	float:left;
+	width:25%;
+	height:35px;
+	background-image:url(/frontimages/line02.jpg);
+	background-repeat:no-repeat;
+	background-position:right center;
+	text-align:center;
+	border-right:1px solid #CCC;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+	background:#f1f1f1;.background:#f1f1f1;/*IE6/.IE7*/
+background:linear-gradient(#f1f1f1 40%, #fff 100%);
+background: -webkit-linear-gradient(#f1f1f1 40%, #fff 100%);/*Chrome10+,Safari5.1+*/
+background: -ms-linear-gradient(#f1f1f1 40%, #fff 100%);/*IE10+*/
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1f1f1', endColorstr='#fff',GradientType=0);/*IE6-9*/
+	}
+/*ul.N_MENU li:last-child{
+	background:none;
+	}*/
+ul.N_MENU li:first-child{border-left:1px solid #CCC;}	
+	
+ul.N_MENU li a{
+	display:block;
+	width:100%;
+	height:35px;
+	border-top:2px solid #c7c7c7;
+	color:#000;
+	font-size:1.1em;
+	line-height:35px;
+	text-decoration:none;
+	}
+	
+ul.N_MENU li a:hover{
+	font-size:1.1em;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}
+ul.N_MENU li.L a{
+	font-size:1.1em;
+	line-height:35px;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}
+	
+.NEWS_BOX_BG{
+	width:100%;
+	height:auto;
+	overflow:hidden;	
+	}	
+.NEWS_BOX{
+	width:100%;
+	height:auto;
+	overflow:hidden;	
+	}
+	
+/*區塊一樣式一*/		
+ul.CON_P{
+	width:98%;
+	margin:0 auto;	
+	list-style-type:disc;
+	list-style-position:inside; 
+	color:#3b6fa8;
+	margin-bottom:10px;}
+ul.CON_P li{
+	clear:both;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	position:relative;
+	}
+ul.CON_P li a{	
+	display:inline-block;	
+	width:69%;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	margin-bottom:-9px;
+	margin-left:0px;
+	}
+
+ul.CON_P span.T02{
+	position:absolute;
+	right:0px;
+	top:0px;
+	height:30px;
+	padding-left:5px;}
+	
+/*區塊二樣式二*/
+.NEWS_BG{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-bottom:15px;}
+.B_120X100{
+	float:left;
+	width:120px;
+	height:100px;
+	margin-right:8px;
+	}
+.NEWS_T{
+	height:auto;
+	overflow:hidden;
+	margin-left:110px;
+	}
+	
+.BOX01 .LINK01{
+	font-size:1.1em;
+	font-weight:bold;}
+	
+.BOX01 .LINK05{
+	font-size:0.9em;
+	font-weight:bold;}
+	
+	
+
+
+.BOX08{
+	float:none;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-top:20px;
+	margin-bottom:15px;
+	background:url(/frontimages/box04bg.jpg) no-repeat right bottom;
+	background-size:cover;
+	}
+.BOX08 .NEWS_BG{margin-top:25px; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: }
+.BOX08 .NEWS_BG .NEWS_T{width: auto;height:100px;margin-left:120px;}
+	
+/*歷年人口成長趨線圖20190902-ADD*/
+.Demographics{ background:#eee url(../frontimages/graphics_Limg.png) no-repeat left bottom; width:96%; height:auto; min-height: auto; overflow:hidden; padding:2%; background-size:100% auto;}
+.Demographics .graphics_L{ float: none; width:100%;height:auto; overflow:hidden;}
+.Demographics .graphics_L h2{ color:#3b6fa8;}
+.Demographics .graphics_R{float: none; width:100%; height:auto; min-height:auto; background-color:#FFF;}	
+	
+/*住宿資訊BAR	*/
+.TITLE_BG{
+	width:100%;
+	height:35px;
+	margin-bottom:10px;
+	border-top:2px solid #c7c7c7;
+	position:relative;
+	}
+.TITLE_BG .TITLE{
+	position:absolute;
+	left:0px;
+	top:-2px;
+	font-size:1.3em;
+	line-height:35px;
+	border-top:2px solid #3b6fa8;
+	color:#3b6fa8;
+	font-weight:bold;
+	}
+	
+	
+/*縣長區塊樣式	*/
+
+.BOX02{
+	float:left;
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-bottom:15px;
+	}
+	
+.BOX02 .COM_BG{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin:0 auto;
+	background-color:#3b6fa8;
+	padding:3%;
+ 
+	}
+	
+.BOX02 .COM_BG img{
+	width:100%;
+	height:auto;
+	margin:0 auto;
+	}
+	
+.BOX02 .COM_BG .BT02{
+	width:100%;
+	height:35px;
+	margin-top:8px;}
+	
+.BT02 ul{
+	width:100%;}
+	
+.BT02 li{
+	float:left;
+	width:50%;
+	height:35px;
+	margin-bottom:5px;
+	text-align:center;
+	}
+	
+.BT02 li a{
+	display:block;
+	width:98%;
+	margin:0 auto;
+	height:35px;
+	line-height:35px;
+	border:1px solid #f2cb0b;
+	color:#f2cb0b;
+	padding-left:5px;
+	text-decoration:none;
+	background-repeat:no-repeat;
+	background-position:left 18% center;
+	-webkit-background-position:left 18% center;
+	-moz-background-position:left 18% center;
+	-ms-background-position:left 18% center;
+	}
+	
+.BT02 li a:hover{
+	background-color:#f2cb0b;
+	color:#000;}
+	
+.BT02 li a.AA{
+	background-image:url(/frontimages/bt_icon01_s.png);}
+.BT02 li a.BB{
+	background-image:url(/frontimages/bt_icon02_s.png);}	
+.BT02 li a.CC{
+	background-image:url(/frontimages/bt_icon03_s.png);}
+.BT02 li a.DD{
+	background-image:url(/frontimages/bt_icon04_s.png);}
+		
+.BT02 li a.AA:hover{
+	background-image:url(/frontimages/bt_icon01a_s.png);}
+.BT02 li a.BB:hover{
+	background-image:url(/frontimages/bt_icon02a_s.png);}	
+.BT02 li a.CC:hover{
+	background-image:url(/frontimages/bt_icon03a_s.png);}
+.BT02 li a.DD:hover{
+	background-image:url(/frontimages/bt_icon04a_s.png);}
+		
+/*各景點區塊*/
+.BOX03{
+	float:left;
+	width:100%;
+	height:238px;
+	margin:0 auto;
+	position:relative;
+	margin-bottom:15px;
+	}
+	
+.TITLE02{
+	width:100%;
+	height:50px;
+	text-align:center;
+	color:#fff;
+	line-height:50px;
+	font-size:1.3em;
+	background-color:#d35b5c;}	
+.TITLE02_B{
+	background-color:#56b9c9;}
+	
+.TITLE02_C{
+	background-color:#78b519;}
+.TITLE02_D{
+	background-color:#db7a3f;}
+	
+
+.BOX03 .BOX03_IMG{
+	position:absolute;
+	width:100%;
+	height:188px;
+	background-size:100% auto;
+	background-repeat:no-repeat;
+	z-index:888;	
+	}
+	
+.BOX03 .BLACK{
+	position:absolute;
+	width:100%;
+	height:188px;
+	background-color:#000;
+	opacity:0.75;
+	z-index:999;
+	}
+	
+.BLACK ul.CON_P02{
+	width:80%;
+	margin:0 auto;
+	list-style-type:disc;
+	list-style-position:inside; 
+	color:#fff;
+	margin-bottom:5px;
+	margin-top:10px;
+	}
+.BLACK ul.CON_P02 li{
+	clear:both;
+	height:30px;
+	line-height:30px;
+	}
+.BLACK ul.CON_P02 li a{
+	display:inline-block;	
+	width:90%;
+	color:#fff;
+	font-size:1em;
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	margin-bottom:-9px;
+	margin-left:-10px;
+	}
+	
+.BLACK ul.CON_P02 li a:hover{
+	color:#ffe851;
+	}
+	
+.BOX03 .BT03{
+	width:100px;
+	height:30px;
+	margin:0 auto;
+	}
+	
+.BOX03 .BT03 a{
+	display:block;
+	width:100px;
+	height:30px;
+	text-align:center;
+	color:#FFF;
+	font-size:1em;
+	line-height:30px;
+	text-decoration:none;
+	border-radius:6px;}
+.BOX03 .BT03 a.B_01{
+	background-color:#d35b5c;}
+.BOX03 .BT03 a.B_02{
+	background-color:#56b9c9;}
+.BOX03 .BT03 a.B_03{
+	background-color:#78b519;}
+.BOX03 .BT03 a.B_04{
+	background-color:#db7a3f;}
+	
+.BOX03 .BT03 a.B_01:hover{
+	background-color:#e58283;}
+.BOX03 .BT03 a.B_02:hover{
+	background-color:#81d2df;}
+.BOX03 .BT03 a.B_03:hover{
+	background-color:#9cd741;}
+.BOX03 .BT03 a.B_04:hover{
+	background-color:#f09f6d;}
+	
+/*各相關按鈕*/
+
+.MENU02{
+	width:100%;
+	margin:0 auto;
+	margin-bottom:20px;
+	}
+	
+.MENU02 ul{
+	width:100%;}
+	
+.MENU02 ul li{
+	float:left;
+	width:24%;
+        height:auto;
+	margin-bottom:5px;
+	}
+	
+.MENU02 ul li a{
+	display:block;
+	width:95%;
+	height:0;
+	padding-bottom:20%;
+	margin:0 auto;
+	text-align:center;
+	color:#000;
+	font-size:0.7em;
+	text-decoration:none;
+	padding-top:80%;
+	border:1px solid #3b6fa8;
+	background-color:#FFF;
+	background-repeat:no-repeat;
+	background-size:70% auto;
+	background-position:top 18% center;
+	-moz-background-position:top 18% center;
+	-webkit-background-position:top 18% center;
+	}
+.MENU02 ul li a:hover{
+	color:#fff;
+	font-weight:bold;
+	background-color:#3b6fa8;
+	}
+.MENU02 ul li a.M01{
+	background-image:url(/frontimages/bt_icon05.png);}	
+.MENU02 ul li a.M02{
+	background-image:url(/frontimages/bt_icon06.png);}	
+.MENU02 ul li a.M03{
+	background-image:url(/frontimages/bt_icon07.png);}	
+.MENU02 ul li a.M04{
+	background-image:url(/frontimages/bt_icon08.png);}	
+.MENU02 ul li a.M05{
+	background-image:url(/frontimages/bt_icon09.png);}	
+.MENU02 ul li a.M06{
+	background-image:url(/frontimages/bt_icon10.png);}	
+.MENU02 ul li a.M07{
+	background-image:url(/frontimages/bt_icon11.png);}	
+.MENU02 ul li a.M08{
+	background-image:url(/frontimages/bt_icon12.png);}
+	
+.MENU02 ul li a.M01:hover{
+	background-image:url(/frontimages/bt_icon05a.png);}	
+.MENU02 ul li a.M02:hover{
+	background-image:url(/frontimages/bt_icon06a.png);}	
+.MENU02 ul li a.M03:hover{
+	background-image:url(/frontimages/bt_icon07a.png);}	
+.MENU02 ul li a.M04:hover{
+	background-image:url(/frontimages/bt_icon08a.png);}	
+.MENU02 ul li a.M05:hover{
+	background-image:url(/frontimages/bt_icon09a.png);}	
+.MENU02 ul li a.M06:hover{
+	background-image:url(/frontimages/bt_icon10a.png);}	
+.MENU02 ul li a.M07:hover{
+	background-image:url(/frontimages/bt_icon11a.png);}	
+.MENU02 ul li a.M08:hover{
+	background-image:url(/frontimages/bt_icon12a.png);}		
+
+/*AD_BANNER*/
+
+.AD_BG{
+	width:100%;
+	height:60px;
+	position:relative;
+	margin:20px auto;
+	}
+	
+.AD_BG .BT_PR a{
+	display:block;
+	width:40px;
+	height:60px;
+	background:url(/frontimages/pre_icon.png) no-repeat center center;
+	background-color:#7f7f7f;
+	text-indent:-9999px;
+	position:absolute;
+	left:0px;
+	z-index:1000;	
+	}
+.AD_BG .BT_NEXT a{
+	display:block;
+	width:40px;
+	height:60px;
+	background:url(/frontimages/next_icon.png) no-repeat center center;
+	background-color:#7f7f7f;
+	text-indent:-9999px;
+	position:absolute;
+	right:0px;
+	z-index:1000;	
+	}
+.AD_BANNER_BG{
+	width:100%;
+	height:60px;
+	position:absolute;
+	left:50px;
+	z-index:999;		
+	}
+.AD_BANNER{
+	width:100%;
+	height:60px;
+	overflow:hidden;
+		
+	}
+.AD_BANNER img{
+	width:180px;
+	height:60px;}
+	
+.AD_BANNER ul{
+	width:100%;
+	height:60px;	
+	}
+	
+.AD_BANNER ul li{
+	float:left;
+	width:180px;
+	height:60px;
+	margin-right:10px;
+	}
+.AD_BANNER ul li a{
+	display:block;
+	width:180px;
+	height:60px;
+	}
+/*patty*/
+
+.TITLE_BG_01{margin-bottom:0px;	}
+.BOX04 {width: 100%; height: auto; overflow: hidden; margin-bottom: 10px; float: none;}
+.BOX05,.BOX06{float: none;width:100%;height: auto;margin-right:0px;margin-top:10px;}
+.BOX07{	float:none;	width:100%;height: auto;margin-left:0px;margin-top:10px;overflow:hidden;}
+.T01{font-size:1.5em;	line-height:1.5em;	}
+
+.BOX01>.NEWS_BG{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	margin-bottom:15px;margin-top:20px;}
+.BOX01 .B_120X100{
+	float:left;
+	width:120px;
+	height:100px;
+	margin-right:8px;
+	}
+.BOX01 .NEWS_T{
+	height:auto;
+	overflow:hidden;
+	margin-left:110px;
+	}
+.BOX01 .NEWS_T p{
+	width:100%; /*限定寬度*/
+margin:0 auto;			
+overflow:hidden;/*超過寬度的內容會自動消失*/
+white-space:nowrap; 	/*文字不折行*/
+text-overflow:ellipsis; /*省略符號*/ }
+.T01_S{	font-size:0.9em;}
+.hr{ display:none; clear:both}
+
+
+/*BANNER*/
+.bannerbox{width:100%; height: auto; background-color:#ededed; overflow:hidden;}
+.bannerbox li{float:left;width:20%;height:90px; overflow:hidden; background-color:#ededed; padding:5px 0;}
+.bannerbox li a{ display:block;}
+.bannerbox li img{ width:90%; height: auto; margin-left:5%;}
+
+/*機場資訊*/
+.BOX02:nth-child(2){
+	width: 48%;
+}
+.BOX02 .COM_BG-2{
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #3b6fa8;
+    padding: 3% 0;
+}
+
+.div-airport{
+	width: 100%;
+	margin: auto;
+	background: #e0f2ff url(../馬祖-連江縣政府_files/airport-02.png)no-repeat center center ;
+	background-size: 100% auto;
+}
+.div-airport ul{
+	width: 100%;
+	margin: auto;
+	padding: 13px 0;
+	text-align: center;
+}
+.div-airport ul li{
+	width: 250px;
+	margin: auto;
+	overflow: hidden;
+}	
+.div-airport ul li a{
+	display: inline-block;
+	width: 100%;
+	padding: 6px 0;
+	vertical-align: middle;
+	margin:15px auto;
+	text-align: center;
+	background: #1c5182dc;
+	border: 2px #2e5b82 solid;
+	font-size: 150%;
+	font-weight: bold;
+	line-height: 150%;
+	border-radius: 11px;
+	overflow: hidden;
+}
+
+.div-airport ul li:nth-child(2) a{
+	background: #007dc6db;
+	border: 2px #00679c solid;
+}
+.div-airport ul li:nth-child(3) a{
+	background: #318638d3;
+	border: 2px #367b3a solid;
+}
+.div-airport ul li a{
+	color: #fff;
+}
+.div-airport ul li a{
+	padding-top: -2px;
+	color: #fff;
+	
+}
+.div-airport ul li a::before{
+	content: "";
+	width: 30px;
+	height: 33px;
+	background: url(../馬祖-連江縣政府_files/airport-04.png)no-repeat center center;
+	background-size: 30px 25px;
+	display: inline-block;
+	vertical-align: text-top;
+}
+}
+.img1 {
+	
+    box-shadow: 4px 4px 3px rgba(10%,10%,10%,0.2);
+	background-color: #FFF;
+	padding: 5px;
+	border: 1px solid #CCC;
+	/* box-shadow: 1px 1px 1px rgba(10%,10%,10%,0.2);
+	background-color: #FFF;
+	padding: 0px;
+	border: 1px solid #CCC;*/
+}
+
+
+
+@media screen and (min-width: 650px)and (max-width: 1023px) {	
+.BOX05 .NEWS_BG,.BOX06 .NEWS_BG{ background-size:100% 100%;}
+.FLIGHT .BOX02:nth-child(1){
+	max-width: 100%;
+}
+.BOX02,.BOX03,.BOX04,.BOX05,.BOX06,.BOX07{ max-width:48%; float: left; margin:1%;}
+
+/*0331+++*/
+
+.BOX01 {width: 100%; height: auto; overflow:auto;margin-right: 15px; float: none; min-width:320px; }
+.BOX01 .NEWS_BG {width:48%; height: auto; margin-left:1%; margin-right:1%; margin-bottom:15px;border-left:0px solid #eee; border-radius:0px 0px 0px 0px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;  float:left;/*border:1px solid #666666 :*/overflow:hidden;}
+.BOX01 .B_120X100_2{ height: auto; width:100%; /*background-color:#CC3333;*/ margin:0 auto; position:relative;overflow:hidden;}
+.BOX01 .B_120X100_2 img{ width:100% ; height:auto; max-height:200px;}
+.BOX01 .B_120X100_2 p{ display:block; position:absolute; bottom:0px; background-color:rgba(247,128,0,0.9); width:100%; color:#FFFFFF; text-align:center; overflow:hidden; height:30px; line-height:30px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap; padding:0 2%; text-shadow:1px 1px 2px rgba(51,51,51,0.8) }
+.BOX05 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX06 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat right bottom; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX07 .NEWS_BG{ width:100%;height:275px;overflow: auto; background:url(/frontimages/box06bg.jpg) no-repeat right bottom; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+
+/*歷年人口成長趨線圖20190902-ADD*/
+.Demographics{ background:#eee url(../frontimages/graphics_Limg.png) no-repeat left bottom; width:96%; height:auto; min-height:364px; overflow:hidden; padding:2%;}
+.Demographics .graphics_L{ float: none; width:100%;}
+.Demographics .graphics_L h2{ color:#3b6fa8;}
+.Demographics .graphics_R{float: none; width:100%; height:auto; min-height:300px; background-color:#FFF;}
+
+}
+
+/*0331+++*/
+
+@media screen and (max-width: 649px){
+.BOX01 {width: 100%; height: auto; overflow: auto; margin-top: 30px; margin-right: 15px; float: none; min-width:320px;}
+.BOX01 .NEWS_BG {width:100%; height: auto; margin-bottom:15px;border-left:0px solid #eee; border-radius:0px 0px 0px 0px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;  float: none; }
+.BOX01 .B_120X100_2{ height: auto; width:100%;/* background-color:#CC3333;*/ margin:0 auto; position:relative;overflow:hidden;}
+.BOX01 .B_120X100_2 img{ width:100% ; height:auto;}
+.BOX01 .B_120X100_2 p{ display:block; position:absolute; bottom:0px; background-color:rgba(247,128,0,0.9); width:100%; color:#FFFFFF; text-align:center; overflow:hidden; height:30px; line-height:30px;overflow:hidden;text-overflow:ellipsis;white-space: nowrap; padding:0 2%; text-shadow:1px 1px 2px rgba(51,51,51,0.8) }
+.BOX05 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX06 .NEWS_BG{ width:100%; height:275px;overflow: auto; background:url(/frontimages/box05bg.jpg) no-repeat right bottom; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+.BOX07 .NEWS_BG{ width:100%;height:275px;overflow: auto; background:url(/frontimages/box06bg.jpg) no-repeat right bottom; background-size:cover; background-position:bottom center; padding:15px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 14px;color:#000;}
+
+/*BANNER*/
+.bannerbox{width:100%; height: auto; background-color:#ededed;}
+.bannerbox li{float:left;width:50%;height:90px; overflow:hidden; padding:5px 0; background-color:#ededed;}
+.bannerbox li a{ display:block;}
+.bannerbox li img{ width:90%; height: auto; margin-left:5%;}
+
+
+
+}

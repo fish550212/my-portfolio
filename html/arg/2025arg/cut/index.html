@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>國立海洋科技博物館-ARG實境解謎遊戲平台</title>
+    <link href="frontcss/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!---------hearder---------------->
+    <div class="wrapper">
+      <div class="header">
+        <div class="headerbox">
+          <div class="logo">
+            <a href="index.html" target="_self" title="回首頁">
+              <div class="logo_img">
+                <img src="frontimages/logo.svg" alt="logo" />
+              </div>
+              ARG實境解謎遊戲平台
+            </a>
+          </div>
+
+          <!--topmenu-->
+          <div class="topmenu">
+            <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+            <script type="text/javascript">
+              $(function () {
+                // 幫 #menu li 加上 hover 事件
+                $("#menu>li").hover(
+                  function () {
+                    // 先找到 li 中的子選單
+                    var _this = $(this),
+                      _subnav = _this.children("ul");
+
+                    // 變更目前母選項的背景顏色
+                    // 同時顯示子選單(如果有的話)
+                    //_this.css('backgroundColor', '#000');
+                    _subnav.css("display", "block");
+                  },
+                  function () {
+                    // 變更目前母選項的背景顏色
+                    // 同時隱藏子選單(如果有的話)
+                    // 也可以把整句拆成上面的寫法
+                    $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                  }
+                );
+
+                // 取消超連結的虛線框
+                //$('a').focus(function(){
+                //  this.blur();
+                //});
+              });
+            </script>
+            <ul id="menu">
+              <li>
+                <a href="index.html" title="遊戲列表">遊戲列表</a>
+              </li>
+              <li>
+                <a href="text.html" title="會員專區">會員專區</a>
+              </li>
+            </ul>
+
+            <div class="searchbox">
+              <input type="search" class="input-search" placeholder="搜尋" />
+              <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+            </div>
+          </div>
+
+          <!--------topmenu-end-------->
+
+          <!--MOB-MENU---位置放class="header"內--->
+          <!--手機選單-漢堡圖-->
+          <div class="mu2 nav-button"><a title="手機選單" class="animate" href="#">MENU</a></div>
+          <!--手機選單-END-->
+          <!-- Nav手機選單 -->
+          <link href="mobmu/common.css" rel="stylesheet" />
+          <!--[if gte IE 9]><!-->
+          <script src="mobmu/jquery-2.1.3.min.js"></script>
+          <!--<![endif]-->
+          <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+          <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+          <script src="mobmu/common.js"></script>
+
+          <div class="nav-panel" id="nav">
+            <ul class="linkgroup">
+              <li class="searchbox">
+                <input type="search" class="input-search" placeholder="搜尋" />
+                <a href="#" class="btn-search"><img src="frontimages/search.svg" alt="搜尋" /></a>
+              </li>
+            </ul>
+            <ul class="reset">
+              <li>
+                <h2>
+                  <a href="index.html" title="遊戲列表">遊戲列表</a>
+                </h2>
+              </li>
+              <li>
+                <h2>
+                  <a href="text.html" title="會員專區">會員專區</a>
+                </h2>
+              </li>
+            </ul>
+          </div>
+          <!--MOB-MENU--END------------->
+        </div>
+      </div>
+      <!---------hearder-end--------------->
+
+      <!--article------------------>
+      <div class="article">
+        <!----------------內容-->
+        <div class="articlebox">
+          <div class="page-section company-section" id="history-section">
+            <div class="sectionbox">
+              <div class="section-title blackfont flex-center">國立海洋科技博物館-ARG實境解謎遊戲</div>
+              <div class="history-group">
+                <div class="box">
+                  <a href="page.html" class="imggroup">
+                    <div class="imgbox">
+                      <img src="frontimages/images-01.jpg" alt="" />
+                    </div>
+                    <div class="img-text">海女養成班</div>
+                  </a>
+                  <a href="#" class="imggroup">
+                    <div class="imgbox">
+                      <img src="frontimages/images-02.jpg" alt="" />
+                    </div>
+                    <div class="img-text">航海家回憶錄</div>
+                  </a>
+                  <a href="#" class="imggroup">
+                    <div class="imgbox">
+                      <img src="frontimages/images-03.jpg" alt="" />
+                    </div>
+                    <div class="img-text">海科王的寶藏</div>
+                  </a>
+                  <a href="#" class="imggroup">
+                    <div class="imgbox">
+                      <img src="frontimages/arg04_0.jpg" alt="" />
+                    </div>
+                    <div class="img-text">重返城中城</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!----------------內容end-->
+        </div>
+      </div>
+    </div>
+    <!--footer--------------------->
+    <div class="footer">
+      <div class="footerbox">國立海洋科技博物館-ARG實境解謎遊戲平台 版權所有 © 2025 隱私及安全政策</div>
+    </div>
+    <!--footer-end------------------>
+
+    <div id="TOP">
+      <img src="frontimages/gotop.svg" alt="回到上面" />
+    </div>
+    <script type="text/javascript" src="frontjs/gotop.js"></script>
+  </body>
+</html>

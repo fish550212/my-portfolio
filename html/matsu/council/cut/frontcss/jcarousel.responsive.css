@@ -1,0 +1,182 @@
+﻿/*首頁下方產品分類/BANNER*/
+
+.productbox .jcarousel-wrapper {
+  height: auto;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid #eee;
+  border-image: none;
+  position: relative;
+}
+.productbox {
+  padding: 20px 0;
+}
+.productbox .jcarousel {
+  width: calc(100% - 80px);
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  /*-webkit-box-shadow:0px 0px 5px #d3d3d3;box-shadow:0px 0px 5px #d3d3d3;*/
+}
+
+.productbox .jcarousel ul {
+  width: 92500px;
+  /*寬度太少BANNER數量超過時會變多行*/
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.productbox .jcarousel li {
+  /*border: 1px solid rgb(255, 255, 255);*/
+  border-image: none;
+  width: 200px;
+  height: auto;
+  float: left;
+  padding: 0px;
+  margin-bottom: 2px;
+  /*box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;*/
+  position: relative;
+}
+
+.productbox .jcarousel li .mesk {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  padding: 14px 15px;
+  text-align: left;
+  font-size: 112.5%;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  width: 100%;
+}
+
+.productbox .jcarousel li a {
+  color: #000;
+}
+
+.productbox .jcarousel img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: 6px solid #fff;
+}
+
+.productbox .jcarousel-control-prev {
+  background: url(../frontimages/left.svg) no-repeat center center;
+  background-size: auto 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: absolute;
+  font-size-adjust: none;
+  font-stretch: normal;
+  /* box-shadow: 0px 0px 4px #f0efe7;  */
+  text-shadow: 0px 0px 1px #000;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  /* -webkit-box-shadow: 0 0 4px #F0EFE7;  */
+  /* -moz-box-shadow: 0 0 4px #F0EFE7; */
+  opacity: 1;
+  z-index: 99;
+}
+
+.productbox .jcarousel-control-next {
+  background: url(../frontimages/right.svg) no-repeat center;
+  background-size: auto 40px;
+ top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 80px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: absolute;
+  font-size-adjust: none;
+  font-stretch: normal;
+  /* box-shadow: 0px 0px 4px #f0efe7;  */
+  text-shadow: 0px 0px 1px #000;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  /* -webkit-box-shadow: 0 0 4px #F0EFE7; 
+	 -moz-box-shadow: 0 0 4px #F0EFE7; */
+  opacity: 1;
+  z-index: 99;
+}
+
+.productbox .jcarousel-control-prev {
+  left: 0px;
+}
+
+.productbox .jcarousel-control-next {
+  right: 0px;
+}
+
+.productbox .jcarousel-pagination {
+  display: none;
+  /*下方點點不顯示*/
+  margin: 0px;
+  left: 50%;
+  bottom: -40px;
+  position: absolute;
+  transform: translate(-50%, 0px);
+  -webkit-transform: translate(-50%, 0);
+}
+
+.productbox .jcarousel-pagination a {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  color: rgb(78, 68, 60);
+  line-height: 10px;
+  text-indent: -9999px;
+  font-size: 70%;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0px 0px 2px #4e443c;
+  -webkit-box-shadow: 0 0 2px #4e443c;
+  -moz-box-shadow: 0 0 2px #4e443c;
+}
+
+.productbox .jcarousel-pagination a.active {
+  background: rgb(78, 68, 60);
+  color: rgb(255, 255, 255);
+  opacity: 1;
+  box-shadow: 0px 0px 2px #f0efe7;
+  -webkit-box-shadow: 0 0 2px #f0efe7;
+  -moz-box-shadow: 0 0 2px #f0efe7;
+}
+
+@media screen and (max-width: 767px) {
+  .productbox .jcarousel {
+      width: calc(100% - 80px);
+    margin: 0 auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  /*.bannerbox .jcarousel li { border-image: none; width: 50%; height: auto; float: left; padding:4px; margin-bottom:8px;}
+.bannerbox .jcarousel img {	height: auto !important; display: block; width: 100%; text-align:center;border:0; border:6px solid #FFF;}*/
+  .productbox .jcarousel li {
+    border-image: none;
+    width: 50%;
+    height: auto;
+    float: left;
+    padding-right: 2px;
+    margin-bottom: 0px;
+  }
+  .productbox .jcarousel img {
+    height:auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border: 0;
+    border: 4px solid #fff;
+  }
+}

@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+.Datalist { width:100%; height:auto; margin:0 auto; overflow:hidden;}
+.Datalist h3{ font-size:180%; color:#003f7a; padding:1% 0; border-bottom:1px solid #CCC; margin-bottom:1%;}
+.Datalist ul{ list-style:none; display:block; width:100%; height:auto; margin:0 auto; overflow:hidden;}
+.Datalist ul li{display:block; width:100%; height:auto; margin:0 auto;padding:1% 1%;border-bottom:1px dashed #CCC;}
+.Datalist ul li h4{font-size:130%; color:#333; }
+.Datalist ul li h4 a{color:#333;}
+.Datalist ul li h4 a:hover{ text-decoration:underline; color:#039;}
+.Datalist ul li:hover{ background-color:#eee;}
+.Datalist ul li .datainfo{ font-size:100%;}
+.Datalist ul li .file-items{width:100%; height:auto; margin:0 auto; padding:1% 0;}
+.Datalist ul li .file-items a{ background-color:#005db5; color:#FFF; padding:5px; margin-right:10px;}
+.Datalist ul li .file-items .file01{ background-color:#005db5;}
+.Datalist ul li .file-items .file02{ background-color:#ec008c;}
+.Datalist ul li .file-items .file03{ background-color:#097c25;}
+.Datalist ul li .file-items .file04{ background-color:#3390ff;}
+.Datalist ul li .file-items .file05{ background-color:#8b41a3;}
+.Datalist ul li .file-items .file06{ background-color:#e65d13;}
+.Datalist ul li .file-items .file07{ background-color:#333;}
+
+.search_boxin{ background-color:#f6f6f6;border:4px solid #cacaca; padding:2%; margin-bottom:1%; border-radius:6px;}
+.search_boxin select,
+.search_boxin input{ padding:4px; font-size:120%; vertical-align:middle; margin:0 2px;}
+.search_boxin .btnbtn{ background-color:#003f7a; color:#FFF; border:0; width:60px; text-align:center;}
+.search_boxin p{ margin-top:10px;}
+
+/*Data_table*/
+.Data_table {width:100%; height:auto; margin:0 auto;}
+.Data_table #css_table .line{background-color:#1e74bd; }
+.Data_table #css_table .box01{ width: auto;}
+.Data_table #css_table .box02{ width: auto;}
+.Data_table #css_table .box03{ width: auto;}
+.Data_table #css_table .box04{ width: auto;}
+.Data_table #css_table .box05{ width: auto;}
+
+/*-----表單樣式--------------------*/
+#Datacss_table { display:table; width:100%; letter-spacing:normal;}
+#Datacss_table .css_tr { display: table-row;width:100%;.border-bottom:#188fa7 2px solid;.display: inline-block;}
+#Datacss_table .css_td { display: table-cell;padding:1px 5px; min-width: auto;.display: block;border-bottom:#ccc 1px solid; text-align: left; font-size:14px; }
+#Datacss_table .css_tr:nth-child(odd){ background-color:#f6f6f6;.background-color:#f6f6f6;.display: inline-block;}
+/*標題部分*/
+#Datacss_table .css_tr:first-child {  font-weight:bold; color:#FFFFFF;_display: none;.display: none;}
+#Datacss_table .css_tr:first-child a{ text-decoration:none;color:#666;}
+#Datacss_table .css_tr:first-child a:hover{ text-decoration:none; color:#188fa7;}
+
+#Datacss_table .line{background-color:#000;color:#fff;}
+#Datacss_table .title{.display: block;color:#0277bd;font-size:87.5%;}
+
+#Datacss_table .css_td b{ color:#0277bd;display:none;.display:inline;}
+#Datacss_table .css_td a.link{ color:#ff8a00;}
+
+#Datacss_table .css_td .tabbtn{background-color:#000; text-decoration:none; font-weight:bold;color:#FFF; font-size:75%; padding:5px 5px; border-radius:5px; text-align:center;}
+#Datacss_table .css_td .tabbtn a{ color:#FFFFFF; font-size:14px; }
+#Datacss_table .css_td .tabbtn:hover{text-decoration:none;}
+
+#Datacss_table .css_td a img{ vertical-align:middle; border:0;}
+#Datacss_table .css_tr .css_td.immg { width:110px;}
+#Datacss_table .css_tr .css_td.immg img{ margin:1px;}
+#Datacss_table .css_tr .css_td.none { display:block;}
+
+/*contentbox*/
+.contentbox{width:100%;height: auto;margin:5px auto; padding:10px 0;line-height:180%; font-size:15px;}
+.contentbox h1{ font-size:130%;line-height:130%;}
+.contentbox h2{ font-size:120%;line-height:130%;}
+.contentbox h3{ font-size:110%;line-height:130%;}
+.contentbox h4{ font-size:105%;line-height:150%;}
+.contentbox h5{ font-size:100%;line-height:130%;}
+.contentbox p{ text-align: justify;text-justify:inter-ideograph;}
+.contentbox p img{ width:100%;}
+/*多圖*/
+.contentbox .imglist{ width:100%; height:auto; overflow: hidden; margin:5px 0;background-color:#f4f4f4;}
+.contentbox .imglist h1{ font-size:100%; color:#FFF; padding:5px; display:block; background-color:#333;}
+/*.contentbox .imglist .imgbox{ width:25%; height:170px; padding:2%; background-color:#f4f4f4; float:left;}
+.contentbox .imglist .imgbox .img{ width:100%; height:140px;overflow: hidden;}
+.contentbox .imglist .imgbox img{ width:100%; height:auto;}*/
+
+/*多檔案下載*/
+.contentbox .downloadlist{ width:100%; height:auto; overflow: hidden; margin:5px 0;}
+.contentbox .downloadlist h1{ font-size:100%; color:#999;color:#FFF; padding:5px; display:block; background-color:#333;}
+.contentbox .downloadlist a{ display:inline-block; width:47.5%; margin:1%; border-bottom:1px dotted #CCCCCC; color:#000; background: url(../frontimages/icon-download.png) no-repeat left center; background-size: 30px auto; padding-left:30px;}
+.contentbox .downloadlist a:hover{ color:#333;}
+
+/* == 類別bookboxlist=============================== */
+.bookboxlist{width:100%;height:auto;margin:0 auto;}
+.bookboxlist .bookbox{ width:17%; height:auto; display:inline-block;margin:0.6%; margin-left:2%; padding:0% 2%;}
+.bookboxlist .bookbox a{display:inline-block; border:2px solid #FFF; border-radius:10px;}
+.bookboxlist .bookbox:hover{ border:2px solid #69C;border-radius:10px}
+.bookboxlist .bookbox .bookimg{ width:100%; height:auto; text-align:center; background:#fff; border:0px #A2A2A2 solid; overflow:hidden; margin:0 auto; vertical-align:middle; padding:3px; }
+.bookboxlist .bookbox .bookimg .bookimgin{ width:100%;height:0; padding-bottom:100%; overflow:hidden;background:#eee url(../frontimages/nopicture.png) no-repeat center center; background-size:60% auto; background-position: center 50%;}
+.bookboxlist .bookbox .bookimg .bookimgin img{ width:100%; height:auto; vertical-align:middle;text-align:center; }
+.bookboxlist .bookbox .bookname{ text-align:center; width:100%; color:#363; font-weight:bold;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden; font-size:120%;line-height:180%;}
+.bookboxlist .bookbox .bookname a{display:block;color:#363;}
+.bookboxlist .bookbox .bookdate{font-size:90%; color:#636363;line-height:100%; margin-top:0px;}
+
+/*======單位department_list===============*/
+.department_list{ width:100%; height:auto; overflow:hidden;}
+.department_list ul{ display:block; width:100%; height:auto; margin:0;}
+.department_list ul li{ list-style: none; width:25%; height:auto; float:left;padding:8px; margin:0; vertical-align:middle; background: url(../frontimages/icon-09.png) no-repeat left center; padding-left:20px;}
+.department_list ul li h2{ font-size:110%; color:#000;}
+.department_list ul li h2 span{ background-color:#36C; color:#FFF; padding:2px 10px; border-radius:5px; margin-left:10px;}
+
+/*授權條款*/
+.license{width:100%; height:auto; overflow:hidden;text-align: justify;text-justify:inter-ideograph;}
+.license h2{ margin:1% 0;}
+.license>ul{ list-style:none;padding-left:30px;}
+.license>ul li ul{list-style:none;padding-left:20px;}
+.license li{text-align: justify;text-justify:inter-ideograph;}
+
+/* == 手機版型區 =============================== */
+@media screen and (max-width: 767px){
+	
+.Datalist { width:96%; height:auto; margin:0 auto; overflow:hidden;}
+.Datalist h3{ font-size:160%; color:#003f7a; padding:1% 0; border-bottom:1px solid #CCC; margin-bottom:2%;}
+.Datalist ul{ list-style:none; display:block; width:100%; height:auto; margin:1% auto; overflow:hidden;}
+.Datalist ul li{display:block; width:100%; height:auto; margin:0 auto;padding:2% 1%;border-bottom:1px dashed #CCC;}
+.Datalist ul li h4{font-size:130%; color:#333; }
+.Datalist ul li h4 a{color:#333;}
+.Datalist ul li h4 a:hover{ text-decoration:underline; color:#039;}
+.Datalist ul li:hover{ background-color:#eee;}
+.Datalist ul li .datainfo{ font-size:100%;margin:2% auto;}
+.Datalist ul li .file-items{width:100%; height:auto; margin:0 auto; padding:1% 0;}
+.Datalist ul li .file-items a{ background-color:#005db5; color:#FFF; padding:5px; margin-right:10px;}
+
+.search_boxin{ background-color:#f6f6f6;border:4px solid #cacaca; padding:2%; margin-bottom:2%; border-radius:6px;}
+.search_boxin select,
+.search_boxin input{ padding:4px; font-size:100%; vertical-align:middle; margin:2px;}
+.search_boxin .btnbtn{ background-color:#039; color:#FFF; border:0; width:60px; text-align:center;}	
+
+/*-----表單樣式--------------------*/
+#Datacss_table { background-color: transparent; text-align:left;}
+#Datacss_table .css_tr { display:block; width:100%; height:auto; overflow:hidden;border:#ddd 1px solid;border-top:#8dbdd0 3px solid;  padding-bottom:1%;margin-bottom: 6px;	background: #ffffff;}
+#Datacss_table .css_tr:nth-child(odd){ background-color:#f6f6f6;.display: block;}
+/*標題部分*/
+#Datacss_table .css_tr:first-child {  font-weight:bold;/*標題底色*/background-color: #ea6e8c; color:#FFFFFF;display: none;}
+#Datacss_table .css_tr:first-child a{ text-decoration:none;color:#666;}
+#Datacss_table .css_tr:first-child a:hover{ text-decoration:none; color:#188fa7;}
+#Datacss_table .css_td { display:inline-block;border: #ddd 1px solid;width: 100%;border: none; text-align:left; padding:1% 2%; }
+
+#Datacss_table .line{/*標題底色*/background-color: rgba(255,255,255,0.8);color:#333;}
+#Datacss_table .css_tr .css_td h1{ font-size:100%;color:#000; margin:0px;}
+#Datacss_table .title{.display: block;color:#0277bd;font-size:87.5%;}
+#Datacss_table .css_td b{ color:#0053a0;display: inline-block;.display:inline;width: 29%;padding-right:5px; text-align: right; vertical-align:top;}
+#Datacss_table .css_td b:after{ content:":";}
+#Datacss_table .css_td a.link{ color:#ff8a00;}
+#Datacss_table .css_td span{display: inline-block;.display:inline;width: 68%; word-break: break-strict;vertical-align:top;}
+
+#Datacss_table .css_td .productbox{ display:block; width:100%; }
+#Datacss_table .css_td .productbox img{ background-color:#CC0000; width:25%; float: left;}
+#Datacss_table .css_td .productbox p{ width:70%; float: left; padding:1% 3%; line-height:120%;}
+
+#Datacss_table .css_td .tabhotn{background-color:#13a8c0; text-decoration:none; font-weight:bold;color:#FFF; font-size:75%; padding:5px 5px; border-radius:5px;}
+#Datacss_table .css_td .tabhotn a{ color:#FFFFFF; font-size:14px; }
+#Datacss_table .css_td .tabhotn:hover{text-decoration:none;}
+#Datacss_table .css_td a img{ vertical-align:middle; border:0;}
+
+.search_boxin p{ margin-top:0px;}
+
+/*contentbox*/
+.contentbox{width:96%;height: auto;margin:5px 2%; padding:10px 0;line-height:180%;}
+.contentbox h1{ font-size:140%;line-height:130%;}
+.contentbox h2{ font-size:130%;line-height:130%;}
+.contentbox h3{ font-size:120%;line-height:130%;}
+.contentbox h4{ font-size:110%;line-height:130%;}
+.contentbox h5{ font-size:100%;line-height:130%;}
+
+.contentbox .photo{ width:35%; margin:1%;}
+.contentbox ul{ margin:1% 0;}
+.contentbox li{ line-height:22px; font-size:15px; list-style:none;}
+.contentbox .name{ color:#0E3B6A; font-size:18px;}
+
+
+/*多圖*/
+.contentbox .imglist{ width:100%; height:auto; overflow: hidden; margin:10px 0%;background-color:#f4f4f4;}
+.contentbox .imglist h1{  font-size:100%; color:#999;color:#FFF; padding:5px; display:block; background-color:#333;}
+/*.contentbox .imglist .imgbox{ width:50%; height:80px; padding:2%; background-color:#f4f4f4; float:left;}
+.contentbox .imglist .imgbox .img{ width:100%; height:80px;overflow: hidden;}
+.contentbox .imglist .imgbox img{ width:100%; height:auto;}*/
+
+/*多檔案下載*/
+.contentbox .downloadlist{ width:100%; height:auto; overflow: hidden; margin:10px 0;}
+.contentbox .downloadlist h1{ font-size:100%; color:#999;color:#FFF; padding:5px; display:block; background-color:#333; }
+.contentbox .downloadlist a{ display:inline-block; width:100%; margin:1%; padding:10px 0; border-bottom:1px dotted #CCCCCC; color:#000; background: url(../frontimages/icon-download.png) no-repeat left center; background-size: 25px auto; padding-left:30px;line-height:130%;}
+.contentbox .downloadlist a:hover{ color:#333;}
+
+/* == 類別bookboxlist=============================== */
+.bookboxlist{width:100%;height:auto;margin:0 auto;}
+.bookboxlist .bookbox{ width:30%; height:auto; display:inline-block;margin:0.6%; margin-left:2%; padding:0 2%;}
+.bookboxlist .bookbox .bookimg{ width:100%; height:auto; text-align:center; background:#fff; border:0px #A2A2A2 solid; overflow:hidden; margin:0 auto; vertical-align:middle; padding:3px; }
+.bookboxlist .bookbox .bookimg .bookimgin{ width:100%;height:0; padding-bottom:100%; overflow:hidden;background:#eee url(../frontimages/nopicture.png) no-repeat center center; background-size:60% auto; background-position: center 50%;}
+.bookboxlist .bookbox .bookimg .bookimgin img{ width:100%; height:auto; vertical-align:middle;text-align:center; }
+.bookboxlist .bookbox .bookname{ text-align:center; width:100%; color:#363; font-weight:bold;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden; font-size:120%;line-height:180%;}
+.bookboxlist .bookbox .bookname a{display:block;color:#363;}
+.bookboxlist .bookbox .bookdate{font-size:90%; color:#636363;line-height:100%; margin-top:0px;}
+
+/*======單位department_list===============*/
+.department_list{ width:100%; height:auto; overflow:hidden;}
+.department_list ul{ display:block; width:100%; height:auto; margin:0;}
+.department_list ul li{ list-style: none; width:50%; height:auto; float:left;padding:8px; margin:0; vertical-align:middle; background: url(../frontimages/icon-09.png) no-repeat 5px center; padding-left:20px;}
+.department_list ul li h2{ font-size:110%; color:#000;}
+.department_list ul li h2 span{ background-color:#36C; color:#FFF; padding:2px 10px; border-radius:5px; margin-left:10px;}
+
+}
+
+/* == 平板版型區 =============================== */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.Datalist { width:100%; height:auto; margin:0 auto; overflow:hidden;}
+.Datalist h3{ font-size:160%; color:#003f7a; padding:1% 0; border-bottom:1px solid #CCC; margin-bottom:2%;}	
+.search_boxin{ background-color:#f6f6f6;border:4px solid #cacaca; padding:2%; margin-bottom:2%; border-radius:6px;}
+.search_boxin select,
+.search_boxin input{ padding:4px; font-size:100%; vertical-align:middle; margin:2px;}
+.search_boxin .btnbtn{ background-color:#039; color:#FFF; border:0; width:60px; text-align:center;}	
+
+/*contentbox*/
+.contentbox .photo{ width:20%; margin:1%;}
+.contentbox ul{ margin:1% 0;}
+.contentbox li{ line-height:22px; font-size:15px; list-style:none;}
+.contentbox .name{ color:#0E3B6A; font-size:18px;}
+
+/* == 類別bookboxlist=============================== */
+.bookboxlist{width:100%;height:auto;margin:0 auto;}
+.bookboxlist .bookbox{ width:21%; height:auto; display:inline-block;margin:0.6%; margin-left:2%; padding:0 2%;}
+.bookboxlist .bookbox .bookimg{ width:100%; height:auto; text-align:center; background:#fff; border:0px #A2A2A2 solid; overflow:hidden; margin:0 auto; vertical-align:middle; padding:3px; }
+.bookboxlist .bookbox .bookimg .bookimgin{ width:100%;height:0; padding-bottom:100%; overflow:hidden;background:#eee url(../frontimages/nopicture.png) no-repeat center center; background-size:60% auto; background-position: center 50%;}
+.bookboxlist .bookbox .bookimg .bookimgin img{ width:100%; height:auto; vertical-align:middle;text-align:center; }
+.bookboxlist .bookbox .bookname{ text-align:center; width:100%; color:#363; font-weight:bold;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow:hidden; font-size:120%;line-height:180%;}
+.bookboxlist .bookbox .bookname a{display:block;color:#363;}
+.bookboxlist .bookbox .bookdate{font-size:90%; color:#636363;line-height:100%; margin-top:0px;}
+
+}
