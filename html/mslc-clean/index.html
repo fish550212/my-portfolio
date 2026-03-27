@@ -1,14 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>海科科學學習中心Marine Science Learning Center</title>
     <link href="cleancss/index.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/js/checkdata.js"></script>
+    <script type="text/javascript" src="js/checkdata.js"></script>
 
     <!---輪播必須程式--------------------------------------------------------------------------->
 
@@ -16,509 +15,671 @@
     <!--script type="text/javascript" src="https://code.jquery.com/.js"></script-->
 
     <style type="text/css">
-        .flexslider {
-            width: 100%;
-        }
+      .flexslider {
+        width: 100%;
+      }
 
-        div.flexslider_6 ol {
-            bottom: 0px;
-            display: none;
-            /*點點*/
-        }
+      div.flexslider_6 ol {
+        bottom: 0px;
+        display: none;
+        /*點點*/
+      }
 
-        div.flexslider_6 div.flex-pauseplay {
-            display: none !important;
-        }
+      div.flexslider_6 div.flex-pauseplay {
+        display: none !important;
+      }
     </style>
 
     <script>
-        function save_currentSlide() {
-            this.currentSlide_1 = null;
-            this.set_1 = function (num) {
-                this.currentSlide_1 = num;
-            }
-            this.get_1 = function () {
-                return this.currentSlide_1;
-            }
-            this.currentSlide_2 = null;
-            this.set_2 = function (num) {
-                this.currentSlide_2 = num;
-            }
-            this.get_2 = function () {
-                return this.currentSlide_2;
-            }
+      function save_currentSlide() {
+        this.currentSlide_1 = null;
+        this.set_1 = function (num) {
+          this.currentSlide_1 = num;
+        };
+        this.get_1 = function () {
+          return this.currentSlide_1;
+        };
+        this.currentSlide_2 = null;
+        this.set_2 = function (num) {
+          this.currentSlide_2 = num;
+        };
+        this.get_2 = function () {
+          return this.currentSlide_2;
+        };
 
-            this.set_paging_OL_Event = function (slider) {
-                const CurrentSlide_X = this;
-                const slides_a_all = slider.slides.children();
-                const paging_OL_a_all = slider.controlNav;
-                const paging_UL_a_all = slider.directionNav;
+        this.set_paging_OL_Event = function (slider) {
+          const CurrentSlide_X = this;
+          const slides_a_all = slider.slides.children();
+          const paging_OL_a_all = slider.controlNav;
+          const paging_UL_a_all = slider.directionNav;
 
-                $.each(slider.controlNavScaffold.find("li"), function (index, val) {
-                    let slides_a = slides_a_all[index];
-                    if (slides_a.title != "") {
-                        let content = slides_a.title.replace("開新視窗,", "");
-                        $(this).children().attr("title", slides_a.title);
-                        $(this).children().html(content);
-                    }
-                    $(this).keydown(function (event) {
-                        if (event.which == 13) {
-                            slides_a.click();
-                        }
-                    });
-                });
-
-                //離開 1
-                paging_UL_a_all[1].addEventListener("keydown",
-                    function (event) {
-                        if (event.which === 9) {
-                            CurrentSlide_X.currentSlide_2 = slider.currentSlide;
-                            slider.animatingTo = CurrentSlide_X.currentSlide_1;
-                            slider.currentSlide = CurrentSlide_X.currentSlide_1;
-                            slider.play();
-                        }
-                    });
-
-                //離開 2
-                $("body").click(function () {
-                    let sliderIsFocus = false;
-                    for (let i = 0; i < slides_a_all.length; i++) {
-                        sliderIsFocus |= slides_a_all[i] === document.activeElement;
-                    }
-                    for (let i = 0; i < paging_OL_a_all.length; i++) {
-                        sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
-                    }
-                    for (let i = 0; i < paging_UL_a_all.length; i++) {
-                        sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
-                    }
-                    if (!sliderIsFocus && !slider.playing) {
-                        CurrentSlide_X.currentSlide_2 = slider.currentSlide;
-                        slider.animatingTo = CurrentSlide_X.currentSlide_1;
-                        slider.currentSlide = CurrentSlide_X.currentSlide_1;
-                        slider.play();
-                    }
-                });
+          $.each(slider.controlNavScaffold.find("li"), function (index, val) {
+            let slides_a = slides_a_all[index];
+            if (slides_a.title != "") {
+              let content = slides_a.title.replace("開新視窗,", "");
+              $(this).children().attr("title", slides_a.title);
+              $(this).children().html(content);
             }
-        }
+            $(this).keydown(function (event) {
+              if (event.which == 13) {
+                slides_a.click();
+              }
+            });
+          });
+
+          //離開 1
+          paging_UL_a_all[1].addEventListener("keydown", function (event) {
+            if (event.which === 9) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+
+          //離開 2
+          $("body").click(function () {
+            let sliderIsFocus = false;
+            for (let i = 0; i < slides_a_all.length; i++) {
+              sliderIsFocus |= slides_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_OL_a_all.length; i++) {
+              sliderIsFocus |= paging_OL_a_all[i] === document.activeElement;
+            }
+            for (let i = 0; i < paging_UL_a_all.length; i++) {
+              sliderIsFocus |= paging_UL_a_all[i] === document.activeElement;
+            }
+            if (!sliderIsFocus && !slider.playing) {
+              CurrentSlide_X.currentSlide_2 = slider.currentSlide;
+              slider.animatingTo = CurrentSlide_X.currentSlide_1;
+              slider.currentSlide = CurrentSlide_X.currentSlide_1;
+              slider.play();
+            }
+          });
+        };
+      }
     </script>
 
     <!---輪播必須程式END--------------------------------------------------------------------------->
     <script>
-        $(document).ready(function () {
-            $("#moreThemeicon").bind("click", function () {
-                $("#Themeicon").show(1000);
-            });
+      $(document).ready(function () {
+        $("#moreThemeicon").bind("click", function () {
+          $("#Themeicon").show(1000);
         });
+      });
     </script>
     <noscript>本Script功能為控制主題專區區塊，您的瀏覽器不支援JavaScript功能，若網頁功能無法正常使用時，請開啟瀏覽器JavaScript狀態。</noscript>
 
-
     <script type="text/javascript">
-        //<![CDATA[
-        var cal = Calendar.setup({
-            onSelect: function (cal) { cal.hide() },
-            showTime: 0
-        });
-        //]]>
+      //<![CDATA[
+      var cal = Calendar.setup({
+        onSelect: function (cal) {
+          cal.hide();
+        },
+        showTime: 0,
+      });
+      //]]>
     </script>
-</head>
+  </head>
 
-<body>
-    <div class="groupbox"> 
-        <div class="header">
-            <div class="headerbox">
-                
-                <!--logo------------>
-                <p><a href="http://www.nmmst.gov.tw/" title="國立海洋科技博物館LOGO" class="logo">國立海洋科技博物館</a></p>
-                <!--toolbar--------->
-                <form name="queryForm" id="queryForm" method="post" action="http://nmmstlearning.netdoing.com.tw:8888/clean/searchall">
-                    <div class="toolbar">
-                        <ul class="toolbarmenu_1">                        
-                            <li class="fbbox">
-                                <a href="https://www.facebook.com/NMMST.TW" class="fb" title="FB(開新視窗)" target="_blank">
-                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/icon-fb.svg" alt="fb(開新視窗)">
-                                </a>
-                            </li>
-                            <li class="search">
-                                <input class="search_input" type="text" id="querykey" name="querykey" placeholder="全文檢索">
-                                <a href="javascript:void(0)">
-                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_search.svg" alt="搜尋" onclick="dokSubmit();">
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="toolbarmenu">
-                            <li>
-                                <a href="http://nmmstlearning.netdoing.com.tw:8888/clean/index" title="回首頁">
-                                    <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun01.svg" alt="回首頁">
-                                    回首頁
-                                </a>
-                            </li>
-                            <li>
-                                <a href="http://nmmstlearning.netdoing.com.tw:8888/html/index" title="海科官網"><img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun02.svg" alt="海科官網">海科官網</a>
-                            </li>
-                            <li>
-                                <a href="https://www.nmmst.gov.tw/chhtml/actionlist/556" title="學習中心行事曆">
-                                <img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun03.svg" alt="學習中心行事曆">學習中心行事曆</a>
-                            </li>
-                            <li>
-                                <a href="http://nmmstlearning.netdoing.com.tw:8888/clean/sitemap" title="網站導覽"><img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/clean_meun04.svg" alt="網站導覽">網站導覽</a>
-                            </li>
-                        </ul>
-                    </div>
-                </form>
-    
-                <!--MOB-MENU---位置放<div class="headerbox">內--->
-                <!--手機選單-漢堡圖--><div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div><!--手機選單-END-->
-                <!-- Nav手機選單 -->
-                <link href="http://nmmstlearning.netdoing.com.tw:8888/mobmu/common_clean.css" rel="stylesheet">
-                <!--[if gte IE 9]><!-->
-                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery-2.1.3.min.js"></script>
-                <!--<![endif]-->
-                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
-                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/jquery.bxslider-4.1.1.min.js"></script>
-                <script src="http://nmmstlearning.netdoing.com.tw:8888/mobmu/common.js"></script>
-                <script src="http://nmmstlearning.netdoing.com.tw:8888/js/checkdata.js"></script>
-                <div class="nav-panel" id="nav">
-    
-                    <h1 class="hidden-element">主選單</h1>
-    
-                    <div class="search-panel clearfix">
-                        <form name="querymobForm" id="querymobForm" method="post" action="http://nmmstlearning.netdoing.com.tw:8888/clean/searchall">
-                            <input class="inText" type="text" id="querykey1" name="querykey1" placeholder="全文檢索" value="">
-                            <input class="submit gradient-blue" type="button" value="搜尋" onclick="mobdokSubmit();">
-                        </form>
-                    </div>
-                    <ul class="reset"><li class="nav-first"><h2><a title="連至淨灘介紹" href="#">淨灘介紹</a></h2><div class="nav-second"><ul class="reset"><li><h3><a title="連至淨灘緣由" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/486">淨灘緣由</a></h3></li><li><h3><a title="連至ICC淨灘介紹" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/487">ICC淨灘介紹</a></h3></li><li><h3><a title="連至海科館活動說明" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/488">海科館活動說明</a></h3></li></ul></div></li><li><h2><a title="連至淨灘過程" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/489">淨灘過程</a></h2></li><li class="nav-first"><h2><a title="連至我要淨灘" href="#">我要淨灘</a></h2><div class="nav-second"><ul class="reset"><li><h3><a title="連至我要借工具淨灘" href="http://nmmstlearning.netdoing.com.tw:8888/clean/toolapplynote/492">我要借工具淨灘</a></h3></li><li><h3><a title="連至跟海科館淨灘" href="http://nmmstlearning.netdoing.com.tw:8888/clean/cleanindex/491">跟海科館淨灘</a></h3></li><li><h3><a title="連至企業淨灘申請" href="http://nmmstlearning.netdoing.com.tw:8888/clean/bussapplynote/498">企業淨灘申請</a></h3></li></ul></div></li><li><h2><a title="連至成果記錄" href="http://nmmstlearning.netdoing.com.tw:8888/clean/result/494">成果記錄</a></h2></li><li><h2><a title="連至心得分享" href="http://nmmstlearning.netdoing.com.tw:8888/clean/sharelist/495">心得分享</a></h2></li><li><h2><a title="連至活動相簿" href="http://nmmstlearning.netdoing.com.tw:8888/clean/albumlist/496">活動相簿</a></h2></li><li><h2><a title="連至聯絡我們" href="http://nmmstlearning.netdoing.com.tw:8888/clean/contact/497">聯絡我們</a></h2></li><li class="nav-first"><h2><a title="連至會員專區" href="#">會員專區</a></h2><div class="nav-second"><ul class="reset"><li><h3><a title="連至進度查詢" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/499">進度查詢</a></h3></li><li><h3><a title="連至列印時數" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/500">列印時數</a></h3></li><li><h3><a title="連至心得上傳" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/501">心得上傳</a></h3></li></ul></div></li></ul>
-                </div>
-                <!--MOB-MENU--END--->
-    
+  <body>
+    <div class="groupbox">
+      <div class="header">
+        <div class="headerbox">
+          <!--logo------------>
+          <p><a href="http://www.nmmst.gov.tw/" title="國立海洋科技博物館LOGO" class="logo">國立海洋科技博物館</a></p>
+          <!--toolbar--------->
+          <form name="queryForm" id="queryForm" method="post" action="http://nmmstlearning.netdoing.com.tw:8888/clean/searchall">
+            <div class="toolbar">
+              <ul class="toolbarmenu_1">
+                <li class="fbbox">
+                  <a href="https://www.facebook.com/NMMST.TW" class="fb" title="FB(開新視窗)" target="_blank">
+                    <img src="cleanimages/icon-fb.svg" alt="fb(開新視窗)" />
+                  </a>
+                </li>
+                <li class="search">
+                  <input class="search_input" type="text" id="querykey" name="querykey" placeholder="全文檢索" />
+                  <a href="javascript:void(0)">
+                    <img src="cleanimages/clean_search.svg" alt="搜尋" onclick="dokSubmit()" />
+                  </a>
+                </li>
+              </ul>
+              <ul class="toolbarmenu">
+                <li>
+                  <a href="#" title="回首頁">
+                    <img src="cleanimages/clean_meun01.svg" alt="回首頁" />
+                    回首頁
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="海科官網">
+                    <img src="cleanimages/clean_meun02.svg" alt="海科官網" />
+                    海科官網
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="學習中心行事曆">
+                    <img src="cleanimages/clean_meun03.svg" alt="學習中心行事曆" />
+                    學習中心行事曆
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title="網站導覽">
+                    <img src="cleanimages/clean_meun04.svg" alt="網站導覽" />
+                    網站導覽
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
-        <!--header-end-->
-        <!--topmenubox-->
-        <div class="topmenubox">
-    
-            <!--------topmenu--------->
-            <div class="topmenu">
-                <div class="container">
-                    
-    
-                    <script src="http://nmmstlearning.netdoing.com.tw:8888/js/jquery-latest.min.js" type="text/javascript"></script>
-                    <script type="text/javascript">
-                        $(function () {
-                            // 幫 #menu li 加上 hover 事件
-                            $('#menu>li').hover(function () {
-                                // 先找到 li 中的子選單
-                                var _this = $(this),
-                                    _subnav = _this.children('ul');
-    
-                                // 變更目前母選項的背景顏色
-                                // 同時顯示子選單(如果有的話)
-                                //_this.css('backgroundColor', '#000');
-                                _subnav.css('display', 'block');
-                            }, function () {
-                                // 變更目前母選項的背景顏色
-                                // 同時隱藏子選單(如果有的話)
-                                // 也可以把整句拆成上面的寫法
-                                $(this).css('backgroundColor', '').children('ul').css('display', 'none');
-                            });
-    
-                            // 取消超連結的虛線框
-                            $('a').focus(function () {
-                                this.blur();
-                            });
-                        });
-                    </script>
-                    <ul id="menu"><li><a title="連至淨灘介紹" href="#">淨灘介紹</a><ul><li><a title="連至淨灘緣由" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/486">淨灘緣由</a></li><li><a title="連至ICC淨灘介紹" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/487">ICC淨灘介紹</a></li><li><a title="連至海科館活動說明" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/488">海科館活動說明</a></li></ul></li><li><a title="連至淨灘過程" href="http://nmmstlearning.netdoing.com.tw:8888/clean/content/489">淨灘過程</a></li><li><a title="連至我要淨灘" href="#">我要淨灘</a><ul><li><a title="連至我要借工具淨灘" href="http://nmmstlearning.netdoing.com.tw:8888/clean/toolapplynote/492">我要借工具淨灘</a></li><li><a title="連至跟海科館淨灘" href="http://nmmstlearning.netdoing.com.tw:8888/clean/cleanindex/491">跟海科館淨灘</a></li><li><a title="連至企業淨灘申請" href="http://nmmstlearning.netdoing.com.tw:8888/clean/bussapplynote/498">企業淨灘申請</a></li></ul></li><li><a title="連至成果記錄" href="http://nmmstlearning.netdoing.com.tw:8888/clean/result/494">成果記錄</a></li><li><a title="連至心得分享" href="http://nmmstlearning.netdoing.com.tw:8888/clean/sharelist/495">心得分享</a></li><li><a title="連至活動相簿" href="http://nmmstlearning.netdoing.com.tw:8888/clean/albumlist/496">活動相簿</a></li><li><a title="連至聯絡我們" href="http://nmmstlearning.netdoing.com.tw:8888/clean/contact/497">聯絡我們</a></li><li><a title="連至會員專區" href="#">會員專區</a><ul><li><a title="連至進度查詢" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/499">進度查詢</a></li><li><a title="連至列印時數" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/500">列印時數</a></li><li><a title="連至心得上傳" href="http://nmmstlearning.netdoing.com.tw:8888/clean/mlogin/501">心得上傳</a></li></ul></li></ul>
-    
-                </div>
+          </form>
+
+          <!--MOB-MENU---位置放<div class="headerbox">內--->
+          <!--手機選單-漢堡圖-->
+          <div class="mu2 nav-button"><a title="Menu" class="animate" href="#">MENU</a></div>
+          <!--手機選單-END-->
+          <!-- Nav手機選單 -->
+          <link href="mobmu/common_clean.css" rel="stylesheet" />
+          <!--[if gte IE 9]><!-->
+          <script src="mobmu/jquery-2.1.3.min.js"></script>
+          <!--<![endif]-->
+          <script src="mobmu/jquery.mobile-1.4.5.custom.min.js"></script>
+          <script src="mobmu/jquery.bxslider-4.1.1.min.js"></script>
+          <script src="mobmu/common.js"></script>
+          <script src="js/checkdata.js"></script>
+          <div class="nav-panel" id="nav">
+            <h1 class="hidden-element">主選單</h1>
+
+            <div class="search-panel clearfix">
+              <form name="querymobForm" id="querymobForm" method="post" action="">
+                <input class="inText" type="text" id="querykey1" name="querykey1" placeholder="全文檢索" value="" />
+                <input class="submit gradient-blue" type="button" value="搜尋" onclick="mobdokSubmit()" />
+              </form>
             </div>
-            <!--------topmenu-end-------->
-    
+            <ul class="reset">
+              <li class="nav-first">
+                <h2><a title="連至淨灘介紹" href="#">淨灘介紹</a></h2>
+                <div class="nav-second">
+                  <ul class="reset">
+                    <li>
+                      <h3><a title="連至淨灘緣由" href="#">淨灘緣由</a></h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至ICC淨灘介紹" href="#">ICC淨灘介紹</a></h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至海科館活動說明" href="#">海科館活動說明</a></h3>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <h2><a title="連至淨灘過程" href="#">淨灘過程</a></h2>
+              </li>
+              <li class="nav-first">
+                <h2><a title="連至我要淨灘" href="#">我要淨灘</a></h2>
+                <div class="nav-second">
+                  <ul class="reset">
+                    <li>
+                      <h3>
+                        <a title="連至我要借工具淨灘" href="#">我要借工具淨灘</a>
+                      </h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至跟海科館淨灘" href="#">跟海科館淨灘</a></h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至企業淨灘申請" href="#">企業淨灘申請</a></h3>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <h2><a title="連至成果記錄" href="#">成果記錄</a></h2>
+              </li>
+              <li>
+                <h2><a title="連至心得分享" href="#">心得分享</a></h2>
+              </li>
+              <li>
+                <h2><a title="連至活動相簿" href="#">活動相簿</a></h2>
+              </li>
+              <li>
+                <h2><a title="連至聯絡我們" href="#">聯絡我們</a></h2>
+              </li>
+              <li class="nav-first">
+                <h2><a title="連至會員專區" href="#">會員專區</a></h2>
+                <div class="nav-second">
+                  <ul class="reset">
+                    <li>
+                      <h3><a title="連至進度查詢" href="#">進度查詢</a></h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至列印時數" href="#">列印時數</a></h3>
+                    </li>
+                    <li>
+                      <h3><a title="連至心得上傳" href="#">心得上傳</a></h3>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--MOB-MENU--END--->
         </div>
+      </div>
+      <!--header-end-->
+      <!--topmenubox-->
+      <div class="topmenubox">
+        <!--------topmenu--------->
+        <div class="topmenu">
+          <div class="container">
+            <script src="js/jquery-latest.min.js" type="text/javascript"></script>
+            <script type="text/javascript">
+              $(function () {
+                // 幫 #menu li 加上 hover 事件
+                $("#menu>li").hover(
+                  function () {
+                    // 先找到 li 中的子選單
+                    var _this = $(this),
+                      _subnav = _this.children("ul");
+
+                    // 變更目前母選項的背景顏色
+                    // 同時顯示子選單(如果有的話)
+                    //_this.css('backgroundColor', '#000');
+                    _subnav.css("display", "block");
+                  },
+                  function () {
+                    // 變更目前母選項的背景顏色
+                    // 同時隱藏子選單(如果有的話)
+                    // 也可以把整句拆成上面的寫法
+                    $(this).css("backgroundColor", "").children("ul").css("display", "none");
+                  },
+                );
+
+                // 取消超連結的虛線框
+                $("a").focus(function () {
+                  this.blur();
+                });
+              });
+            </script>
+            <ul id="menu">
+              <li>
+                <a title="連至淨灘介紹" href="#">淨灘介紹</a>
+                <ul>
+                  <li><a title="連至淨灘緣由" href="#">淨灘緣由</a></li>
+                  <li><a title="連至ICC淨灘介紹" href="#">ICC淨灘介紹</a></li>
+                  <li><a title="連至海科館活動說明" href="#">海科館活動說明</a></li>
+                </ul>
+              </li>
+              <li><a title="連至淨灘過程" href="#">淨灘過程</a></li>
+              <li>
+                <a title="連至我要淨灘" href="#">我要淨灘</a>
+                <ul>
+                  <li><a title="連至我要借工具淨灘" href="#">我要借工具淨灘</a></li>
+                  <li><a title="連至跟海科館淨灘" href="#">跟海科館淨灘</a></li>
+                  <li><a title="連至企業淨灘申請" href="#">企業淨灘申請</a></li>
+                </ul>
+              </li>
+              <li><a title="連至成果記錄" href="#">成果記錄</a></li>
+              <li><a title="連至心得分享" href="#">心得分享</a></li>
+              <li><a title="連至活動相簿" href="#">活動相簿</a></li>
+              <li><a title="連至聯絡我們" href="#">聯絡我們</a></li>
+              <li>
+                <a title="連至會員專區" href="#">會員專區</a>
+                <ul>
+                  <li><a title="連至進度查詢" href="#">進度查詢</a></li>
+                  <li><a title="連至列印時數" href="#">列印時數</a></li>
+                  <li><a title="連至心得上傳" href="#">心得上傳</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--------topmenu-end-------->
+      </div>
     </div>
     <!--adv-->
     <div class="adv">
-        <div id="TOP"><img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/gotop.png" alt="回到上面"></div>
-        <div class="ADVbox">
-            <link href="cleanADVbox/ADV.css" rel="stylesheet">
-            <script src="cleanADVbox/responsiveslides.min.js"></script>
-            <script>
-                $(function () {
-
-                    // Slideshow 1
-                    $("#slider4").responsiveSlides({
-                        auto: true,/*false手動 / true自動*/
-                        pager: true,
-                        nav: true,
-                        speed: 763,
-                        maxwidth: 2526,
-                        namespace: "centered-btns"
-                    });
-                });
-
-            </script>
-            <div class="bannerbox">
-                <div class="wrapper1">
-                    <!-- Slideshow 1 -->
-                    <div class="rslides_container">
-                        <ul class="rslides" id="slider4">
-                            <li>
-                                <!-- <div class="mesk">
+      <div id="TOP"><img src="cleanimages/gotop.png" alt="回到上面" /></div>
+      <div class="ADVbox">
+        <link href="cleanADVbox/ADV.css" rel="stylesheet" />
+        <script src="cleanADVbox/responsiveslides.min.js"></script>
+        <script>
+          $(function () {
+            // Slideshow 1
+            $("#slider4").responsiveSlides({
+              auto: true /*false手動 / true自動*/,
+              pager: true,
+              nav: true,
+              speed: 763,
+              maxwidth: 2526,
+              namespace: "centered-btns",
+            });
+          });
+        </script>
+        <div class="bannerbox">
+          <div class="wrapper1">
+            <!-- Slideshow 1 -->
+            <div class="rslides_container">
+              <ul class="rslides" id="slider4">
+                <li>
+                  <!-- <div class="mesk">
                                     <div class="box">&nbsp;</div>
                                 </div> -->
-                                <img src="cleanimages/advimg.png" />
-                            </li>
-                            <li>
-                                <!-- <div class="mesk">
+                  <img src="cleanimages/advimg.png" />
+                </li>
+                <li>
+                  <!-- <div class="mesk">
                                     <div class="box">&nbsp;</div>
                                 </div> -->
-                                <img src="cleanimages/adv_banner02.png" />
-                            </li>
-                            <li>
-                                <!-- <div class="mesk">
+                  <img src="cleanimages/adv_banner02.png" />
+                </li>
+                <li>
+                  <!-- <div class="mesk">
                                     <div class="box">&nbsp;</div>
                                 </div> -->
-                                <img src="cleanimages/adv_banner03.png" />
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
+                  <img src="cleanimages/adv_banner03.png" />
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
-        <!--advbox-end-->
+      </div>
+      <!--advbox-end-->
     </div>
     <!--adv-end-->
     <!--article-->
     <div class="article">
-        <div class="index_articlebox articlebox ">
-        
+      <div class="index_articlebox articlebox">
         <!--indexnewsbox------------------------>
         <div class="indexnewsbox">
-        <div class="container">
-        <h3 class="title_c_w clean_title_2 ">淨灘活動</h3>
-        
-        <div class="about">
-            <div class="imgbox"><img src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/cleanimg-01.png"></div>
-            <div class="photolistbox">
-            <p>讓參與活動的夥伴了解到短短的海岸線在少許的時間內可以清除大量的垃圾，再透過數據可得知垃圾的組成，所有人經過這樣的親身體驗，反省往後在日常生活中是否應透過減塑和自備餐具等自我行為改變來達到善待海洋的使命，所以淨灘是一場人與海洋深切對話的最佳環境教育課程選擇。
-        <br>您與您的家人、朋友也想來一場還給海洋美麗面貌的淨灘活動嗎?</p>
-            
-        </div>
-        </div>
-        </div>
+          <div class="container">
+            <h3 class="title_c_w clean_title_2">淨灘活動</h3>
+
+            <div class="about">
+              <div class="imgbox"><img src="cleanimages/cleanimg-01.png" /></div>
+              <div class="photolistbox">
+                <p>
+                  讓參與活動的夥伴了解到短短的海岸線在少許的時間內可以清除大量的垃圾，再透過數據可得知垃圾的組成，所有人經過這樣的親身體驗，反省往後在日常生活中是否應透過減塑和自備餐具等自我行為改變來達到善待海洋的使命，所以淨灘是一場人與海洋深切對話的最佳環境教育課程選擇。
+                  <br />
+                  您與您的家人、朋友也想來一場還給海洋美麗面貌的淨灘活動嗎?
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <!--about-end------------------->
-        
+
         <!--淨灘活動花絮script--->
-            <link href="http://nmmstlearning.netdoing.com.tw:8888/js/FlexSlider/flexslider.css" rel="stylesheet">
-            <script src="http://nmmstlearning.netdoing.com.tw:8888/js/FlexSlider/shCore.js"></script>
-            <script src="http://nmmstlearning.netdoing.com.tw:8888/js/FlexSlider/jquery.flexslider-min.js"></script>
+        <link href="js/FlexSlider/flexslider.css" rel="stylesheet" />
+        <script src="js/FlexSlider/shCore.js"></script>
+        <script src="js/FlexSlider/jquery.flexslider-min.js"></script>
         <script type="text/javascript">
-                    $(function () {
-                        
-                        var CurrentSlide_2 = new save_currentSlide();
-                        $('div.flexslider_5').flexslider({
-                            animation: "fade",
-                            animationLoop: true,
-                            itemMargin: 5,
-                            prevText: '上一頁',
-                            nextText: '下一頁',
-                            slideshowSpeed: 4000,
-                            animationSpeed: 300,
-                            controlNav: true,
-                            start: function (slider) {
-                                CurrentSlide_2.set_paging_OL_Event(slider);
-                            },
-                            before: function (slider) {
-                                if (CurrentSlide_2.get_2() != null) {
-                                    slider.slides[CurrentSlide_2.get_2()].style.opacity = 0;
-                                    slider.slides[CurrentSlide_2.get_2()].style.zIndex = 1;
-                                    CurrentSlide_2.set_2(null);
-                                }
-                                if (slider.playing) {
-                                    CurrentSlide_2.set_1(slider.currentSlide);
-                                }
-                            }
-                        });
-        
-                    });
-        
-                </script>
-        <!--淨灘活動花絮script--->
-        
-            <div class="cleanbox">
-            <div class="container">
-        <!--cleanphoto--->    
-                <div class="cleanphoto">
-                    <h3 class="clean_title">淨灘活動花絮</h3>
-                    <div class="statisticsbox"> 
-                        <section class="slider">                                
-                            <div class="flexslider flexslider_5 carousel">
-                            <ul class="slides">                    
-                                  
-                            </ul>
-                             </div>
-                            
-                             <div class="fontbox-mob"><a href="http://nmmstlearning.netdoing.com.tw:8888/clean/albumlist/496">more</a></div>	
-                         </section>
-                    </div>
-                    </div>
-                 
-            <!--cleanphoto----------->        
-                <form id="indexform" method="post">
-                    <input name="__RequestVerificationToken" type="hidden" value="xTPRug1of958U3R__iTA-DcJcGMSEcp01BnZ3zUx20fdTWiPJ-vC0brI7qLHiinW0XXrX1mQW0Gq7SMMKgis9axh_vnkMoUejL_Dbb-0R_kQnUtFiZAVGxGY5ndC9AK0g3i3wuSH2-gkVTQ5P3OdH8oxPM_VIeaXUhoWV56nwfE1">
-                    <input type="hidden" name="lessontype" id="lessontype" value="I">
-                    <div class="cleanlogin">
-                        <h3 class="clean_title">會員專區</h3>
-                        <div class="box">
-                            
-                            <div class="loginbox">
-                                <p align="left">
-                                    <img class="loginbox_img" src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/icon-user.svg">
-                                    <input type="text" placeholder="帳號" name="Userid" id="Userid" maxlength="20">
-                                </p>
-                                <p align="left">
-                                    <img class="loginbox_img" src="http://nmmstlearning.netdoing.com.tw:8888/cleanimages/icon-lock.svg">
-                                    <input type="password" placeholder="密碼" name="UserPass" id="UserPass" maxlength="20" autocomplete="off">
-                                </p>
-                                <p align="left">
-                                    <span id="chkno">
-        
-        <script>
-            var timercnt = 0;
-            function playchkcode() {
-             
-                if (timercnt == 0) {
-                    var auc = document.getElementById("auc");
-                    var captchasession = "";
-                    var timer = setInterval(function () {
-                        //alert(timercnt)
-                        if (timercnt == 0) { //步驟一,取得CAPTCHA四碼
-                            $("#captchasession").load("http://nmmstlearning.netdoing.com.tw:8888/Ajax/getCAPTCHAsession");
-                            captchasession = $("#captchasession").text();
-                            if (captchasession != "") { captchasession = captchasession.substr(captchasession.indexOf("***") + 3, 4); timercnt++; }
-                        }
-                        if (timercnt == 1) { //步驟二,播放開始語音
-                            auc.src = "http://nmmstlearning.netdoing.com.tw:8888/sound/begin.mp3"; auc.play();
-                            timercnt++;
-                        }
-                        if (timercnt >= 2 && timercnt <= 5) { //步驟三,播放CAPTCHA語音
-                            if (auc.ended) {
-                                auc.src = "http://nmmstlearning.netdoing.com.tw:8888/sound/" + captchasession.substr(timercnt - 2, 1) + ".mp3"; auc.play();
-                                timercnt++;
-                            }
-                        }
-                        if (timercnt == 6) { //步驟三,播放CAPTCHA語音
-                            if (auc.ended) {
-                                auc.src = "http://nmmstlearning.netdoing.com.tw:8888/sound/end.mp3"; auc.play();
-                                captchasession = "";
-                                clearInterval(timer);
-                                $("#captchasession").text("");
-                                timercnt = 0;
-                            }
-                        }
-                    }, 500)
+          $(function () {
+            var CurrentSlide_2 = new save_currentSlide();
+            $("div.flexslider_5").flexslider({
+              animation: "fade",
+              animationLoop: true,
+              itemMargin: 5,
+              prevText: "上一頁",
+              nextText: "下一頁",
+              slideshowSpeed: 4000,
+              animationSpeed: 300,
+              controlNav: true,
+              start: function (slider) {
+                CurrentSlide_2.set_paging_OL_Event(slider);
+              },
+              before: function (slider) {
+                if (CurrentSlide_2.get_2() != null) {
+                  slider.slides[CurrentSlide_2.get_2()].style.opacity = 0;
+                  slider.slides[CurrentSlide_2.get_2()].style.zIndex = 1;
+                  CurrentSlide_2.set_2(null);
                 }
-            }
-        
-            function reloadimg() {
-                d = new Date();
-                $("#capchaimg").attr("src", "http://nmmstlearning.netdoing.com.tw:8888/Ajax/getCAPTCHA?" + d.getTime());
-            }
+                if (slider.playing) {
+                  CurrentSlide_2.set_1(slider.currentSlide);
+                }
+              },
+            });
+          });
         </script>
-        <input type="text" maxlength="4" name="chkno2" id="chkno2" style="width:100px;" class="text_input" placeholder="驗證碼" value="" onkeyup="this.value = this.value.toUpperCase()">
-        <img id="capchaimg" src="http://nmmstlearning.netdoing.com.tw:8888/Ajax/getCAPTCHA" tabindex="0" onclick="reloadimg()" onkeyup="if(event.keyCode == 13 || event.keyCode == 32){ reloadimg();}" alt="驗證碼" title="變更驗證碼" role="button">
-        <!--驗證碼語音播放按鈕-->
-        <span id="playchkcode"><input type="button" class="voice" value="語音播放" onkeypress="javascript:playchkcode();" onclick="javascript:playchkcode();" title="驗證碼語音播放" role="button"></span>
-        <!--end-->
-        <p id="captchasession" style="display:none"></p>
-        
-        <audio id="auc" controls="" style="display:none">
-            <source src="http://nmmstlearning.netdoing.com.tw:8888/sound/mcdonal.mp3" type="audio/mp3" style="display:none">
-            Your browser does not support the audio element.
-        </audio></span></p>
-                                <p class="btnbox">
-                                    <input type="button" class="loginbtn" value="登入" onclick="chkmember();" style="cursor:pointer">
-                                    <input type="button" class="loginbtn" value="註冊" onclick="location.href='http://nmmstlearning.netdoing.com.tw:8888/member/member_join/381?lessontype=C';" style="cursor:pointer">
-                                </p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </form> 
-         <!--cleanbox----------->            
-             </div>
-             </div>
-            <div class="collectbox">
-                <div class="container">
-                <h3 class="clean_title_2">淨灘撿拾成果</h3>
-                <div class="trash_box">
-        
-                    <ul class="clean_garbagelist">
-                       <li><b>塑膠瓶蓋</b><span>34,750個</span></li><li><b>菸蒂</b><span>21,418個</span></li><li><b>吸管</b><span>17,073個</span></li><li><b>寶特瓶</b><span>15,877個</span></li><li><b>免洗餐具</b><span>11,991個</span></li><li><b>塑膠提袋</b><span>11,292個</span></li><li><b>漁業浮球、浮筒、漁船防碰墊</b><span>6,850個</span></li><li><b>釣魚用具</b><span>6,498個</span></li><li><b>其他飲料瓶與食物容器</b><span>6,069個</span></li><li><b>漁網與繩子</b><span>5,815個</span></li><li><b>玻璃瓶</b><span>5,640個</span></li><li><b>外帶飲料杯</b><span>5,472個</span></li><li><b>食品包裝袋</b><span>5,455個</span></li><li><b>非食物的瓶罐與容器</b><span>2,500個</span></li><li><b>打火機</b><span>2,405個</span></li><li><b>鐵鋁罐</b><span>2,083個</span></li><li><b>鋁箔包或利樂包</b><span>1,956個</span></li><li><b>牙刷</b><span>614個</span></li><li><b>針筒、針頭</b><span>364個</span></li><li><b>金屬製品</b><span>0個</span></li><li><b>魚鉤</b><span>0個</span></li>
-                    </ul>
-                </div>
-                 </div>
+        <!--淨灘活動花絮script--->
+
+        <div class="cleanbox">
+          <div class="container">
+            <!--cleanphoto--->
+            <div class="cleanphoto">
+              <h3 class="clean_title">淨灘活動花絮</h3>
+              <div class="statisticsbox">
+                <section class="slider">
+                  <div class="flexslider flexslider_5 carousel">
+                    <ul class="slides"></ul>
+                  </div>
+
+                  <div class="fontbox-mob"><a href="#">more</a></div>
+                </section>
+              </div>
             </div>
+
+            <!--cleanphoto----------->
+            <form id="indexform" method="post">
+              <input
+                name="__RequestVerificationToken"
+                type="hidden"
+                value="xTPRug1of958U3R__iTA-DcJcGMSEcp01BnZ3zUx20fdTWiPJ-vC0brI7qLHiinW0XXrX1mQW0Gq7SMMKgis9axh_vnkMoUejL_Dbb-0R_kQnUtFiZAVGxGY5ndC9AK0g3i3wuSH2-gkVTQ5P3OdH8oxPM_VIeaXUhoWV56nwfE1"
+              />
+              <input type="hidden" name="lessontype" id="lessontype" value="I" />
+              <div class="cleanlogin">
+                <h3 class="clean_title">會員專區</h3>
+                <div class="box">
+                  <div class="loginbox">
+                    <p align="left">
+                      <img class="loginbox_img" src="cleanimages/icon-user.svg" />
+                      <input type="text" placeholder="帳號" name="Userid" id="Userid" maxlength="20" />
+                    </p>
+                    <p align="left">
+                      <img class="loginbox_img" src="cleanimages/icon-lock.svg" />
+                      <input type="password" placeholder="密碼" name="UserPass" id="UserPass" maxlength="20" autocomplete="off" />
+                    </p>
+                    <p align="left">
+                      <span id="chkno">
+                       
+                        <input
+                          type="text"
+                          maxlength="4"
+                          name="chkno2"
+                          id="chkno2"
+                          style="width: 100px"
+                          class="text_input"
+                          placeholder="驗證碼"
+                          value=""
+                          onkeyup="this.value = this.value.toUpperCase()"
+                        />
+                       
+                        <!--驗證碼語音播放按鈕-->
+                        <span id="playchkcode">
+                          <input
+                            type="button"
+                            class="voice"
+                            value="語音播放"
+                            onkeypress="javascript: playchkcode();"
+                            onclick="javascript: playchkcode();"
+                            title="驗證碼語音播放"
+                            role="button"
+                          />
+                        </span>
+                        <!--end-->
+                        <p id="captchasession" style="display: none"></p>
+
+                        <audio id="auc" controls="" style="display: none">
+                          <source src="" type="audio/mp3" style="display: none" />
+                          Your browser does not support the audio element.
+                        </audio>
+                      </span>
+                    </p>
+                    <p class="btnbox">
+                      <input type="button" class="loginbtn" value="登入" onclick="chkmember()" style="cursor: pointer" />
+                      <input
+                        type="button"
+                        class="loginbtn"
+                        value="註冊"                       
+                        style="cursor: pointer"
+                      />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!--cleanbox----------->
+          </div>
+        </div>
+        <div class="collectbox">
+          <div class="container">
+            <h3 class="clean_title_2">淨灘撿拾成果</h3>
+            <div class="trash_box">
+              <ul class="clean_garbagelist">
+                <li>
+                  <b>塑膠瓶蓋</b>
+                  <span>34,750個</span>
+                </li>
+                <li>
+                  <b>菸蒂</b>
+                  <span>21,418個</span>
+                </li>
+                <li>
+                  <b>吸管</b>
+                  <span>17,073個</span>
+                </li>
+                <li>
+                  <b>寶特瓶</b>
+                  <span>15,877個</span>
+                </li>
+                <li>
+                  <b>免洗餐具</b>
+                  <span>11,991個</span>
+                </li>
+                <li>
+                  <b>塑膠提袋</b>
+                  <span>11,292個</span>
+                </li>
+                <li>
+                  <b>漁業浮球、浮筒、漁船防碰墊</b>
+                  <span>6,850個</span>
+                </li>
+                <li>
+                  <b>釣魚用具</b>
+                  <span>6,498個</span>
+                </li>
+                <li>
+                  <b>其他飲料瓶與食物容器</b>
+                  <span>6,069個</span>
+                </li>
+                <li>
+                  <b>漁網與繩子</b>
+                  <span>5,815個</span>
+                </li>
+                <li>
+                  <b>玻璃瓶</b>
+                  <span>5,640個</span>
+                </li>
+                <li>
+                  <b>外帶飲料杯</b>
+                  <span>5,472個</span>
+                </li>
+                <li>
+                  <b>食品包裝袋</b>
+                  <span>5,455個</span>
+                </li>
+                <li>
+                  <b>非食物的瓶罐與容器</b>
+                  <span>2,500個</span>
+                </li>
+                <li>
+                  <b>打火機</b>
+                  <span>2,405個</span>
+                </li>
+                <li>
+                  <b>鐵鋁罐</b>
+                  <span>2,083個</span>
+                </li>
+                <li>
+                  <b>鋁箔包或利樂包</b>
+                  <span>1,956個</span>
+                </li>
+                <li>
+                  <b>牙刷</b>
+                  <span>614個</span>
+                </li>
+                <li>
+                  <b>針筒、針頭</b>
+                  <span>364個</span>
+                </li>
+                <li>
+                  <b>金屬製品</b>
+                  <span>0個</span>
+                </li>
+                <li>
+                  <b>魚鉤</b>
+                  <span>0個</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <!-------------------iconmu---------------------------------------->
-            <link rel="stylesheet" type="text/css" href="http://nmmstlearning.netdoing.com.tw:8888/slick/slick.css">
-            <link rel="stylesheet" type="text/css" href="http://nmmstlearning.netdoing.com.tw:8888/slick/slick-theme.css">
-            <script src="http://nmmstlearning.netdoing.com.tw:8888/slick/slick.js" type="text/javascript" charset="utf-8"></script>
-        
-                      <script type="text/javascript">
-                            $(document).on('ready', function () {
-                                $(".regular2").slick({
-                                    dots: true,
-                                    infinite: true,
-                                    slidesToShow: 6,
-                                    slidesToScroll: 6,
-                                    responsive: [
-                                    {
-                                        breakpoint: 1024,
-                                        settings: {
-                                            slidesToShow: 3,
-                                            slidesToScroll: 3,
-                                            infinite: true,
-                                            dots: true
-                                        }
-                                    },
-                                    {
-                                        breakpoint: 600,
-                                        settings: {
-                                            slidesToShow: 2,
-                                            slidesToScroll: 2,
-                                        }
-                                    },
-                                    {
-                                        breakpoint: 480,
-                                        settings: {
-                                            slidesToShow: 1,
-                                            slidesToScroll: 1
-                                        }
-                                    }
-                                    ]
-        
-                                });
-                            });
-                        </script>
-         
-                  <!--連結輪播end  ---> 
-            <!-------------------iconmu-end------------------------------------>
-        </div></div>
+        <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+        <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+        <script type="text/javascript">
+          $(document).on("ready", function () {
+            $(".regular2").slick({
+              dots: true,
+              infinite: true,
+              slidesToShow: 6,
+              slidesToScroll: 6,
+              responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true,
+                  },
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                  },
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  },
+                },
+              ],
+            });
+          });
+        </script>
+
+        <!--連結輪播end  --->
+        <!-------------------iconmu-end------------------------------------>
+      </div>
+    </div>
     <!--adv->
 
     <!---footer-->
     <div class="footer">
-        <div class="footerbox">
-            <div class="footer-logo"><img src="cleanimages/footer-logo.png" /></div>
-            <p>Copyright © National Museum of Marine Science & Technology All rights reserved.</p>
-        </div>
+      <div class="footerbox">
+        <div class="footer-logo"><img src="cleanimages/footer-logo.png" /></div>
+        <p>Copyright © National Museum of Marine Science & Technology All rights reserved.</p>
+      </div>
     </div>
 
     <!--footer-end-->
     <script type="text/javascript" src="frontjs/gotop.js"></script>
-</body>
-
+  </body>
 </html>
