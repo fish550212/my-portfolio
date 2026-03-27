@@ -6,15 +6,15 @@
     "year": 2025,
     "tags": ["多媒體", "淺色", "RWD"],
     "url": "https://fish550212.github.io/my-portfolio/html/ccii/cut/index.html",
-    "thumb": "./file/ccll/ccll.jpg",
+    "thumb": "./file/ccii/ccii.jpg",
     "layouts": [
-      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/ccll/ccll-index.jpg" },
-      { "key": "page-newmovie", "title": "電影", "path": "page-newmovie.html", "kind": "List", "thumb": "./file/ccll/ccll-page-newmovie.jpg" },
-      { "key": "page-tvshow", "title": "頻道", "path": "page-tvshow.html", "kind": "List", "thumb": "./file/ccll/ccll-page-tvshow.jpg" },
-      { "key": "page-shop", "title": "公播", "path": "page-shop.html", "kind": "Form", "thumb": "./file/ccll/ccll-page-shop.jpg" },
-      { "key": "page-about", "title": "關於采昌", "path": "page-about.html", "kind": "Content", "thumb": "./file/ccll/ccll-page-about.jpg" },
-      { "key": "page-sitemap", "title": "網站導覽", "path": "page-sitemap.html", "kind": "Content", "thumb": "./file/ccll/ccll-page-sitemap.jpg" },
-      { "key": "page-contact", "title": "網站導覽", "path": "page-contact.html", "kind": "Form", "thumb": "./file/ccll/ccll-page-contact.jpg" }
+      { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/ccii/ccii-index.jpg" },
+      { "key": "page-newmovie", "title": "電影", "path": "page-newmovie.html", "kind": "List", "thumb": "./file/ccii/ccii-page-newmovie.jpg" },
+      { "key": "page-tvshow", "title": "頻道", "path": "page-tvshow.html", "kind": "List", "thumb": "./file/ccii/ccii-page-tvshow.jpg" },
+      { "key": "page-shop", "title": "公播", "path": "page-shop.html", "kind": "Form", "thumb": "./file/ccii/ccii-page-shop.jpg" },
+      { "key": "page-about", "title": "關於采昌", "path": "page-about.html", "kind": "Content", "thumb": "./file/ccii/ccii-page-about.jpg" },
+      { "key": "page-sitemap", "title": "網站導覽", "path": "page-sitemap.html", "kind": "Content", "thumb": "./file/ccii/ccii-page-sitemap.jpg" },
+      { "key": "page-contact", "title": "網站導覽", "path": "page-contact.html", "kind": "Form", "thumb": "./file/ccii/ccii-page-contact.jpg" }
     ]
   },
   {
