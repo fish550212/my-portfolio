@@ -5,6 +5,45 @@ div * {
 .font_red {
   color: #bd0000;
 }
+
+
+.advsidebar {
+  position: fixed;
+  bottom: 15%;
+  right: 10px;
+  left: auto;
+  z-index: 9999;
+  box-shadow:
+    0 1px 2px 0 rgba(0, 0, 0, 0.3),
+    0 2px 6px 2px rgba(0, 0, 0, 0.15);
+  width: 90px;
+  .adv_btn {
+    display: flex;
+    width: 100%;
+    height: auto;
+    & img {
+      width: 100%;
+    }
+  }
+  #close-adv {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    font-weight: 300;
+    line-height: 45px;
+    font-size: 0;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    cursor: pointer;
+    opacity: 0.8;
+    background:#000 url(../frontimages/icon_cancel.svg) no-repeat center center;
+    background-size: 10px auto;
+  }
+}
+
+
 .content,
 .page-content {
   max-width: 1000px;
@@ -287,12 +326,12 @@ div * {
 .movie-photobox .swiper-slide {
   transition: opacity 0.3s;
   background-color: #fff;
-  aspect-ratio: 14 / 9;
+  aspect-ratio: 16 / 9;
 }
 .movie-photobox .swiper-slide img {
   opacity: 0.5;
   width: 100%;
-  height: 100%;
+  height:auto;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -321,23 +360,23 @@ div * {
   max-height: 90vh;
 }
 .modal #modalClose {
-    width: 30px;
-    height: 30px;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-weight: 300;
-    background-color: transparent;
-    border: 0;
-    line-height: 45px;
-    color: #fff;
-    font-size: 0;
-    border-radius: 100%;
-    border: 1px solid #fff;
-    cursor: pointer;
-    opacity: .8;
-    background: url(../frontimages/icon_cancel.svg) no-repeat center center;
-    background-size: 15px auto;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-weight: 300;
+  background-color: transparent;
+  border: 0;
+  line-height: 45px;
+  color: #fff;
+  font-size: 0;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  cursor: pointer;
+  opacity: 0.8;
+  background: url(../frontimages/icon_cancel.svg) no-repeat center center;
+  background-size: 15px auto;
 }
 /*電影新聞*/
 
@@ -445,6 +484,11 @@ div * {
 }
 .news-section .more-btn a:hover {
   background-color: #bfbfbf;
+}
+
+.page-content .newimgbox {
+  text-align: center;
+  width: 100%;
 }
 /*內容框--*/
 .line {
@@ -609,7 +653,7 @@ div * {
 .movie-section .section-title .movietitle-list-searchbox {
   display: none;
 }
-.movie-section .section-title .movietitle-list-searchbox.search-date{
+.movie-section .section-title .movietitle-list-searchbox.search-date {
   display: inline-block;
 }
 .movie-section .movietitle-list a {
@@ -629,16 +673,16 @@ div * {
   margin-left: auto;
 }
 .movie-section .section-title .searchbox .select-style {
-  height: 40px;
+  height: 48px;
   padding: 0 35px 0 10px;
   width: 160px;
   font-size: 16px;
 }
-.movie-section .section-title .searchbox.search-date .select-style{
+.movie-section .section-title .searchbox.search-date .select-style {
   width: 130px;
 }
 .movie-section .section-title .searchbox .input-style {
-  height: 40px;
+  height: 48px;
 }
 .movie-group {
   display: flex;
@@ -654,7 +698,7 @@ div * {
 }
 
 .movie-section .movie-img {
-  aspect-ratio: 3.2 / 4.5;
+  aspect-ratio: 3.15 / 4.5;
   overflow: hidden;
   background-color: #ccc;
   display: flex;
@@ -663,7 +707,7 @@ div * {
 }
 .movie-section .movie-img img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -737,6 +781,7 @@ div * {
 }
 .searchbox .text-input {
   width: 80%;
+  font-size: 18px;
 }
 .searchbox .input-style {
   flex: 0 0 auto;
@@ -769,7 +814,7 @@ div * {
   line-height: 25px;
 }
 .shop-group .movie-img {
-  aspect-ratio: 3 / 4.5;
+  aspect-ratio: 3.15 / 4.5;
   overflow: hidden;
   background-color: #ccc;
   display: flex;
@@ -778,7 +823,7 @@ div * {
 }
 .shop-group .movie-img img {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
   object-position: center;
   display: block;
@@ -927,7 +972,6 @@ textarea.text-input {
 
 .tvshow-section .sectionbox .searchbox .select-style {
   width: 300px;
-
 }
 
 .tvshow-section .sectionbox .group {
@@ -953,7 +997,7 @@ textarea.text-input {
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: 20px;
+  font-size: 22px;
   color: #a6a6a6;
   transition: 0.3s;
 }
@@ -967,7 +1011,7 @@ textarea.text-input {
   color: #1f1f1f;
 }
 .tvshow-section .channelslist li a img {
-  height: 60px;
+  height: 90px;
 }
 /*頻道-改*/
 /* .movie-section .movietitle-link.tv-link {
@@ -1092,6 +1136,9 @@ textarea.text-input {
 .history-group .monthbox {
   display: flex;
   gap: 15px;
+}
+.history-group .month-gruop {
+    width: 100%;
 }
 .history-group .monthbox .monthline {
   position: relative;
@@ -1276,22 +1323,21 @@ input[type="radio"] {
 /**/
 /* == 手機版型區 =============================== */
 @media screen and (max-width: 767px) {
-input[type="date"] {
-  -webkit-appearance: none; 
-  appearance: none;
-  color: #000 ; 
-  background-color: #fff;
-  border-radius: 0;
-}
-input[type="search"] {
-  background-color: #fff;
-}
-select{
-  -webkit-appearance: none; 
-  appearance: none;
-  color: #000 ; 
-}
-
+  input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    color: #000;
+    background-color: #fff;
+    border-radius: 0;
+  }
+  input[type="search"] {
+    background-color: #fff;
+  }
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    color: #000;
+  }
 
   .page-content img,
   .content img {
@@ -1510,6 +1556,13 @@ select{
     display: flex;
     justify-content: center;
   }
+   .movie-section.shop-section .section-title{
+    
+    flex-wrap: nowrap;
+   }
+  .movie-section.shop-section .section-title .searchbox {
+    margin-left: inherit;
+}
   .shop-section .shoptitle-list {
     display: none;
     gap: 10px;
@@ -1569,10 +1622,10 @@ select{
     width: 50%;
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;
-}
-.tvshow-section .channelslist li:nth-child(even){
-   border-right: 0px solid #eee;
-}
+  }
+  .tvshow-section .channelslist li:nth-child(even) {
+    border-right: 0px solid #eee;
+  }
 
   .tvshow-section .channelslist li font {
     display: none;
@@ -1882,6 +1935,10 @@ select{
     align-items: flex-end;
     gap: 15px;
     flex-wrap: wrap;
+  }
+  .movie-section.shop-section .section-title {
+    align-items: center;
+    flex-wrap: nowrap;
   }
   .movie-section .movietitle-link a {
     line-height: 30px;

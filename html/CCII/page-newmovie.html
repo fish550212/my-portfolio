@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -131,7 +131,7 @@
                   // 同時隱藏子選單(如果有的話)
                   // 也可以把整句拆成上面的寫法
                   $(this).css("backgroundColor", "").children("ul").css("display", "none");
-                }
+                },
               );
 
               // 取消超連結的虛線框
@@ -543,7 +543,7 @@
             </div>
           </div>
         </div>
-          <div class="page-section community-section bg-gray">
+        <div class="page-section community-section bg-gray">
           <div class="sectionbox">
             <div class="section-title blackfont">社群資訊</div>
             <div class="community-group">
@@ -877,5 +877,27 @@
       });
     </script>
     <!----彈跳視窗---->
+
+    <!-- 懸浮廣告 -->
+    <div class="advsidebar" id="infoModal-adv">
+      <a href="#" class="adv_btn" data-url="https://www.youtube.com/embed/ThTHsCmMhiA?si=ymgZayKX06jjk2WK" id="advshow">
+        <img src="./frontimages/vc-20260213104508.jpg" alt="" />
+      </a>
+      <input type="button" id="close-adv" value="" title="關閉"/>
+      <script>
+        document.body.addEventListener("click", function (e) {
+          const modal = document.getElementById("infoModal-adv");
+          const closeBtn = document.getElementById("close-adv");
+          // 假設 iframe 在 a 標籤內或另有定義，此處需抓取實際 iframe 節點
+          const iframe = modal.querySelector("iframe") || document.querySelector("iframe");
+
+          if (e.target === closeBtn || e.target === modal) {
+            modal.style.display = "none";
+            if (iframe) iframe.src = "";
+          }
+        });
+      </script>
+    </div>
+    <!-- 懸浮廣告 -->
   </body>
 </html>

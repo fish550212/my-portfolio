@@ -170,6 +170,10 @@ input[type="url"] {
   background: var(--btn-hover);
   border-color: var(--border-w-50);
 }
+.btn img{
+  width: 20px;
+  height: 20px;
+}
 .chips {
   display: flex;
   flex-wrap: wrap;

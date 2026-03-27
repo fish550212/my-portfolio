@@ -5,7 +5,8 @@
     "type": "企業網站",
     "year": 2025,
     "tags": ["多媒體", "淺色", "RWD"],
-    "url": "https://fish550212.github.io/my-portfolio/html/CCII/cut/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/CCII/index.html",
+    "officialUrl": "https://www.ccii.com.tw/",
     "thumb": "./file/ccii/ccll.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/ccii/ccll-index.jpg" },
