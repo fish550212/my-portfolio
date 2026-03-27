@@ -1,0 +1,475 @@
+/** {	margin: 0px; padding: 0px;}*/
+/*adv*/
+.adv {
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+    text-align: center;
+    clear: both;
+}
+
+.adv .ADVbox {
+    width: 100%;
+    height: auto;
+    /*max-height:485px;min-height:530px;*/
+    overflow: hidden;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.adv .ADVbox img {
+    width: 100%;
+    height: auto;
+    /*max-height:450px;min-height:450px;*/
+    text-align: center;
+    margin: 0px auto;
+}
+
+.adv .ADVbox .bannerboxpage {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
+}
+
+.adv .ADVbox .bannerboxpage .advtitle {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    font-size: 350%;
+    margin-top: 0%;
+    opacity: 0.5;
+}
+
+html {
+    background: rgb(255, 255, 255);
+}
+
+.bannerbox {
+    font: 14px/24px sans-serif;
+    margin: 0px auto;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size-adjust: none;
+    font-stretch: normal;
+    _width: 100%;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    padding-top: 0px;
+}
+
+.bannerbox.wrapper1 {
+    width: 100%;
+    margin-bottom: 0px;
+    float: left;
+}
+
+.rslides {
+    margin: 0px auto;
+    position: relative;
+}
+
+.rslides {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.rslides li {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: none;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+}
+
+.rslides li:first-child {
+    float: left;
+    display: block;
+}
+
+.rslides img {
+    border: 0px currentColor;
+    border-image: none;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    float: left;
+    display: block;
+}
+
+.rslides_container {
+    width: 100%;
+    margin-bottom: 0px;
+    float: left;
+    position: relative;
+    text-indent: 0px;
+    -webkit-box-sizing: border-box;
+}
+
+.mesk {
+    width: 100%;
+    height: auto;
+    background-color: #e7b820;
+    color: #FFF;
+    font-size: 200%;
+    padding: 10px auto;
+    line-height: 120%;
+    text-align: center;
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+    overflow: hidden;
+}
+
+.mesk p {
+    display: block;
+    width: 96%;
+    color: #FFF;
+    padding: 10px auto;
+    margin: 15px 0px;
+}
+
+
+/*slider1點點設定*/
+.centered-btns_nav {
+    display: block;
+    background: url("../ADVbox/ADVbtn.png") no-repeat left top;
+    left: -10px;
+    top: 50%;
+    width: 38px;
+    height: 61px;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    margin-top: -30px;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.3;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+}
+
+.centered-btns_nav:active {
+    opacity: 0.5;
+    top: 50%;
+}
+
+.centered-btns_nav:hover {
+    background: #FFF url("../ADVbox/ADVbtn.png") no-repeat left top;
+}
+
+.next.centered-btns_nav {
+    background-position: right top;
+    left: auto;
+    right: -10px;
+    top: 50%;
+}
+
+.centered-btns_nav:focus {}
+
+/*小圓點*/
+.centered-btns_tabs {
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    padding-bottom: 10px;
+    /*小圓點位置*/
+}
+
+.centered-btns_tabs li {
+    margin-right: 5px;
+    float: none;
+    display: inline;
+    _float: left;
+}
+
+.centered-btns_tabs a {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    width: 10px;
+    height: 10px;
+    text-indent: -9999px;
+    overflow: hidden;
+    display: inline-block;
+    /* box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.3);*/
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    _display: block;
+    /* -webkit-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3); -moz-box-shadow: inset 0 0 2px 0 rgba(0, 0, 0, .3);*/
+}
+
+.centered-btns_here a {
+    /*background: rgba(0,117,194,0.9);*/
+    background: rgba(0, 0, 0, 0.1)
+        /*小圓點顏色*/
+}
+
+/*.bannerbox2 {font: 14px/24px sans-serif; margin: 0px auto;text-align: center; color: rgb(51, 51, 51); width: 100%;max-width: 1000px;height:320px; overflow:hidden ;font-size-adjust: none; font-stretch: normal; _width: 100%; -webkit-font-smoothing: antialiased;position: relative; padding-top:10px;}
+.bannerbox2 .wrapper2 {width:100%; margin-bottom:0px; float: left;}
+.bannerbox2 .wrapper2 .rslides .imgbox {width: 48%; height:auto;max-width:530px;max-height:345px;float: left; display: block; border-right:1px solid #becd54; padding-right:2%;}
+.bannerbox2 .wrapper2 .rslides .imgboximg {width:445px;height:290px; overflow:hidden;}
+.bannerbox2 .wrapper2 .rslides .imgbox img {width: 100%;height:auto;}
+.bannerbox2 .wrapper2 .rslides .fontbox {width: 50%; height:auto;float: right; display: block; padding:0px 0px 0px 0px; color:#333333;}
+.bannerbox2 .wrapper2 .rslides .fontbox h3{ font-size:130%; margin-bottom:10px;}
+.bannerbox2 .wrapper2 .centered-btns_tabs {text-align: center; margin-top: 10px;position:absolute; bottom:0px; z-index:20; left:0;right:0; padding-bottom:0px;/*小圓點位置*/
+/*}
+*/
+/*==============================手機版型區==============================*/
+@media screen and (max-width: 767px) {
+    .bannerbox {
+        font: 14px/24px sans-serif;
+        margin: 0px auto;
+        text-align: center;
+        color: rgb(51, 51, 51);
+        max-width: 100%;
+        max-height: auto;
+        overflow: hidden;
+        font-size-adjust: none;
+        font-stretch: normal;
+        _width: 100%;
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+        clear: both;
+    }
+
+    .rslides_container {
+        width: 100%;
+        margin-bottom: 0px;
+        float: left;
+        position: relative;
+        text-indent: 0px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .centered-btns_nav {
+        opacity: 0.3;
+        /*左右按鍵隱藏*/
+    }
+
+    .centered-btns_tabs,
+    .transparent-btns_tabs,
+    .large-btns_tabs {
+        text-align: center;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding-bottom: 20px;
+        /*小圓點位置*/
+    }
+
+    .adv .ADVbox {
+        width: 100%;
+        height: auto;
+        /*max-height:300px;min-height:230px;*/
+        overflow: hidden;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    .adv .ADVbox img {
+        width: 100%;
+        height: auto;
+        /*max-height:180px ;min-height:180px;*/
+        text-align: center;
+    }
+
+    .mesk {
+        width: 100%;
+        height: auto;
+        font-size: 100%;
+        /* padding: 3px 2%; */
+        line-height: 120%;
+        text-align: center;
+        font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+        overflow: hidden;
+    }
+
+    .mesk p {
+        display: block;
+        width: 96%;
+        color: #FFF;
+        padding: 3px auto;
+        margin: 3px 0px;
+    }
+
+
+    /*.bannerbox2 {font: 14px/24px sans-serif; margin: 0px auto;text-align: center; color: rgb(51, 51, 51); max-width: 100%;max-height: auto;height: auto; overflow:hidden ;font-size-adjust: none; font-stretch: normal; _width: 100%; -webkit-font-smoothing: antialiased;position: relative;}
+.bannerbox2 .wrapper2 {width:100%;height: auto; margin:0 auto; float: none; overflow:hidden;}
+.bannerbox2 .wrapper2 .rslides .imgbox {width: 100%; height:auto;max-width:100%;max-height: auto ;float: none; display: block; border-right:0px solid #becd54; padding-right:0%; height:auto; overflow:hidden;}
+.bannerbox2 .wrapper2 .rslides .imgboximg {width:100%;height:auto; overflow:hidden;}
+.bannerbox2 .wrapper2 .rslides .imgbox img {width: 100%;height:auto;}
+.bannerbox2 .wrapper2 .rslides .fontbox {width: 100%; height:auto;float: none; display: block; padding:0px 0px 30px 0px; color:#333333;}
+.bannerbox2 .wrapper2 .rslides .fontbox h3{ font-size:130%; margin-bottom:10px; margin-top:10px; color:#390;}
+.bannerbox2 .wrapper2 .centered-btns_tabs {text-align: center; margin-top: 10px;position:absolute; bottom:0px; z-index:20; left:0;right:0; padding-bottom:5px;/*小圓點位置*/
+    /*}*/
+}
+
+@media screen and (min-width: 768px)and (max-width: 1024px) {
+    .bannerbox {
+        max-width: 100%;
+        max-height: auto;
+        height: auto;
+        max-height: auto;
+    }
+
+    .rslides img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: auto;
+    }
+
+    .rslides_container {
+        width: 100%;
+        margin-bottom: 0px;
+        float: left;
+        position: relative;
+        text-indent: 0px;
+        -webkit-box-sizing: border-box;
+    }
+
+    .centered-btns_nav {
+        display: block;
+        opacity: 0.3;
+        /*左右按鍵隱藏*/
+    }
+
+    .centered-btns_tabs,
+    .transparent-btns_tabs,
+    .large-btns_tabs {
+        text-align: center;
+        margin-top: 0px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding-bottom: 5px;
+        /*小圓點位置*/
+    }
+
+    .adv .ADVbox {
+        width: 100%;
+        height: auto;
+        /*max-height:300px;min-height:230px;*/
+        overflow: hidden;
+        margin: 0px auto;
+        text-align: center;
+    }
+
+    .adv .ADVbox img {
+        width: 100%;
+        height: auto;
+        /*max-height:180px ;min-height:180px;*/
+        text-align: center;
+    }
+
+    .mesk {
+        width: 100%;
+        height: auto;
+        font-size: 120%;
+        /* padding: 3px 2%; */
+        line-height: 120%;
+        text-align: center;
+        font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+        overflow: hidden;
+    }
+
+    .mesk p {
+        display: block;
+        width: 96%;
+        color: #FFF;
+        padding: 3px auto;
+        margin: 3px 0px;
+    }
+
+    .bannerbox2 {
+        font: 14px/24px sans-serif;
+        margin: 0px auto;
+        text-align: center;
+        color: rgb(51, 51, 51);
+        width: 100%;
+        max-width: auto;
+        height: auto;
+        overflow: hidden;
+        font-size-adjust: none;
+        font-stretch: normal;
+        _width: 100%;
+        -webkit-font-smoothing: antialiased;
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .bannerbox2 .wrapper2 {
+        width: 100%;
+        margin-bottom: 0px;
+        float: left;
+    }
+
+    .bannerbox2 .wrapper2 .rslides .imgbox {
+        width: 40%;
+        height: auto;
+        max-width: auto;
+        max-height: auto;
+        overflow: hidden;
+        float: left;
+        display: block;
+        border-right: 1px solid #becd54;
+        padding-right: 2%;
+        margin-bottom: 10px;
+    }
+
+    .bannerbox2 .wrapper2 .rslides .imgboximg {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .bannerbox2 .wrapper2 .rslides .imgbox img {
+        width: 100%;
+        height: auto;
+    }
+
+    .bannerbox2 .wrapper2 .rslides .fontbox {
+        width: 58%;
+        height: auto;
+        float: right;
+        display: block;
+        padding: 0px 0px 0px 0px;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+
+    .bannerbox2 .wrapper2 .rslides .fontbox h3 {
+        font-size: 130%;
+        margin-bottom: 10px;
+    }
+
+    .bannerbox2 .wrapper2 .centered-btns_tabs {
+        text-align: center;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 0px;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        padding-bottom: 0px;
+        /*小圓點位置*/
+    }
+}

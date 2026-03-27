@@ -25,6 +25,7 @@
     "year": 2025,
     "tags": ["海科", "藍色", "白色", "海洋", "RWD"],
     "url": "https://fish550212.github.io/my-portfolio/html/mslc-Contest/boat/cut/index.html",
+    "officialUrl":"https://eservice.matsu.gov.tw/",
     "thumb": "./file/mslc-Contest/mslc-Contest.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-Contest/mslc-Contest.jpg" },
@@ -41,6 +42,7 @@
     "year": 2025,
     "tags": ["海科", "藍色", "海洋", "RWD"],
     "url": "https://fish550212.github.io/my-portfolio/html/mslc-Contest/activity/cut/index.html",
+    "officialUrl":"https://mslc.nmmst.gov.tw/evtsite2/content/NmmstEdu/569",
     "thumb": "./file/mslc-Contest/mslc-activity.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-Contest/mslc-activity.jpg" },
@@ -70,7 +72,7 @@
     "type": "遊戲平台",
     "year": 2023,
     "tags": ["海科", "遊戲", "arg", "RWD"],
-    "url": "https://fish550212.github.io/my-portfolio/html/arg/teacher/cut/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/arg/teacher/index.html",
     "thumb": "./file/arg/teacher/page-livegame.jpg",
     "layouts": [
       { "key": "login", "title": "登入", "path": "login.html", "kind": "Login", "thumb": "./file/arg/teacher/login.jpg" },
@@ -102,6 +104,7 @@
     "year": 2025,
     "tags": ["白色", "紫色", "連江縣", "RWD"],
     "url": "https://fish550212.github.io/my-portfolio/html/matsu/cut/index.html",
+    "officialUrl": "https://eservice.matsu.gov.tw/",
     "thumb": "./file/matsu/e-serve/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/matsu/e-serve/index.jpg" },
@@ -120,7 +123,7 @@
     "type": "活動網站",
     "year": 2024,
     "tags": ["海科", "藍色", "RWD"],
-    "url": "https://fish550212.github.io/my-portfolio/html/mslc-clean/2024clean/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/mslc-clean/index.html",
     "thumb": "./file/mslc-clean/2024clean/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/mslc-clean/2024clean/index.jpg" },
@@ -150,7 +153,7 @@
     "type": "企業網站",
     "year": 2023,
     "tags": ["藍色", "RWD", "科技"],
-    "url": "https://fish550212.github.io/my-portfolio/html/woodpecker/cutENG/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/woodpecker/cut-ENG/index.html",
     "thumb": "./file/woodpecker/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/woodpecker/index.jpg" },
@@ -167,7 +170,8 @@
     "type": "企業網站",
     "year": 2022,
     "tags": ["白色", "RWD", "食品"],
-    "url": "https://fish550212.github.io/my-portfolio/html/everstyle/web/cut/index.html",
+    "url": "https://fish550212.github.io/my-portfolio/html/EverStyle/web/cut/index.html",
+    "officialUrl":"https://www.everstyle.com/cut/index.html",
     "thumb": "./file/everstyle/index.jpg",
     "layouts": [
       { "key": "index", "title": "首頁", "path": "index.html", "kind": "home", "thumb": "./file/everstyle/index.jpg" },

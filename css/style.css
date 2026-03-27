@@ -171,8 +171,8 @@ input[type="url"] {
   border-color: var(--border-w-50);
 }
 .btn img{
-  width: 20px;
-  height: 20px;
+  /* width: 20px; */
+  height: 18px;
 }
 .chips {
   display: flex;
