@@ -64,7 +64,7 @@ body {
 .bottombox{
 	width: 100%;
 	height: 20px;
-	margin-top: -5px;
+	margin-top: -24px;
 	background: url(../Images/login-images-line.png) repeat-x;
 	background-size: 100% 21px;
 }
@@ -161,7 +161,7 @@ background: #c72222;
 	.bottombox{
 		width: 100%;
 		height: 20px;
-		margin-top: -5px;
+		margin-top: -24px;
 		background: url(../Images/login-images-line.png) repeat-x;
 		background-size: 100% 21px;
 	}
